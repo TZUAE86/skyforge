@@ -1,6 +1,14 @@
 hash-format = "sha256"
 
 [[files]]
+file = "LICENSE"
+hash = "47de850994cb61477fb4366ceda1e8486b7b12fad2f852721bc65735b12f16eb"
+
+[[files]]
+file = "README.md"
+hash = "e463e173da2049c6a58b2e96fe7518c706d905a57fb8576b23f777561dd0dfac"
+
+[[files]]
 file = "mods/advancedae.pw.toml"
 hash = "281593eae2857d26522a0084f7441ce8367cea75b23832d4ddbd435fa2cb02f2"
 metafile = true
@@ -502,7 +510,7 @@ metafile = true
 
 [[files]]
 file = "mods/sable-(create-aeronautics)-collision-damage.pw.toml"
-hash = "cde6bc8e26d6e99bdc7f76c6f56c67cecd6a804da0d1ea3e56d1dc72ed64af52"
+hash = "29fdbd5c9fc8183982036b090e52da87153451cdf24682e72b2eb99b67a59158"
 metafile = true
 
 [[files]]

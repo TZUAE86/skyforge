@@ -1,0 +1,13 @@
+name = "Modern Industrialization"
+filename = "Modern-Industrialization-2.4.3.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Gov5Dboq/versions/zI1AzXFg/Modern-Industrialization-2.4.3.jar"
+hash-format = "sha512"
+hash = "47e9edaadb341e6dcb6f61ecfd4e1381025ed01d6673507dc40d34eaabd21f1fe497ba751ab85edf05537dd326fd72e09a6dc751fee1da1d84fbe397743f7d61"
+
+[update]
+[update.modrinth]
+mod-id = "Gov5Dboq"
+version = "zI1AzXFg"

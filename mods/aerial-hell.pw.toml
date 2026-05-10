@@ -1,0 +1,13 @@
+name = "Aerial Hell"
+filename = "aerialhell-0.7.2_neoforge1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/hvaVU41U/versions/Ieg5kRRU/aerialhell-0.7.2_neoforge1.21.1.jar"
+hash-format = "sha512"
+hash = "1d06ef6b0c79347a54d8da797712553145cd6293d2afab917292c0b957c30415e4d3aa5c85049e70d3c464965bda65260470677c36774d7c5fcdb52d233ec2bb"
+
+[update]
+[update.modrinth]
+mod-id = "hvaVU41U"
+version = "Ieg5kRRU"

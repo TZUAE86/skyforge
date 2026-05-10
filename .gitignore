@@ -1,0 +1,15 @@
+# Exported pack artifacts (regenerable from the manifest)
+*.mrpack
+*.zip
+
+# Run logs
+*.log
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp

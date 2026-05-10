@@ -1,0 +1,13 @@
+name = "Cumulus"
+filename = "cumulus_menus-1.21.1-2.0.8-neoforge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/sq1f0DCq/versions/J49frL2W/cumulus_menus-1.21.1-2.0.8-neoforge.jar"
+hash-format = "sha512"
+hash = "b38aa9978b893ed052de5bc39ee891e1f2642704f4446b80a0e918bbf5edcd475bcdeded83956980e98970feed154e47c41af4cf42c3c4afd24e1041307248fc"
+
+[update]
+[update.modrinth]
+mod-id = "sq1f0DCq"
+version = "J49frL2W"

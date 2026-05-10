@@ -1,0 +1,13 @@
+name = "DotumChe"
+filename = "DotumChe.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/vsU8XG1d/versions/oSXFYDeB/DotumChe.zip"
+hash-format = "sha512"
+hash = "d89c85bc4b7a59570310d0ad6c3d15b730790de2d9a2e1847925bedc8c6ee00efb3bbd1899b7663f0b93e79168cccee997b7280f495e1748d3be4f02f7ce1ecf"
+
+[update]
+[update.modrinth]
+mod-id = "vsU8XG1d"
+version = "oSXFYDeB"

@@ -94,7 +94,4 @@ The first launch shows a small installer window downloading the 128 mods (5–15
 
 ## License
 
-- **The pack manifest** (this repo: `pack.toml`, `index.toml`, the 128 `mods/*.pw.toml` files, scripts and docs) — feel free to fork, study, learn from it.
-- **The mods themselves** are NOT covered by that license. Each mod is owned by its respective author and retains its own terms. Modrinth/CurseForge fetch the mods from their official sources at install time; this repo never bundles or redistributes mod jars.
-- **Per-mod license breakdown:** see [LICENSES.md](LICENSES.md) for an audit of all 128 mods (35 permissive, 31 copyleft, 19 custom, 18 ARR, 17 CurseForge, 9 non-commercial). Raw machine-readable data: [`license-audit.csv`](license-audit.csv).
-- **Attribution:** every mod author is credited via the mod's own metadata, visible in-game (Mods menu) and on each mod's Modrinth/CurseForge page linked from `mods/<slug>.pw.toml`.
+This repo only contains the packwiz manifest — `pack.toml`, `index.toml`, and the small `mods/*.pw.toml` files that point at each mod's official Modrinth/CurseForge download. Mod jars are fetched from their original authors at install time; nothing is redistributed here. Each mod retains its own license, visible in-game via the Mods menu and on its respective project page.

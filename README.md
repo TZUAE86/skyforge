@@ -1,4 +1,4 @@
-# Skyforge (only private use, if you are not my friends get out plz)
+# Skyforge (only private use)
 
 Minecraft 1.21.1 NeoForge modpack — Create + Aeronautics, magic, tech, MineColonies.
 **128 mods.** Auto-update via packwiz.

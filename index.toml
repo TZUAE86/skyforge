@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "README.md"
-hash = "f7a4df85520c79170237e813b9ab4f316a240181bf45f3b77777aa6c35bce7fd"
+hash = "3f9353f7cb7a640f57b37be0252811dd59e34c493da0b1bc2598afc1f09c8b6a"
 
 [[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
@@ -10,7 +10,7 @@ hash = "d390a9816680c40d9809630ac555ca0518997553c412053b841ed8d4a89ef35f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_01_the_charter.snbt"
-hash = "fef52fd0b24180788c81f6d0a4df5891c203db7a0734626f129042506687f8e9"
+hash = "7d1ec784b674729171dd7cb3a12cffd08b52e905796bff982f532a0cf3397031"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_02_first_smoke.snbt"

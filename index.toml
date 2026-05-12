@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "README.md"
-hash = "3f9353f7cb7a640f57b37be0252811dd59e34c493da0b1bc2598afc1f09c8b6a"
-
-[[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
 hash = "d390a9816680c40d9809630ac555ca0518997553c412053b841ed8d4a89ef35f"
 

@@ -1,0 +1,7 @@
+# Repo-level files — not part of the pack contents.
+README.md
+LICENSE
+LICENSE.md
+.gitignore
+.gitattributes
+.github/

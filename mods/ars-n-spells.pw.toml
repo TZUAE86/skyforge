@@ -3,9 +3,9 @@ filename = "ars_n_spells-2.1.0.jar"
 side = "both"
 
 [download]
+url = "https://edge.forgecdn.net/files/7797/567/ars_n_spells-2.1.0.jar"
 hash-format = "sha1"
 hash = "f530b0e282f131b64e305194620a6134a59950fd"
-mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]

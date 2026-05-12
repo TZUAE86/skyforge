@@ -1,0 +1,17 @@
+{
+	id: "5A11E0F1A0000002"
+	loot_size: 2
+	order_index: 1
+	rewards: [
+		{ count: 4, item: "create:brass_ingot", weight: 4 }
+		{ count: 4, item: "create:brass_casing", weight: 3 }
+		{ count: 1, item: "create:mechanical_arm", weight: 2 }
+		{ count: 1, item: "create:deployer", weight: 2 }
+		{ count: 2, item: "create:steam_engine", weight: 1 }
+		{ count: 8, item: "create:precision_mechanism", weight: 2 }
+		{ count: 1, item: "minecolonies:supplycampdeluxe", weight: 1 }
+		{ count: 6, item: "minecraft:gold_ingot", weight: 3 }
+	]
+	title: "Tier 2 — Bronze Foreman"
+	use_title: true
+}

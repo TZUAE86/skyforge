@@ -1,0 +1,13 @@
+{
+	# Skyforge — quest text translation file.
+	#
+	# Turn 1a ships Act I with all titles + descriptions INLINE in
+	# chapters/act_01_the_charter.snbt (FTB Quests' in-game editor exports
+	# that way; cleanest for hand-authoring).
+	#
+	# Externalize to this file via a later automated extraction pass before
+	# adding any non-English translation. Keys will follow the convention:
+	#   "quests.skyforge.actNN.qMM.title"
+	#   "quests.skyforge.actNN.qMM.subtitle"
+	#   "quests.skyforge.actNN.qMM.desc"
+}

@@ -1,0 +1,12 @@
+{
+	chapter_groups: [
+		{
+			id: "5A11E0F100000001"
+			title: "Main Story"
+		}
+		{
+			id: "5A11E0F100000002"
+			title: "Side Paths"
+		}
+	]
+}

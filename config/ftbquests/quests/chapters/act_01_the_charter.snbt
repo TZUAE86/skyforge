@@ -1,0 +1,769 @@
+# Skyforge — Act I: The Charter (30 quests, Turn 1a).
+# TONE: Steampunk colonial adventure. Foreman of the Skyforge Charter
+# arrives on an unclaimed sky-fragment. Optimistic, practical, romantic
+# about the work. Reference points: Treasure Planet, Skies of Arcadia.
+# THEME BIBLE: Create is the spine. Hand crank -> wooden shaft -> basic
+# gears -> Andesite Alloy. Every quest in the Foreman's voice.
+# TODO verify all icon + task item IDs at NeoForge 21.1 mod versions.
+
+{
+	autofocus_id: "5A11E0F101010001"
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_01_the_charter"
+	group: "5A11E0F100000001"
+	icon: "create:wrench"
+	id: "5A11E0F101000000"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	subtitle: ["You're a Foreman now, whether you feel ready or not."]
+	title: "Act I — The Charter"
+	quests: [
+
+		# ---------- Q01: Scene-beat — Charter Tablet ----------
+		{
+			id: "5A11E0F101010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Charter Tablet"
+			subtitle: "Your claim is filed."
+			description: [
+				"The Charter Tablet hums faintly in your pack. It's been sealed for two years — your assignment delayed, the fragment unclaimed."
+				""
+				"Step out onto the stone. You're a Foreman now, whether you feel ready or not."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F101020001"
+				type: "checkmark"
+				title: "Step out onto the fragment"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030001", type: "item", item: "create:wrench" }
+				{ id: "5A11E0F101030002", type: "xp", xp: 20 }
+				{ id: "5A11E0F101030003", type: "item", item: { id: "minecraft:bread", Count: 8b } }
+			]
+		}
+
+		# ---------- Q02: Bedroll on the Fragment ----------
+		{
+			id: "5A11E0F101010002"
+			x: -2.5d
+			y: 1.5d
+			title: "Bedroll on the Fragment"
+			subtitle: "First night, first watch."
+			description: [
+				"The wind off the cloud-banks bites. Get a bed under you and sleep through to morning — the Charter never asked a Foreman to die of exposure on day one."
+			]
+			icon: "minecraft:red_bed"
+			tasks: [{
+				id: "5A11E0F101020002"
+				type: "item"
+				item: "minecraft:red_bed"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030004", type: "xp", xp: 20 }
+				{ id: "5A11E0F101030005", type: "item", item: { id: "minecraft:torch", Count: 8b } }
+			]
+			dependencies: ["5A11E0F101010001"]
+		}
+
+		# ---------- Q03: First Light ----------
+		{
+			id: "5A11E0F101010003"
+			x: 0.0d
+			y: 2.0d
+			title: "First Light"
+			subtitle: "Wood before iron. Always."
+			description: [
+				"Find a tree. Punch until the cuff of your sleeve gets sore. The Charter's compendium says the trick is rotation — your forearm says the trick is patience."
+			]
+			icon: "minecraft:oak_log"
+			tasks: [{
+				id: "5A11E0F101020003"
+				type: "item"
+				item: { id: "#minecraft:logs", Count: 16b }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030006", type: "xp", xp: 15 }
+				{ id: "5A11E0F101030007", type: "item", item: { id: "minecraft:oak_sapling", Count: 4b } }
+			]
+			dependencies: ["5A11E0F101010001"]
+		}
+
+		# ---------- Q04: A Foreman's Hand (Wrench) ----------
+		{
+			id: "5A11E0F101010004"
+			x: -2.5d
+			y: 3.0d
+			title: "A Foreman's Hand"
+			subtitle: "The first tool the Charter forges every recruit."
+			description: [
+				"The Wrench was already in your pack when the Tablet activated. The Charter expects every Foreman to carry a second — for the apprentice they'll one day train, for the night the first one rusts solid."
+				""
+				"Craft a spare."
+			]
+			icon: "create:wrench"
+			tasks: [{
+				id: "5A11E0F101020004"
+				type: "item"
+				item: "create:wrench"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030008", type: "xp", xp: 25 }
+				{ id: "5A11E0F101030009", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: ["5A11E0F101010003"]
+		}
+
+		# ---------- Q05: The Andesite Promise ----------
+		{
+			id: "5A11E0F101010005"
+			x: 2.5d
+			y: 1.5d
+			title: "The Andesite Promise"
+			subtitle: "Grey stone, brass-bound future."
+			description: [
+				"The Charter's first lesson: andesite is patient. It sits in the dark waiting to become alloy, casing, mixer, press. Find some."
+			]
+			icon: "minecraft:andesite"
+			tasks: [{
+				id: "5A11E0F101020005"
+				type: "item"
+				item: { id: "minecraft:andesite", Count: 16b }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030010", type: "xp", xp: 20 }
+				{ id: "5A11E0F101030011", type: "item", item: { id: "minecraft:cobblestone", Count: 16b } }
+			]
+			dependencies: ["5A11E0F101010003"]
+		}
+
+		# ---------- Q06: Iron in the Stone ----------
+		{
+			id: "5A11E0F101010006"
+			x: 2.5d
+			y: 3.0d
+			title: "Iron in the Stone"
+			subtitle: "Every Foreman digs their own first ton."
+			description: [
+				"There's iron under the fragment — there always is, the Charter's surveyors are good. Mine four chunks of raw ore. Don't waste a stroke."
+			]
+			icon: "minecraft:raw_iron"
+			tasks: [{
+				id: "5A11E0F101020006"
+				type: "item"
+				item: { id: "minecraft:raw_iron", Count: 4b }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030012", type: "xp", xp: 25 }
+				{ id: "5A11E0F101030013", type: "item", item: { id: "minecraft:coal", Count: 8b } }
+			]
+			dependencies: ["5A11E0F101010003"]
+		}
+
+		# ---------- Q07: Alloy at the Bench (mechanical milestone) ----------
+		{
+			id: "5A11E0F101010007"
+			x: 0.0d
+			y: 4.5d
+			shape: "rsquare"
+			title: "Alloy at the Bench"
+			subtitle: "Andesite + Iron Nugget. The Charter's first reaction."
+			description: [
+				"Place andesite next to iron nuggets at the workbench. The Charter calls the result Andesite Alloy. Every Create block that matters starts here."
+				""
+				"Forge four."
+			]
+			icon: "create:andesite_alloy"
+			tasks: [{
+				id: "5A11E0F101020007"
+				type: "item"
+				item: { id: "create:andesite_alloy", Count: 4b }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030014", type: "xp", xp: 40 }
+				{ id: "5A11E0F101030015", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: [
+				"5A11E0F101010005"
+				"5A11E0F101010006"
+			]
+		}
+
+		# ---------- Q08: The Cobblestone Wall ----------
+		{
+			id: "5A11E0F101010008"
+			x: -4.5d
+			y: 4.0d
+			title: "The Cobblestone Wall"
+			subtitle: "Pirates come at dusk. You sleep at midnight."
+			description: [
+				"A waist-high wall is not a fortress. It's a statement. The Charter expects the statement to be loud."
+				""
+				"Quarry stone. Lay nine cobblestone walls anywhere you call home."
+			]
+			icon: "minecraft:cobblestone_wall"
+			tasks: [{
+				id: "5A11E0F101020008"
+				type: "item"
+				item: { id: "minecraft:cobblestone_wall", Count: 9b }
+				count: 9L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030016", type: "xp", xp: 25 }
+				{ id: "5A11E0F101030017", type: "item", item: { id: "minecraft:cobblestone", Count: 32b } }
+			]
+			dependencies: ["5A11E0F101010017"]
+		}
+
+		# ---------- Q09: First Crank (mechanical milestone) ----------
+		{
+			id: "5A11E0F101010009"
+			x: -2.5d
+			y: 5.5d
+			shape: "rsquare"
+			title: "First Crank"
+			subtitle: "Rotation, by hand."
+			description: [
+				"A Hand Crank is the Charter's first lesson in motion: every Create network begins with a torque source. For now, that source is your arm."
+				""
+				"Craft and place a Hand Crank."
+			]
+			icon: "create:hand_crank"
+			tasks: [{
+				id: "5A11E0F101020009"
+				type: "item"
+				item: "create:hand_crank"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030018", type: "xp", xp: 40 }
+				{ id: "5A11E0F101030019", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: ["5A11E0F101010007"]
+		}
+
+		# ---------- Q10: A Shaft in Hand ----------
+		{
+			id: "5A11E0F101010010"
+			x: -4.5d
+			y: 5.5d
+			title: "A Shaft in Hand"
+			subtitle: "Andesite Alloy, milled long."
+			description: [
+				"A shaft moves nothing on its own — but every belt, every cog, every mixer the Charter ever blueprinted runs on one. Cut four."
+			]
+			icon: "create:shaft"
+			tasks: [{
+				id: "5A11E0F101020010"
+				type: "item"
+				item: { id: "create:shaft", Count: 4b }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030020", type: "xp", xp: 20 }
+				{ id: "5A11E0F101030021", type: "item", item: { id: "create:andesite_alloy", Count: 4b } }
+			]
+			dependencies: ["5A11E0F101010007"]
+		}
+
+		# ---------- Q11: Cogwheel Logic ----------
+		{
+			id: "5A11E0F101010011"
+			x: 0.0d
+			y: 6.5d
+			title: "Cogwheel Logic"
+			subtitle: "Small turns one way. Large turns the other."
+			description: [
+				"A cogwheel changes the speed of a shaft. A large cogwheel changes the direction too. The Charter's apprentices learn this on day one. Today is your day one."
+				""
+				"Craft two cogwheels."
+			]
+			icon: "create:cogwheel"
+			tasks: [{
+				id: "5A11E0F101020011"
+				type: "item"
+				item: { id: "create:cogwheel", Count: 2b }
+				count: 2L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030022", type: "xp", xp: 25 }
+				{ id: "5A11E0F101030023", type: "item", item: { id: "create:large_cogwheel", Count: 1b } }
+			]
+			dependencies: ["5A11E0F101010007"]
+		}
+
+		# ---------- Q12: A Hopper of Hope ----------
+		{
+			id: "5A11E0F101010012"
+			x: 4.5d
+			y: 4.0d
+			title: "A Hopper of Hope"
+			subtitle: "Five iron, one bucket of patience."
+			description: [
+				"A hopper is the Charter's cheapest piece of automation. Crude, vanilla, indispensable. Every senior engineer remembers their first."
+			]
+			icon: "minecraft:hopper"
+			tasks: [{
+				id: "5A11E0F101020012"
+				type: "item"
+				item: "minecraft:hopper"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030024", type: "xp", xp: 25 }
+				{ id: "5A11E0F101030025", type: "item", item: { id: "minecraft:chest", Count: 2b } }
+			]
+			dependencies: ["5A11E0F101010015"]
+		}
+
+		# ---------- Q13: Glider Down the Cliff ----------
+		{
+			id: "5A11E0F101010013"
+			x: -6.5d
+			y: 3.5d
+			title: "Glider Down the Cliff"
+			subtitle: "Your first flight is always borrowed."
+			description: [
+				"A glider isn't a ship. It's a controlled fall with opinions. Strap one on, find a high edge, and step off."
+				""
+				"You don't need an airship yet. You need to learn to look down without flinching."
+			]
+			icon: "immersive_aircraft:gyrodyne"
+			tasks: [{
+				id: "5A11E0F101020013"
+				type: "checkmark"
+				title: "Glide at least 30 blocks with any flight item (TODO verify Immersive Aircraft glider ID)"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030026", type: "xp", xp: 35 }
+				{ id: "5A11E0F101030027", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: ["5A11E0F101010004"]
+		}
+
+		# ---------- Q14: Field Rations ----------
+		{
+			id: "5A11E0F101010014"
+			x: -4.5d
+			y: 2.5d
+			title: "Field Rations"
+			subtitle: "Bread doesn't build a fragment. But a Foreman who skips a meal won't either."
+			description: [
+				"Cook eight loaves of bread, or eight of any decent meal Farmer's Delight will let you make. Eat one. Save the rest."
+			]
+			icon: "minecraft:bread"
+			tasks: [{
+				id: "5A11E0F101020014"
+				type: "item"
+				item: { id: "minecraft:bread", Count: 8b }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030028", type: "xp", xp: 20 }
+				{ id: "5A11E0F101030029", type: "item", item: { id: "minecraft:wheat_seeds", Count: 8b } }
+			]
+			dependencies: ["5A11E0F101010003"]
+		}
+
+		# ---------- Q15: The First Furnace ----------
+		{
+			id: "5A11E0F101010015"
+			x: 4.5d
+			y: 3.0d
+			title: "The First Furnace"
+			subtitle: "Coal in, iron out."
+			description: [
+				"The Charter has nothing to say about furnaces — every settler the guild ever chartered already knew how to light one. Smelt four iron ingots and prove it."
+			]
+			icon: "minecraft:furnace"
+			tasks: [{
+				id: "5A11E0F101020015"
+				type: "item"
+				item: { id: "minecraft:iron_ingot", Count: 4b }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030030", type: "xp", xp: 25 }
+				{ id: "5A11E0F101030031", type: "item", item: "minecraft:furnace" }
+			]
+			dependencies: ["5A11E0F101010006"]
+		}
+
+		# ---------- Q16: A Belt to the Bench ----------
+		{
+			id: "5A11E0F101010016"
+			x: -6.5d
+			y: 5.5d
+			title: "A Belt to the Bench"
+			subtitle: "The first thing a Foreman builds that moves on its own."
+			description: [
+				"A Mechanical Belt carries items between hoppers, presses, drawers, anything you want it to. Crafted from leather and andesite alloy."
+				""
+				"Make two."
+			]
+			icon: "create:belt_connector"
+			tasks: [{
+				id: "5A11E0F101020016"
+				type: "item"
+				item: { id: "create:belt_connector", Count: 2b }
+				count: 2L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030032", type: "xp", xp: 30 }
+				{ id: "5A11E0F101030033", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: ["5A11E0F101010009"]
+		}
+
+		# ---------- Q17: Cobble & Brick ----------
+		{
+			id: "5A11E0F101010017"
+			x: -4.5d
+			y: 3.0d
+			title: "Cobble & Brick"
+			subtitle: "Stone is the Foreman's first language."
+			description: [
+				"Quarry thirty-two stone. You'll need every block for walls, furnace, foundation. The Charter doesn't budget for shortcuts."
+			]
+			icon: "minecraft:cobblestone"
+			tasks: [{
+				id: "5A11E0F101020017"
+				type: "item"
+				item: { id: "minecraft:cobblestone", Count: 32b }
+				count: 32L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030034", type: "xp", xp: 20 }
+				{ id: "5A11E0F101030035", type: "item", item: { id: "minecraft:stone", Count: 16b } }
+			]
+			dependencies: ["5A11E0F101010003"]
+		}
+
+		# ---------- Q18: A Friend in the Trees ----------
+		{
+			id: "5A11E0F101010018"
+			x: 4.5d
+			y: 1.5d
+			title: "A Friend in the Trees"
+			subtitle: "Even foremen need company."
+			description: [
+				"There are creatures up here the Charter never catalogued — sky-skuas, brass-eared foxes, the things from Alex's grimoire. Tame one, or just bring back its drop. The Charter's bestiary is always behind, and yours will be too."
+			]
+			icon: "minecraft:wheat"
+			tasks: [{
+				id: "5A11E0F101020018"
+				type: "checkmark"
+				title: "Tame a vanilla animal OR collect any Alex's Mobs / Mowzie's drop"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030036", type: "xp", xp: 30 }
+				{ id: "5A11E0F101030037", type: "item", item: { id: "minecraft:leather", Count: 4b } }
+			]
+			dependencies: ["5A11E0F101010001"]
+		}
+
+		# ---------- Q19: The Sky-Pirate Scouts ----------
+		{
+			id: "5A11E0F101010019"
+			x: 6.5d
+			y: 5.0d
+			title: "The Sky-Pirate Scouts"
+			subtitle: "They probe the fragments at dusk. You meet them in the dark."
+			description: [
+				"Three of them, if the Charter's intel is right. Loose-stitched leathers, knife-on-rope, looking for an unguarded Foreman."
+				""
+				"Find three. Drop three."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F101020019"
+				type: "kill"
+				entity: "minecraft:zombie"
+				value: 3L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030038", type: "xp", xp: 40 }
+				{ id: "5A11E0F101030039", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: ["5A11E0F101010020"]
+		}
+
+		# ---------- Q20: Whetstone & Edge ----------
+		{
+			id: "5A11E0F101010020"
+			x: 6.5d
+			y: 4.0d
+			title: "Whetstone & Edge"
+			subtitle: "An iron sword keeps the Foreman's promises."
+			description: [
+				"The Charter issues no swords. The Charter issues schematics, and trusts a Foreman to forge their own."
+				""
+				"Make one. Bring one axe with you, too — wood doesn't fall on its own."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [
+				{ id: "5A11E0F101020020", type: "item", item: "minecraft:iron_sword" }
+				{ id: "5A11E0F101020021", type: "item", item: "minecraft:iron_axe" }
+			]
+			rewards: [
+				{ id: "5A11E0F101030040", type: "xp", xp: 30 }
+				{ id: "5A11E0F101030041", type: "item", item: { id: "minecraft:shield", Count: 1b } }
+			]
+			dependencies: ["5A11E0F101010015"]
+		}
+
+		# ---------- Q21: Water Where It Wasn't ----------
+		{
+			id: "5A11E0F101010021"
+			x: 4.5d
+			y: 5.0d
+			title: "Water Where It Wasn't"
+			subtitle: "The fragment is dry. The Charter is patient."
+			description: [
+				"Some sky-fragments come with a spring. Yours did not. Carry water up here in a bucket — set the source so the next Foreman finds it running."
+			]
+			icon: "minecraft:water_bucket"
+			tasks: [{
+				id: "5A11E0F101020022"
+				type: "item"
+				item: "minecraft:water_bucket"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030042", type: "xp", xp: 25 }
+				{ id: "5A11E0F101030043", type: "item", item: { id: "minecraft:water_bucket", Count: 1b } }
+			]
+			dependencies: ["5A11E0F101010015"]
+		}
+
+		# ---------- Q22: The Charter's Compendium ----------
+		{
+			id: "5A11E0F101010022"
+			x: 2.5d
+			y: -1.0d
+			title: "The Charter's Compendium"
+			subtitle: "Every recipe is in there. Find your own."
+			description: [
+				"The Charter ships every Foreman with a compendium — these days they call it 'EMI', or 'JEI' depending on the printing. Open it. Type 'wrench'. Read."
+				""
+				"Press R or U on an item to see what it makes, or what makes it."
+			]
+			icon: "minecraft:book"
+			tasks: [{
+				id: "5A11E0F101020023"
+				type: "checkmark"
+				title: "Open the EMI/JEI panel (default key: inventory side bar)"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030044", type: "xp", xp: 10 }
+				{ id: "5A11E0F101030045", type: "item", item: { id: "minecraft:book", Count: 2b } }
+			]
+			dependencies: ["5A11E0F101010001"]
+		}
+
+		# ---------- Q23: A Place to Sleep, Properly ----------
+		{
+			id: "5A11E0F101010023"
+			x: -4.5d
+			y: 0.5d
+			title: "A Place to Sleep, Properly"
+			subtitle: "A roof. A door. A bed off the dirt."
+			description: [
+				"Five by five, three high. Door on one wall, bed on the floor. The Charter has no patience for romance — but it does insist a Foreman not freeze in their sleep."
+			]
+			icon: "minecraft:oak_door"
+			tasks: [{
+				id: "5A11E0F101020024"
+				type: "checkmark"
+				title: "Build a 5x5x3 enclosed room with a door and a bed inside"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030046", type: "xp", xp: 30 }
+				{ id: "5A11E0F101030047", type: "item", item: { id: "minecraft:oak_planks", Count: 16b } }
+			]
+			dependencies: ["5A11E0F101010002"]
+		}
+
+		# ---------- Q24: Coal for the Long Watch ----------
+		{
+			id: "5A11E0F101010024"
+			x: 2.5d
+			y: 4.5d
+			title: "Coal for the Long Watch"
+			subtitle: "Sixteen lumps. Three days. Twelve nights of light."
+			description: [
+				"Coal feeds the furnace. The furnace feeds the iron. The iron feeds the Foreman. Stop the chain, the chain stops you."
+			]
+			icon: "minecraft:coal"
+			tasks: [{
+				id: "5A11E0F101020025"
+				type: "item"
+				item: { id: "minecraft:coal", Count: 16b }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F101030048", type: "xp", xp: 20 }
+				{ id: "5A11E0F101030049", type: "item", item: { id: "minecraft:torch", Count: 16b } }
+			]
+			dependencies: ["5A11E0F101010003"]
+		}
+
+		# ---------- Q25: The Lookout Post ----------
+		{
+			id: "5A11E0F101010025"
+			x: -2.5d
+			y: -1.5d
+			title: "The Lookout Post"
+			subtitle: "The Charter wants eyes on the horizon."
+			description: [
+				"Find a high point. Plant a torch. Mark your fragment for the next ship that drifts past — sky-pirates avoid lit claims more often than not."
+			]
+			icon: "minecraft:torch"
+			tasks: [{
+				id: "5A11E0F101020026"
+				type: "checkmark"
+				title: "Place a torch high on the fragment (any vantage point)"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030050", type: "xp", xp: 15 }
+				{ id: "5A11E0F101030051", type: "item", item: { id: "minecraft:torch", Count: 8b } }
+			]
+			dependencies: ["5A11E0F101010001"]
+		}
+
+		# ---------- Q26: First Saplings ----------
+		{
+			id: "5A11E0F101010026"
+			x: 0.0d
+			y: -2.0d
+			title: "First Saplings"
+			subtitle: "Wood you cut today, the Charter expects regrown tomorrow."
+			description: [
+				"Plant four saplings. The Charter is strict about timber audits — Foremen who deforest a fragment get reassigned to coal duty in the wet quarter."
+			]
+			icon: "minecraft:oak_sapling"
+			tasks: [{
+				id: "5A11E0F101020027"
+				type: "checkmark"
+				title: "Plant four saplings (any tree species)"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030052", type: "xp", xp: 15 }
+				{ id: "5A11E0F101030053", type: "item", item: { id: "minecraft:bone_meal", Count: 8b } }
+			]
+			dependencies: ["5A11E0F101010003"]
+		}
+
+		# ---------- Q27: The Foreman's Map ----------
+		{
+			id: "5A11E0F101010027"
+			x: -2.5d
+			y: -2.5d
+			title: "The Foreman's Map"
+			subtitle: "Xaero charts what the Charter doesn't."
+			description: [
+				"The Charter's survey ships flew over this fragment twice. Their maps are inaccurate. Your minimap is not."
+				""
+				"Open it (default key: Y) and look at where you actually are."
+			]
+			icon: "minecraft:compass"
+			tasks: [{
+				id: "5A11E0F101020028"
+				type: "checkmark"
+				title: "Open Xaero's Minimap menu (default: Y)"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030054", type: "xp", xp: 10 }
+				{ id: "5A11E0F101030055", type: "item", item: "minecraft:compass" }
+			]
+			dependencies: ["5A11E0F101010001"]
+		}
+
+		# ---------- Q28: The Crank Test (mechanical milestone) ----------
+		{
+			id: "5A11E0F101010028"
+			x: 0.0d
+			y: 7.5d
+			shape: "rsquare"
+			title: "The Crank Test"
+			subtitle: "Hand crank. Shaft. Millstone. Flour."
+			description: [
+				"Stand a Millstone next to a Hand Crank. Connect them with a shaft. Drop wheat in the top. Turn until your shoulder complains."
+				""
+				"Four flour. That's the Charter's threshold for 'you understand rotation now.'"
+			]
+			icon: "create:millstone"
+			tasks: [
+				{ id: "5A11E0F101020029", type: "item", item: "create:millstone" }
+				{ id: "5A11E0F101020030", type: "item", item: { id: "create:wheat_flour", Count: 4b }, count: 4L }
+			]
+			rewards: [
+				{ id: "5A11E0F101030056", type: "xp", xp: 50 }
+				{ id: "5A11E0F101030057", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F101030058", type: "item", item: { id: "create:cogwheel", Count: 4b } }
+			]
+			dependencies: [
+				"5A11E0F101010009"
+				"5A11E0F101010010"
+				"5A11E0F101010011"
+			]
+		}
+
+		# ---------- Q29: Charter Audit, Day Seven ----------
+		{
+			id: "5A11E0F101010029"
+			x: -4.5d
+			y: 1.5d
+			title: "Charter Audit, Day Seven"
+			subtitle: "The Charter checks in. Sleep three nights. Stay alive."
+			description: [
+				"By the time the Charter's first audit drone drifts past your fragment, the guild expects you alive, fed, and not on fire. Sleep three nights to mark the week."
+			]
+			icon: "minecraft:clock"
+			tasks: [{
+				id: "5A11E0F101020031"
+				type: "checkmark"
+				title: "Sleep through three nights in any bed"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030059", type: "xp", xp: 30 }
+				{ id: "5A11E0F101030060", type: "item", item: { id: "farmersdelight:cooked_rice", Count: 4b } }
+			]
+			dependencies: ["5A11E0F101010023"]
+		}
+
+		# ---------- Q30: Scene-beat — The Forge Site Chosen ----------
+		{
+			id: "5A11E0F10101001E"
+			x: 0.0d
+			y: 9.5d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Forge Site is Chosen"
+			subtitle: "A Mechanical Press stands where bare stone used to."
+			description: [
+				"You're done with hand cranks. The Charter's next compendium chapter is open on the bench — water wheel, windmill, encased fan, press."
+				""
+				"Place a Mechanical Press anywhere on your fragment. The forge site is chosen. Act II begins on the first turn of the press."
+			]
+			icon: "create:mechanical_press"
+			tasks: [{
+				id: "5A11E0F101020032"
+				type: "item"
+				item: "create:mechanical_press"
+			}]
+			rewards: [
+				{ id: "5A11E0F101030061", type: "xp", xp: 75 }
+				{ id: "5A11E0F101030062", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F101030063", type: "item", item: { id: "create:water_wheel", Count: 1b } }
+			]
+			dependencies: ["5A11E0F101010028"]
+		}
+	]
+}

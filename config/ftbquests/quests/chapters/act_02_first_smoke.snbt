@@ -1,0 +1,20 @@
+# Skyforge — Act II: First Smoke (placeholder for Turn 1b).
+# Create-tier mastered: water wheel, windmill, millstone, encased fan,
+# press, basic mixer. Scene beat: "The forge lights. Your fragment has
+# a heartbeat."
+# TODO Turn 1b: populate ~40 quests in the steampunk colonial voice.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_02_first_smoke"
+	group: "5A11E0F100000001"
+	icon: "create:water_wheel"
+	id: "5A11E0F102000000"
+	images: [ ]
+	order_index: 1
+	quest_links: [ ]
+	subtitle: ["The shaft turns even when you sleep."]
+	title: "Act II — First Smoke"
+	quests: [ ]
+}

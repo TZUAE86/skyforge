@@ -1,0 +1,18 @@
+{
+	id: "5A11E0F1A0000001"
+	loot_size: 2
+	order_index: 0
+	rewards: [
+		{ count: 6, item: "create:andesite_alloy", weight: 4 }
+		{ count: 1, item: "create:wrench", weight: 2 }
+		{ count: 4, item: "create:shaft", weight: 3 }
+		{ count: 2, item: "create:cogwheel", weight: 3 }
+		{ count: 1, item: "create:water_wheel", weight: 1 }
+		{ count: 1, item: "create:andesite_funnel", weight: 2 }
+		{ count: 4, item: "minecraft:iron_ingot", weight: 3 }
+		{ count: 8, item: "minecraft:bread", weight: 2 }
+		{ count: 1, item: "create:empty_blaze_burner", weight: 1 }
+	]
+	title: "Tier 1 — Starter Bench"
+	use_title: true
+}

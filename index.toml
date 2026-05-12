@@ -1,12 +1,48 @@
 hash-format = "sha256"
 
 [[files]]
-file = "LICENSE"
-hash = "47de850994cb61477fb4366ceda1e8486b7b12fad2f852721bc65735b12f16eb"
+file = "README.md"
+hash = "f7a4df85520c79170237e813b9ab4f316a240181bf45f3b77777aa6c35bce7fd"
 
 [[files]]
-file = "README.md"
-hash = "e463e173da2049c6a58b2e96fe7518c706d905a57fb8576b23f777561dd0dfac"
+file = "config/ftbquests/quests/chapter_groups.snbt"
+hash = "d390a9816680c40d9809630ac555ca0518997553c412053b841ed8d4a89ef35f"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/act_01_the_charter.snbt"
+hash = "fef52fd0b24180788c81f6d0a4df5891c203db7a0734626f129042506687f8e9"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/act_02_first_smoke.snbt"
+hash = "994230a40738fee186affac35bb3785997b82c299d1a83975144a1debc3adbfb"
+
+[[files]]
+file = "config/ftbquests/quests/data.snbt"
+hash = "e86765d3c3791461f5581af4a0d7e20c53a166d305643a2797999a5f0ee3430c"
+
+[[files]]
+file = "config/ftbquests/quests/lang/en_us.snbt"
+hash = "38d88ae33c8de846850fdbf6417841d00a948d2f781a65e9a79b891afd4e6ee3"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/tier1_basic.snbt"
+hash = "3d91f606413b241fb62fe12fecd537fd6338e525314039e4d223fa572c42b65c"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/tier2_intermediate.snbt"
+hash = "66da70f14da54d298a3f5ade01701801c5200db93ed37429bf74db5bb7aac0bd"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/tier3_advanced.snbt"
+hash = "ffa1cd7075ed4d87b3f1d69d94ebfcf46e059fab25a68e10c1bfafbafcfd2346"
+
+[[files]]
+file = "kubejs/server_scripts/skyforge_challenges.js"
+hash = "a84c57185adc289c68e56572b3b41fbd8a10f0009db190183f03c0eb13f1cf0c"
+
+[[files]]
+file = "kubejs/server_scripts/skyforge_scene_beats.js"
+hash = "8a940a4e115992f476ea205b8abdec7f897f132b0bda74648ad1d840c102e17f"
 
 [[files]]
 file = "mods/advancedae.pw.toml"

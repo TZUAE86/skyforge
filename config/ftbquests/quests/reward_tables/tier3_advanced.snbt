@@ -1,0 +1,17 @@
+{
+	id: "5A11E0F1A0000003"
+	loot_size: 2
+	order_index: 2
+	rewards: [
+		{ count: 4, item: "mekanism:ingot_steel", weight: 4 }
+		{ count: 4, item: "ae2:fluix_crystal", weight: 3 }
+		{ count: 1, item: "create:potato_cannon", weight: 1 }
+		{ count: 1, item: "create_aeronautics:propeller", weight: 2 }
+		{ count: 1, item: "ironsspellbooks:spell_book", weight: 1 }
+		{ count: 8, item: "minecraft:diamond", weight: 2 }
+		{ count: 1, item: "mekanism:jetpack", weight: 1 }
+		{ count: 4, item: "ars_nouveau:source_gem", weight: 3 }
+	]
+	title: "Tier 3 — Master Mechanic"
+	use_title: true
+}

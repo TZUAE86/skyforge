@@ -6,7 +6,7 @@ hash = "d390a9816680c40d9809630ac555ca0518997553c412053b841ed8d4a89ef35f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_01_the_charter.snbt"
-hash = "458ee270188d0a44c8225433d7b8cb1851ee14a589c9473cf620524154807115"
+hash = "181ec0d5a3b52f99714d840e1e353a36cb0ba60cb7ac581bb7ec03d1220f055e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_02_first_smoke.snbt"
@@ -38,7 +38,7 @@ hash = "a84c57185adc289c68e56572b3b41fbd8a10f0009db190183f03c0eb13f1cf0c"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_custom_tasks.js"
-hash = "67a1e17f8178c3437ab9721d38c3d88065881b352002816b2cbae965a81967e9"
+hash = "8ffaf80d1bf212c45d1fc99d53344e6f79b23d4b01379de143fcc7eee9536a8e"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"

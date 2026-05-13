@@ -82,6 +82,8 @@
 				"Find a tree. Any tree. Punch until the cuff of your sleeve gets sore. The Charter's compendium says the trick is rotation — your forearm says the trick is patience."
 				""
 				"Sixteen logs. Oak, birch, spruce, dark oak, jungle, acacia, mangrove, cherry — the Charter's auditors count them all the same."
+				""
+				"The icon shows oak because the auditors are old-fashioned that way."
 			]
 			icon: "minecraft:oak_log"
 			tasks: [{

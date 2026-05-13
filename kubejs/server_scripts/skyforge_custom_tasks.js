@@ -10,8 +10,14 @@
 // <hex> is QuestObjectBase.toString() == String.format("%016X", id) —
 // UPPERCASE, exactly 16 chars, leading zeros. The task ID in the
 // chapter .snbt must match the registration string exactly.
+//
+// Rhino-in-KubeJS quirk: use classic `function()` syntax and `var`
+// inside the check body. Arrow functions + let/const inside a check
+// invoked repeatedly will throw "redeclaration of var X" because
+// Rhino re-runs the body in a shared scope between calls.
 
 const LOGS_INGREDIENT = Ingredient.of('#minecraft:logs');
+var skyforge_q3_check_logged = false;
 
 // ---- Q03 (Act I, "First Light"): 16 logs of any wood type ----
 FTBQuestsEvents.customTask('5A11E0F101020003', event => {
@@ -19,18 +25,22 @@ FTBQuestsEvents.customTask('5A11E0F101020003', event => {
         event.setMaxProgress(16);
         event.setCheckTimer(40); // 2 s polling
         event.setEnableButton(true); // manual complete button as a safety net
-        event.setCheck((task, player) => {
+        event.setCheck(function(task, player) {
             try {
-                let total = 0;
-                const inv = player.inventory;
-                const size = inv.containerSize;
-                for (let i = 0; i < size; i++) {
-                    const stack = inv.getItem(i);
+                var total = 0;
+                var playerInv = player.inventory;
+                var size = playerInv.containerSize;
+                for (var i = 0; i < size; i++) {
+                    var stack = playerInv.getItem(i);
                     if (stack && !stack.isEmpty() && LOGS_INGREDIENT.test(stack)) {
                         total += stack.count;
                     }
                 }
-                const capped = Math.min(total, 16);
+                var capped = Math.min(total, 16);
+                if (!skyforge_q3_check_logged) {
+                    console.info('[Skyforge] Q3 check firing — found ' + total + ' logs');
+                    skyforge_q3_check_logged = true;
+                }
                 if (task.progress !== capped) {
                     task.setProgress(capped);
                 }

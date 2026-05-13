@@ -38,7 +38,7 @@ hash = "a84c57185adc289c68e56572b3b41fbd8a10f0009db190183f03c0eb13f1cf0c"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_custom_tasks.js"
-hash = "c44628c67fa5cadf379129c9cb37b4846b63fcaa5db976560d8fa75b6cac9800"
+hash = "67a1e17f8178c3437ab9721d38c3d88065881b352002816b2cbae965a81967e9"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"

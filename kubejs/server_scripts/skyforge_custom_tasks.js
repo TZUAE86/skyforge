@@ -6,35 +6,39 @@
 // registered from KubeJS — fires every checkTimer ticks for each
 // player and updates progress.
 //
-// Event ID format: ftbquests.custom_task.<lowercase-hex-of-task-id>
-// Task IDs come from the chapter .snbt files.
+// Event-ID format: FTBQuestsEvents.customTask(<hex>, ...) where
+// <hex> is QuestObjectBase.toString() == String.format("%016X", id) —
+// UPPERCASE, exactly 16 chars, leading zeros. The task ID in the
+// chapter .snbt must match the registration string exactly.
+
+const LOGS_INGREDIENT = Ingredient.of('#minecraft:logs');
 
 // ---- Q03 (Act I, "First Light"): 16 logs of any wood type ----
-const LOG_TAG_INGREDIENT = Ingredient.of('#minecraft:logs');
-
-FTBQuestsEvents.customTask('5a11e0f101020003', event => {
+FTBQuestsEvents.customTask('5A11E0F101020003', event => {
     try {
-        event.maxProgress = 16;
-        event.checkTimer = 40; // 2s polling
-        event.check = (task, player) => {
+        event.setMaxProgress(16);
+        event.setCheckTimer(40); // 2 s polling
+        event.setEnableButton(true); // manual complete button as a safety net
+        event.setCheck((task, player) => {
             try {
                 let total = 0;
                 const inv = player.inventory;
                 const size = inv.containerSize;
                 for (let i = 0; i < size; i++) {
                     const stack = inv.getItem(i);
-                    if (stack && !stack.isEmpty() && LOG_TAG_INGREDIENT.test(stack)) {
+                    if (stack && !stack.isEmpty() && LOGS_INGREDIENT.test(stack)) {
                         total += stack.count;
                     }
                 }
                 const capped = Math.min(total, 16);
                 if (task.progress !== capped) {
-                    task.progress = capped;
+                    task.setProgress(capped);
                 }
             } catch (e) {
                 console.error('[Skyforge] Q3 log check failed: ' + e);
             }
-        };
+        });
+        console.info('[Skyforge] Q3 customTask registered (16 logs, any wood)');
     } catch (e) {
         console.error('[Skyforge] Q3 customTask registration failed: ' + e);
     }

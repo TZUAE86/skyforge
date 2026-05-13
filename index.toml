@@ -6,7 +6,7 @@ hash = "d390a9816680c40d9809630ac555ca0518997553c412053b841ed8d4a89ef35f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_01_the_charter.snbt"
-hash = "44922e5168b9e87b454e76ea6f2c8aa69ed6c720f86ba1deafa36e9c38a04c7c"
+hash = "458ee270188d0a44c8225433d7b8cb1851ee14a589c9473cf620524154807115"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_02_first_smoke.snbt"
@@ -35,6 +35,10 @@ hash = "ffa1cd7075ed4d87b3f1d69d94ebfcf46e059fab25a68e10c1bfafbafcfd2346"
 [[files]]
 file = "kubejs/server_scripts/skyforge_challenges.js"
 hash = "a84c57185adc289c68e56572b3b41fbd8a10f0009db190183f03c0eb13f1cf0c"
+
+[[files]]
+file = "kubejs/server_scripts/skyforge_custom_tasks.js"
+hash = "c44628c67fa5cadf379129c9cb37b4846b63fcaa5db976560d8fa75b6cac9800"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"
@@ -311,6 +315,11 @@ hash = "e717bb275a54a5caadaa7cf82bc34df3589f49402074adf93c31eaac43860313"
 metafile = true
 
 [[files]]
+file = "mods/ftb-xmod-compat.pw.toml"
+hash = "43287a3c5030a05b370b45ec1ab9a4a8d5c3d43e9c740aae5218f07ffd041fd2"
+metafile = true
+
+[[files]]
 file = "mods/galosphere.pw.toml"
 hash = "8c990ed08776b403cf29ae41064f8e3d1fde9d879dd0ef6eaf7ee9031bed82ae"
 metafile = true
@@ -398,6 +407,11 @@ metafile = true
 [[files]]
 file = "mods/ksyxis.pw.toml"
 hash = "24108936876681291323c2ba37f0a8da6ae4a779411e360d480f21ab145c396b"
+metafile = true
+
+[[files]]
+file = "mods/kubejs.pw.toml"
+hash = "99bea71046529d65463fc12acb505ab363c91133ebbcc1d976e49a5d33150702"
 metafile = true
 
 [[files]]
@@ -533,6 +547,11 @@ metafile = true
 [[files]]
 file = "mods/resourceful-lib.pw.toml"
 hash = "c0b066684294c33972d562e0cb08ea17b2d31bcf86cd1d6c63b8e968f0eac7a2"
+metafile = true
+
+[[files]]
+file = "mods/rhino.pw.toml"
+hash = "6b91f46291891e725189b0bd54d0db0f66925b1e785bdfa737592dfcf41a79a3"
 metafile = true
 
 [[files]]

@@ -79,13 +79,15 @@
 			title: "First Light"
 			subtitle: "Wood before iron. Always."
 			description: [
-				"Find a tree. Punch until the cuff of your sleeve gets sore. The Charter's compendium says the trick is rotation — your forearm says the trick is patience."
+				"Find an oak. Punch until the cuff of your sleeve gets sore. The Charter's compendium says the trick is rotation — your forearm says the trick is patience."
+				""
+				"Other wood types work for crafting later, but the Charter audits oak first. Bring sixteen logs."
 			]
 			icon: "minecraft:oak_log"
 			tasks: [{
 				id: "5A11E0F101020003"
 				type: "item"
-				item: "#minecraft:logs"
+				item: { Count: 1b, id: "minecraft:oak_log" }
 				count: 16L
 			}]
 			rewards: [

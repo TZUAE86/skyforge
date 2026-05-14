@@ -63,9 +63,11 @@ function countItemInInventory(player, itemId) {
     }
 }
 
-// Public API — call from other server scripts or from KubeJS console:
-//   global.skyforgeStartChallenge(player, "iron_60_per_min_for_5min")
-global.skyforgeStartChallenge = function (player, challengeId) {
+// Public-ish helper. Modern KubeJS forbids writing to `global`, so we
+// keep this as a file-scoped function. To call it from another server
+// script, copy the function or re-implement; cross-script sharing is
+// rare enough not to be worth a proper binding for Turn 2.
+function skyforgeStartChallenge(player, challengeId) {
     try {
         const def = CHALLENGES[challengeId];
         if (!def) {
@@ -91,7 +93,7 @@ global.skyforgeStartChallenge = function (player, challengeId) {
         console.error("[Skyforge] startChallenge failed: " + e);
         return false;
     }
-};
+}
 
 // Server tick: poll every CHALLENGE_TICK_HZ ticks
 let tickCounter = 0;

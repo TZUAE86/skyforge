@@ -35,11 +35,11 @@
 				""
 				"Place the Supply Camp Deluxe. Erik will start unpacking."
 			]
-			icon: "minecolonies:supplycampdeluxe"
+			icon: "minecolonies:supplycampdeployer"
 			tasks: [{
 				id: "5A11E0F103020001"
 				type: "item"
-				item: "minecolonies:supplycampdeluxe"
+				item: "minecolonies:supplycampdeployer"
 			}]
 			rewards: [
 				{ id: "5A11E0F103030001", type: "xp", xp: 50 }
@@ -131,11 +131,11 @@
 			description: [
 				"Place a Forester's Hut. The next citizen the Charter dispatches takes the job. Wood will arrive at the warehouse without you swinging the axe."
 			]
-			icon: "minecolonies:blockhutforester"
+			icon: "minecolonies:blockhutlumberjack"
 			tasks: [{
 				id: "5A11E0F103020006"
 				type: "item"
-				item: "minecolonies:blockhutforester"
+				item: "minecolonies:blockhutlumberjack"
 			}]
 			rewards: [
 				{ id: "5A11E0F103030010", type: "xp", xp: 30 }
@@ -362,7 +362,7 @@
 			description: [
 				"Have five citizens working on your fragment. The Charter audits at five — every Foreman remembers their first audit-passing roster."
 			]
-			icon: "minecolonies:citizen"
+			icon: "minecraft:player_head"
 			tasks: [{
 				id: "5A11E0F103020016"
 				type: "checkmark"
@@ -652,11 +652,11 @@
 			description: [
 				"Place a Stable's Hut (or hire a Stablemaster via Tavern). Horses and cows give the colony a way to move tonnage that doesn't run on coal."
 			]
-			icon: "minecolonies:blockhutstable"
+			icon: "minecolonies:blockhutcowboy"
 			tasks: [{
 				id: "5A11E0F103020028"
 				type: "item"
-				item: "minecolonies:blockhutstable"
+				item: "minecolonies:blockhutcowboy"
 			}]
 			rewards: [
 				{ id: "5A11E0F103030054", type: "xp", xp: 30 }
@@ -698,7 +698,7 @@
 			description: [
 				"Recruit and house ten citizens. The Charter pays you a small per-head stipend at this milestone. Spend it on bread."
 			]
-			icon: "minecolonies:citizen"
+			icon: "minecraft:player_head"
 			tasks: [{
 				id: "5A11E0F103020030"
 				type: "checkmark"
@@ -861,7 +861,7 @@
 			description: [
 				"Get your colony's happiness rating to 7 or higher. Right-click the Town Hall → Citizens tab → check the smile averages. Fed, housed, employed, defended."
 			]
-			icon: "minecolonies:citizen"
+			icon: "minecraft:player_head"
 			tasks: [{
 				id: "5A11E0F103020037"
 				type: "checkmark"

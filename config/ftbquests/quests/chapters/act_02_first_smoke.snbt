@@ -1002,7 +1002,7 @@
 			rewards: [
 				{ id: "5A11E0F102030081", type: "xp", xp: 100 }
 				{ id: "5A11E0F102030082", type: "random", table_id: 6490215866393690114L }
-				{ id: "5A11E0F102030083", type: "item", item: "minecolonies:supplycampdeluxe" }
+				{ id: "5A11E0F102030083", type: "item", item: "minecolonies:supplycampdeployer" }
 			]
 			dependencies: [
 				"5A11E0F102010021"

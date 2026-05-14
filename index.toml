@@ -10,11 +10,11 @@ hash = "22c3f94a0d8e42f35d79ee061b947257e8008f3a4c0794a15b128ca172d401ec"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_02_first_smoke.snbt"
-hash = "f0a7ffd28400234a5cf6503e746407c3038ac6aead995e5459066ffe34f7327c"
+hash = "1cf41f0b425f33c6087ad11241116a059c16244ad82c5e0df4368a5b99bf9aea"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_03_the_foreman.snbt"
-hash = "2f49ed57b2ba7cb69d8195ed5da830034272ea1efe79bd85aa1265fe3bf5cb0b"
+hash = "8f900cf32fae53c6b1d1b75b6cb1a986ee6949869499a8123f13ea58ac11440c"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -38,7 +38,7 @@ hash = "ffa1cd7075ed4d87b3f1d69d94ebfcf46e059fab25a68e10c1bfafbafcfd2346"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_challenges.js"
-hash = "a84c57185adc289c68e56572b3b41fbd8a10f0009db190183f03c0eb13f1cf0c"
+hash = "953db6db44db1a36131e4d7320072f5a0982592ad3b199dc3f85f1464652e839"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_custom_tasks.js"

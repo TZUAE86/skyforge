@@ -13,6 +13,10 @@ file = "config/ftbquests/quests/chapters/act_02_first_smoke.snbt"
 hash = "f0a7ffd28400234a5cf6503e746407c3038ac6aead995e5459066ffe34f7327c"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/act_03_the_foreman.snbt"
+hash = "2f49ed57b2ba7cb69d8195ed5da830034272ea1efe79bd85aa1265fe3bf5cb0b"
+
+[[files]]
 file = "config/ftbquests/quests/data.snbt"
 hash = "e86765d3c3791461f5581af4a0d7e20c53a166d305643a2797999a5f0ee3430c"
 
@@ -41,8 +45,12 @@ file = "kubejs/server_scripts/skyforge_custom_tasks.js"
 hash = "8ffaf80d1bf212c45d1fc99d53344e6f79b23d4b01379de143fcc7eee9536a8e"
 
 [[files]]
+file = "kubejs/server_scripts/skyforge_player_setup.js"
+hash = "cf736ec614206cc0f79a2166dc53b6221e4e1829bea12d82be4a3aa34e97924c"
+
+[[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"
-hash = "466686d280c7274142554f8ed12b4e99666602e6ef744c50c0844e3aa0e35f57"
+hash = "09f87028631f8d92beee053450adfdc4773d1aabba6507c5605eb0dfcf282681"
 
 [[files]]
 file = "mods/advancedae.pw.toml"

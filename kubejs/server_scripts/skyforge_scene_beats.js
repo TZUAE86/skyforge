@@ -46,6 +46,23 @@ const SCENE_BEATS = {
         sound: "minecraft:block.bell.use",
         pitch: 1.0,
         lore: "Act II closes. Brass alloyed, smoker lit, the Blaze Burner is awake. Erik Brassgrip is on the next survey ship."
+    },
+    // ---- Act III — The Foreman ----
+    "5A11E0F103010001": {
+        title: "The Survey Ship Lands",
+        subtitle: "Erik Brassgrip steps off.",
+        color: 0xB8A06C,
+        sound: "minecraft:entity.villager.yes",
+        pitch: 1.0,
+        lore: "Act III — The Foreman. The survey ship landed. Erik tipped his cap. The colony is filed under your name."
+    },
+    "5A11E0F103010040": {
+        title: "The Colony Is Named",
+        subtitle: "Erik tips his cap.",
+        color: 0xE8C070,
+        sound: "minecraft:block.bell.use",
+        pitch: 1.2,
+        lore: "Act III closes. The audit drone left a clean docket. The flag is raised. Act IV — Iron Bellows — begins on the first turn of a Steam Engine."
     }
 };
 

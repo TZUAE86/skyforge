@@ -1,0 +1,989 @@
+# Skyforge — Act III: The Foreman (40 quests, Turn 2 part 1).
+# TONE: Steampunk colonial. Erik Brassgrip arrives. The colony is
+# founded. Citizens are colleagues — Builder, Forester, Cook, Miner,
+# Smith, Guard. The Charter audits happiness, not just output.
+# THEME BIBLE: Create + MineColonies grow together. Domum Ornamentum
+# dresses the colony; Mechanical Arm + Deployer give the Foreman
+# their first automated colleague.
+# TODO verify all icon + task item IDs at NeoForge 21.1 mod versions.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_03_the_foreman"
+	group: "5A11E0F100000001"
+	icon: "minecolonies:blockhuttownhall"
+	id: "5A11E0F103000000"
+	images: [ ]
+	order_index: 2
+	quest_links: [ ]
+	subtitle: ["Erik tips his cap. Your colony is named."]
+	title: "Act III — The Foreman"
+	quests: [
+
+		# ---------- Q01: Scene-beat opening — Erik Arrives ----------
+		{
+			id: "5A11E0F103010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Survey Ship Lands"
+			subtitle: "Erik Brassgrip, fourteen years' service, steps off."
+			description: [
+				"You hear the rotor before you see the ship. A small Charter survey craft. A man in a brass-bound coat steps off, lifts a hammer in salute, and asks where you'd like the Supply Camp placed."
+				""
+				"Place the Supply Camp Deluxe. Erik will start unpacking."
+			]
+			icon: "minecolonies:supplycampdeluxe"
+			tasks: [{
+				id: "5A11E0F103020001"
+				type: "item"
+				item: "minecolonies:supplycampdeluxe"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030001", type: "xp", xp: 50 }
+				{ id: "5A11E0F103030002", type: "item", item: "minecolonies:blockhuttownhall" }
+			]
+			dependencies: ["5A11E0F102010040"]
+		}
+
+		# ---------- Q02: Town Hall Foundation (mechanical milestone) ----------
+		{
+			id: "5A11E0F103010002"
+			x: 0.0d
+			y: 2.0d
+			shape: "rsquare"
+			title: "The Town Hall"
+			subtitle: "Every chartered fragment needs an office."
+			description: [
+				"Place the Town Hall block. The Charter recognizes a colony from this moment. You are no longer just a Foreman with a forge — you are a Foreman with a docket."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [{
+				id: "5A11E0F103020002"
+				type: "item"
+				item: "minecolonies:blockhuttownhall"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030003", type: "xp", xp: 40 }
+				{ id: "5A11E0F103030004", type: "item", item: "minecolonies:blockhutbuilder" }
+			]
+			dependencies: ["5A11E0F103010001"]
+		}
+
+		# ---------- Q03: Name the Colony ----------
+		{
+			id: "5A11E0F103010003"
+			x: 2.0d
+			y: 2.5d
+			title: "Name the Colony"
+			subtitle: "The Charter likes a name on the docket."
+			description: [
+				"Right-click the Town Hall. The Charter's clerk asks for a name. Whatever you write — 'Brassgrip Landing', 'Fragment 0x174A', 'Erik's Hope' — goes on the survey map by the next audit."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F103020003"
+				type: "checkmark"
+				title: "Right-click the Town Hall and name the colony"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030005", type: "xp", xp: 20 }
+				{ id: "5A11E0F103030006", type: "item", item: "minecraft:name_tag" }
+			]
+			dependencies: ["5A11E0F103010002"]
+		}
+
+		# ---------- Q04: Erik's Builder Hut (mechanical milestone) ----------
+		{
+			id: "5A11E0F103010004"
+			x: 0.0d
+			y: 4.0d
+			shape: "rsquare"
+			title: "Erik's Builder Hut"
+			subtitle: "First hut. First hammer. First handshake."
+			description: [
+				"Place a Builder's Hut block near the Town Hall. Right-click → assign Erik. Approve his first build order (the hut itself)."
+				""
+				"Erik will lay the foundation. The Charter calls this 'an honest day's work for an honest day's wax-sealed docket.'"
+			]
+			icon: "minecolonies:blockhutbuilder"
+			tasks: [
+				{ id: "5A11E0F103020004", type: "item", item: "minecolonies:blockhutbuilder" }
+				{ id: "5A11E0F103020005", type: "checkmark", title: "Hire Erik (the first Builder) and approve his first build order" }
+			]
+			rewards: [
+				{ id: "5A11E0F103030007", type: "xp", xp: 50 }
+				{ id: "5A11E0F103030008", type: "random", table_id: 6490215866393690114L }
+				{ id: "5A11E0F103030009", type: "item", item: { id: "minecraft:bread", Count: 16b } }
+			]
+			dependencies: ["5A11E0F103010003"]
+		}
+
+		# ---------- Q05: The Forester's Hut ----------
+		{
+			id: "5A11E0F103010005"
+			x: -2.5d
+			y: 5.0d
+			title: "The Forester's Hut"
+			subtitle: "Wood needs a worker who likes woods."
+			description: [
+				"Place a Forester's Hut. The next citizen the Charter dispatches takes the job. Wood will arrive at the warehouse without you swinging the axe."
+			]
+			icon: "minecolonies:blockhutforester"
+			tasks: [{
+				id: "5A11E0F103020006"
+				type: "item"
+				item: "minecolonies:blockhutforester"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030010", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030011", type: "item", item: { id: "minecraft:oak_sapling", Count: 8b } }
+			]
+			dependencies: ["5A11E0F103010004"]
+		}
+
+		# ---------- Q06: The Tavern ----------
+		{
+			id: "5A11E0F103010006"
+			x: 2.5d
+			y: 5.0d
+			title: "The Tavern"
+			subtitle: "Recruiting needs ale. Or rumour. Or both."
+			description: [
+				"The Tavern is where the Charter's surveyors drink between rotations and where new colonists arrive looking for work. Place one and recruitment doubles."
+			]
+			icon: "minecolonies:blockhuttavern"
+			tasks: [{
+				id: "5A11E0F103020007"
+				type: "item"
+				item: "minecolonies:blockhuttavern"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030012", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030013", type: "item", item: { id: "farmersdelight:cooked_rice", Count: 8b } }
+			]
+			dependencies: ["5A11E0F103010004"]
+		}
+
+		# ---------- Q07: The Miner's Shaft ----------
+		{
+			id: "5A11E0F103010007"
+			x: 4.5d
+			y: 6.0d
+			title: "The Miner's Shaft"
+			subtitle: "Down where the Charter never looks."
+			description: [
+				"Place a Miner's Hut. Citizens will tunnel for cobble, iron, coal, occasionally something stranger. Don't ask what they bring up by lantern-light on a quiet shift."
+			]
+			icon: "minecolonies:blockhutminer"
+			tasks: [{
+				id: "5A11E0F103020008"
+				type: "item"
+				item: "minecolonies:blockhutminer"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030014", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030015", type: "item", item: { id: "minecraft:iron_pickaxe", Count: 1b } }
+			]
+			dependencies: ["5A11E0F103010006"]
+		}
+
+		# ---------- Q08: The Cook's Promise ----------
+		{
+			id: "5A11E0F103010008"
+			x: -4.5d
+			y: 6.0d
+			title: "The Cook's Promise"
+			subtitle: "A colony cooks together or starves together."
+			description: [
+				"Place a Cook's Hut. The Cook will take whatever raw food the colony produces and turn it into something a citizen will actually eat at 5pm."
+			]
+			icon: "minecolonies:blockhutcook"
+			tasks: [{
+				id: "5A11E0F103020009"
+				type: "item"
+				item: "minecolonies:blockhutcook"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030016", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030017", type: "item", item: { id: "farmersdelight:vegetable_soup", Count: 4b } }
+			]
+			dependencies: ["5A11E0F103010005"]
+		}
+
+		# ---------- Q09: The Farmer's Field ----------
+		{
+			id: "5A11E0F103010009"
+			x: -6.5d
+			y: 7.0d
+			title: "The Farmer's Field"
+			subtitle: "Wheat. Carrots. Potatoes. Patience."
+			description: [
+				"Place a Farmer's Hut and at least one Field block. The Farmer will plough, plant, and harvest while you sleep. The Charter calls this 'paying your back's debt.'"
+			]
+			icon: "minecolonies:blockhutfarmer"
+			tasks: [{
+				id: "5A11E0F103020010"
+				type: "item"
+				item: "minecolonies:blockhutfarmer"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030018", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030019", type: "item", item: { id: "minecraft:wheat_seeds", Count: 16b } }
+			]
+			dependencies: ["5A11E0F103010008"]
+		}
+
+		# ---------- Q10: The Smithery ----------
+		{
+			id: "5A11E0F103010010"
+			x: 6.5d
+			y: 7.0d
+			title: "The Smithery"
+			subtitle: "Iron in, tools out."
+			description: [
+				"Place the colony's Smithery. The Smith will accept iron and brass deliveries and turn them into the tools your other citizens need to do their jobs."
+			]
+			icon: "minecolonies:blockhutsmeltery"
+			tasks: [{
+				id: "5A11E0F103020011"
+				type: "item"
+				item: "minecolonies:blockhutsmeltery"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030020", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030021", type: "item", item: { id: "create:brass_ingot", Count: 8b } }
+			]
+			dependencies: ["5A11E0F103010007"]
+		}
+
+		# ---------- Q11: The Warehouse ----------
+		{
+			id: "5A11E0F103010011"
+			x: 0.0d
+			y: 5.5d
+			title: "The Warehouse"
+			subtitle: "Stock. Sort. Deliver."
+			description: [
+				"Place a Warehouse. Once the Couriers are hired, the Warehouse becomes the colony's logistics heart — everything every Citizen needs to do their job flows through it."
+			]
+			icon: "minecolonies:blockhutwarehouse"
+			tasks: [{
+				id: "5A11E0F103020012"
+				type: "item"
+				item: "minecolonies:blockhutwarehouse"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030022", type: "xp", xp: 35 }
+				{ id: "5A11E0F103030023", type: "item", item: { id: "minecraft:chest", Count: 4b } }
+			]
+			dependencies: ["5A11E0F103010004"]
+		}
+
+		# ---------- Q12: The Courier's Hut ----------
+		{
+			id: "5A11E0F103010012"
+			x: 2.0d
+			y: 6.5d
+			title: "The Courier's Hut"
+			subtitle: "Legs make the warehouse work."
+			description: [
+				"Place a Courier's Hut. Without Couriers, the Warehouse just sits there full of crates that never reach the Builder's site."
+			]
+			icon: "minecolonies:blockhutdeliveryman"
+			tasks: [{
+				id: "5A11E0F103020013"
+				type: "item"
+				item: "minecolonies:blockhutdeliveryman"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030024", type: "xp", xp: 25 }
+				{ id: "5A11E0F103030025", type: "item", item: { id: "minecraft:leather_boots", Count: 1b } }
+			]
+			dependencies: ["5A11E0F103010011"]
+		}
+
+		# ---------- Q13: The Guard Tower ----------
+		{
+			id: "5A11E0F103010013"
+			x: 4.0d
+			y: 2.5d
+			title: "The Guard Tower"
+			subtitle: "Pirates come at dusk. You staffed for it."
+			description: [
+				"Place a Guard Tower. Hire a Guard. Issue them an iron sword. Your colony's first night with a uniformed watch is the night the pirates change their flight plan."
+			]
+			icon: "minecolonies:blockhutguardtower"
+			tasks: [{
+				id: "5A11E0F103020014"
+				type: "item"
+				item: "minecolonies:blockhutguardtower"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030026", type: "xp", xp: 40 }
+				{ id: "5A11E0F103030027", type: "item", item: { id: "minecraft:iron_sword", Count: 1b } }
+			]
+			dependencies: ["5A11E0F103010002"]
+		}
+
+		# ---------- Q14: The Library ----------
+		{
+			id: "5A11E0F103010014"
+			x: -4.0d
+			y: 2.5d
+			title: "The Library"
+			subtitle: "A colony with books trains its own."
+			description: [
+				"Place a Library. Citizens train each other when there's something to read. The Charter pays a small bonus for a colony with a stocked library — call it 'institutional self-respect.'"
+			]
+			icon: "minecolonies:blockhutlibrary"
+			tasks: [{
+				id: "5A11E0F103020015"
+				type: "item"
+				item: "minecolonies:blockhutlibrary"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030028", type: "xp", xp: 25 }
+				{ id: "5A11E0F103030029", type: "item", item: { id: "minecraft:book", Count: 8b } }
+			]
+			dependencies: ["5A11E0F103010002"]
+		}
+
+		# ---------- Q15: Five Citizens ----------
+		{
+			id: "5A11E0F103010015"
+			x: 0.0d
+			y: 7.0d
+			shape: "rsquare"
+			title: "Five Citizens"
+			subtitle: "A colony that can outvote its Foreman."
+			description: [
+				"Have five citizens working on your fragment. The Charter audits at five — every Foreman remembers their first audit-passing roster."
+			]
+			icon: "minecolonies:citizen"
+			tasks: [{
+				id: "5A11E0F103020016"
+				type: "checkmark"
+				title: "Have at least 5 living citizens in the colony"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030030", type: "xp", xp: 60 }
+				{ id: "5A11E0F103030031", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F103010005"
+				"5A11E0F103010008"
+				"5A11E0F103010012"
+			]
+		}
+
+		# ---------- Q16: Town Hall Level 2 ----------
+		{
+			id: "5A11E0F103010016"
+			x: 2.5d
+			y: 7.5d
+			title: "Town Hall Level 2"
+			subtitle: "The Charter's clerk likes a fresh paint job."
+			description: [
+				"Upgrade the Town Hall to level 2. Build orders cascade — Erik will need a few days. Don't disturb him before the wax dries on the second-level docket."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [{
+				id: "5A11E0F103020017"
+				type: "checkmark"
+				title: "Upgrade Town Hall to level 2 (Erik's build order)"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030032", type: "xp", xp: 40 }
+				{ id: "5A11E0F103030033", type: "item", item: { id: "minecraft:gold_ingot", Count: 4b } }
+			]
+			dependencies: ["5A11E0F103010015"]
+		}
+
+		# ---------- Q17: Builder Hut Level 2 ----------
+		{
+			id: "5A11E0F103010017"
+			x: -2.5d
+			y: 7.5d
+			title: "Builder Hut Level 2"
+			subtitle: "Erik upgrades his own bench. He earned it."
+			description: [
+				"Erik builds his own hut up to level 2. The colony's build speed roughly doubles when his hut levels."
+			]
+			icon: "minecolonies:blockhutbuilder"
+			tasks: [{
+				id: "5A11E0F103020018"
+				type: "checkmark"
+				title: "Upgrade Erik's Builder Hut to level 2"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030034", type: "xp", xp: 40 }
+				{ id: "5A11E0F103030035", type: "item", item: { id: "create:brass_ingot", Count: 4b } }
+			]
+			dependencies: ["5A11E0F103010015"]
+		}
+
+		# ---------- Q18: Domum Ornamentum Cut ----------
+		{
+			id: "5A11E0F103010018"
+			x: -4.5d
+			y: 4.0d
+			title: "Domum Ornamentum"
+			subtitle: "Bricks with opinions."
+			description: [
+				"Domum Ornamentum lets your masons cut decorative stone into pillars, bands, friezes, cornices. The Charter calls a colony with a single DO column 'a colony with ambitions.'"
+				""
+				"Craft any Domum Ornamentum block."
+			]
+			icon: "domum_ornamentum:brick_block"
+			tasks: [{
+				id: "5A11E0F103020019"
+				type: "checkmark"
+				title: "Craft any Domum Ornamentum decorative block"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030036", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030037", type: "item", item: { id: "minecraft:stone_bricks", Count: 32b } }
+			]
+			dependencies: ["5A11E0F103010004"]
+		}
+
+		# ---------- Q19: A Roof of Slate ----------
+		{
+			id: "5A11E0F103010019"
+			x: -6.5d
+			y: 4.5d
+			title: "A Roof of Slate"
+			subtitle: "Sixteen slates, sixteen lessons in not standing under the eaves."
+			description: [
+				"Place sixteen Domum Ornamentum roof blocks somewhere in the colony — any pitch, any colour, the Charter doesn't care so long as no two adjacent slates look quite the same."
+			]
+			icon: "domum_ornamentum:brick_block"
+			tasks: [{
+				id: "5A11E0F103020020"
+				type: "checkmark"
+				title: "Place 16 Domum Ornamentum blocks on roofs"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030038", type: "xp", xp: 25 }
+				{ id: "5A11E0F103030039", type: "item", item: { id: "minecraft:stone_bricks", Count: 32b } }
+			]
+			dependencies: ["5A11E0F103010018"]
+		}
+
+		# ---------- Q20: The Mechanical Arm (Create milestone) ----------
+		{
+			id: "5A11E0F103010020"
+			x: 0.0d
+			y: 10.0d
+			shape: "rsquare"
+			title: "The Mechanical Arm"
+			subtitle: "Six joints. One purpose. Zero complaints."
+			description: [
+				"Craft a Mechanical Arm. Configure it to pick from one inventory and deposit to another. The Charter's first lesson in colleagues who never miss a shift."
+			]
+			icon: "create:mechanical_arm"
+			tasks: [{
+				id: "5A11E0F103020021"
+				type: "item"
+				item: "create:mechanical_arm"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030040", type: "xp", xp: 60 }
+				{ id: "5A11E0F103030041", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F103010015"]
+		}
+
+		# ---------- Q21: The Deployer (Create milestone) ----------
+		{
+			id: "5A11E0F103010021"
+			x: 2.5d
+			y: 10.5d
+			shape: "rsquare"
+			title: "The Deployer"
+			subtitle: "A hand on a piston. Use any tool. Place any block. Forever."
+			description: [
+				"Craft a Deployer. The Charter's surveyors call the Deployer 'the first machine that fundamentally changed what a Foreman is for' — they meant it as a compliment."
+			]
+			icon: "create:deployer"
+			tasks: [{
+				id: "5A11E0F103020022"
+				type: "item"
+				item: "create:deployer"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030042", type: "xp", xp: 50 }
+				{ id: "5A11E0F103030043", type: "item", item: "create:mechanical_arm" }
+			]
+			dependencies: ["5A11E0F103010020"]
+		}
+
+		# ---------- Q22: First Automation ----------
+		{
+			id: "5A11E0F103010022"
+			x: -2.5d
+			y: 10.5d
+			title: "First Automation"
+			subtitle: "Belt in. Deployer crafts. Belt out. The Foreman naps."
+			description: [
+				"Build a small automated assembly line using the Mechanical Arm or Deployer. Any auto-crafted item counts — sticks, gears, sandwiches, your call."
+				""
+				"Honor-system task: complete on the line that earned the nap."
+			]
+			icon: "create:mechanical_arm"
+			tasks: [{
+				id: "5A11E0F103020023"
+				type: "checkmark"
+				title: "Build a working automation line using Mechanical Arm or Deployer"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030044", type: "xp", xp: 50 }
+				{ id: "5A11E0F103030045", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F103010021"]
+		}
+
+		# ---------- Q23: First Harvest ----------
+		{
+			id: "5A11E0F103010023"
+			x: -6.5d
+			y: 8.5d
+			title: "First Harvest"
+			subtitle: "Bread on the table, audit on the docket."
+			description: [
+				"Collect sixteen wheat from the colony farm (yours or the Farmer's, the Charter doesn't separate the harvests)."
+			]
+			icon: "minecraft:wheat"
+			tasks: [{
+				id: "5A11E0F103020024"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:wheat" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F103030046", type: "xp", xp: 25 }
+				{ id: "5A11E0F103030047", type: "item", item: { id: "minecraft:hay_block", Count: 4b } }
+			]
+			dependencies: ["5A11E0F103010009"]
+		}
+
+		# ---------- Q24: Citizens Fed ----------
+		{
+			id: "5A11E0F103010024"
+			x: -4.5d
+			y: 8.5d
+			title: "Citizens Fed"
+			subtitle: "Saturation, not just calories."
+			description: [
+				"Stock the warehouse with at least eight cooked meals. A fed citizen is a working citizen — a hungry one strikes."
+			]
+			icon: "minecraft:cooked_beef"
+			tasks: [{
+				id: "5A11E0F103020025"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:cooked_beef" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F103030048", type: "xp", xp: 20 }
+				{ id: "5A11E0F103030049", type: "item", item: { id: "minecraft:cooked_beef", Count: 8b } }
+			]
+			dependencies: ["5A11E0F103010008"]
+		}
+
+		# ---------- Q25: Builder Materials ----------
+		{
+			id: "5A11E0F103010025"
+			x: -2.5d
+			y: 9.0d
+			title: "Builder Materials"
+			subtitle: "Sixty-four planks, before Erik asks again."
+			description: [
+				"Deposit 64 oak planks (or any planks) into Erik's Builder Hut inventory. He builds faster when his shelves are full."
+			]
+			icon: "minecraft:oak_planks"
+			tasks: [{
+				id: "5A11E0F103020026"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:oak_planks" }
+				count: 64L
+			}]
+			rewards: [
+				{ id: "5A11E0F103030050", type: "xp", xp: 25 }
+				{ id: "5A11E0F103030051", type: "item", item: { id: "minecraft:oak_log", Count: 16b } }
+			]
+			dependencies: ["5A11E0F103010005"]
+		}
+
+		# ---------- Q26: First Iron Tools (Smith) ----------
+		{
+			id: "5A11E0F103010026"
+			x: 6.5d
+			y: 8.5d
+			title: "First Iron Tools"
+			subtitle: "The Smith delivers. The Foreman signs."
+			description: [
+				"Deliver 8 iron ingots to the Smithery. The Smith returns with iron pickaxes, axes, and hoes for the colony's workers."
+			]
+			icon: "minecraft:iron_ingot"
+			tasks: [{
+				id: "5A11E0F103020027"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:iron_ingot" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F103030052", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030053", type: "item", item: { id: "minecraft:iron_axe", Count: 1b } }
+			]
+			dependencies: ["5A11E0F103010010"]
+		}
+
+		# ---------- Q27: The Stable ----------
+		{
+			id: "5A11E0F103010027"
+			x: 4.5d
+			y: 9.5d
+			title: "The Stable"
+			subtitle: "A horse the Foreman doesn't have to walk."
+			description: [
+				"Place a Stable's Hut (or hire a Stablemaster via Tavern). Horses and cows give the colony a way to move tonnage that doesn't run on coal."
+			]
+			icon: "minecolonies:blockhutstable"
+			tasks: [{
+				id: "5A11E0F103020028"
+				type: "item"
+				item: "minecolonies:blockhutstable"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030054", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030055", type: "item", item: { id: "minecraft:saddle", Count: 1b } }
+			]
+			dependencies: ["5A11E0F103010007"]
+		}
+
+		# ---------- Q28: The Apothecary ----------
+		{
+			id: "5A11E0F103010028"
+			x: -4.5d
+			y: 10.5d
+			title: "The Apothecary"
+			subtitle: "Tinctures for the cold months."
+			description: [
+				"Place a Plantation Hut or Florist's Hut — the Charter calls them both 'the apothecary' in field reports. Citizens will gather flowers and rare growth for the Cook and the Smith."
+			]
+			icon: "minecolonies:blockhutflorist"
+			tasks: [{
+				id: "5A11E0F103020029"
+				type: "item"
+				item: "minecolonies:blockhutflorist"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030056", type: "xp", xp: 25 }
+				{ id: "5A11E0F103030057", type: "item", item: { id: "minecraft:poppy", Count: 4b } }
+			]
+			dependencies: ["5A11E0F103010009"]
+		}
+
+		# ---------- Q29: Ten Citizens ----------
+		{
+			id: "5A11E0F103010029"
+			x: 0.0d
+			y: 11.5d
+			title: "Ten Citizens"
+			subtitle: "Double the audit. Double the headcount."
+			description: [
+				"Recruit and house ten citizens. The Charter pays you a small per-head stipend at this milestone. Spend it on bread."
+			]
+			icon: "minecolonies:citizen"
+			tasks: [{
+				id: "5A11E0F103020030"
+				type: "checkmark"
+				title: "Have 10 living citizens in the colony"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030058", type: "xp", xp: 60 }
+				{ id: "5A11E0F103030059", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F103010015"]
+		}
+
+		# ---------- Q30: The Mason's Hut ----------
+		{
+			id: "5A11E0F103010030"
+			x: -6.5d
+			y: 11.5d
+			title: "The Mason's Hut"
+			subtitle: "Stone cut to spec. Domum Ornamentum on tap."
+			description: [
+				"Place a Mason's Hut. The Mason will cut decorative Domum Ornamentum blocks on request, freeing you to do anything other than crafting friezes."
+			]
+			icon: "minecolonies:blockhutstonemason"
+			tasks: [{
+				id: "5A11E0F103020031"
+				type: "item"
+				item: "minecolonies:blockhutstonemason"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030060", type: "xp", xp: 35 }
+				{ id: "5A11E0F103030061", type: "item", item: { id: "minecraft:smooth_stone", Count: 16b } }
+			]
+			dependencies: ["5A11E0F103010018"]
+		}
+
+		# ---------- Q31: A Defended Colony ----------
+		{
+			id: "5A11E0F103010031"
+			x: 6.5d
+			y: 4.5d
+			title: "A Defended Colony"
+			subtitle: "Two Guards. One Barracks. Pirates re-route."
+			description: [
+				"Hire a second Guard. Build a Barracks Tower somewhere central. The Charter's pirate-deterrent rating goes up by one bar."
+			]
+			icon: "minecolonies:blockhutbarracks"
+			tasks: [{
+				id: "5A11E0F103020032"
+				type: "item"
+				item: "minecolonies:blockhutbarracks"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030062", type: "xp", xp: 40 }
+				{ id: "5A11E0F103030063", type: "item", item: { id: "minecraft:iron_helmet", Count: 1b } }
+			]
+			dependencies: ["5A11E0F103010013"]
+		}
+
+		# ---------- Q32: First Raid Defended ----------
+		{
+			id: "5A11E0F103010032"
+			x: 8.5d
+			y: 5.5d
+			title: "First Raid Defended"
+			subtitle: "The pirates came. The colony stood."
+			description: [
+				"Survive a colony raid event. The Charter's surveyors keep score. Erik will note the date in the build log."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F103020033"
+				type: "kill"
+				entity: "minecraft:pillager"
+				value: 3L
+			}]
+			rewards: [
+				{ id: "5A11E0F103030064", type: "xp", xp: 60 }
+				{ id: "5A11E0F103030065", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F103010031"]
+		}
+
+		# ---------- Q33: The Lumberjack Stack ----------
+		{
+			id: "5A11E0F103010033"
+			x: -4.0d
+			y: 6.5d
+			title: "The Lumberjack Stack"
+			subtitle: "Sixty-four logs, stacked by hands that aren't yours."
+			description: [
+				"Wait for the Forester to deliver at least 64 logs to your Warehouse. The Charter audits delivered tonnage, not Foreman-felled timber."
+			]
+			icon: "minecraft:oak_log"
+			tasks: [{
+				id: "5A11E0F103020034"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:oak_log" }
+				count: 64L
+			}]
+			rewards: [
+				{ id: "5A11E0F103030066", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030067", type: "item", item: { id: "minecraft:oak_log", Count: 32b } }
+			]
+			dependencies: ["5A11E0F103010005"]
+		}
+
+		# ---------- Q34: Builder Hut Level 3 ----------
+		{
+			id: "5A11E0F103010034"
+			x: -2.5d
+			y: 12.5d
+			title: "Builder Hut Level 3"
+			subtitle: "Erik draws faster than you can sign."
+			description: [
+				"Upgrade Erik's hut to level 3. By now the colony can build a five-block wall in an afternoon. The Charter calls this 'velocity.'"
+			]
+			icon: "minecolonies:blockhutbuilder"
+			tasks: [{
+				id: "5A11E0F103020035"
+				type: "checkmark"
+				title: "Upgrade Erik's Builder Hut to level 3"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030068", type: "xp", xp: 50 }
+				{ id: "5A11E0F103030069", type: "item", item: { id: "create:brass_ingot", Count: 8b } }
+			]
+			dependencies: ["5A11E0F103010017"]
+		}
+
+		# ---------- Q35: Town Hall Level 3 ----------
+		{
+			id: "5A11E0F103010035"
+			x: 2.5d
+			y: 12.5d
+			title: "Town Hall Level 3"
+			subtitle: "The clerk's office gets a second floor."
+			description: [
+				"Upgrade the Town Hall to level 3. Audits get longer. Citizens get more shifts. The Charter's stipend goes up by a small margin you won't notice until you do."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [{
+				id: "5A11E0F103020036"
+				type: "checkmark"
+				title: "Upgrade Town Hall to level 3"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030070", type: "xp", xp: 50 }
+				{ id: "5A11E0F103030071", type: "item", item: { id: "minecraft:gold_ingot", Count: 8b } }
+			]
+			dependencies: ["5A11E0F103010016"]
+		}
+
+		# ---------- Q36: A Happy Colony ----------
+		{
+			id: "5A11E0F103010036"
+			x: 4.5d
+			y: 11.5d
+			title: "A Happy Colony"
+			subtitle: "Citizens with a 7+ happiness rating audit better."
+			description: [
+				"Get your colony's happiness rating to 7 or higher. Right-click the Town Hall → Citizens tab → check the smile averages. Fed, housed, employed, defended."
+			]
+			icon: "minecolonies:citizen"
+			tasks: [{
+				id: "5A11E0F103020037"
+				type: "checkmark"
+				title: "Achieve a colony happiness rating of 7 or higher"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030072", type: "xp", xp: 40 }
+				{ id: "5A11E0F103030073", type: "item", item: { id: "farmersdelight:cake_slice", Count: 4b } }
+			]
+			dependencies: [
+				"5A11E0F103010024"
+				"5A11E0F103010029"
+			]
+		}
+
+		# ---------- Q37: The Foreman's Office (your room) ----------
+		{
+			id: "5A11E0F103010037"
+			x: -4.5d
+			y: 12.5d
+			title: "The Foreman's Office"
+			subtitle: "A door with your name on it."
+			description: [
+				"Build yourself a private room inside or beside the Town Hall — bed, desk, a chest for the Charter's binders. The Charter's apprentices say you can tell a Foreman by the state of their office."
+			]
+			icon: "minecraft:oak_door"
+			tasks: [{
+				id: "5A11E0F103020038"
+				type: "checkmark"
+				title: "Build a private room (any 4x4x3) with bed and chest"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030074", type: "xp", xp: 30 }
+				{ id: "5A11E0F103030075", type: "item", item: { id: "minecraft:painting", Count: 2b } }
+			]
+			dependencies: ["5A11E0F103010003"]
+		}
+
+		# ---------- Q38: The Trade Route Whisper ----------
+		{
+			id: "5A11E0F103010038"
+			x: 6.5d
+			y: 12.5d
+			title: "The Trade Route Whisper"
+			subtitle: "Act IV is on the docket."
+			description: [
+				"Acquire 8 iron sheets (the Mechanical Press from Act II). Erik whispers that he saw a Steam Engine schematic on a Charter clerk's desk last audit — Act IV is closer than you think."
+			]
+			icon: "create:iron_sheet"
+			tasks: [{
+				id: "5A11E0F103020039"
+				type: "item"
+				item: { Count: 1b, id: "create:iron_sheet" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F103030076", type: "xp", xp: 40 }
+				{ id: "5A11E0F103030077", type: "item", item: { id: "create:precision_mechanism", Count: 4b } }
+			]
+			dependencies: ["5A11E0F103010026"]
+		}
+
+		# ---------- Q39: Audit Day ----------
+		{
+			id: "5A11E0F103010039"
+			x: -2.5d
+			y: 14.0d
+			title: "Audit Day"
+			subtitle: "Wax seal. Cream paper. Tea."
+			description: [
+				"The Charter's audit drone arrives. Erik shakes its hand (the drone has hands, somehow). Everyone gets a small bonus and Erik makes tea in the new kitchen."
+				""
+				"Honor-system: complete this when you feel the colony has cleared every hut in the chapter."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F103020040"
+				type: "checkmark"
+				title: "All Act III huts placed, all milestones cleared"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030078", type: "xp", xp: 60 }
+				{ id: "5A11E0F103030079", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F103010030"
+				"5A11E0F103010034"
+				"5A11E0F103010035"
+				"5A11E0F103010036"
+			]
+		}
+
+		# ---------- Q40: Scene-beat finale — The Colony Is Named ----------
+		{
+			id: "5A11E0F103010040"
+			x: 0.0d
+			y: 16.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Colony Is Named"
+			subtitle: "Erik tips his cap. Your colony is named."
+			description: [
+				"The audit drone returns to the survey ship with a clean docket. The Charter's clerk files your fragment under its given name. Citizens raise a small flag above the Town Hall — none of them planned it, all of them showed up."
+				""
+				"Act IV — Iron Bellows — begins when you place a Create Steam Engine. The Charter expects steam, brass, and the first Steam 'n Rails locomotive whistle echoing off the cliffs."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [{
+				id: "5A11E0F103020041"
+				type: "checkmark"
+				title: "Stand in the Town Hall square at sunset and salute Erik"
+			}]
+			rewards: [
+				{ id: "5A11E0F103030080", type: "xp", xp: 100 }
+				{ id: "5A11E0F103030081", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F103030082", type: "item", item: { id: "create:steam_engine", Count: 1b } }
+			]
+			dependencies: [
+				"5A11E0F103010022"
+				"5A11E0F103010032"
+				"5A11E0F103010039"
+			]
+		}
+	]
+}

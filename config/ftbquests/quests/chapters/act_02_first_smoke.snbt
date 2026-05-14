@@ -1,8 +1,9 @@
-# Skyforge — Act II: First Smoke (placeholder for Turn 1b).
-# Create-tier mastered: water wheel, windmill, millstone, encased fan,
-# press, basic mixer. Scene beat: "The forge lights. Your fragment has
-# a heartbeat."
-# TODO Turn 1b: populate ~40 quests in the steampunk colonial voice.
+# Skyforge — Act II: First Smoke (40 quests, Turn 1b).
+# TONE: Steampunk colonial. The Foreman moves from hand-crank to
+# water-wheel + windmill. The workshop gets a roof, a network, and
+# a smoker. By the end, brass is alloyed and the forge breathes.
+# THEME BIBLE: Create is the spine. Press, fan, mixer, crushing wheels.
+# TODO verify all icon + task item IDs at NeoForge 21.1 mod versions.
 
 {
 	default_hide_dependency_lines: false
@@ -16,5 +17,994 @@
 	quest_links: [ ]
 	subtitle: ["The shaft turns even when you sleep."]
 	title: "Act II — First Smoke"
-	quests: [ ]
+	quests: [
+
+		# ---------- Q01: Scene-beat opening — Foundation Pour ----------
+		{
+			id: "5A11E0F102010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Foundation Pour"
+			subtitle: "Before the forge, the floor."
+			description: [
+				"The Charter's compendium opens at a new chapter. Step one: lay sixteen blocks of stone or stone bricks as the workshop floor."
+				""
+				"You will stand on this for the next thousand days. Pour it level."
+			]
+			icon: "minecraft:stone_bricks"
+			tasks: [{
+				id: "5A11E0F102020001"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:stone_bricks" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030001", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030002", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: ["5A11E0F10101001E"]
+		}
+
+		# ---------- Q02: Andesite Casing ----------
+		{
+			id: "5A11E0F102010002"
+			x: -2.0d
+			y: 1.5d
+			title: "Andesite Casing"
+			subtitle: "The workshop's bread and timber."
+			description: [
+				"Casings dress your machinery. Every fan, every mixer, every press the Charter has ever blueprinted wears one. Cut four."
+			]
+			icon: "create:andesite_casing"
+			tasks: [{
+				id: "5A11E0F102020002"
+				type: "item"
+				item: { Count: 1b, id: "create:andesite_casing" }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030003", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030004", type: "item", item: { id: "create:andesite_alloy", Count: 8b } }
+			]
+			dependencies: ["5A11E0F102010001"]
+		}
+
+		# ---------- Q03: Read the Wind (mechanical milestone — windmill) ----------
+		{
+			id: "5A11E0F102010003"
+			x: -3.0d
+			y: 3.0d
+			shape: "rsquare"
+			title: "Read the Wind"
+			subtitle: "Bearing, sails, a sky that won't sit still."
+			description: [
+				"A windmill turns when the air does. The Charter recommends them for fragments without a stream. Yours has both — build the windmill anyway. Redundancy is a kindness to your future self."
+				""
+				"Craft a Windmill Bearing."
+			]
+			icon: "create:windmill_bearing"
+			tasks: [{
+				id: "5A11E0F102020003"
+				type: "item"
+				item: "create:windmill_bearing"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030005", type: "xp", xp: 35 }
+				{ id: "5A11E0F102030006", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: ["5A11E0F102010002"]
+		}
+
+		# ---------- Q04: Twelve Sails ----------
+		{
+			id: "5A11E0F102010004"
+			x: -5.0d
+			y: 4.0d
+			title: "Twelve Sails on the Bearing"
+			subtitle: "Cloth and wood. The wind does the rest."
+			description: [
+				"Twelve sails on a Windmill Bearing is the Charter's minimum. Fewer and you fight the gearbox. More and you fight the inspector."
+			]
+			icon: "create:white_sail"
+			tasks: [{
+				id: "5A11E0F102020004"
+				type: "item"
+				item: { Count: 1b, id: "create:white_sail" }
+				count: 12L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030007", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030008", type: "item", item: { id: "minecraft:white_wool", Count: 8b } }
+			]
+			dependencies: ["5A11E0F102010003"]
+		}
+
+		# ---------- Q05: The Wheel That Drinks (mechanical milestone) ----------
+		{
+			id: "5A11E0F102010005"
+			x: 3.0d
+			y: 3.0d
+			shape: "rsquare"
+			title: "The Wheel That Drinks"
+			subtitle: "Set it on a stream. It turns forever."
+			description: [
+				"Mount a Water Wheel on a shaft, set the shaft beside flowing water, and the rotation is yours. The Charter's first lesson in a quiet engine."
+			]
+			icon: "create:water_wheel"
+			tasks: [{
+				id: "5A11E0F102020005"
+				type: "item"
+				item: "create:water_wheel"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030009", type: "xp", xp: 35 }
+				{ id: "5A11E0F102030010", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: ["5A11E0F102010002"]
+		}
+
+		# ---------- Q06: Shafts of Iron ----------
+		{
+			id: "5A11E0F102010006"
+			x: 0.0d
+			y: 2.0d
+			title: "Shafts of Iron"
+			subtitle: "Eight of them. Long ones."
+			description: [
+				"Power without delivery is wasted. Cut eight shafts. Run them where the workshop needs them."
+			]
+			icon: "create:shaft"
+			tasks: [{
+				id: "5A11E0F102020006"
+				type: "item"
+				item: { Count: 1b, id: "create:shaft" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030011", type: "xp", xp: 15 }
+				{ id: "5A11E0F102030012", type: "item", item: { id: "create:cogwheel", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010001"]
+		}
+
+		# ---------- Q07: The Encased Fan (mechanical milestone) ----------
+		{
+			id: "5A11E0F102010007"
+			x: 2.0d
+			y: 4.5d
+			shape: "rsquare"
+			title: "The Encased Fan"
+			subtitle: "Air with intent."
+			description: [
+				"An Encased Fan moves air. Over lava, it smelts. Over water, it washes. Over a campfire, it smokes. The Charter calls it the most versatile block in the catalogue."
+			]
+			icon: "create:encased_fan"
+			tasks: [{
+				id: "5A11E0F102020007"
+				type: "item"
+				item: "create:encased_fan"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030013", type: "xp", xp: 35 }
+				{ id: "5A11E0F102030014", type: "loot", table_id: "5A11E0F1A0000001" }
+			]
+			dependencies: ["5A11E0F102010005"]
+		}
+
+		# ---------- Q08: Fanned Smelting ----------
+		{
+			id: "5A11E0F102010008"
+			x: 4.0d
+			y: 5.5d
+			title: "Fanned Smelting"
+			subtitle: "Lava below, fan above. Iron out the other side."
+			description: [
+				"Drop iron ore onto a belt under an Encased Fan blowing through lava. The Charter calls this 'bulk smelting' — your back calls it relief."
+				""
+				"Collect sixteen iron ingots. Any way you want. The fan is the fast way."
+			]
+			icon: "minecraft:iron_ingot"
+			tasks: [{
+				id: "5A11E0F102020008"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:iron_ingot" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030015", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030016", type: "item", item: { id: "minecraft:bucket", Count: 1b } }
+			]
+			dependencies: ["5A11E0F102010007"]
+		}
+
+		# ---------- Q09: Fanned Washing ----------
+		{
+			id: "5A11E0F102010009"
+			x: 2.0d
+			y: 6.5d
+			title: "Fanned Washing"
+			subtitle: "Gravel, gold flakes, secrets."
+			description: [
+				"Wash gravel under an Encased Fan with water. The Charter's surveyors say the gravel of this fragment hides flint, iron, gold flakes — useful tonnage for someone patient."
+				""
+				"Collect any eight nuggets."
+			]
+			icon: "minecraft:gold_nugget"
+			tasks: [{
+				id: "5A11E0F102020009"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:gold_nugget" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030017", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030018", type: "item", item: { id: "minecraft:flint", Count: 8b } }
+			]
+			dependencies: ["5A11E0F102010007"]
+		}
+
+		# ---------- Q10: Copper at Last ----------
+		{
+			id: "5A11E0F102010010"
+			x: 0.0d
+			y: 5.0d
+			title: "Copper at Last"
+			subtitle: "Pink-grey, lightning's favorite."
+			description: [
+				"Copper is the second metal a Foreman learns. Soft when raw, brilliant when oxidised, indispensable when alloyed."
+				""
+				"Sixteen raw copper. Don't smelt it yet."
+			]
+			icon: "minecraft:raw_copper"
+			tasks: [{
+				id: "5A11E0F102020010"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:raw_copper" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030019", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030020", type: "item", item: { id: "minecraft:copper_ingot", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010001"]
+		}
+
+		# ---------- Q11: A Bag of Zinc ----------
+		{
+			id: "5A11E0F102010011"
+			x: 2.0d
+			y: 5.0d
+			title: "A Bag of Zinc"
+			subtitle: "Blue-white. The other half of brass."
+			description: [
+				"Zinc is a Create signature — find it in deepslate, or generated in some sky-fragment veins. Mine eight."
+			]
+			icon: "create:zinc_ingot"
+			tasks: [{
+				id: "5A11E0F102020011"
+				type: "item"
+				item: { Count: 1b, id: "create:zinc_ingot" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030021", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030022", type: "item", item: { id: "create:zinc_nugget", Count: 16b } }
+			]
+			dependencies: ["5A11E0F102010001"]
+		}
+
+		# ---------- Q12: The Mechanical Mixer (mechanical milestone) ----------
+		{
+			id: "5A11E0F102010012"
+			x: 0.0d
+			y: 6.5d
+			shape: "rsquare"
+			title: "The Mechanical Mixer"
+			subtitle: "Basin below, paddles above."
+			description: [
+				"A Mechanical Mixer with a Basin below it is the Charter's first chemistry set. Heat it with a Blaze Burner and you can alloy brass, cook bread, brew nostalgia."
+			]
+			icon: "create:mechanical_mixer"
+			tasks: [
+				{ id: "5A11E0F102020012", type: "item", item: "create:mechanical_mixer" }
+				{ id: "5A11E0F102020013", type: "item", item: "create:basin" }
+			]
+			rewards: [
+				{ id: "5A11E0F102030023", type: "xp", xp: 40 }
+				{ id: "5A11E0F102030024", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F102030025", type: "item", item: "create:empty_blaze_burner" }
+			]
+			dependencies: [
+				"5A11E0F102010002"
+				"5A11E0F102010006"
+			]
+		}
+
+		# ---------- Q13: First Brass ----------
+		{
+			id: "5A11E0F102010013"
+			x: 0.0d
+			y: 8.0d
+			shape: "rsquare"
+			title: "First Brass"
+			subtitle: "Copper plus zinc. Heat. Patience."
+			description: [
+				"Throw copper and zinc nuggets into a Basin under a heated Mixer. Out comes brass — the Charter's signature alloy."
+				""
+				"Smelt or alloy eight brass ingots."
+			]
+			icon: "create:brass_ingot"
+			tasks: [{
+				id: "5A11E0F102020014"
+				type: "item"
+				item: { Count: 1b, id: "create:brass_ingot" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030026", type: "xp", xp: 45 }
+				{ id: "5A11E0F102030027", type: "loot", table_id: "5A11E0F1A0000002" }
+			]
+			dependencies: [
+				"5A11E0F102010010"
+				"5A11E0F102010011"
+				"5A11E0F102010012"
+			]
+		}
+
+		# ---------- Q14: Brass Casing ----------
+		{
+			id: "5A11E0F102010014"
+			x: -2.0d
+			y: 9.0d
+			title: "Brass Casing"
+			subtitle: "Heavier than andesite. Worth the weight."
+			description: [
+				"Brass casings dress the next tier of Create machinery. Cut four. You'll need them soon."
+			]
+			icon: "create:brass_casing"
+			tasks: [{
+				id: "5A11E0F102020015"
+				type: "item"
+				item: { Count: 1b, id: "create:brass_casing" }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030028", type: "xp", xp: 30 }
+				{ id: "5A11E0F102030029", type: "item", item: { id: "create:brass_ingot", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010013"]
+		}
+
+		# ---------- Q15: The Crushing Wheels (mechanical milestone) ----------
+		{
+			id: "5A11E0F102010015"
+			x: 3.0d
+			y: 8.0d
+			shape: "rsquare"
+			title: "The Crushing Wheels"
+			subtitle: "Two wheels. Opposite spin. Anything between them, gone."
+			description: [
+				"Place two Crushing Wheels facing each other. Counter-rotate them. Drop cobble between them and it returns as gravel. Drop ore, you get more ore."
+				""
+				"Craft a pair."
+			]
+			icon: "create:crushing_wheel"
+			tasks: [{
+				id: "5A11E0F102020016"
+				type: "item"
+				item: { Count: 1b, id: "create:crushing_wheel" }
+				count: 2L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030030", type: "xp", xp: 40 }
+				{ id: "5A11E0F102030031", type: "loot", table_id: "5A11E0F1A0000002" }
+			]
+			dependencies: ["5A11E0F102010013"]
+		}
+
+		# ---------- Q16: Crushed Gravel ----------
+		{
+			id: "5A11E0F102010016"
+			x: 5.0d
+			y: 9.0d
+			title: "Crushed Gravel"
+			subtitle: "Cobble in, gravel out. The Foreman smiles."
+			description: [
+				"Run cobble through your crushing wheels. Collect sixteen gravel. The Charter calls this 'the joy of automation' — your neighbour calls it the noise complaint."
+			]
+			icon: "minecraft:gravel"
+			tasks: [{
+				id: "5A11E0F102020017"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:gravel" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030032", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030033", type: "item", item: { id: "minecraft:flint", Count: 8b } }
+			]
+			dependencies: ["5A11E0F102010015"]
+		}
+
+		# ---------- Q17: The Press Stamps Iron ----------
+		{
+			id: "5A11E0F102010017"
+			x: -2.0d
+			y: 5.5d
+			title: "The Press Stamps Iron"
+			subtitle: "Sixteen sheets. Each one a Foreman's badge."
+			description: [
+				"Set iron ingots on a belt under the Mechanical Press from Act I. Iron sheets out. The Charter pays better per sheet than per ingot."
+			]
+			icon: "create:iron_sheet"
+			tasks: [{
+				id: "5A11E0F102020018"
+				type: "item"
+				item: { Count: 1b, id: "create:iron_sheet" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030034", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030035", type: "item", item: { id: "create:iron_sheet", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010008"]
+		}
+
+		# ---------- Q18: Brass Funnel ----------
+		{
+			id: "5A11E0F102010018"
+			x: -4.0d
+			y: 10.0d
+			title: "Brass Funnel"
+			subtitle: "Andesite's smarter cousin."
+			description: [
+				"Brass funnels filter items. Drop one onto a belt, slot a filter into it, only what matches passes. The Charter's first lesson in logistics."
+			]
+			icon: "create:brass_funnel"
+			tasks: [{
+				id: "5A11E0F102020019"
+				type: "item"
+				item: "create:brass_funnel"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030036", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030037", type: "item", item: "create:brass_tunnel" }
+			]
+			dependencies: ["5A11E0F102010014"]
+		}
+
+		# ---------- Q19: Brass Tunnel ----------
+		{
+			id: "5A11E0F102010019"
+			x: -2.0d
+			y: 11.0d
+			title: "Brass Tunnel"
+			subtitle: "Split a belt three ways. Without raising your voice."
+			description: [
+				"Brass tunnels split conveyed items down branching belts. The Charter calls this a 'sorting yard' on paper, a 'mess of brass' in practice."
+			]
+			icon: "create:brass_tunnel"
+			tasks: [{
+				id: "5A11E0F102020020"
+				type: "item"
+				item: "create:brass_tunnel"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030038", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030039", type: "item", item: "create:filter" }
+			]
+			dependencies: ["5A11E0F102010018"]
+		}
+
+		# ---------- Q20: The Brass Filter ----------
+		{
+			id: "5A11E0F102010020"
+			x: 0.0d
+			y: 11.5d
+			title: "The Brass Filter"
+			subtitle: "Tell the funnel what to want."
+			description: [
+				"A filter says 'pass iron, refuse copper.' Slot it in the funnel above and watch the chaos sort itself."
+			]
+			icon: "create:filter"
+			tasks: [{
+				id: "5A11E0F102020021"
+				type: "item"
+				item: "create:filter"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030040", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030041", type: "item", item: "create:attribute_filter" }
+			]
+			dependencies: ["5A11E0F102010019"]
+		}
+
+		# ---------- Q21: A Belt to Sort ----------
+		{
+			id: "5A11E0F102010021"
+			x: 2.0d
+			y: 11.0d
+			title: "A Belt to Sort"
+			subtitle: "Chest in. Two chests out. Iron left, copper right."
+			description: [
+				"Set up a sorting line. Chest → belt → tunnel → filtered funnels → two output chests. Iron one way, copper the other."
+				""
+				"The Charter's auditors don't grade you on this — your neighbour will."
+			]
+			icon: "create:belt_connector"
+			tasks: [{
+				id: "5A11E0F102020022"
+				type: "checkmark"
+				title: "Build a sorting line with two filtered outputs"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030042", type: "xp", xp: 35 }
+				{ id: "5A11E0F102030043", type: "loot", table_id: "5A11E0F1A0000002" }
+			]
+			dependencies: ["5A11E0F102010020"]
+		}
+
+		# ---------- Q22: Mason's Polish ----------
+		{
+			id: "5A11E0F102010022"
+			x: 5.0d
+			y: 6.5d
+			title: "Mason's Polish"
+			subtitle: "Cobble looks better in a cravat."
+			description: [
+				"Run andesite through the millstone or fan-stones it on its own. Polished andesite is the Charter's preferred wall finish for officers' quarters."
+				""
+				"Sixteen blocks of polished andesite."
+			]
+			icon: "minecraft:polished_andesite"
+			tasks: [{
+				id: "5A11E0F102020023"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:polished_andesite" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030044", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030045", type: "item", item: { id: "minecraft:polished_andesite", Count: 16b } }
+			]
+			dependencies: ["5A11E0F102010001"]
+		}
+
+		# ---------- Q23: Workshop Door ----------
+		{
+			id: "5A11E0F102010023"
+			x: -4.0d
+			y: 6.5d
+			title: "Workshop Door"
+			subtitle: "Hinges and good intentions."
+			description: [
+				"The workshop needs a door. Wooden, iron, fancy — the Charter only cares that you can close it at night."
+			]
+			icon: "minecraft:iron_door"
+			tasks: [{
+				id: "5A11E0F102020024"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:iron_door" }
+			}]
+			rewards: [
+				{ id: "5A11E0F102030046", type: "xp", xp: 15 }
+				{ id: "5A11E0F102030047", type: "item", item: { id: "minecraft:oak_door", Count: 2b } }
+			]
+			dependencies: ["5A11E0F102010001"]
+		}
+
+		# ---------- Q24: Workshop Glass ----------
+		{
+			id: "5A11E0F102010024"
+			x: 4.0d
+			y: 2.0d
+			title: "Workshop Glass"
+			subtitle: "Sky light without sky risk."
+			description: [
+				"Six panes of glass set into the workshop walls. The Charter's apprentices learn faster when they can see daylight."
+			]
+			icon: "minecraft:glass"
+			tasks: [{
+				id: "5A11E0F102020025"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:glass" }
+				count: 6L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030048", type: "xp", xp: 15 }
+				{ id: "5A11E0F102030049", type: "item", item: { id: "minecraft:glass", Count: 16b } }
+			]
+			dependencies: ["5A11E0F102010001"]
+		}
+
+		# ---------- Q25: A Smithing Anvil ----------
+		{
+			id: "5A11E0F102010025"
+			x: 6.5d
+			y: 7.5d
+			title: "A Smithing Anvil"
+			subtitle: "Heavy. Loud. Indispensable."
+			description: [
+				"Place an anvil in the workshop. The Charter's bestiary calls anvils 'the only block that bites back when you fall on it.'"
+			]
+			icon: "minecraft:anvil"
+			tasks: [{
+				id: "5A11E0F102020026"
+				type: "item"
+				item: "minecraft:anvil"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030050", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030051", type: "item", item: "minecraft:experience_bottle" }
+			]
+			dependencies: ["5A11E0F102010008"]
+		}
+
+		# ---------- Q26: The Smoker's Promise ----------
+		{
+			id: "5A11E0F102010026"
+			x: -5.0d
+			y: 7.5d
+			title: "The Smoker's Promise"
+			subtitle: "Iron, oak, hunger."
+			description: [
+				"A smoker cooks faster than a furnace. The Charter never explained why and a Foreman never asked."
+			]
+			icon: "minecraft:smoker"
+			tasks: [{
+				id: "5A11E0F102020027"
+				type: "item"
+				item: "minecraft:smoker"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030052", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030053", type: "item", item: { id: "minecraft:cooked_beef", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010008"]
+		}
+
+		# ---------- Q27: Farmer's Delight Cooking Pot ----------
+		{
+			id: "5A11E0F102010027"
+			x: -5.0d
+			y: 9.0d
+			title: "The Cooking Pot"
+			subtitle: "Stew, soup, civility."
+			description: [
+				"Farmer's Delight ships with a cooking pot. Place one. The Charter's apprentices, given the choice, will always pick stew."
+			]
+			icon: "farmersdelight:cooking_pot"
+			tasks: [{
+				id: "5A11E0F102020028"
+				type: "item"
+				item: "farmersdelight:cooking_pot"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030054", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030055", type: "item", item: { id: "farmersdelight:cooked_rice", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010008"]
+		}
+
+		# ---------- Q28: Field Audit ----------
+		{
+			id: "5A11E0F102010028"
+			x: -7.0d
+			y: 9.0d
+			title: "Field Audit"
+			subtitle: "Four meals. Four hungry colonists."
+			description: [
+				"Cook four Farmer's Delight meals (any variety). The Charter's audit drone notes well-fed Foremen for promotion."
+			]
+			icon: "farmersdelight:vegetable_soup"
+			tasks: [{
+				id: "5A11E0F102020029"
+				type: "item"
+				item: { Count: 1b, id: "farmersdelight:vegetable_soup" }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030056", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030057", type: "item", item: { id: "farmersdelight:bread", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010027"]
+		}
+
+		# ---------- Q29: The Lectern Controller ----------
+		{
+			id: "5A11E0F102010029"
+			x: 0.0d
+			y: 9.5d
+			title: "The Lectern Controller"
+			subtitle: "Read the network. Change the filter. Walk away."
+			description: [
+				"The Lectern Controller lets you reconfigure filters from across the room. The Charter recommends one in every workshop — busywork is the enemy of innovation."
+			]
+			icon: "create:lectern_controller"
+			tasks: [{
+				id: "5A11E0F102020030"
+				type: "item"
+				item: "create:lectern_controller"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030058", type: "xp", xp: 30 }
+				{ id: "5A11E0F102030059", type: "item", item: "create:linked_controller" }
+			]
+			dependencies: ["5A11E0F102010014"]
+		}
+
+		# ---------- Q30: A Steam-Bound Promise ----------
+		{
+			id: "5A11E0F102010030"
+			x: 3.0d
+			y: 10.5d
+			title: "A Steam-Bound Promise"
+			subtitle: "An empty burner. A flame. A promise of trains."
+			description: [
+				"Place an Empty Blaze Burner. Light it with any flame-bearing item or by catching a blaze. The Charter calls a lit Blaze Burner 'the small flame that warms the big alloy.'"
+				""
+				"Act IV will ask you for steam. This is the first whisper."
+			]
+			icon: "create:blaze_burner"
+			tasks: [{
+				id: "5A11E0F102020031"
+				type: "item"
+				item: "create:empty_blaze_burner"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030060", type: "xp", xp: 30 }
+				{ id: "5A11E0F102030061", type: "item", item: { id: "minecraft:blaze_powder", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010013"]
+		}
+
+		# ---------- Q31: The Lights Go Up ----------
+		{
+			id: "5A11E0F102010031"
+			x: 7.0d
+			y: 5.0d
+			title: "The Lights Go Up"
+			subtitle: "Sixteen torches. The workshop has corners now."
+			description: [
+				"Place sixteen torches inside the workshop. The Charter's safety inspector visits at dusk and writes citations by lamp-light."
+			]
+			icon: "minecraft:torch"
+			tasks: [{
+				id: "5A11E0F102020032"
+				type: "checkmark"
+				title: "Place 16 torches around the workshop interior"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030062", type: "xp", xp: 15 }
+				{ id: "5A11E0F102030063", type: "item", item: { id: "minecraft:lantern", Count: 2b } }
+			]
+			dependencies: ["5A11E0F102010001"]
+		}
+
+		# ---------- Q32: Sky-Pirate Reprisal ----------
+		{
+			id: "5A11E0F102010032"
+			x: 7.0d
+			y: 11.0d
+			title: "Sky-Pirate Reprisal"
+			subtitle: "They come back. You come back harder."
+			description: [
+				"They probed your fragment in Act I and lost. They will probe again. Make sure they lose again — five hostile mobs, one night."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F102020033"
+				type: "kill"
+				entity: "minecraft:zombie"
+				value: 5L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030064", type: "xp", xp: 40 }
+				{ id: "5A11E0F102030065", type: "loot", table_id: "5A11E0F1A0000002" }
+			]
+			dependencies: ["5A11E0F102010025"]
+		}
+
+		# ---------- Q33: Reinforced Wall ----------
+		{
+			id: "5A11E0F102010033"
+			x: 5.0d
+			y: 4.0d
+			title: "Reinforced Wall"
+			subtitle: "Iron bars where the pirates squint."
+			description: [
+				"Place eight iron bars somewhere along the workshop perimeter. The Charter calls these 'visibility deterrents' — pirates avoid lit, barred claims."
+			]
+			icon: "minecraft:iron_bars"
+			tasks: [{
+				id: "5A11E0F102020034"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:iron_bars" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030066", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030067", type: "item", item: { id: "minecraft:iron_bars", Count: 8b } }
+			]
+			dependencies: ["5A11E0F102010008"]
+		}
+
+		# ---------- Q34: A First Fluid Tank ----------
+		{
+			id: "5A11E0F102010034"
+			x: -3.0d
+			y: 8.0d
+			title: "A First Fluid Tank"
+			subtitle: "Water in. Water on tap. Water out."
+			description: [
+				"A Create Fluid Tank holds water, lava, or honey — and feeds them into pipes when the Charter asks. Build one."
+			]
+			icon: "create:fluid_tank"
+			tasks: [{
+				id: "5A11E0F102020035"
+				type: "item"
+				item: "create:fluid_tank"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030068", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030069", type: "item", item: { id: "create:fluid_pipe", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010014"]
+		}
+
+		# ---------- Q35: Saplings of Variety ----------
+		{
+			id: "5A11E0F102010035"
+			x: -7.0d
+			y: 5.0d
+			title: "Saplings of Variety"
+			subtitle: "Eight saplings. Four species. One forest."
+			description: [
+				"The Charter's surveyors note: a fragment with one tree species is a fragment that pirates target for monoculture timber. Plant four species, eight saplings, and confuse the auditor."
+			]
+			icon: "minecraft:birch_sapling"
+			tasks: [{
+				id: "5A11E0F102020036"
+				type: "checkmark"
+				title: "Plant eight saplings across at least four species"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030070", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030071", type: "item", item: { id: "minecraft:bone_meal", Count: 16b } }
+			]
+			dependencies: ["5A11E0F102010001"]
+		}
+
+		# ---------- Q36: The Compendium Reads Back ----------
+		{
+			id: "5A11E0F102010036"
+			x: 6.0d
+			y: 1.0d
+			title: "The Compendium Reads Back"
+			subtitle: "Press W to ponder. The Charter does."
+			description: [
+				"Right-click any Create block in your inventory with the wrench equipped to open the Ponder UI. Read at least one page. The Charter audits comprehension, not just possession."
+			]
+			icon: "create:goggles"
+			tasks: [{
+				id: "5A11E0F102020037"
+				type: "checkmark"
+				title: "Open Ponder for any Create block"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030072", type: "xp", xp: 15 }
+				{ id: "5A11E0F102030073", type: "item", item: "create:goggles" }
+			]
+			dependencies: ["5A11E0F102010002"]
+		}
+
+		# ---------- Q37: First Rose Quartz ----------
+		{
+			id: "5A11E0F102010037"
+			x: 5.0d
+			y: 12.0d
+			title: "First Rose Quartz"
+			subtitle: "Pink, faceted, electrical."
+			description: [
+				"Throw a redstone dust and quartz under a heated mixer — out comes Rose Quartz. The Charter calls it 'the gem that listens to current.'"
+			]
+			icon: "create:rose_quartz"
+			tasks: [{
+				id: "5A11E0F102020038"
+				type: "item"
+				item: { Count: 1b, id: "create:rose_quartz" }
+				count: 2L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030074", type: "xp", xp: 30 }
+				{ id: "5A11E0F102030075", type: "item", item: { id: "minecraft:redstone", Count: 16b } }
+			]
+			dependencies: ["5A11E0F102010013"]
+		}
+
+		# ---------- Q38: The Wrench Knows ----------
+		{
+			id: "5A11E0F102010038"
+			x: 8.0d
+			y: 8.5d
+			title: "The Wrench Knows"
+			subtitle: "Disassembly is engineering at its most humble."
+			description: [
+				"Pick up a Create block with the Wrench — right-click while crouching. Place it again. The Charter's apprentices learn this in their first week, the Foreman re-learns it every Sunday."
+			]
+			icon: "create:wrench"
+			tasks: [{
+				id: "5A11E0F102020039"
+				type: "checkmark"
+				title: "Pick up and replace a Create block with the wrench"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030076", type: "xp", xp: 15 }
+				{ id: "5A11E0F102030077", type: "item", item: "create:wrench" }
+			]
+			dependencies: ["5A11E0F102010003"]
+		}
+
+		# ---------- Q39: Stockpiled Workshop ----------
+		{
+			id: "5A11E0F102010039"
+			x: -2.0d
+			y: 12.5d
+			title: "Stockpiled Workshop"
+			subtitle: "A barrel of iron. A barrel of copper. A barrel of brass."
+			description: [
+				"The Charter's audit looks favourably on Foremen whose workshop has visible reserves. Sixteen iron ingots, sixteen copper ingots, eight brass ingots — held, not consumed."
+			]
+			icon: "minecraft:barrel"
+			tasks: [
+				{ id: "5A11E0F102020040", type: "item", item: { Count: 1b, id: "minecraft:iron_ingot" }, count: 16L }
+				{ id: "5A11E0F102020041", type: "item", item: { Count: 1b, id: "minecraft:copper_ingot" }, count: 16L }
+				{ id: "5A11E0F102020042", type: "item", item: { Count: 1b, id: "create:brass_ingot" }, count: 8L }
+			]
+			rewards: [
+				{ id: "5A11E0F102030078", type: "xp", xp: 50 }
+				{ id: "5A11E0F102030079", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F102030080", type: "item", item: "minecraft:barrel" }
+			]
+			dependencies: [
+				"5A11E0F102010008"
+				"5A11E0F102010010"
+				"5A11E0F102010013"
+			]
+		}
+
+		# ---------- Q40: Scene-beat finale — Smoke Rises ----------
+		{
+			id: "5A11E0F102010040"
+			x: 0.0d
+			y: 14.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "Smoke Rises"
+			subtitle: "The forge lights. Your fragment has a heartbeat."
+			description: [
+				"You stand in the doorway with brass in your hand and the sound of the water wheel behind you. A column of smoke from the smoker, a hum from the mixer, the thump of the press."
+				""
+				"Place a lit Blaze Burner anywhere on the fragment. The Charter sees the smoke. Act III begins when a Builder named Erik Brassgrip steps off the next survey ship with a docket in his hand."
+			]
+			icon: "create:blaze_burner"
+			tasks: [{
+				id: "5A11E0F102020043"
+				type: "item"
+				item: "create:blaze_burner"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030081", type: "xp", xp: 100 }
+				{ id: "5A11E0F102030082", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F102030083", type: "item", item: "minecolonies:supplycampdeluxe" }
+			]
+			dependencies: [
+				"5A11E0F102010021"
+				"5A11E0F102010030"
+				"5A11E0F102010039"
+			]
+		}
+	]
 }

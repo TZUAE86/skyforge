@@ -10,7 +10,7 @@ hash = "181ec0d5a3b52f99714d840e1e353a36cb0ba60cb7ac581bb7ec03d1220f055e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_02_first_smoke.snbt"
-hash = "994230a40738fee186affac35bb3785997b82c299d1a83975144a1debc3adbfb"
+hash = "67774d4bf3b77a77dc821ae989e8d808aab514373711d217cbd349540166c4a7"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -42,7 +42,7 @@ hash = "8ffaf80d1bf212c45d1fc99d53344e6f79b23d4b01379de143fcc7eee9536a8e"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"
-hash = "8a940a4e115992f476ea205b8abdec7f897f132b0bda74648ad1d840c102e17f"
+hash = "466686d280c7274142554f8ed12b4e99666602e6ef744c50c0844e3aa0e35f57"
 
 [[files]]
 file = "mods/advancedae.pw.toml"

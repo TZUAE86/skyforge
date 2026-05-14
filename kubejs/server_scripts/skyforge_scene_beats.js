@@ -4,12 +4,16 @@
 // declared in the Theme Bible). Plays a sound, sends a centered title,
 // appends a hidden lore entry to a per-player log readable via /skyforge lore.
 //
+// Event target = the quest's uppercase 16-char hex ID (per FTB Quests'
+// QuestObjectBase.toString() = String.format("%016X", id)). We register
+// one handler per beat quest. Inside the handler, event.notifiedPlayers
+// is the list to apply effects to.
+//
 // All side effects wrapped in try/catch so a handler error never blocks
 // the quest's reward delivery.
 
-// quest_id -> { title, subtitle, color (TextColor argb), sound, pitch, lore }
 const SCENE_BEATS = {
-    // Act I — The Charter
+    // ---- Act I — The Charter ----
     "5A11E0F101010001": {
         title: "Foreman of Fragment 0x174A",
         subtitle: "Filed.",
@@ -25,108 +29,99 @@ const SCENE_BEATS = {
         sound: "minecraft:block.bell.use",
         pitch: 1.1,
         lore: "Act I closes. A Mechanical Press stands where bare stone used to. Act II begins."
+    },
+    // ---- Act II — First Smoke ----
+    "5A11E0F102010001": {
+        title: "The Foundation Pour",
+        subtitle: "Stone-bound and patient.",
+        color: 0xA9B58E,
+        sound: "minecraft:block.stone.place",
+        pitch: 0.9,
+        lore: "Act II — First Smoke. The workshop has a floor. The shaft will turn even when you sleep."
+    },
+    "5A11E0F102010040": {
+        title: "Smoke Rises",
+        subtitle: "The forge breathes.",
+        color: 0xE08040,
+        sound: "minecraft:block.bell.use",
+        pitch: 1.0,
+        lore: "Act II closes. Brass alloyed, smoker lit, the Blaze Burner is awake. Erik Brassgrip is on the next survey ship."
     }
 };
 
-const LORE_FILE = "skyforge/lore_log.json";
-
-function loadLore(server) {
+function fireSceneBeat(player, beat) {
+    if (!player || !beat) return;
+    var hexColor = '#' + beat.color.toString(16).padStart(6, '0');
     try {
-        const data = server.persistentData;
-        const raw = data.getString("skyforge_lore");
-        if (!raw || raw.length === 0) return {};
-        return JSON.parse(raw);
+        player.playNotifySound(beat.sound, 'master', 1.0, beat.pitch);
     } catch (e) {
-        console.error("[Skyforge] Failed to load lore log: " + e);
-        return {};
+        console.error('[Skyforge] beat sound failed: ' + e);
+    }
+    try {
+        player.runCommandSilent('title @s times 10 60 20');
+        player.runCommandSilent('title @s subtitle {"text":"' + beat.subtitle + '","color":"' + hexColor + '"}');
+        player.runCommandSilent('title @s title {"text":"' + beat.title + '","color":"' + hexColor + '","bold":true}');
+    } catch (e) {
+        console.error('[Skyforge] beat title failed: ' + e);
+    }
+    try {
+        var server = player.server;
+        var raw = server.persistentData.getString('skyforge_lore');
+        var lore = (raw && raw.length > 0) ? JSON.parse(raw) : {};
+        var uuid = player.uuid.toString();
+        if (!lore[uuid]) lore[uuid] = [];
+        lore[uuid].push({ ts: Date.now(), text: beat.lore });
+        server.persistentData.putString('skyforge_lore', JSON.stringify(lore));
+    } catch (e) {
+        console.error('[Skyforge] beat lore log failed: ' + e);
     }
 }
 
-function saveLore(server, lore) {
-    try {
-        server.persistentData.putString("skyforge_lore", JSON.stringify(lore));
-    } catch (e) {
-        console.error("[Skyforge] Failed to save lore log: " + e);
-    }
-}
-
-FTBQuestsEvents.completed("ftbquests:quest", event => {
-    try {
-        const beat = SCENE_BEATS[event.quest.id];
-        if (!beat) return;
-
-        const player = event.player;
-        if (!player) return;
-
-        // 1. Sound
+// Register one handler per scene-beat quest.
+Object.keys(SCENE_BEATS).forEach(function(qid) {
+    FTBQuestsEvents.completed(qid, function(event) {
         try {
-            player.playNotifySound(beat.sound, "master", 1.0, beat.pitch);
+            var beat = SCENE_BEATS[qid];
+            var players = event.notifiedPlayers;
+            for (var i = 0; i < players.size(); i++) {
+                fireSceneBeat(players.get(i), beat);
+            }
         } catch (e) {
-            console.error("[Skyforge] scene-beat sound failed: " + e);
+            console.error('[Skyforge] scene-beat ' + qid + ' failed: ' + e);
         }
-
-        // 2. Centered title
-        try {
-            player.runCommandSilent(
-                `title @s times 10 60 20`
-            );
-            player.runCommandSilent(
-                `title @s subtitle {"text":"${beat.subtitle}","color":"#${beat.color.toString(16).padStart(6, "0")}"}`
-            );
-            player.runCommandSilent(
-                `title @s title {"text":"${beat.title}","color":"#${beat.color.toString(16).padStart(6, "0")}","bold":true}`
-            );
-        } catch (e) {
-            console.error("[Skyforge] scene-beat title failed: " + e);
-        }
-
-        // 3. Lore log
-        try {
-            const server = player.server;
-            const lore = loadLore(server);
-            const key = player.uuid.toString();
-            if (!lore[key]) lore[key] = [];
-            lore[key].push({
-                quest: event.quest.id,
-                ts: Date.now(),
-                text: beat.lore
-            });
-            saveLore(server, lore);
-        } catch (e) {
-            console.error("[Skyforge] scene-beat lore log failed: " + e);
-        }
-    } catch (e) {
-        console.error("[Skyforge] scene-beat handler crashed: " + e);
-    }
+    });
 });
 
-// /skyforge lore  -> prints the per-player log to chat
-ServerEvents.commandRegistry(event => {
+console.info('[Skyforge] scene-beat handlers registered for ' + Object.keys(SCENE_BEATS).length + ' quests');
+
+// ---- /skyforge lore — show per-player log ----
+ServerEvents.commandRegistry(function(event) {
     try {
-        const { commands: Commands, arguments: Arguments } = event;
+        var Commands = event.commands;
         event.register(
-            Commands.literal("skyforge")
-                .then(Commands.literal("lore").executes(ctx => {
+            Commands.literal('skyforge')
+                .then(Commands.literal('lore').executes(function(ctx) {
                     try {
-                        const player = ctx.source.playerOrException;
-                        const lore = loadLore(player.server);
-                        const entries = lore[player.uuid.toString()] || [];
+                        var player = ctx.source.playerOrException;
+                        var raw = player.server.persistentData.getString('skyforge_lore');
+                        var lore = (raw && raw.length > 0) ? JSON.parse(raw) : {};
+                        var entries = lore[player.uuid.toString()] || [];
                         if (entries.length === 0) {
-                            player.tell("§7No lore entries yet, Foreman.");
+                            player.tell('§7No lore entries yet, Foreman.');
                         } else {
-                            player.tell("§6=== Skyforge Lore Log ===");
-                            for (const e of entries) {
-                                player.tell("§e• §f" + e.text);
+                            player.tell('§6=== Skyforge Lore Log ===');
+                            for (var i = 0; i < entries.length; i++) {
+                                player.tell('§e• §f' + entries[i].text);
                             }
                         }
                         return 1;
                     } catch (e) {
-                        console.error("[Skyforge] /skyforge lore failed: " + e);
+                        console.error('[Skyforge] /skyforge lore failed: ' + e);
                         return 0;
                     }
                 }))
         );
     } catch (e) {
-        console.error("[Skyforge] command registration failed: " + e);
+        console.error('[Skyforge] command registration failed: ' + e);
     }
 });

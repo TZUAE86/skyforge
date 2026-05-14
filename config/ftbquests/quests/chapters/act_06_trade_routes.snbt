@@ -104,11 +104,11 @@
 			description: [
 				"Place a MineColonies Restaurant. The Restaurant cooks food for the colony's workers without the Cook running between sites."
 			]
-			icon: "minecolonies:blockhutrestaurant"
+			icon: "minecolonies:blockhutkitchen"
 			tasks: [{
 				id: "5A11E0F106020004"
 				type: "item"
-				item: "minecolonies:blockhutrestaurant"
+				item: "minecolonies:blockhutkitchen"
 			}]
 			rewards: [
 				{ id: "5A11E0F106030007", type: "xp", xp: 30 }
@@ -311,11 +311,11 @@
 			description: [
 				"Craft a Modular Routers Item Router. Configure it with one module — sender, receiver, or filter. The Foreman's warehouse becomes self-organising."
 			]
-			icon: "modularrouters:item_router"
+			icon: "modularrouters:modular_router"
 			tasks: [{
 				id: "5A11E0F106020013"
 				type: "item"
-				item: "modularrouters:item_router"
+				item: "modularrouters:modular_router"
 			}]
 			rewards: [
 				{ id: "5A11E0F106030025", type: "xp", xp: 40 }
@@ -342,7 +342,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F106030027", type: "xp", xp: 30 }
-				{ id: "5A11E0F106030028", type: "item", item: "modularrouters:filter_module" }
+				{ id: "5A11E0F106030028", type: "item", item: "modularrouters:tag_filter" }
 			]
 			dependencies: ["5A11E0F106010013"]
 		}
@@ -452,11 +452,11 @@
 			description: [
 				"Place a MineColonies Trader (or Marketplace) Hut. Citizens negotiate with outside vendors on the colony's behalf."
 			]
-			icon: "minecolonies:blockhutmarketplace"
+			icon: "minecolonies:blockhuttavern"
 			tasks: [{
 				id: "5A11E0F106020019"
-				type: "item"
-				item: "minecolonies:blockhutmarketplace"
+				type: "checkmark"
+				title: "Designate any colony hut as the trading post (Tavern + Warehouse handles trade in this MC version)"
 			}]
 			rewards: [
 				{ id: "5A11E0F106030037", type: "xp", xp: 35 }
@@ -784,7 +784,7 @@
 			description: [
 				"Upgrade the Restaurant to level 3. Citizens travel from neighbour fragments for the Cook's stew. The Charter takes a small endorsement fee."
 			]
-			icon: "minecolonies:blockhutrestaurant"
+			icon: "minecolonies:blockhutkitchen"
 			tasks: [{
 				id: "5A11E0F106020033"
 				type: "checkmark"

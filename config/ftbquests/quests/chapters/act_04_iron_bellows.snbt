@@ -296,11 +296,11 @@
 			description: [
 				"Craft a Cast Iron Cannon — Big Cannons' first lesson. The Charter does not care if you fire it. Yet."
 			]
-			icon: "createbigcannons:cast_iron_cannon"
+			icon: "createbigcannons:cast_iron_cannon_barrel"
 			tasks: [{
 				id: "5A11E0F104020012"
 				type: "item"
-				item: "createbigcannons:cast_iron_cannon"
+				item: "createbigcannons:cast_iron_cannon_barrel"
 			}]
 			rewards: [
 				{ id: "5A11E0F104030023", type: "xp", xp: 40 }
@@ -366,7 +366,7 @@
 			description: [
 				"Fire the cannon at least once at a target. Hit, miss — the Charter only audits the boom."
 			]
-			icon: "createbigcannons:cannonball"
+			icon: "createbigcannons:shot_balls"
 			tasks: [{
 				id: "5A11E0F104020015"
 				type: "checkmark"
@@ -389,11 +389,11 @@
 			description: [
 				"Craft an Autocannon. Heavier than the cast-iron, faster than a Foreman's pulse. The Charter recommends a Guard Tower nearby."
 			]
-			icon: "createbigcannons:autocannon"
+			icon: "createbigcannons:cast_iron_autocannon_barrel"
 			tasks: [{
 				id: "5A11E0F104020016"
 				type: "item"
-				item: "createbigcannons:autocannon"
+				item: "createbigcannons:cast_iron_autocannon_barrel"
 			}]
 			rewards: [
 				{ id: "5A11E0F104030031", type: "xp", xp: 50 }
@@ -505,11 +505,11 @@
 			description: [
 				"Craft a Diesel Generator. With the right fuel — biodiesel, gasoline, fuel oil — it will spin shafts faster than any blaze-burner-fed boiler. The Charter respects efficiency."
 			]
-			icon: "createdieselgenerators:diesel_generator"
+			icon: "minecraft:dispenser"
 			tasks: [{
 				id: "5A11E0F104020021"
-				type: "item"
-				item: "createdieselgenerators:diesel_generator"
+				type: "checkmark"
+				title: "Place any Create: Diesel Generators engine block (Portable Engine or similar)"
 			}]
 			rewards: [
 				{ id: "5A11E0F104030041", type: "xp", xp: 50 }
@@ -528,11 +528,11 @@
 			description: [
 				"Build a Large Diesel Generator. The Foreman who places one in their workshop signs an unspoken treaty with their neighbours regarding noise after 10pm."
 			]
-			icon: "createdieselgenerators:large_diesel_generator"
+			icon: "minecraft:furnace"
 			tasks: [{
 				id: "5A11E0F104020022"
-				type: "item"
-				item: "createdieselgenerators:large_diesel_generator"
+				type: "checkmark"
+				title: "Place any Large Diesel / Industrial engine from Create: Diesel Generators"
 			}]
 			rewards: [
 				{ id: "5A11E0F104030043", type: "xp", xp: 60 }
@@ -668,11 +668,11 @@
 			description: [
 				"Place a Track Buffer at the end of each line. The Charter has lost two Foremen to under-engineered terminals. Erik mentions this often."
 			]
-			icon: "railways:track_buffer"
+			icon: "minecraft:dispenser"
 			tasks: [{
 				id: "5A11E0F104020028"
-				type: "item"
-				item: "railways:track_buffer"
+				type: "checkmark"
+				title: "Place a Steam 'n Rails track buffer (or any rail terminator block) at end of line"
 			}]
 			rewards: [
 				{ id: "5A11E0F104030055", type: "xp", xp: 25 }

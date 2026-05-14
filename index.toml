@@ -6,11 +6,11 @@ hash = "d390a9816680c40d9809630ac555ca0518997553c412053b841ed8d4a89ef35f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_01_the_charter.snbt"
-hash = "181ec0d5a3b52f99714d840e1e353a36cb0ba60cb7ac581bb7ec03d1220f055e"
+hash = "22c3f94a0d8e42f35d79ee061b947257e8008f3a4c0794a15b128ca172d401ec"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_02_first_smoke.snbt"
-hash = "67774d4bf3b77a77dc821ae989e8d808aab514373711d217cbd349540166c4a7"
+hash = "f0a7ffd28400234a5cf6503e746407c3038ac6aead995e5459066ffe34f7327c"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"

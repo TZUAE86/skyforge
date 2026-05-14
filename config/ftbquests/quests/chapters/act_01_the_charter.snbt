@@ -119,7 +119,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F101030008", type: "xp", xp: 25 }
-				{ id: "5A11E0F101030009", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F101030009", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: ["5A11E0F101010003"]
 		}
@@ -194,7 +194,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F101030014", type: "xp", xp: 40 }
-				{ id: "5A11E0F101030015", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F101030015", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: [
 				"5A11E0F101010005"
@@ -249,7 +249,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F101030018", type: "xp", xp: 40 }
-				{ id: "5A11E0F101030019", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F101030019", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: ["5A11E0F101010007"]
 		}
@@ -347,7 +347,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F101030026", type: "xp", xp: 35 }
-				{ id: "5A11E0F101030027", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F101030027", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: ["5A11E0F101010004"]
 		}
@@ -421,7 +421,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F101030032", type: "xp", xp: 30 }
-				{ id: "5A11E0F101030033", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F101030033", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: ["5A11E0F101010009"]
 		}
@@ -494,7 +494,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F101030038", type: "xp", xp: 40 }
-				{ id: "5A11E0F101030039", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F101030039", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: ["5A11E0F101010020"]
 		}
@@ -709,7 +709,7 @@
 			]
 			rewards: [
 				{ id: "5A11E0F101030056", type: "xp", xp: 50 }
-				{ id: "5A11E0F101030057", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F101030057", type: "random", table_id: 6490215866393690113L }
 				{ id: "5A11E0F101030058", type: "item", item: { id: "create:cogwheel", Count: 4b } }
 			]
 			dependencies: [
@@ -764,7 +764,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F101030061", type: "xp", xp: 75 }
-				{ id: "5A11E0F101030062", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F101030062", type: "random", table_id: 6490215866393690114L }
 				{ id: "5A11E0F101030063", type: "item", item: { id: "create:water_wheel", Count: 1b } }
 			]
 			dependencies: ["5A11E0F101010028"]

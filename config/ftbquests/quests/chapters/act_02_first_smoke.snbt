@@ -42,7 +42,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F102030001", type: "xp", xp: 25 }
-				{ id: "5A11E0F102030002", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F102030002", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: ["5A11E0F10101001E"]
 		}
@@ -92,7 +92,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F102030005", type: "xp", xp: 35 }
-				{ id: "5A11E0F102030006", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F102030006", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: ["5A11E0F102010002"]
 		}
@@ -140,7 +140,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F102030009", type: "xp", xp: 35 }
-				{ id: "5A11E0F102030010", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F102030010", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: ["5A11E0F102010002"]
 		}
@@ -188,7 +188,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F102030013", type: "xp", xp: 35 }
-				{ id: "5A11E0F102030014", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F102030014", type: "random", table_id: 6490215866393690113L }
 			]
 			dependencies: ["5A11E0F102010005"]
 		}
@@ -313,7 +313,7 @@
 			]
 			rewards: [
 				{ id: "5A11E0F102030023", type: "xp", xp: 40 }
-				{ id: "5A11E0F102030024", type: "loot", table_id: "5A11E0F1A0000001" }
+				{ id: "5A11E0F102030024", type: "random", table_id: 6490215866393690113L }
 				{ id: "5A11E0F102030025", type: "item", item: "create:empty_blaze_burner" }
 			]
 			dependencies: [
@@ -344,7 +344,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F102030026", type: "xp", xp: 45 }
-				{ id: "5A11E0F102030027", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F102030027", type: "random", table_id: 6490215866393690114L }
 			]
 			dependencies: [
 				"5A11E0F102010010"
@@ -399,7 +399,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F102030030", type: "xp", xp: 40 }
-				{ id: "5A11E0F102030031", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F102030031", type: "random", table_id: 6490215866393690114L }
 			]
 			dependencies: ["5A11E0F102010013"]
 		}
@@ -541,7 +541,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F102030042", type: "xp", xp: 35 }
-				{ id: "5A11E0F102030043", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F102030043", type: "random", table_id: 6490215866393690114L }
 			]
 			dependencies: ["5A11E0F102010020"]
 		}
@@ -712,25 +712,27 @@
 			dependencies: ["5A11E0F102010027"]
 		}
 
-		# ---------- Q29: The Lectern Controller ----------
+		# ---------- Q29: The Linked Controller ----------
 		{
 			id: "5A11E0F102010029"
 			x: 0.0d
 			y: 9.5d
-			title: "The Lectern Controller"
-			subtitle: "Read the network. Change the filter. Walk away."
+			title: "The Linked Controller"
+			subtitle: "Pair it with a lectern. Run the network from your chair."
 			description: [
-				"The Lectern Controller lets you reconfigure filters from across the room. The Charter recommends one in every workshop — busywork is the enemy of innovation."
+				"The Linked Controller is the handheld pair to a Lectern Controller block. Set it on a lectern and you can flip filters, freeze belts, and re-route hoppers from across the workshop."
+				""
+				"The Charter recommends one per Foreman. Busywork is the enemy of innovation."
 			]
-			icon: "create:lectern_controller"
+			icon: "create:linked_controller"
 			tasks: [{
 				id: "5A11E0F102020030"
 				type: "item"
-				item: "create:lectern_controller"
+				item: "create:linked_controller"
 			}]
 			rewards: [
 				{ id: "5A11E0F102030058", type: "xp", xp: 30 }
-				{ id: "5A11E0F102030059", type: "item", item: "create:linked_controller" }
+				{ id: "5A11E0F102030059", type: "item", item: { id: "create:redstone_link", Count: 2b } }
 			]
 			dependencies: ["5A11E0F102010014"]
 		}
@@ -802,7 +804,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F102030064", type: "xp", xp: 40 }
-				{ id: "5A11E0F102030065", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F102030065", type: "random", table_id: 6490215866393690114L }
 			]
 			dependencies: ["5A11E0F102010025"]
 		}
@@ -965,7 +967,7 @@
 			]
 			rewards: [
 				{ id: "5A11E0F102030078", type: "xp", xp: 50 }
-				{ id: "5A11E0F102030079", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F102030079", type: "random", table_id: 6490215866393690114L }
 				{ id: "5A11E0F102030080", type: "item", item: "minecraft:barrel" }
 			]
 			dependencies: [
@@ -987,7 +989,9 @@
 			description: [
 				"You stand in the doorway with brass in your hand and the sound of the water wheel behind you. A column of smoke from the smoker, a hum from the mixer, the thump of the press."
 				""
-				"Place a lit Blaze Burner anywhere on the fragment. The Charter sees the smoke. Act III begins when a Builder named Erik Brassgrip steps off the next survey ship with a docket in his hand."
+				"Place a lit Blaze Burner anywhere on the fragment. The Charter sees the smoke."
+				""
+				"Act III — The Foreman — begins on completion. A Builder named Erik Brassgrip steps off the next survey ship with a docket and a hammer. The Charter expects a Town Hall, a Builder's Hut, and five citizens fed and housed before the audit drone returns."
 			]
 			icon: "create:blaze_burner"
 			tasks: [{
@@ -997,7 +1001,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F102030081", type: "xp", xp: 100 }
-				{ id: "5A11E0F102030082", type: "loot", table_id: "5A11E0F1A0000002" }
+				{ id: "5A11E0F102030082", type: "random", table_id: 6490215866393690114L }
 				{ id: "5A11E0F102030083", type: "item", item: "minecolonies:supplycampdeluxe" }
 			]
 			dependencies: [
@@ -1005,6 +1009,138 @@
 				"5A11E0F102010030"
 				"5A11E0F102010039"
 			]
+		}
+
+		# ---------- Q41: The Reservoir (water-tier bridge) ----------
+		{
+			id: "5A11E0F102010041"
+			x: 5.0d
+			y: 3.5d
+			title: "The Reservoir"
+			subtitle: "No fragment is unauditable without water on tap."
+			description: [
+				"The Charter's auditors visit every fragment with the same first question: where is the water? A bucket placed in a dug-out cell, even a single block of source, counts."
+				""
+				"Place water somewhere on your fragment and bring back the empty bucket."
+			]
+			icon: "minecraft:water_bucket"
+			tasks: [{
+				id: "5A11E0F102020044"
+				type: "checkmark"
+				title: "Place a water source on the fragment, then collect the empty bucket"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030084", type: "xp", xp: 15 }
+				{ id: "5A11E0F102030085", type: "item", item: { id: "minecraft:bucket", Count: 1b } }
+			]
+			dependencies: ["5A11E0F102010005"]
+		}
+
+		# ---------- Q42: Washed in Water (water-tier bridge) ----------
+		{
+			id: "5A11E0F102010042"
+			x: 4.0d
+			y: 7.5d
+			title: "Washed in Water"
+			subtitle: "Wash before you smelt."
+			description: [
+				"Run an Encased Fan over water — not lava — and feed it gravel, soul sand, or red sand. The fragment gives up gold, lapis, even quartz. The Charter calls this 'the lazy survey.'"
+				""
+				"Collect eight lapis lazuli from any source — washed or mined."
+			]
+			icon: "minecraft:lapis_lazuli"
+			tasks: [{
+				id: "5A11E0F102020045"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:lapis_lazuli" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F102030086", type: "xp", xp: 25 }
+				{ id: "5A11E0F102030087", type: "item", item: { id: "minecraft:lapis_lazuli", Count: 8b } }
+			]
+			dependencies: ["5A11E0F102010007"]
+		}
+
+		# ---------- Q43: The Cobble Spring (water-tier bridge) ----------
+		{
+			id: "5A11E0F102010043"
+			x: -6.0d
+			y: 3.0d
+			title: "The Cobble Spring"
+			subtitle: "Water meets lava. Stone every tick."
+			description: [
+				"Every Foreman builds a cobble generator before they build a second wall. Water on one side, lava on the other, a one-block gap between. The Charter pretends not to know."
+				""
+				"Build one and collect sixteen cobblestone from it."
+			]
+			icon: "minecraft:cobblestone"
+			tasks: [{
+				id: "5A11E0F102020046"
+				type: "checkmark"
+				title: "Build a water+lava cobblestone generator and collect 16 cobble from it"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030088", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030089", type: "item", item: { id: "minecraft:lava_bucket", Count: 1b } }
+			]
+			dependencies: ["5A11E0F102010041"]
+		}
+
+		# ---------- Q44: Hose to the Tank (water-tier bridge) ----------
+		{
+			id: "5A11E0F102010044"
+			x: -5.0d
+			y: 8.0d
+			title: "Hose to the Tank"
+			subtitle: "Suck a lake into a chassis. The Charter's favorite trick."
+			description: [
+				"A Hose Pulley draws fluid from a source pool and pumps it through a fluid pipe to your tank. With it you can drain a lake, bottle lava, move honey from a tree to a brewery."
+				""
+				"Place a Hose Pulley, connect it to a Fluid Tank via Fluid Pipe, extract any fluid."
+			]
+			icon: "create:hose_pulley"
+			tasks: [{
+				id: "5A11E0F102020047"
+				type: "item"
+				item: "create:hose_pulley"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030090", type: "xp", xp: 30 }
+				{ id: "5A11E0F102030091", type: "item", item: { id: "create:fluid_pipe", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010034"]
+		}
+
+		# ---------- Q45: The Charter's Letter (colony hint) ----------
+		{
+			id: "5A11E0F102010045"
+			x: -4.0d
+			y: 13.0d
+			title: "The Charter's Letter"
+			subtitle: "A docket. A name. A Builder, expected."
+			description: [
+				"A small brass tube sits on your workbench, sealed with the Charter's wax. Inside, a docket on cream paper:"
+				""
+				"  Foreman of 0x174A —"
+				"  Builder Erik Brassgrip, 14 years' service, will arrive by next survey ship."
+				"  He brings: a Supply Camp, his own tools, two saplings of his late wife's favourite oak."
+				"  He needs: a roof, a hut, and a foreman who returns his handshake firmly."
+				"  Sign the docket. Place the Supply Camp when he sets it on your floor."
+				""
+				"Look up the Supply Camp in EMI or JEI to know what's coming."
+			]
+			icon: "minecraft:paper"
+			tasks: [{
+				id: "5A11E0F102020048"
+				type: "checkmark"
+				title: "Open EMI or JEI and search for 'Supply Camp'"
+			}]
+			rewards: [
+				{ id: "5A11E0F102030092", type: "xp", xp: 20 }
+				{ id: "5A11E0F102030093", type: "item", item: { id: "minecraft:paper", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010039"]
 		}
 	]
 }

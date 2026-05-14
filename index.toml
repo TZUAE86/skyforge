@@ -21,6 +21,14 @@ file = "config/ftbquests/quests/chapters/act_04_iron_bellows.snbt"
 hash = "166cdde4dd7c9d79a647d4e36a08863957471656804908c8b5361d4d3855edcd"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/act_05_wings_and_anchors.snbt"
+hash = "aa6774afd33cc8b71320722fcd0cbd29e86515cf71e748083b209a72e109abab"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/act_06_trade_routes.snbt"
+hash = "ec4186a8ef2185ba14f7560d0d002d7694ab252e711a6123190ee0a0e470b0b5"
+
+[[files]]
 file = "config/ftbquests/quests/data.snbt"
 hash = "e86765d3c3791461f5581af4a0d7e20c53a166d305643a2797999a5f0ee3430c"
 
@@ -54,7 +62,7 @@ hash = "cf736ec614206cc0f79a2166dc53b6221e4e1829bea12d82be4a3aa34e97924c"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"
-hash = "6dd791e5a46141d09fb6e6e96f1432884ba88767b04e1fb4a6bfcdd5356c3fb6"
+hash = "7d672ddc13d2dd3a7caa481351df5fa4d96465b1a4e86c665cbfcc4fe9c4776a"
 
 [[files]]
 file = "mods/advancedae.pw.toml"

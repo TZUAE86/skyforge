@@ -1,0 +1,979 @@
+# Skyforge — Act V: Wings & Anchors (40 quests, Turn 3 part 1).
+# TONE: Steampunk colonial. The Foreman takes to the sky. First
+# airship is built in the workshop yard from Create Aeronautics
+# parts. The fragment shrinks below.
+# THEME BIBLE: Aeronautics propellers/lift/aileron + Sable collision
+# realism + Ritchie's Projectile Library + Immersive Aircraft as a
+# warmup glider option.
+# TODO verify Aeronautics item IDs at NeoForge 21.1.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_05_wings_and_anchors"
+	group: "5A11E0F100000001"
+	icon: "create_aeronautics:propeller"
+	id: "5A11E0F105000000"
+	images: [ ]
+	order_index: 4
+	quest_links: [ ]
+	subtitle: ["The fragment shrinks below as you climb."]
+	title: "Act V — Wings & Anchors"
+	quests: [
+
+		# ---------- Q01: Scene-beat opener — Propeller in Hand ----------
+		{
+			id: "5A11E0F105010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "Propeller in Hand"
+			subtitle: "The Charter's first aeronautical lesson: thrust forward, hope upward."
+			description: [
+				"You hold the Create Aeronautics Propeller Erik handed you at the audit. Place it somewhere on your fragment — anywhere — and the Charter recognizes you as a Foreman with sky ambitions."
+			]
+			icon: "create_aeronautics:propeller"
+			tasks: [{
+				id: "5A11E0F105020001"
+				type: "item"
+				item: "create_aeronautics:propeller"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030001", type: "xp", xp: 50 }
+				{ id: "5A11E0F105030002", type: "item", item: { id: "create_aeronautics:propeller", Count: 2b } }
+			]
+			dependencies: ["5A11E0F104010040"]
+		}
+
+		# ---------- Q02: A Second Propeller ----------
+		{
+			id: "5A11E0F105010002"
+			x: -2.5d
+			y: 1.5d
+			title: "A Second Propeller"
+			subtitle: "Balance is the difference between flight and folly."
+			description: [
+				"Craft a second Propeller. Two pulling together steady a small airship the way one alone never will."
+			]
+			icon: "create_aeronautics:propeller"
+			tasks: [{
+				id: "5A11E0F105020002"
+				type: "item"
+				item: { Count: 1b, id: "create_aeronautics:propeller" }
+				count: 2L
+			}]
+			rewards: [
+				{ id: "5A11E0F105030003", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030004", type: "item", item: { id: "create:precision_mechanism", Count: 2b } }
+			]
+			dependencies: ["5A11E0F105010001"]
+		}
+
+		# ---------- Q03: Lift Block ----------
+		{
+			id: "5A11E0F105010003"
+			x: 2.5d
+			y: 1.5d
+			title: "Lift Block"
+			subtitle: "What goes down must, before that, go up."
+			description: [
+				"Craft a Lift Block — Aeronautics' answer to gravity. The Charter's airships use them stacked along the keel."
+			]
+			icon: "create_aeronautics:lift"
+			tasks: [{
+				id: "5A11E0F105020003"
+				type: "item"
+				item: "create_aeronautics:lift"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030005", type: "xp", xp: 35 }
+				{ id: "5A11E0F105030006", type: "item", item: "create_aeronautics:lift" }
+			]
+			dependencies: ["5A11E0F105010001"]
+		}
+
+		# ---------- Q04: Aileron ----------
+		{
+			id: "5A11E0F105010004"
+			x: -2.5d
+			y: 3.0d
+			title: "Aileron"
+			subtitle: "Tilt. Turn. Bank."
+			description: [
+				"Craft an Aileron. With it the airship rolls; without it the airship goes wherever the wind decides."
+			]
+			icon: "create_aeronautics:aileron"
+			tasks: [{
+				id: "5A11E0F105020004"
+				type: "item"
+				item: "create_aeronautics:aileron"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030007", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030008", type: "item", item: { id: "create_aeronautics:aileron", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010002"]
+		}
+
+		# ---------- Q05: Rudder ----------
+		{
+			id: "5A11E0F105010005"
+			x: 2.5d
+			y: 3.0d
+			title: "Rudder"
+			subtitle: "Yaw, the Charter's preferred axis."
+			description: [
+				"Craft a Rudder. Mounted aft, it lets the airship turn left or right without rolling. The Charter audits Foremen who fly without one as 'optimists.'"
+			]
+			icon: "create_aeronautics:rudder"
+			tasks: [{
+				id: "5A11E0F105020005"
+				type: "item"
+				item: "create_aeronautics:rudder"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030009", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030010", type: "item", item: { id: "create_aeronautics:rudder", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010003"]
+		}
+
+		# ---------- Q06: The Airship Helm ----------
+		{
+			id: "5A11E0F105010006"
+			x: 0.0d
+			y: 4.5d
+			title: "The Airship Helm"
+			subtitle: "Wheel. Lever. View."
+			description: [
+				"Craft an Airship Helm — the seat from which a Foreman commands wind, weight, and a slightly nervous crew. The Charter's surveyors photograph helms from the front."
+			]
+			icon: "create_aeronautics:control_block"
+			tasks: [{
+				id: "5A11E0F105020006"
+				type: "item"
+				item: "create_aeronautics:control_block"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030011", type: "xp", xp: 40 }
+				{ id: "5A11E0F105030012", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F105010004"
+				"5A11E0F105010005"
+			]
+		}
+
+		# ---------- Q07: Wood Deck ----------
+		{
+			id: "5A11E0F105010007"
+			x: -4.5d
+			y: 4.5d
+			title: "Wood Deck"
+			subtitle: "Sixteen planks, end to end. The airship has a floor."
+			description: [
+				"Lay sixteen wood-plank blocks somewhere in the yard as the airship's deck. Any wood species; the Charter records species in the build log."
+			]
+			icon: "minecraft:oak_planks"
+			tasks: [{
+				id: "5A11E0F105020007"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:oak_planks" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F105030013", type: "xp", xp: 20 }
+				{ id: "5A11E0F105030014", type: "item", item: { id: "minecraft:oak_planks", Count: 32b } }
+			]
+			dependencies: ["5A11E0F105010001"]
+		}
+
+		# ---------- Q08: Brass Hull Cladding ----------
+		{
+			id: "5A11E0F105010008"
+			x: 4.5d
+			y: 4.5d
+			title: "Brass Hull Cladding"
+			subtitle: "Eight blocks of brass for the prow."
+			description: [
+				"Mount eight Brass Blocks (or Brass Casings) on the airship's hull. Pirates avoid brass-bound craft on principle. Erik says it's about pride; the Charter says it's about radar reflection."
+			]
+			icon: "create:brass_block"
+			tasks: [{
+				id: "5A11E0F105020008"
+				type: "item"
+				item: { Count: 1b, id: "create:brass_block" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F105030015", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030016", type: "item", item: { id: "create:brass_block", Count: 4b } }
+			]
+			dependencies: ["5A11E0F105010001"]
+		}
+
+		# ---------- Q09: First Anchor (mechanical milestone — assemble) ----------
+		{
+			id: "5A11E0F105010009"
+			x: 0.0d
+			y: 6.0d
+			shape: "rsquare"
+			title: "First Anchor"
+			subtitle: "Mast up. Bearings set. The airship is a contraption now."
+			description: [
+				"Place an Airship Bearing or assembly block. Right-click to assemble the airship contraption: helm, propeller(s), lift, aileron, rudder, hull all bound."
+				""
+				"Honor-system: complete when the assembly succeeds."
+			]
+			icon: "create_aeronautics:airship_bearing"
+			tasks: [{
+				id: "5A11E0F105020009"
+				type: "checkmark"
+				title: "Assemble a working airship contraption (Airship Bearing)"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030017", type: "xp", xp: 80 }
+				{ id: "5A11E0F105030018", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F105010006"
+				"5A11E0F105010007"
+				"5A11E0F105010008"
+			]
+		}
+
+		# ---------- Q10: First Hover ----------
+		{
+			id: "5A11E0F105010010"
+			x: -2.5d
+			y: 7.0d
+			title: "First Hover"
+			subtitle: "Five blocks above the deck. The Foreman exhales."
+			description: [
+				"Lift the airship five blocks above where it stood. Hold it there for ten seconds. The Charter calls this 'controlled ascent' — Erik calls it 'the first time you trust your own welding.'"
+			]
+			icon: "create_aeronautics:lift"
+			tasks: [{
+				id: "5A11E0F105020010"
+				type: "checkmark"
+				title: "Hover the airship 5+ blocks above its starting position"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030019", type: "xp", xp: 50 }
+				{ id: "5A11E0F105030020", type: "item", item: "create_aeronautics:lift" }
+			]
+			dependencies: ["5A11E0F105010009"]
+		}
+
+		# ---------- Q11: First Flight ----------
+		{
+			id: "5A11E0F105010011"
+			x: 2.5d
+			y: 7.0d
+			title: "First Flight"
+			subtitle: "Fifty blocks forward. The fragment behind you."
+			description: [
+				"Fly the airship at least fifty blocks horizontally from its launch point. The Charter calls this 'the first commute' — for some Foremen, the start of a lifetime."
+			]
+			icon: "create_aeronautics:propeller"
+			tasks: [{
+				id: "5A11E0F105020011"
+				type: "checkmark"
+				title: "Fly the airship 50+ blocks horizontally in one trip"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030021", type: "xp", xp: 50 }
+				{ id: "5A11E0F105030022", type: "item", item: { id: "create:precision_mechanism", Count: 4b } }
+			]
+			dependencies: ["5A11E0F105010010"]
+		}
+
+		# ---------- Q12: Controlled Descent ----------
+		{
+			id: "5A11E0F105010012"
+			x: 0.0d
+			y: 8.5d
+			title: "Controlled Descent"
+			subtitle: "Down. Not crash."
+			description: [
+				"Land the airship at a point of your choosing without losing more than two hull blocks to impact. The Charter calls this 'landing' — Foremen who skip this step rarely make Act VI."
+			]
+			icon: "minecraft:feather"
+			tasks: [{
+				id: "5A11E0F105020012"
+				type: "checkmark"
+				title: "Land the airship safely (<=2 hull blocks lost)"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030023", type: "xp", xp: 40 }
+				{ id: "5A11E0F105030024", type: "item", item: { id: "minecraft:feather", Count: 8b } }
+			]
+			dependencies: ["5A11E0F105010011"]
+		}
+
+		# ---------- Q13: Sable Collision Realism ----------
+		{
+			id: "5A11E0F105010013"
+			x: 4.5d
+			y: 8.0d
+			title: "Sable Realism"
+			subtitle: "If you crash, the airship feels it. So does the Foreman."
+			description: [
+				"Sable: Collision Damage is loaded. The airship now takes structural damage proportional to impact velocity. The Charter calls this 'physics' — Foremen call it 'incentive.'"
+				""
+				"Survive one minor collision and repair afterward."
+			]
+			icon: "minecraft:iron_block"
+			tasks: [{
+				id: "5A11E0F105020013"
+				type: "checkmark"
+				title: "Survive a minor collision and repair the airship"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030025", type: "xp", xp: 40 }
+				{ id: "5A11E0F105030026", type: "item", item: { id: "minecraft:iron_block", Count: 2b } }
+			]
+			dependencies: ["5A11E0F105010012"]
+		}
+
+		# ---------- Q14: A Higher Altitude ----------
+		{
+			id: "5A11E0F105010014"
+			x: 0.0d
+			y: 10.0d
+			title: "A Higher Altitude"
+			subtitle: "Y=150. The Charter sees you on radar."
+			description: [
+				"Fly the airship to y=150 or above. The Charter's atmospheric surveyors take photographs at that altitude on the half-hour."
+			]
+			icon: "minecraft:elytra"
+			tasks: [{
+				id: "5A11E0F105020014"
+				type: "checkmark"
+				title: "Reach altitude y=150 in the airship"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030027", type: "xp", xp: 50 }
+				{ id: "5A11E0F105030028", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F105010011"]
+		}
+
+		# ---------- Q15: Hull Repair ----------
+		{
+			id: "5A11E0F105010015"
+			x: -4.5d
+			y: 6.0d
+			title: "Hull Repair"
+			subtitle: "Four planks. Four nails. One Wrench."
+			description: [
+				"Repair the airship's hull by replacing at least four wood-plank blocks on the deck. Erik supervises Foremen on their first hull-repair shift."
+			]
+			icon: "minecraft:oak_planks"
+			tasks: [{
+				id: "5A11E0F105020015"
+				type: "checkmark"
+				title: "Repair the airship hull (replace 4+ plank blocks)"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030029", type: "xp", xp: 25 }
+				{ id: "5A11E0F105030030", type: "item", item: { id: "minecraft:oak_planks", Count: 32b } }
+			]
+			dependencies: ["5A11E0F105010013"]
+		}
+
+		# ---------- Q16: Immersive Aircraft Glider (alt path) ----------
+		{
+			id: "5A11E0F105010016"
+			x: 6.5d
+			y: 5.0d
+			title: "Immersive Aircraft Glider"
+			subtitle: "Sometimes the airship stays in the yard."
+			description: [
+				"Craft any Immersive Aircraft personal flight item — Hang Glider, Gyrodyne, Eagle. For Foremen days when assembling the full airship is too much paperwork."
+			]
+			icon: "immersive_aircraft:gyrodyne"
+			tasks: [{
+				id: "5A11E0F105020016"
+				type: "item"
+				item: "immersive_aircraft:gyrodyne"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030031", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030032", type: "item", item: { id: "immersive_aircraft:gyrodyne", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010001"]
+		}
+
+		# ---------- Q17: Personal Flight ----------
+		{
+			id: "5A11E0F105010017"
+			x: 8.5d
+			y: 6.0d
+			title: "Personal Flight"
+			subtitle: "Glide 200 blocks. The Foreman without an airship still flies."
+			description: [
+				"Glide at least 200 blocks in a personal aircraft. The Charter's surveyors recognize a Foreman who keeps a backup."
+			]
+			icon: "immersive_aircraft:gyrodyne"
+			tasks: [{
+				id: "5A11E0F105020017"
+				type: "checkmark"
+				title: "Glide 200+ blocks in a personal aircraft"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030033", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030034", type: "item", item: { id: "minecraft:feather", Count: 16b } }
+			]
+			dependencies: ["5A11E0F105010016"]
+		}
+
+		# ---------- Q18: Cargo Hold ----------
+		{
+			id: "5A11E0F105010018"
+			x: -2.5d
+			y: 10.5d
+			title: "Cargo Hold"
+			subtitle: "A chest below decks. The Foreman becomes a merchant."
+			description: [
+				"Mount at least one chest on the airship's deck or below it. The cargo hold is the difference between 'flight' and 'trade.'"
+			]
+			icon: "minecraft:chest"
+			tasks: [{
+				id: "5A11E0F105020018"
+				type: "checkmark"
+				title: "Mount a chest on the airship and load it with any cargo"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030035", type: "xp", xp: 25 }
+				{ id: "5A11E0F105030036", type: "item", item: { id: "minecraft:chest", Count: 4b } }
+			]
+			dependencies: ["5A11E0F105010012"]
+		}
+
+		# ---------- Q19: Ritchie's Projectile Library ----------
+		{
+			id: "5A11E0F105010019"
+			x: 4.5d
+			y: 10.5d
+			title: "Ritchie's Projectile Library"
+			subtitle: "The Charter calls this 'preparedness.'"
+			description: [
+				"Acquire any Ritchie's Projectile Library item or compatible weapon-mod tool that uses it. The airship has a fighting chance now."
+			]
+			icon: "minecraft:bow"
+			tasks: [{
+				id: "5A11E0F105020019"
+				type: "checkmark"
+				title: "Acquire any RPL-compatible projectile weapon"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030037", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030038", type: "item", item: { id: "minecraft:bow", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010018"]
+		}
+
+		# ---------- Q20: Airship-Mounted Cannon ----------
+		{
+			id: "5A11E0F105010020"
+			x: 6.5d
+			y: 9.5d
+			title: "Airship-Mounted Cannon"
+			subtitle: "A cast-iron cannon. A Foreman with a vantage."
+			description: [
+				"Mount a Cast Iron Cannon on the airship's deck before assembly. The Charter expects two warning shots, never one."
+			]
+			icon: "createbigcannons:cast_iron_cannon"
+			tasks: [{
+				id: "5A11E0F105020020"
+				type: "checkmark"
+				title: "Mount a cannon on the airship and assemble"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030039", type: "xp", xp: 50 }
+				{ id: "5A11E0F105030040", type: "item", item: { id: "createbigcannons:powder_charge", Count: 16b } }
+			]
+			dependencies: ["5A11E0F105010019"]
+		}
+
+		# ---------- Q21: First Pirate Encounter ----------
+		{
+			id: "5A11E0F105010021"
+			x: 8.5d
+			y: 10.5d
+			title: "First Pirate Encounter"
+			subtitle: "They didn't expect a Foreman who showed up to the meeting armed."
+			description: [
+				"Engage a Born in Chaos sky-pirate or any hostile mob from the airship's deck. Two shots, one warning. The Charter's combat surveyors keep score."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F105020021"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 3L
+			}]
+			rewards: [
+				{ id: "5A11E0F105030041", type: "xp", xp: 50 }
+				{ id: "5A11E0F105030042", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F105010020"]
+		}
+
+		# ---------- Q22: Sky-Fragment Survey ----------
+		{
+			id: "5A11E0F105010022"
+			x: -2.5d
+			y: 12.0d
+			title: "Sky-Fragment Survey"
+			subtitle: "Visit a distant biome. Photograph it. Return."
+			description: [
+				"Fly the airship at least 1,000 blocks from your fragment, land in an unfamiliar biome, return. The Charter prints survey photographs in the next month's bulletin."
+			]
+			icon: "minecraft:filled_map"
+			tasks: [{
+				id: "5A11E0F105020022"
+				type: "checkmark"
+				title: "Fly 1000+ blocks to a distant biome and return"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030043", type: "xp", xp: 60 }
+				{ id: "5A11E0F105030044", type: "item", item: { id: "minecraft:filled_map", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010014"]
+		}
+
+		# ---------- Q23: Larger Airship Frame ----------
+		{
+			id: "5A11E0F105010023"
+			x: 0.0d
+			y: 11.5d
+			title: "Larger Airship Frame"
+			subtitle: "Hull thirty-two blocks wide. Mast eight blocks tall."
+			description: [
+				"Build a larger airship — at least 32 hull blocks, mast at least eight blocks. The Charter calls this 'second-class merchant' — Foremen call it 'finally enough cargo capacity.'"
+			]
+			icon: "create_aeronautics:propeller"
+			tasks: [{
+				id: "5A11E0F105020023"
+				type: "checkmark"
+				title: "Build and assemble a larger airship (32+ hull blocks)"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030045", type: "xp", xp: 70 }
+				{ id: "5A11E0F105030046", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F105010022"]
+		}
+
+		# ---------- Q24: Second Propeller Bank ----------
+		{
+			id: "5A11E0F105010024"
+			x: -4.5d
+			y: 11.5d
+			title: "Second Propeller Bank"
+			subtitle: "Four propellers in parallel. The airship sings."
+			description: [
+				"Mount at least four Propellers on the larger airship. The Charter notes the new top speed in the surveyor's almanac."
+			]
+			icon: "create_aeronautics:propeller"
+			tasks: [{
+				id: "5A11E0F105020024"
+				type: "item"
+				item: { Count: 1b, id: "create_aeronautics:propeller" }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F105030047", type: "xp", xp: 40 }
+				{ id: "5A11E0F105030048", type: "item", item: { id: "create_aeronautics:propeller", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010023"]
+		}
+
+		# ---------- Q25: Steam-Powered Airship ----------
+		{
+			id: "5A11E0F105010025"
+			x: 4.5d
+			y: 12.5d
+			title: "Steam-Powered Airship"
+			subtitle: "Coal in. Altitude up."
+			description: [
+				"Power the airship from a mounted Steam Engine (boiler + Blaze Burner aboard). The Foreman who carries their own steam carries their own range."
+			]
+			icon: "create:steam_engine"
+			tasks: [{
+				id: "5A11E0F105020025"
+				type: "checkmark"
+				title: "Mount a working Steam Engine on the airship"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030049", type: "xp", xp: 50 }
+				{ id: "5A11E0F105030050", type: "item", item: { id: "create:fluid_tank", Count: 4b } }
+			]
+			dependencies: ["5A11E0F105010023"]
+		}
+
+		# ---------- Q26: Airship Schedule ----------
+		{
+			id: "5A11E0F105010026"
+			x: -6.5d
+			y: 10.5d
+			title: "Airship Schedule"
+			subtitle: "Route. Stops. Cargo expected."
+			description: [
+				"Define a route between your fragment and one other map waypoint. Pirate-free, ideally. The Charter's air-traffic clerks keep schedules from every Foreman."
+			]
+			icon: "create:schedule"
+			tasks: [{
+				id: "5A11E0F105020026"
+				type: "checkmark"
+				title: "Define an airship route with 2+ waypoints"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030051", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030052", type: "item", item: { id: "minecraft:compass", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010022"]
+		}
+
+		# ---------- Q27: Helm Painted ----------
+		{
+			id: "5A11E0F105010027"
+			x: 6.5d
+			y: 7.5d
+			title: "Helm Painted"
+			subtitle: "The Foreman's colour goes on the wheel."
+			description: [
+				"Paint or decorate the airship's helm. Brass-on-mahogany is the Charter's traditional; you may differ. The Charter doesn't audit colour, only enthusiasm."
+			]
+			icon: "minecraft:white_dye"
+			tasks: [{
+				id: "5A11E0F105020027"
+				type: "checkmark"
+				title: "Decorate the airship's helm with paint, banners, or trim"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030053", type: "xp", xp: 15 }
+				{ id: "5A11E0F105030054", type: "item", item: { id: "minecraft:white_banner", Count: 2b } }
+			]
+			dependencies: ["5A11E0F105010006"]
+		}
+
+		# ---------- Q28: First Aeronautic Cargo Run ----------
+		{
+			id: "5A11E0F105010028"
+			x: -6.5d
+			y: 12.5d
+			title: "First Aeronautic Cargo Run"
+			subtitle: "Sixty-four iron, delivered by air."
+			description: [
+				"Fly the airship to a second location with at least 64 iron ingots in its cargo hold. Deliver them. Erik countersigns the docket."
+			]
+			icon: "minecraft:iron_block"
+			tasks: [{
+				id: "5A11E0F105020028"
+				type: "checkmark"
+				title: "Deliver 64+ iron ingots via airship to a second location"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030055", type: "xp", xp: 60 }
+				{ id: "5A11E0F105030056", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F105010018"
+				"5A11E0F105010023"
+			]
+		}
+
+		# ---------- Q29: Sky-Pirate Boarding Repelled ----------
+		{
+			id: "5A11E0F105010029"
+			x: 8.5d
+			y: 12.0d
+			title: "Sky-Pirate Boarding Repelled"
+			subtitle: "Five pirates on the deck. Five pirates off the deck."
+			description: [
+				"Repel a boarding attempt by sky-pirates on your airship's deck. Five hostile mobs killed while the airship is assembled."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F105020029"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 5L
+			}]
+			rewards: [
+				{ id: "5A11E0F105030057", type: "xp", xp: 60 }
+				{ id: "5A11E0F105030058", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F105010021"]
+		}
+
+		# ---------- Q30: Aeronautic Map ----------
+		{
+			id: "5A11E0F105010030"
+			x: -8.5d
+			y: 11.5d
+			title: "Aeronautic Map"
+			subtitle: "Three waypoints. Three colour-coded pins."
+			description: [
+				"On Xaero's World Map, mark at least three waypoints — your fragment, a distant biome, a known pirate territory. The Charter's surveyors call this 'situational awareness.'"
+			]
+			icon: "minecraft:filled_map"
+			tasks: [{
+				id: "5A11E0F105020030"
+				type: "checkmark"
+				title: "Mark 3+ named waypoints on Xaero's World Map"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030059", type: "xp", xp: 25 }
+				{ id: "5A11E0F105030060", type: "item", item: { id: "minecraft:compass", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010022"]
+		}
+
+		# ---------- Q31: Floating Dock ----------
+		{
+			id: "5A11E0F105010031"
+			x: 0.0d
+			y: 13.5d
+			title: "Floating Dock"
+			subtitle: "Where the airship lives when the Foreman sleeps."
+			description: [
+				"Build a dedicated airship dock — a marked landing pad at least 9x9, with a hangar or lit perimeter. The Charter prefers Foremen who park indoors."
+			]
+			icon: "minecraft:lantern"
+			tasks: [{
+				id: "5A11E0F105020031"
+				type: "checkmark"
+				title: "Build a 9x9 airship dock with lit perimeter"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030061", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030062", type: "item", item: { id: "minecraft:lantern", Count: 8b } }
+			]
+			dependencies: ["5A11E0F105010023"]
+		}
+
+		# ---------- Q32: Aeronautic Insurance ----------
+		{
+			id: "5A11E0F105010032"
+			x: -4.5d
+			y: 13.5d
+			title: "Aeronautic Insurance"
+			subtitle: "Spare parts in a chest. Always."
+			description: [
+				"Stockpile spare aeronautic parts: 4 Propellers, 2 Lift Blocks, 2 Aileron, 2 Rudder, 1 Helm. The Charter's audit asks for this stockpile at the second-class merchant rank."
+			]
+			icon: "minecraft:chest"
+			tasks: [
+				{ id: "5A11E0F105020032", type: "item", item: { Count: 1b, id: "create_aeronautics:propeller" }, count: 4L }
+				{ id: "5A11E0F105020033", type: "item", item: { Count: 1b, id: "create_aeronautics:lift" }, count: 2L }
+				{ id: "5A11E0F105020034", type: "item", item: { Count: 1b, id: "create_aeronautics:aileron" }, count: 2L }
+			]
+			rewards: [
+				{ id: "5A11E0F105030063", type: "xp", xp: 50 }
+				{ id: "5A11E0F105030064", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F105010024"]
+		}
+
+		# ---------- Q33: Aerial Combat Patrol ----------
+		{
+			id: "5A11E0F105010033"
+			x: 4.5d
+			y: 14.0d
+			title: "Aerial Combat Patrol"
+			subtitle: "Two pirates from the air, in one trip."
+			description: [
+				"Take the airship up and engage at least two pirates from above without landing. The Charter recognises 'aerial dominance' as its own audit category."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F105020035"
+				type: "checkmark"
+				title: "Kill 2+ pirates while airborne in the airship"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030065", type: "xp", xp: 50 }
+				{ id: "5A11E0F105030066", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F105010029"]
+		}
+
+		# ---------- Q34: Underdeck Cabin ----------
+		{
+			id: "5A11E0F105010034"
+			x: -2.5d
+			y: 15.0d
+			title: "Underdeck Cabin"
+			subtitle: "A bed below decks. The Foreman sleeps in the sky."
+			description: [
+				"Mount a bed below decks on the airship. The Charter's first-class merchants live half their year aboard. Erik will visit on shore leave."
+			]
+			icon: "minecraft:red_bed"
+			tasks: [{
+				id: "5A11E0F105020036"
+				type: "checkmark"
+				title: "Mount a bed on the airship and sleep aboard once"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030067", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030068", type: "item", item: { id: "minecraft:red_bed", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010023"]
+		}
+
+		# ---------- Q35: Airship Promotion ----------
+		{
+			id: "5A11E0F105010035"
+			x: 2.5d
+			y: 15.0d
+			title: "Airship Promotion"
+			subtitle: "Second-Class Merchant. The docket comes with a propeller-shaped seal."
+			description: [
+				"Erik delivers the Charter's recognition: a Foreman with their own airship and a successful cargo run is promoted to Second-Class Merchant. The docket pins next to the First-Class one."
+			]
+			icon: "minecraft:gold_ingot"
+			tasks: [{
+				id: "5A11E0F105020037"
+				type: "checkmark"
+				title: "Pin the Second-Class Merchant docket next to the First-Class one"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030069", type: "xp", xp: 60 }
+				{ id: "5A11E0F105030070", type: "item", item: { id: "minecraft:gold_block", Count: 2b } }
+			]
+			dependencies: ["5A11E0F105010028"]
+		}
+
+		# ---------- Q36: Sky-Pirate Den Discovered ----------
+		{
+			id: "5A11E0F105010036"
+			x: 6.5d
+			y: 14.5d
+			title: "Sky-Pirate Den Discovered"
+			subtitle: "Mark it. Avoid it. For now."
+			description: [
+				"Find a Born in Chaos sky-pirate structure or any procedurally-generated raider den. Mark its location. Don't engage yet — Act IX has the cathartic burn."
+			]
+			icon: "minecraft:filled_map"
+			tasks: [{
+				id: "5A11E0F105020038"
+				type: "checkmark"
+				title: "Discover a pirate structure and mark it on the map"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030071", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030072", type: "item", item: { id: "minecraft:emerald", Count: 4b } }
+			]
+			dependencies: ["5A11E0F105010030"]
+		}
+
+		# ---------- Q37: Aether Glimpse ----------
+		{
+			id: "5A11E0F105010037"
+			x: 8.5d
+			y: 14.5d
+			title: "Aether Glimpse"
+			subtitle: "The Aether dimension. A first peek."
+			description: [
+				"Locate (don't enter yet) an Aether portal item or the recipe in EMI/JEI. The Charter's exploration auditors keep records of who notices the Aether first."
+			]
+			icon: "aether:aether_portal_frame"
+			tasks: [{
+				id: "5A11E0F105020039"
+				type: "checkmark"
+				title: "Open the Aether portal recipe in EMI/JEI"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030073", type: "xp", xp: 20 }
+				{ id: "5A11E0F105030074", type: "item", item: { id: "minecraft:glowstone_dust", Count: 16b } }
+			]
+			dependencies: ["5A11E0F105010022"]
+		}
+
+		# ---------- Q38: Aileron Bank ----------
+		{
+			id: "5A11E0F105010038"
+			x: -8.5d
+			y: 13.5d
+			title: "Aileron Bank"
+			subtitle: "Two aileron pairs. The airship banks like a hawk."
+			description: [
+				"Mount at least four Ailerons on the airship for refined roll control. The Charter's aerobatic surveyors approve."
+			]
+			icon: "create_aeronautics:aileron"
+			tasks: [{
+				id: "5A11E0F105020040"
+				type: "item"
+				item: { Count: 1b, id: "create_aeronautics:aileron" }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F105030075", type: "xp", xp: 30 }
+				{ id: "5A11E0F105030076", type: "item", item: { id: "create_aeronautics:aileron", Count: 2b } }
+			]
+			dependencies: ["5A11E0F105010024"]
+		}
+
+		# ---------- Q39: The Survey Flight ----------
+		{
+			id: "5A11E0F105010039"
+			x: 0.0d
+			y: 16.5d
+			title: "The Survey Flight"
+			subtitle: "Two thousand blocks. Two photographs. One report."
+			description: [
+				"Fly at least two thousand blocks from the fragment, take two screenshots (real-world; honor system), return safely. The Charter publishes the longest survey flights in the annual."
+			]
+			icon: "minecraft:filled_map"
+			tasks: [{
+				id: "5A11E0F105020041"
+				type: "checkmark"
+				title: "Fly 2000+ blocks and return; document the trip"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030077", type: "xp", xp: 60 }
+				{ id: "5A11E0F105030078", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F105010022"
+				"5A11E0F105010035"
+			]
+		}
+
+		# ---------- Q40: Scene-beat finale — Fragment Shrinks Below ----------
+		{
+			id: "5A11E0F105010040"
+			x: 0.0d
+			y: 18.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "Fragment Shrinks Below"
+			subtitle: "The Foreman is a sky-traveller now."
+			description: [
+				"You climb the airship to its ceiling. The fragment shrinks below — Town Hall a pin, workshop a glimmer, Erik a hat. The Charter's atmospheric mapper logs you above the cloud-bank."
+				""
+				"Act VI — Trade Routes — begins on completion. The Charter expects ledgers, stations, traders, a colony economy that runs without the Foreman's hand on every lever."
+			]
+			icon: "create_aeronautics:propeller"
+			tasks: [{
+				id: "5A11E0F105020042"
+				type: "checkmark"
+				title: "Climb to maximum altitude in the airship at sunset"
+			}]
+			rewards: [
+				{ id: "5A11E0F105030079", type: "xp", xp: 100 }
+				{ id: "5A11E0F105030080", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F105030081", type: "item", item: "waystones:waystone" }
+			]
+			dependencies: [
+				"5A11E0F105010033"
+				"5A11E0F105010039"
+			]
+		}
+	]
+}

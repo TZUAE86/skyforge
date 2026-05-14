@@ -1,0 +1,971 @@
+# Skyforge — Act VI: Trade Routes (40 quests, Turn 3 part 2).
+# TONE: Steampunk colonial. The Charter's ledger opens. Stations,
+# trains, traders, restaurants, waystones, sophisticated storage,
+# modular routers. The Foreman becomes a logistics officer.
+# THEME BIBLE: Trade is the verb. Steam 'n Rails network +
+# MineColonies merchants + Sophisticated Storage + Modular Routers +
+# Waystones + Sophisticated Backpacks. The colony runs itself.
+# TODO verify all icon + task item IDs at NeoForge 21.1.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_06_trade_routes"
+	group: "5A11E0F100000001"
+	icon: "waystones:waystone"
+	id: "5A11E0F106000000"
+	images: [ ]
+	order_index: 5
+	quest_links: [ ]
+	subtitle: ["Tonnage out, tonnage in. The ledger closes black."]
+	title: "Act VI — Trade Routes"
+	quests: [
+
+		# ---------- Q01: Scene-beat opener — First Waystone ----------
+		{
+			id: "5A11E0F106010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The First Waystone"
+			subtitle: "The Charter's signature on the map."
+			description: [
+				"Place the Waystone Erik handed you at the audit. The Charter's clerks recognise the fragment from this stone forward; trade routes route through here automatically."
+			]
+			icon: "waystones:waystone"
+			tasks: [{
+				id: "5A11E0F106020001"
+				type: "item"
+				item: "waystones:waystone"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030001", type: "xp", xp: 40 }
+				{ id: "5A11E0F106030002", type: "item", item: { id: "waystones:waystone", Count: 1b } }
+			]
+			dependencies: ["5A11E0F105010040"]
+		}
+
+		# ---------- Q02: Second Waystone ----------
+		{
+			id: "5A11E0F106010002"
+			x: -2.5d
+			y: 1.5d
+			title: "Second Waystone"
+			subtitle: "Routes need endpoints."
+			description: [
+				"Place a second Waystone somewhere on the fragment — outpost, distant cliff, far end of the rail line. Two stones is a route; one is a marker."
+			]
+			icon: "waystones:waystone"
+			tasks: [{
+				id: "5A11E0F106020002"
+				type: "item"
+				item: { Count: 1b, id: "waystones:waystone" }
+				count: 2L
+			}]
+			rewards: [
+				{ id: "5A11E0F106030003", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030004", type: "item", item: "waystones:warp_scroll" }
+			]
+			dependencies: ["5A11E0F106010001"]
+		}
+
+		# ---------- Q03: Third Waystone ----------
+		{
+			id: "5A11E0F106010003"
+			x: 2.5d
+			y: 1.5d
+			title: "Third Waystone"
+			subtitle: "The Charter's stipend tier opens at three."
+			description: [
+				"Place a third Waystone. The Charter's logistics officers approve trade-route fees at this density."
+			]
+			icon: "waystones:waystone"
+			tasks: [{
+				id: "5A11E0F106020003"
+				type: "item"
+				item: { Count: 1b, id: "waystones:waystone" }
+				count: 3L
+			}]
+			rewards: [
+				{ id: "5A11E0F106030005", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030006", type: "item", item: { id: "waystones:return_scroll", Count: 2b } }
+			]
+			dependencies: ["5A11E0F106010002"]
+		}
+
+		# ---------- Q04: Restaurant ----------
+		{
+			id: "5A11E0F106010004"
+			x: -4.5d
+			y: 2.5d
+			title: "The Restaurant"
+			subtitle: "Citizens eat there. Foremen eat there. Pirates do not."
+			description: [
+				"Place a MineColonies Restaurant. The Restaurant cooks food for the colony's workers without the Cook running between sites."
+			]
+			icon: "minecolonies:blockhutrestaurant"
+			tasks: [{
+				id: "5A11E0F106020004"
+				type: "item"
+				item: "minecolonies:blockhutrestaurant"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030007", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030008", type: "item", item: { id: "farmersdelight:vegetable_soup", Count: 4b } }
+			]
+			dependencies: ["5A11E0F106010001"]
+		}
+
+		# ---------- Q05: Baker ----------
+		{
+			id: "5A11E0F106010005"
+			x: 4.5d
+			y: 2.5d
+			title: "The Baker"
+			subtitle: "Bread, cake, and the occasional pretzel."
+			description: [
+				"Place a Baker's Hut. The Baker turns Farmer's wheat into bread the Restaurant serves. The Charter's stipend rises by a fractional amount."
+			]
+			icon: "minecolonies:blockhutbaker"
+			tasks: [{
+				id: "5A11E0F106020005"
+				type: "item"
+				item: "minecolonies:blockhutbaker"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030009", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030010", type: "item", item: { id: "minecraft:bread", Count: 16b } }
+			]
+			dependencies: ["5A11E0F106010001"]
+		}
+
+		# ---------- Q06: Concrete Mixer ----------
+		{
+			id: "5A11E0F106010006"
+			x: -4.5d
+			y: 4.0d
+			title: "The Concrete Mixer"
+			subtitle: "Sand, gravel, dye, water. A wall in a Foreman's voice."
+			description: [
+				"Place a Concrete Mixer's Hut. Citizens will mix concrete on demand. The Charter calls this 'fortification capacity.'"
+			]
+			icon: "minecolonies:blockhutconcretemixer"
+			tasks: [{
+				id: "5A11E0F106020006"
+				type: "item"
+				item: "minecolonies:blockhutconcretemixer"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030011", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030012", type: "item", item: { id: "minecraft:white_concrete", Count: 16b } }
+			]
+			dependencies: ["5A11E0F106010004"]
+		}
+
+		# ---------- Q07: Sawmill ----------
+		{
+			id: "5A11E0F106010007"
+			x: 4.5d
+			y: 4.0d
+			title: "The Sawmill"
+			subtitle: "Logs in. Planks, slabs, stairs out."
+			description: [
+				"Place a Sawmill. The Sawmill turns the Lumberjack's tonnage into the Builder's spec — and the Restaurant's tables, and the Baker's counter."
+			]
+			icon: "minecolonies:blockhutsawmill"
+			tasks: [{
+				id: "5A11E0F106020007"
+				type: "item"
+				item: "minecolonies:blockhutsawmill"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030013", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030014", type: "item", item: { id: "minecraft:oak_planks", Count: 32b } }
+			]
+			dependencies: ["5A11E0F106010005"]
+		}
+
+		# ---------- Q08: Sophisticated Chest ----------
+		{
+			id: "5A11E0F106010008"
+			x: -2.5d
+			y: 5.0d
+			title: "Sophisticated Chest"
+			subtitle: "Bigger inside than it looks outside."
+			description: [
+				"Craft a Sophisticated Storage chest or barrel. The Foreman who upgrades their vanilla chests is the Foreman whose warehouse never overflows."
+			]
+			icon: "sophisticatedstorage:chest"
+			tasks: [{
+				id: "5A11E0F106020008"
+				type: "item"
+				item: "sophisticatedstorage:chest"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030015", type: "xp", xp: 25 }
+				{ id: "5A11E0F106030016", type: "item", item: "sophisticatedstorage:barrel" }
+			]
+			dependencies: ["5A11E0F106010001"]
+		}
+
+		# ---------- Q09: Sophisticated Barrel ----------
+		{
+			id: "5A11E0F106010009"
+			x: 2.5d
+			y: 5.0d
+			title: "Sophisticated Barrel"
+			subtitle: "Stack the warehouse, stack the audit."
+			description: [
+				"Craft a Sophisticated Storage barrel. Stackable, filterable, upgradeable — the Charter's preferred bulk storage."
+			]
+			icon: "sophisticatedstorage:barrel"
+			tasks: [{
+				id: "5A11E0F106020009"
+				type: "item"
+				item: "sophisticatedstorage:barrel"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030017", type: "xp", xp: 25 }
+				{ id: "5A11E0F106030018", type: "item", item: { id: "sophisticatedstorage:barrel", Count: 2b } }
+			]
+			dependencies: ["5A11E0F106010008"]
+		}
+
+		# ---------- Q10: Stack Upgrade Tier 1 ----------
+		{
+			id: "5A11E0F106010010"
+			x: 0.0d
+			y: 6.0d
+			title: "Stack Upgrade Tier 1"
+			subtitle: "Each slot, 2x capacity. The Foreman exhales."
+			description: [
+				"Craft a Sophisticated Storage Stack Upgrade (Tier 1). Apply it to a chest. Watch the slots fatten."
+			]
+			icon: "sophisticatedstorage:stack_upgrade_tier_1"
+			tasks: [{
+				id: "5A11E0F106020010"
+				type: "item"
+				item: "sophisticatedstorage:stack_upgrade_tier_1"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030019", type: "xp", xp: 35 }
+				{ id: "5A11E0F106030020", type: "item", item: "sophisticatedstorage:stack_upgrade_tier_2" }
+			]
+			dependencies: ["5A11E0F106010009"]
+		}
+
+		# ---------- Q11: Backpack ----------
+		{
+			id: "5A11E0F106010011"
+			x: -4.5d
+			y: 6.0d
+			title: "Backpack"
+			subtitle: "The Foreman's mobile warehouse."
+			description: [
+				"Craft a Sophisticated Backpack. The Charter's surveyors say the Foreman who carries one is the Foreman whose audit reports always include 'spare belt.'"
+			]
+			icon: "sophisticatedbackpacks:backpack"
+			tasks: [{
+				id: "5A11E0F106020011"
+				type: "item"
+				item: "sophisticatedbackpacks:backpack"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030021", type: "xp", xp: 35 }
+				{ id: "5A11E0F106030022", type: "item", item: "sophisticatedbackpacks:iron_backpack" }
+			]
+			dependencies: ["5A11E0F106010008"]
+		}
+
+		# ---------- Q12: Iron Backpack ----------
+		{
+			id: "5A11E0F106010012"
+			x: -6.5d
+			y: 7.0d
+			title: "Iron Backpack"
+			subtitle: "More slots. Still on one back."
+			description: [
+				"Craft a Sophisticated Iron Backpack — the Foreman's second tier. The Charter notes promotion to 'mobile inventory officer.'"
+			]
+			icon: "sophisticatedbackpacks:iron_backpack"
+			tasks: [{
+				id: "5A11E0F106020012"
+				type: "item"
+				item: "sophisticatedbackpacks:iron_backpack"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030023", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030024", type: "item", item: "sophisticatedbackpacks:gold_backpack" }
+			]
+			dependencies: ["5A11E0F106010011"]
+		}
+
+		# ---------- Q13: Modular Item Router ----------
+		{
+			id: "5A11E0F106010013"
+			x: 4.5d
+			y: 6.0d
+			title: "Modular Item Router"
+			subtitle: "Programmable sorting. The Charter's logistics dream."
+			description: [
+				"Craft a Modular Routers Item Router. Configure it with one module — sender, receiver, or filter. The Foreman's warehouse becomes self-organising."
+			]
+			icon: "modularrouters:item_router"
+			tasks: [{
+				id: "5A11E0F106020013"
+				type: "item"
+				item: "modularrouters:item_router"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030025", type: "xp", xp: 40 }
+				{ id: "5A11E0F106030026", type: "item", item: "modularrouters:blank_module" }
+			]
+			dependencies: ["5A11E0F106010009"]
+		}
+
+		# ---------- Q14: Sender Module ----------
+		{
+			id: "5A11E0F106010014"
+			x: 6.5d
+			y: 7.0d
+			title: "Sender Module"
+			subtitle: "From here. To there. Don't ask twice."
+			description: [
+				"Craft a Sender Module for the Modular Item Router. Configure it to push specific items from one chest to another. The Foreman's warehouse breathes on its own."
+			]
+			icon: "modularrouters:sender_module_1"
+			tasks: [{
+				id: "5A11E0F106020014"
+				type: "item"
+				item: "modularrouters:sender_module_1"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030027", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030028", type: "item", item: "modularrouters:filter_module" }
+			]
+			dependencies: ["5A11E0F106010013"]
+		}
+
+		# ---------- Q15: Receiver Module ----------
+		{
+			id: "5A11E0F106010015"
+			x: 8.5d
+			y: 7.0d
+			title: "Receiver Module"
+			subtitle: "Pulls. Selectively. Politely."
+			description: [
+				"Craft a Receiver Module. The Router pulls items from an external inventory into its own. The Charter calls a sender-receiver pair 'a Foreman's pipeline.'"
+			]
+			icon: "modularrouters:puller_module_1"
+			tasks: [{
+				id: "5A11E0F106020015"
+				type: "item"
+				item: "modularrouters:puller_module_1"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030029", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030030", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F106010014"]
+		}
+
+		# ---------- Q16: Train Network Junction ----------
+		{
+			id: "5A11E0F106010016"
+			x: 0.0d
+			y: 8.0d
+			shape: "rsquare"
+			title: "Train Network Junction"
+			subtitle: "Two stations. Three tracks. One Foreman."
+			description: [
+				"Expand the train network from Act IV into a true junction: at least three Train Tracks meeting at a switch, two Train Stations active, one cargo schedule running."
+			]
+			icon: "create:track"
+			tasks: [{
+				id: "5A11E0F106020016"
+				type: "checkmark"
+				title: "Build a 3-track junction with 2+ stations and a working cargo schedule"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030031", type: "xp", xp: 60 }
+				{ id: "5A11E0F106030032", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F106010001"]
+		}
+
+		# ---------- Q17: Cargo Schedule (advanced) ----------
+		{
+			id: "5A11E0F106010017"
+			x: -2.5d
+			y: 9.0d
+			title: "Advanced Cargo Schedule"
+			subtitle: "Three stops. Conditional cargo. The Foreman naps."
+			description: [
+				"Write a Schedule with at least three stops and conditional cargo loading (e.g. 'load iron at Station A, copper at Station B, deliver to C')."
+			]
+			icon: "create:schedule"
+			tasks: [{
+				id: "5A11E0F106020017"
+				type: "checkmark"
+				title: "Run a 3-stop conditional cargo schedule for 10+ in-game minutes"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030033", type: "xp", xp: 50 }
+				{ id: "5A11E0F106030034", type: "item", item: { id: "create:schedule", Count: 2b } }
+			]
+			dependencies: ["5A11E0F106010016"]
+		}
+
+		# ---------- Q18: First Profit Ledger ----------
+		{
+			id: "5A11E0F106010018"
+			x: 0.0d
+			y: 10.0d
+			shape: "rsquare"
+			title: "First Profit Ledger"
+			subtitle: "Income out, expenses in, the difference in black ink."
+			description: [
+				"Stockpile 100 emeralds (or equivalent currency item) at any colony hut. The Charter's auditors recognise this as 'first profit.' Erik enters it in the bound ledger."
+			]
+			icon: "minecraft:emerald"
+			tasks: [{
+				id: "5A11E0F106020018"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:emerald" }
+				count: 100L
+			}]
+			rewards: [
+				{ id: "5A11E0F106030035", type: "xp", xp: 80 }
+				{ id: "5A11E0F106030036", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F106010017"]
+		}
+
+		# ---------- Q19: Trader Hut ----------
+		{
+			id: "5A11E0F106010019"
+			x: -4.5d
+			y: 8.0d
+			title: "Trader Hut"
+			subtitle: "MineColonies opens trade routes."
+			description: [
+				"Place a MineColonies Trader (or Marketplace) Hut. Citizens negotiate with outside vendors on the colony's behalf."
+			]
+			icon: "minecolonies:blockhutmarketplace"
+			tasks: [{
+				id: "5A11E0F106020019"
+				type: "item"
+				item: "minecolonies:blockhutmarketplace"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030037", type: "xp", xp: 35 }
+				{ id: "5A11E0F106030038", type: "item", item: { id: "minecraft:emerald", Count: 8b } }
+			]
+			dependencies: ["5A11E0F106010005"]
+		}
+
+		# ---------- Q20: Hospital ----------
+		{
+			id: "5A11E0F106010020"
+			x: 4.5d
+			y: 8.0d
+			title: "Hospital"
+			subtitle: "The Charter audits casualty counts."
+			description: [
+				"Place a Hospital. Citizens injured in the line of duty heal here; the Charter's stipend tier rises by a notch for colonies with on-site medical."
+			]
+			icon: "minecolonies:blockhuthospital"
+			tasks: [{
+				id: "5A11E0F106020020"
+				type: "item"
+				item: "minecolonies:blockhuthospital"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030039", type: "xp", xp: 35 }
+				{ id: "5A11E0F106030040", type: "item", item: { id: "minecraft:golden_apple", Count: 1b } }
+			]
+			dependencies: ["5A11E0F106010004"]
+		}
+
+		# ---------- Q21: School ----------
+		{
+			id: "5A11E0F106010021"
+			x: 6.5d
+			y: 9.0d
+			title: "School"
+			subtitle: "Citizens train faster. Foreman naps more often."
+			description: [
+				"Place a School. The Charter's stipend tier rises. Children become Adults faster. Everyone wins except the Foreman who liked the quiet."
+			]
+			icon: "minecolonies:blockhutschool"
+			tasks: [{
+				id: "5A11E0F106020021"
+				type: "item"
+				item: "minecolonies:blockhutschool"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030041", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030042", type: "item", item: { id: "minecraft:book", Count: 8b } }
+			]
+			dependencies: ["5A11E0F106010020"]
+		}
+
+		# ---------- Q22: University ----------
+		{
+			id: "5A11E0F106010022"
+			x: 8.5d
+			y: 9.0d
+			title: "University"
+			subtitle: "Research. Slow. Worth it."
+			description: [
+				"Place a University. Citizens conduct slow, expensive research that unlocks colony bonuses. The Charter's first-class merchant rank requires one."
+			]
+			icon: "minecolonies:blockhutuniversity"
+			tasks: [{
+				id: "5A11E0F106020022"
+				type: "item"
+				item: "minecolonies:blockhutuniversity"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030043", type: "xp", xp: 50 }
+				{ id: "5A11E0F106030044", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F106010021"]
+		}
+
+		# ---------- Q23: Town Hall Level 4 ----------
+		{
+			id: "5A11E0F106010023"
+			x: 4.5d
+			y: 11.0d
+			title: "Town Hall Level 4"
+			subtitle: "The clerk's office becomes a wing."
+			description: [
+				"Upgrade the Town Hall to level 4. The Charter's audit drone now circles before landing — a sign of respect among administrators."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [{
+				id: "5A11E0F106020023"
+				type: "checkmark"
+				title: "Upgrade Town Hall to level 4"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030045", type: "xp", xp: 60 }
+				{ id: "5A11E0F106030046", type: "item", item: { id: "minecraft:diamond", Count: 2b } }
+			]
+			dependencies: ["5A11E0F106010022"]
+		}
+
+		# ---------- Q24: Fifteen Citizens ----------
+		{
+			id: "5A11E0F106010024"
+			x: -4.5d
+			y: 11.0d
+			title: "Fifteen Citizens"
+			subtitle: "A village. A workforce. A Foreman's responsibility."
+			description: [
+				"Have at least fifteen living citizens in the colony. The Charter's stipend rises one tier; the colony's collective audit weighting changes from 'experimental' to 'established.'"
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F106020024"
+				type: "checkmark"
+				title: "Have at least 15 living citizens"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030047", type: "xp", xp: 60 }
+				{ id: "5A11E0F106030048", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F106010022"]
+		}
+
+		# ---------- Q25: Trade Route to Distant Fragment ----------
+		{
+			id: "5A11E0F106010025"
+			x: -2.5d
+			y: 12.0d
+			title: "Trade Route to Distant Fragment"
+			subtitle: "A handshake at distance."
+			description: [
+				"Identify a distant village, structure, or coordinates as a trade-route endpoint. Mark it on Xaero. The Charter logs the bilateral in the trade ledger."
+			]
+			icon: "minecraft:filled_map"
+			tasks: [{
+				id: "5A11E0F106020025"
+				type: "checkmark"
+				title: "Mark a distant trade endpoint on Xaero (1000+ blocks away)"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030049", type: "xp", xp: 40 }
+				{ id: "5A11E0F106030050", type: "item", item: { id: "minecraft:compass", Count: 1b } }
+			]
+			dependencies: ["5A11E0F106010003"]
+		}
+
+		# ---------- Q26: Cargo Run by Train + Airship ----------
+		{
+			id: "5A11E0F106010026"
+			x: 2.5d
+			y: 12.0d
+			title: "Multimodal Cargo Run"
+			subtitle: "Train to the station. Airship from the platform."
+			description: [
+				"Move 64 brass ingots by train from one station to another, then transfer to the airship, then deliver to a third location. The Charter's logistics auditors call this 'mature trade.'"
+			]
+			icon: "create:brass_ingot"
+			tasks: [{
+				id: "5A11E0F106020026"
+				type: "checkmark"
+				title: "Multimodal cargo run: train + airship + delivery (64 brass ingots)"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030051", type: "xp", xp: 80 }
+				{ id: "5A11E0F106030052", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F106010017"
+				"5A11E0F106010025"
+			]
+		}
+
+		# ---------- Q27: Filtered Sorting Yard ----------
+		{
+			id: "5A11E0F106010027"
+			x: -6.5d
+			y: 11.5d
+			title: "Filtered Sorting Yard"
+			subtitle: "Iron, copper, brass — each to its barrel."
+			description: [
+				"Build a sorting yard with Sophisticated Storage + Modular Routers (or Create brass funnels/tunnels). At least three categories sort automatically."
+			]
+			icon: "create:brass_tunnel"
+			tasks: [{
+				id: "5A11E0F106020027"
+				type: "checkmark"
+				title: "Build an automatic sorting yard with 3+ filtered categories"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030053", type: "xp", xp: 50 }
+				{ id: "5A11E0F106030054", type: "item", item: "sophisticatedstorage:barrel" }
+			]
+			dependencies: ["5A11E0F106010015"]
+		}
+
+		# ---------- Q28: Bulk Brass ----------
+		{
+			id: "5A11E0F106010028"
+			x: 6.5d
+			y: 11.0d
+			title: "Bulk Brass"
+			subtitle: "256 brass ingots. The Foreman's first deep stockpile."
+			description: [
+				"Stockpile 256 brass ingots in the colony's warehouse. The Charter pays a tonnage stipend at this mark."
+			]
+			icon: "create:brass_ingot"
+			tasks: [{
+				id: "5A11E0F106020028"
+				type: "item"
+				item: { Count: 1b, id: "create:brass_ingot" }
+				count: 256L
+			}]
+			rewards: [
+				{ id: "5A11E0F106030055", type: "xp", xp: 60 }
+				{ id: "5A11E0F106030056", type: "item", item: { id: "create:brass_block", Count: 4b } }
+			]
+			dependencies: ["5A11E0F106010016"]
+		}
+
+		# ---------- Q29: Bulk Iron ----------
+		{
+			id: "5A11E0F106010029"
+			x: 8.5d
+			y: 11.0d
+			title: "Bulk Iron"
+			subtitle: "256 iron ingots. The Charter quietly upgrades your stipend."
+			description: [
+				"Stockpile 256 iron ingots. The Charter records this in the trade ledger; merchants in other colonies hear about it before the next audit."
+			]
+			icon: "minecraft:iron_ingot"
+			tasks: [{
+				id: "5A11E0F106020029"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:iron_ingot" }
+				count: 256L
+			}]
+			rewards: [
+				{ id: "5A11E0F106030057", type: "xp", xp: 60 }
+				{ id: "5A11E0F106030058", type: "item", item: { id: "minecraft:iron_block", Count: 4b } }
+			]
+			dependencies: ["5A11E0F106010016"]
+		}
+
+		# ---------- Q30: Diamond Reserve ----------
+		{
+			id: "5A11E0F106010030"
+			x: 0.0d
+			y: 13.0d
+			title: "Diamond Reserve"
+			subtitle: "Sixteen diamonds. The Charter's most senior auditor smiles."
+			description: [
+				"Stockpile sixteen diamonds. The Charter does not require it; the Charter notices."
+			]
+			icon: "minecraft:diamond"
+			tasks: [{
+				id: "5A11E0F106020030"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:diamond" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F106030059", type: "xp", xp: 60 }
+				{ id: "5A11E0F106030060", type: "item", item: { id: "minecraft:diamond_block", Count: 1b } }
+			]
+			dependencies: [
+				"5A11E0F106010028"
+				"5A11E0F106010029"
+			]
+		}
+
+		# ---------- Q31: Waystone Network ----------
+		{
+			id: "5A11E0F106010031"
+			x: -4.5d
+			y: 13.0d
+			title: "Waystone Network"
+			subtitle: "Five stones across the fragment. Free travel for the Foreman."
+			description: [
+				"Place five Waystones across the fragment. The Charter's logistics officers now route warp scrolls through your network — small per-use fee, paid quarterly."
+			]
+			icon: "waystones:waystone"
+			tasks: [{
+				id: "5A11E0F106020031"
+				type: "item"
+				item: { Count: 1b, id: "waystones:waystone" }
+				count: 5L
+			}]
+			rewards: [
+				{ id: "5A11E0F106030061", type: "xp", xp: 50 }
+				{ id: "5A11E0F106030062", type: "item", item: { id: "waystones:warp_scroll", Count: 4b } }
+			]
+			dependencies: ["5A11E0F106010003"]
+		}
+
+		# ---------- Q32: Diamond Backpack ----------
+		{
+			id: "5A11E0F106010032"
+			x: -8.5d
+			y: 9.5d
+			title: "Diamond Backpack"
+			subtitle: "The Foreman's mobile warehouse, third tier."
+			description: [
+				"Craft a Diamond Backpack from Sophisticated Backpacks. Slot count: respectable. Upgrade slots: many. The Charter's mobility audit approves."
+			]
+			icon: "sophisticatedbackpacks:diamond_backpack"
+			tasks: [{
+				id: "5A11E0F106020032"
+				type: "item"
+				item: "sophisticatedbackpacks:diamond_backpack"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030063", type: "xp", xp: 50 }
+				{ id: "5A11E0F106030064", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F106010012"]
+		}
+
+		# ---------- Q33: Trade Restaurant Famous ----------
+		{
+			id: "5A11E0F106010033"
+			x: 4.5d
+			y: 13.0d
+			title: "The Famous Restaurant"
+			subtitle: "The Cook upgrades. The Charter's surveyors detour."
+			description: [
+				"Upgrade the Restaurant to level 3. Citizens travel from neighbour fragments for the Cook's stew. The Charter takes a small endorsement fee."
+			]
+			icon: "minecolonies:blockhutrestaurant"
+			tasks: [{
+				id: "5A11E0F106020033"
+				type: "checkmark"
+				title: "Upgrade the Restaurant to level 3"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030065", type: "xp", xp: 40 }
+				{ id: "5A11E0F106030066", type: "item", item: { id: "farmersdelight:cake_slice", Count: 6b } }
+			]
+			dependencies: ["5A11E0F106010004"]
+		}
+
+		# ---------- Q34: Cargo Train First-Class ----------
+		{
+			id: "5A11E0F106010034"
+			x: -6.5d
+			y: 13.5d
+			title: "First-Class Cargo Train"
+			subtitle: "Three cargo cars. One Foreman in the driver's chair."
+			description: [
+				"Build a cargo train with at least three cargo cars. The Foreman's freight tonnage capacity triples. The Charter's logistics officers send a congratulatory cable."
+			]
+			icon: "create:cart_assembler"
+			tasks: [{
+				id: "5A11E0F106020034"
+				type: "checkmark"
+				title: "Build a cargo train with 3+ cargo cars and drive it"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030067", type: "xp", xp: 60 }
+				{ id: "5A11E0F106030068", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F106010016"]
+		}
+
+		# ---------- Q35: Trader Promotion ----------
+		{
+			id: "5A11E0F106010035"
+			x: 2.5d
+			y: 14.0d
+			title: "First-Class Merchant"
+			subtitle: "Three dockets on the office wall now."
+			description: [
+				"Erik delivers the Charter's recognition: First-Class Merchant. The docket pins beside the First-Class Foreman and Second-Class Merchant dockets. Office wall: complete."
+			]
+			icon: "minecraft:emerald_block"
+			tasks: [{
+				id: "5A11E0F106020035"
+				type: "checkmark"
+				title: "Hang the First-Class Merchant docket in the office"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030069", type: "xp", xp: 80 }
+				{ id: "5A11E0F106030070", type: "item", item: { id: "minecraft:emerald_block", Count: 1b } }
+			]
+			dependencies: ["5A11E0F106010030"]
+		}
+
+		# ---------- Q36: Net Profit ----------
+		{
+			id: "5A11E0F106010036"
+			x: -2.5d
+			y: 14.0d
+			title: "Net Profit"
+			subtitle: "256 emeralds. The Charter's surveyors take notes."
+			description: [
+				"Stockpile 256 emeralds in the trade ledger. The Charter's stipend payout escalates a tier — Foreman pays no more colony taxes until the next major audit."
+			]
+			icon: "minecraft:emerald"
+			tasks: [{
+				id: "5A11E0F106020036"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:emerald" }
+				count: 256L
+			}]
+			rewards: [
+				{ id: "5A11E0F106030071", type: "xp", xp: 70 }
+				{ id: "5A11E0F106030072", type: "item", item: { id: "minecraft:emerald_block", Count: 2b } }
+			]
+			dependencies: ["5A11E0F106010018"]
+		}
+
+		# ---------- Q37: Twenty Citizens ----------
+		{
+			id: "5A11E0F106010037"
+			x: 6.5d
+			y: 13.5d
+			title: "Twenty Citizens"
+			subtitle: "A town. A working economy. A Foreman's reputation."
+			description: [
+				"Recruit and house twenty citizens. The Charter calls this 'mature settlement.' The colony's name appears in the next year's trade almanac."
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F106020037"
+				type: "checkmark"
+				title: "Have at least 20 living citizens"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030073", type: "xp", xp: 70 }
+				{ id: "5A11E0F106030074", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F106010024"]
+		}
+
+		# ---------- Q38: AE2 Glimpse ----------
+		{
+			id: "5A11E0F106010038"
+			x: -8.5d
+			y: 14.0d
+			title: "AE2 Glimpse"
+			subtitle: "Applied Energistics. The Charter's most senior logistics technology."
+			description: [
+				"Mine certus quartz or look up its recipe in EMI/JEI. Act VII opens the AE2 Workshops thread; this is the warmup."
+			]
+			icon: "ae2:certus_quartz_crystal"
+			tasks: [{
+				id: "5A11E0F106020038"
+				type: "checkmark"
+				title: "Acquire any AE2 certus quartz item or research it in EMI/JEI"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030075", type: "xp", xp: 30 }
+				{ id: "5A11E0F106030076", type: "item", item: { id: "minecraft:quartz", Count: 16b } }
+			]
+			dependencies: ["5A11E0F106010030"]
+		}
+
+		# ---------- Q39: The Audit Festival ----------
+		{
+			id: "5A11E0F106010039"
+			x: 0.0d
+			y: 15.0d
+			title: "The Audit Festival"
+			subtitle: "Citizens raise the second flag. The Foreman raises a glass."
+			description: [
+				"Pass the Charter's senior audit: 20 citizens, happiness 7+, trade ledger 256 emeralds, three waystones, train network operational. Erik organises a small festival."
+			]
+			icon: "minecraft:cake"
+			tasks: [{
+				id: "5A11E0F106020039"
+				type: "checkmark"
+				title: "All Act VI milestones cleared — Audit Festival celebrated"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030077", type: "xp", xp: 80 }
+				{ id: "5A11E0F106030078", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F106010035"
+				"5A11E0F106010036"
+				"5A11E0F106010037"
+			]
+		}
+
+		# ---------- Q40: Scene-beat finale — The Ledger Closes Black ----------
+		{
+			id: "5A11E0F106010040"
+			x: 0.0d
+			y: 16.5d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Ledger Closes Black"
+			subtitle: "The first profit ledger closes in black."
+			description: [
+				"At sundown Erik closes the bound ledger and stamps it with the Charter's wax. Income out, expenses in, the difference legible in black ink. The colony will not need the Foreman to make every decision next quarter."
+				""
+				"Act VII — The Workshops — begins on completion. The Charter sends a Senior Engineer's compendium. Mekanism, AE2, Modern Industrialization. The Workshops never sleep."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F106020040"
+				type: "checkmark"
+				title: "Close the trade ledger at sundown with Erik present"
+			}]
+			rewards: [
+				{ id: "5A11E0F106030079", type: "xp", xp: 100 }
+				{ id: "5A11E0F106030080", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F106030081", type: "item", item: "mekanism:ingot_steel" }
+			]
+			dependencies: ["5A11E0F106010039"]
+		}
+	]
+}

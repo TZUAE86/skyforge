@@ -80,6 +80,40 @@ const SCENE_BEATS = {
         sound: "minecraft:block.bell.use",
         pitch: 0.85,
         lore: "Act IV closes. Steam, brass, electric, diesel — all on tap. Act V — Wings & Anchors — begins when the Foreman takes to the sky."
+    },
+    // ---- Act V — Wings & Anchors ----
+    "5A11E0F105010001": {
+        title: "Propeller in Hand",
+        subtitle: "Sky ambitions filed.",
+        color: 0x88B8E0,
+        sound: "minecraft:entity.experience_orb.pickup",
+        pitch: 1.2,
+        lore: "Act V — Wings & Anchors. The Foreman holds a Create Aeronautics propeller. The sky is open."
+    },
+    "5A11E0F105010040": {
+        title: "Fragment Shrinks Below",
+        subtitle: "Above the cloud-bank.",
+        color: 0xC0D8F0,
+        sound: "minecraft:item.elytra.flying",
+        pitch: 1.0,
+        lore: "Act V closes. The Foreman is airborne. Act VI — Trade Routes — begins on the first Waystone placed below."
+    },
+    // ---- Act VI — Trade Routes ----
+    "5A11E0F106010001": {
+        title: "The First Waystone",
+        subtitle: "The Charter signs the map.",
+        color: 0x60A060,
+        sound: "minecraft:block.amethyst_block.chime",
+        pitch: 1.0,
+        lore: "Act VI — Trade Routes. The first Waystone planted. Trade routes route through your fragment now."
+    },
+    "5A11E0F106010040": {
+        title: "The Ledger Closes Black",
+        subtitle: "First profit ledger sealed.",
+        color: 0xE8D060,
+        sound: "minecraft:item.book.put",
+        pitch: 1.0,
+        lore: "Act VI closes. The colony pays its own bills. Act VII — The Workshops — begins on the first Mekanism steel ingot."
     }
 };
 

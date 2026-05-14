@@ -1,0 +1,981 @@
+# Skyforge — Act VII: The Workshops (40 quests, Turn 4 part 1).
+# TONE: Steampunk colonial. The Senior Engineer's compendium opens.
+# Mekanism + AE2 + MI live alongside Create. The Workshops never sleep.
+# THEME BIBLE: Mekanism + AE2 are conjugations of Create's verbs.
+# Storage Cell = indexed warehouse. Energy Cube = capacitor's older
+# sibling. The Foreman calls the Compendium "the third volume."
+# TODO verify Mekanism/AE2/MI item IDs at NeoForge 21.1.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_07_the_workshops"
+	group: "5A11E0F100000001"
+	icon: "mekanism:steel_casing"
+	id: "5A11E0F107000000"
+	images: [ ]
+	order_index: 6
+	quest_links: [ ]
+	subtitle: ["The Workshops don't sleep. Neither does the Foreman."]
+	title: "Act VII — The Workshops"
+	quests: [
+
+		# ---------- Q01: Scene-beat opener — Steel Ingot ----------
+		{
+			id: "5A11E0F107010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Senior Engineer's Compendium"
+			subtitle: "Steel. The metal Foremen graduate to."
+			description: [
+				"You crack the wax seal on the third volume Erik delivered at the audit. Inside: Mekanism schematics, AE2 patterns, MI machine plans. The Charter calls this 'the senior engineer's library.'"
+				""
+				"Smelt a Mekanism Steel Ingot. The cover of the compendium is stamped with one."
+			]
+			icon: "mekanism:ingot_steel"
+			tasks: [{
+				id: "5A11E0F107020001"
+				type: "item"
+				item: "mekanism:ingot_steel"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030001", type: "xp", xp: 60 }
+				{ id: "5A11E0F107030002", type: "item", item: { id: "mekanism:ingot_steel", Count: 4b } }
+			]
+			dependencies: ["5A11E0F106010040"]
+		}
+
+		# ---------- Q02: Osmium ----------
+		{
+			id: "5A11E0F107010002"
+			x: -2.5d
+			y: 1.5d
+			title: "Osmium"
+			subtitle: "Heavy. Blue-white. The Charter pays per ingot."
+			description: [
+				"Mine osmium ore and smelt eight osmium ingots. Mekanism's signature metal — denser than iron, hungrier than copper."
+			]
+			icon: "mekanism:ingot_osmium"
+			tasks: [{
+				id: "5A11E0F107020002"
+				type: "item"
+				item: { Count: 1b, id: "mekanism:ingot_osmium" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030003", type: "xp", xp: 30 }
+				{ id: "5A11E0F107030004", type: "item", item: { id: "mekanism:nugget_osmium", Count: 8b } }
+			]
+			dependencies: ["5A11E0F107010001"]
+		}
+
+		# ---------- Q03: Metallurgic Infuser ----------
+		{
+			id: "5A11E0F107010003"
+			x: 2.5d
+			y: 1.5d
+			title: "Metallurgic Infuser"
+			subtitle: "Steel through patience."
+			description: [
+				"Craft a Metallurgic Infuser — Mekanism's first dedicated machine. Feed it iron + carbon → enriched iron. Then enriched iron + carbon → steel."
+			]
+			icon: "mekanism:metallurgic_infuser"
+			tasks: [{
+				id: "5A11E0F107020003"
+				type: "item"
+				item: "mekanism:metallurgic_infuser"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030005", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030006", type: "item", item: { id: "mekanism:enriched_iron", Count: 4b } }
+			]
+			dependencies: ["5A11E0F107010001"]
+		}
+
+		# ---------- Q04: Enrichment Chamber ----------
+		{
+			id: "5A11E0F107010004"
+			x: -2.5d
+			y: 3.0d
+			title: "Enrichment Chamber"
+			subtitle: "Ore in. Dust out. Doubled."
+			description: [
+				"Craft an Enrichment Chamber. Mekanism's first ore-doubler. The Charter calls a Foreman with one 'efficient.'"
+			]
+			icon: "mekanism:enrichment_chamber"
+			tasks: [{
+				id: "5A11E0F107020004"
+				type: "item"
+				item: "mekanism:enrichment_chamber"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030007", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030008", type: "item", item: "mekanism:basic_energy_cube" }
+			]
+			dependencies: ["5A11E0F107010003"]
+		}
+
+		# ---------- Q05: Crusher ----------
+		{
+			id: "5A11E0F107010005"
+			x: 2.5d
+			y: 3.0d
+			title: "Mekanism Crusher"
+			subtitle: "Smaller pieces. Faster smelt."
+			description: [
+				"Craft a Crusher. Pairs with the Enrichment Chamber for the first half of Mekanism's tripling chain."
+			]
+			icon: "mekanism:crusher"
+			tasks: [{
+				id: "5A11E0F107020005"
+				type: "item"
+				item: "mekanism:crusher"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030009", type: "xp", xp: 30 }
+				{ id: "5A11E0F107030010", type: "item", item: { id: "mekanism:dust_iron", Count: 4b } }
+			]
+			dependencies: ["5A11E0F107010001"]
+		}
+
+		# ---------- Q06: First Steel Casing (mechanical milestone) ----------
+		{
+			id: "5A11E0F107010006"
+			x: 0.0d
+			y: 4.5d
+			shape: "rsquare"
+			title: "First Steel Casing"
+			subtitle: "Brass's senior cousin."
+			description: [
+				"Stockpile sixteen Steel Casings. Every Mekanism machine above tier-1 needs one. The Charter audits stockpiles."
+			]
+			icon: "mekanism:steel_casing"
+			tasks: [{
+				id: "5A11E0F107020006"
+				type: "item"
+				item: { Count: 1b, id: "mekanism:steel_casing" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030011", type: "xp", xp: 50 }
+				{ id: "5A11E0F107030012", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F107010003"
+				"5A11E0F107010004"
+			]
+		}
+
+		# ---------- Q07: Basic Energy Cube ----------
+		{
+			id: "5A11E0F107010007"
+			x: -4.5d
+			y: 4.5d
+			title: "Basic Energy Cube"
+			subtitle: "A battery the size of a chest."
+			description: [
+				"Craft a Basic Energy Cube. Stores Forge Energy / Joules. The Charter's electricians upgrade to advanced cubes within the month."
+			]
+			icon: "mekanism:basic_energy_cube"
+			tasks: [{
+				id: "5A11E0F107020007"
+				type: "item"
+				item: "mekanism:basic_energy_cube"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030013", type: "xp", xp: 30 }
+				{ id: "5A11E0F107030014", type: "item", item: { id: "mekanism:energy_tablet", Count: 1b } }
+			]
+			dependencies: ["5A11E0F107010001"]
+		}
+
+		# ---------- Q08: Heat Generator ----------
+		{
+			id: "5A11E0F107010008"
+			x: 4.5d
+			y: 4.5d
+			title: "Heat Generator"
+			subtitle: "Coal in. Joules out."
+			description: [
+				"Craft a Heat Generator. The Foreman's first Mekanism power source. The Charter's electricians consider it 'a starter set.'"
+			]
+			icon: "mekanism:heat_generator"
+			tasks: [{
+				id: "5A11E0F107020008"
+				type: "item"
+				item: "mekanism:heat_generator"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030015", type: "xp", xp: 30 }
+				{ id: "5A11E0F107030016", type: "item", item: { id: "minecraft:coal", Count: 32b } }
+			]
+			dependencies: ["5A11E0F107010001"]
+		}
+
+		# ---------- Q09: Solar Generator ----------
+		{
+			id: "5A11E0F107010009"
+			x: 6.5d
+			y: 5.5d
+			title: "Solar Generator"
+			subtitle: "Free joules from the open sky."
+			description: [
+				"Craft a Solar Generator. Place it on the roof. The Foreman who learns the term 'capacity factor' here."
+			]
+			icon: "mekanism:solar_generator"
+			tasks: [{
+				id: "5A11E0F107020009"
+				type: "item"
+				item: "mekanism:solar_generator"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030017", type: "xp", xp: 30 }
+				{ id: "5A11E0F107030018", type: "item", item: { id: "mekanism:solar_generator", Count: 1b } }
+			]
+			dependencies: ["5A11E0F107010008"]
+		}
+
+		# ---------- Q10: AE2 Charged Certus ----------
+		{
+			id: "5A11E0F107010010"
+			x: -2.5d
+			y: 6.0d
+			title: "Charged Certus"
+			subtitle: "Quartz under lightning."
+			description: [
+				"Charge a certus quartz crystal with a Charger (vanilla anvil + thrown lightning bolt or a Charger machine). Eight charged crystals."
+			]
+			icon: "ae2:charged_certus_quartz_crystal"
+			tasks: [{
+				id: "5A11E0F107020010"
+				type: "item"
+				item: { Count: 1b, id: "ae2:charged_certus_quartz_crystal" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030019", type: "xp", xp: 35 }
+				{ id: "5A11E0F107030020", type: "item", item: { id: "ae2:certus_quartz_crystal", Count: 8b } }
+			]
+			dependencies: ["5A11E0F107010006"]
+		}
+
+		# ---------- Q11: Fluix Crystal ----------
+		{
+			id: "5A11E0F107010011"
+			x: 2.5d
+			y: 6.0d
+			title: "Fluix Crystal"
+			subtitle: "Charged certus + redstone + nether quartz. Lightning-purple."
+			description: [
+				"Combine charged certus, redstone, and nether quartz in a water source. Lightning crackles. Fluix crystallises. The Charter's AE2 logisticians consider this the entry point."
+			]
+			icon: "ae2:fluix_crystal"
+			tasks: [{
+				id: "5A11E0F107020011"
+				type: "item"
+				item: { Count: 1b, id: "ae2:fluix_crystal" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030021", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030022", type: "item", item: { id: "ae2:fluix_dust", Count: 4b } }
+			]
+			dependencies: ["5A11E0F107010010"]
+		}
+
+		# ---------- Q12: ME Controller (mechanical milestone) ----------
+		{
+			id: "5A11E0F107010012"
+			x: 0.0d
+			y: 7.5d
+			shape: "rsquare"
+			title: "ME Controller"
+			subtitle: "The brain of the indexed warehouse."
+			description: [
+				"Craft an AE2 Controller. Power it with at least 16 ae/t. The Foreman's first networked storage system runs from here."
+			]
+			icon: "ae2:controller"
+			tasks: [{
+				id: "5A11E0F107020012"
+				type: "item"
+				item: "ae2:controller"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030023", type: "xp", xp: 60 }
+				{ id: "5A11E0F107030024", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F107010011"]
+		}
+
+		# ---------- Q13: ME Drive ----------
+		{
+			id: "5A11E0F107010013"
+			x: -2.5d
+			y: 9.0d
+			title: "ME Drive"
+			subtitle: "Ten storage bays. One block."
+			description: [
+				"Craft an ME Drive and load it with at least one storage cell. The Foreman's first 'indexed warehouse.'"
+			]
+			icon: "ae2:drive"
+			tasks: [{
+				id: "5A11E0F107020013"
+				type: "item"
+				item: "ae2:drive"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030025", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030026", type: "item", item: "ae2:item_storage_cell_1k" }
+			]
+			dependencies: ["5A11E0F107010012"]
+		}
+
+		# ---------- Q14: Storage Cell ----------
+		{
+			id: "5A11E0F107010014"
+			x: 2.5d
+			y: 9.0d
+			title: "1k Storage Cell"
+			subtitle: "1024 items per type. The Charter respects density."
+			description: [
+				"Craft a 1k item storage cell. The Foreman's smallest indexed-warehouse drawer."
+			]
+			icon: "ae2:item_storage_cell_1k"
+			tasks: [{
+				id: "5A11E0F107020014"
+				type: "item"
+				item: "ae2:item_storage_cell_1k"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030027", type: "xp", xp: 30 }
+				{ id: "5A11E0F107030028", type: "item", item: "ae2:item_storage_cell_4k" }
+			]
+			dependencies: ["5A11E0F107010013"]
+		}
+
+		# ---------- Q15: ME Terminal ----------
+		{
+			id: "5A11E0F107010015"
+			x: 0.0d
+			y: 10.5d
+			title: "ME Terminal"
+			subtitle: "Search. Click. Have."
+			description: [
+				"Craft an ME Terminal. Hold it. The Foreman's first 'pocket warehouse.'"
+			]
+			icon: "ae2:terminal"
+			tasks: [{
+				id: "5A11E0F107020015"
+				type: "item"
+				item: "ae2:terminal"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030029", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030030", type: "item", item: "ae2:crafting_terminal" }
+			]
+			dependencies: ["5A11E0F107010013"]
+		}
+
+		# ---------- Q16: Crafting Terminal ----------
+		{
+			id: "5A11E0F107010016"
+			x: -2.5d
+			y: 12.0d
+			title: "Crafting Terminal"
+			subtitle: "ME inventory + 3x3 grid. The Foreman never opens a chest again."
+			description: [
+				"Craft a Crafting Terminal. Mount it on the ME network. The Charter's clerks call this 'the second great unburdening.'"
+			]
+			icon: "ae2:crafting_terminal"
+			tasks: [{
+				id: "5A11E0F107020016"
+				type: "item"
+				item: "ae2:crafting_terminal"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030031", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030032", type: "item", item: "ae2:pattern_provider" }
+			]
+			dependencies: ["5A11E0F107010015"]
+		}
+
+		# ---------- Q17: Pattern Provider ----------
+		{
+			id: "5A11E0F107010017"
+			x: 2.5d
+			y: 12.0d
+			title: "Pattern Provider"
+			subtitle: "Autocrafting opens here."
+			description: [
+				"Craft a Pattern Provider. With patterns, the ME network can autocraft anything you've written a recipe for. The Charter calls this 'industrial fluency.'"
+			]
+			icon: "ae2:pattern_provider"
+			tasks: [{
+				id: "5A11E0F107020017"
+				type: "item"
+				item: "ae2:pattern_provider"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030033", type: "xp", xp: 50 }
+				{ id: "5A11E0F107030034", type: "item", item: "ae2:blank_pattern" }
+			]
+			dependencies: ["5A11E0F107010016"]
+		}
+
+		# ---------- Q18: Smelting Factory ----------
+		{
+			id: "5A11E0F107010018"
+			x: -4.5d
+			y: 6.0d
+			title: "Smelting Factory"
+			subtitle: "Three furnaces in one block."
+			description: [
+				"Craft a Basic Smelting Factory. Three smelting slots in a single Mekanism machine. The Charter calls a Foreman with one 'a foreman with output.'"
+			]
+			icon: "mekanism:basic_smelting_factory"
+			tasks: [{
+				id: "5A11E0F107020018"
+				type: "item"
+				item: "mekanism:basic_smelting_factory"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030035", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030036", type: "item", item: { id: "minecraft:iron_ingot", Count: 32b } }
+			]
+			dependencies: ["5A11E0F107010006"]
+		}
+
+		# ---------- Q19: MI Forge Hammer ----------
+		{
+			id: "5A11E0F107010019"
+			x: 4.5d
+			y: 8.0d
+			title: "MI Forge Hammer"
+			subtitle: "Modern Industrialization's first lesson."
+			description: [
+				"Craft a Modern Industrialization Forge Hammer. MI's parallel industrial discipline begins here — different recipe chain, same Foreman's voice."
+			]
+			icon: "modern_industrialization:forge_hammer"
+			tasks: [{
+				id: "5A11E0F107020019"
+				type: "checkmark"
+				title: "Craft a Modern Industrialization Forge Hammer or equivalent first-tier machine"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030037", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030038", type: "item", item: { id: "minecraft:iron_ingot", Count: 16b } }
+			]
+			dependencies: ["5A11E0F107010001"]
+		}
+
+		# ---------- Q20: MI Steam Boiler ----------
+		{
+			id: "5A11E0F107010020"
+			x: 6.5d
+			y: 8.5d
+			title: "MI Steam Boiler"
+			subtitle: "MI's bronze-tier steam."
+			description: [
+				"Build a Modern Industrialization steam boiler (or equivalent first-tier energy source). MI runs in parallel with Mekanism — the Charter pays for both."
+			]
+			icon: "modern_industrialization:bronze_boiler"
+			tasks: [{
+				id: "5A11E0F107020020"
+				type: "checkmark"
+				title: "Build an MI steam boiler or first-tier MI energy source"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030039", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030040", type: "item", item: { id: "minecraft:water_bucket", Count: 1b } }
+			]
+			dependencies: ["5A11E0F107010019"]
+		}
+
+		# ---------- Q21: Applied Mekanistics ----------
+		{
+			id: "5A11E0F107010021"
+			x: -4.5d
+			y: 11.0d
+			title: "Applied Mekanistics"
+			subtitle: "Mekanism × AE2. The compatibility addon."
+			description: [
+				"Craft any Applied Mekanistics block — the addon that lets Mekanism chemicals flow through ME networks. The Charter's logistics auditors approve every cross-mod bridge."
+			]
+			icon: "appmek:chemical_storage_cell_64k"
+			tasks: [{
+				id: "5A11E0F107020021"
+				type: "checkmark"
+				title: "Craft any Applied Mekanistics chemical-storage cell or housing"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030041", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030042", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F107010013"
+				"5A11E0F107010018"
+			]
+		}
+
+		# ---------- Q22: Advanced AE Glimpse ----------
+		{
+			id: "5A11E0F107010022"
+			x: 4.5d
+			y: 11.0d
+			title: "Advanced AE"
+			subtitle: "AE2's bigger, faster cousin."
+			description: [
+				"Craft any Advanced AE block or item. The Foreman's first 'industrial-scale' AE network component."
+			]
+			icon: "advanced_ae:quantum_link_chamber"
+			tasks: [{
+				id: "5A11E0F107020022"
+				type: "checkmark"
+				title: "Craft any Advanced AE component"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030043", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030044", type: "item", item: { id: "ae2:fluix_crystal", Count: 8b } }
+			]
+			dependencies: ["5A11E0F107010017"]
+		}
+
+		# ---------- Q23: Diamond + Steel Combined ----------
+		{
+			id: "5A11E0F107010023"
+			x: -2.5d
+			y: 13.5d
+			title: "Diamond and Steel"
+			subtitle: "The Foreman's foundational stockpile."
+			description: [
+				"Stockpile sixteen diamonds and forty-eight steel ingots. The Charter's accountants ask for this baseline."
+			]
+			icon: "minecraft:diamond"
+			tasks: [
+				{ id: "5A11E0F107020023", type: "item", item: { Count: 1b, id: "minecraft:diamond" }, count: 16L }
+				{ id: "5A11E0F107020024", type: "item", item: { Count: 1b, id: "mekanism:ingot_steel" }, count: 48L }
+			]
+			rewards: [
+				{ id: "5A11E0F107030045", type: "xp", xp: 60 }
+				{ id: "5A11E0F107030046", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F107010006"]
+		}
+
+		# ---------- Q24: Energy Tablet ----------
+		{
+			id: "5A11E0F107010024"
+			x: -6.5d
+			y: 4.5d
+			title: "Energy Tablet"
+			subtitle: "Portable joules. Pocket-sized."
+			description: [
+				"Craft a Mekanism Energy Tablet. The Charter's electricians keep one as a calibration reference."
+			]
+			icon: "mekanism:energy_tablet"
+			tasks: [{
+				id: "5A11E0F107020025"
+				type: "item"
+				item: "mekanism:energy_tablet"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030047", type: "xp", xp: 25 }
+				{ id: "5A11E0F107030048", type: "item", item: { id: "mekanism:basic_energy_cube", Count: 1b } }
+			]
+			dependencies: ["5A11E0F107010007"]
+		}
+
+		# ---------- Q25: Configurator ----------
+		{
+			id: "5A11E0F107010025"
+			x: -6.5d
+			y: 6.0d
+			title: "Configurator"
+			subtitle: "The Mekanism wrench."
+			description: [
+				"Craft a Mekanism Configurator. Sets sides on every Mekanism machine: input, output, energy, none. The Foreman's third wrench."
+			]
+			icon: "mekanism:configurator"
+			tasks: [{
+				id: "5A11E0F107020026"
+				type: "item"
+				item: "mekanism:configurator"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030049", type: "xp", xp: 25 }
+				{ id: "5A11E0F107030050", type: "item", item: "mekanism:configuration_card" }
+			]
+			dependencies: ["5A11E0F107010003"]
+		}
+
+		# ---------- Q26: Network Cables ----------
+		{
+			id: "5A11E0F107010026"
+			x: 4.5d
+			y: 12.5d
+			title: "Network Cables"
+			subtitle: "Sixteen Fluix Cables. The Foreman lays out a grid."
+			description: [
+				"Craft sixteen Fluix Cables (or ME smart cables). The colony's ME network grows when you can route it."
+			]
+			icon: "ae2:fluix_glass_cable"
+			tasks: [{
+				id: "5A11E0F107020027"
+				type: "item"
+				item: { Count: 1b, id: "ae2:fluix_glass_cable" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030051", type: "xp", xp: 25 }
+				{ id: "5A11E0F107030052", type: "item", item: { id: "ae2:fluix_glass_cable", Count: 32b } }
+			]
+			dependencies: ["5A11E0F107010012"]
+		}
+
+		# ---------- Q27: Energy Acceptor ----------
+		{
+			id: "5A11E0F107010027"
+			x: 6.5d
+			y: 13.5d
+			title: "Energy Acceptor"
+			subtitle: "Joules in. AE out."
+			description: [
+				"Craft an Energy Acceptor. Now your Mekanism cubes can feed the ME network. The Charter's first power-bridge moment."
+			]
+			icon: "ae2:energy_acceptor"
+			tasks: [{
+				id: "5A11E0F107020028"
+				type: "item"
+				item: "ae2:energy_acceptor"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030053", type: "xp", xp: 30 }
+				{ id: "5A11E0F107030054", type: "item", item: "ae2:energy_acceptor" }
+			]
+			dependencies: ["5A11E0F107010026"]
+		}
+
+		# ---------- Q28: Quartz Glass ----------
+		{
+			id: "5A11E0F107010028"
+			x: 2.5d
+			y: 13.5d
+			title: "Quartz Glass"
+			subtitle: "Cables fit through this."
+			description: [
+				"Craft sixteen Quartz Glass. The Foreman's first AE-routing material."
+			]
+			icon: "ae2:quartz_glass"
+			tasks: [{
+				id: "5A11E0F107020029"
+				type: "item"
+				item: { Count: 1b, id: "ae2:quartz_glass" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030055", type: "xp", xp: 20 }
+				{ id: "5A11E0F107030056", type: "item", item: { id: "minecraft:glass", Count: 32b } }
+			]
+			dependencies: ["5A11E0F107010011"]
+		}
+
+		# ---------- Q29: Industrial Steel ----------
+		{
+			id: "5A11E0F107010029"
+			x: 0.0d
+			y: 15.0d
+			title: "Industrial Steel"
+			subtitle: "256 ingots. The Charter's depth-of-supply test."
+			description: [
+				"Stockpile 256 steel ingots. Mekanism + MI both run on it. The Charter expects the Foreman to keep deeper reserves than a single audit needs."
+			]
+			icon: "mekanism:ingot_steel"
+			tasks: [{
+				id: "5A11E0F107020030"
+				type: "item"
+				item: { Count: 1b, id: "mekanism:ingot_steel" }
+				count: 256L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030057", type: "xp", xp: 80 }
+				{ id: "5A11E0F107030058", type: "item", item: { id: "mekanism:block_steel", Count: 2b } }
+			]
+			dependencies: ["5A11E0F107010001"]
+		}
+
+		# ---------- Q30: Industrial Osmium ----------
+		{
+			id: "5A11E0F107010030"
+			x: -4.5d
+			y: 13.5d
+			title: "Industrial Osmium"
+			subtitle: "128 ingots. The Charter's depth-of-supply test, second metal."
+			description: [
+				"Stockpile 128 osmium ingots. The Foreman's second metal reserve."
+			]
+			icon: "mekanism:ingot_osmium"
+			tasks: [{
+				id: "5A11E0F107020031"
+				type: "item"
+				item: { Count: 1b, id: "mekanism:ingot_osmium" }
+				count: 128L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030059", type: "xp", xp: 60 }
+				{ id: "5A11E0F107030060", type: "item", item: { id: "mekanism:block_osmium", Count: 1b } }
+			]
+			dependencies: ["5A11E0F107010002"]
+		}
+
+		# ---------- Q31: Autocrafting (mechanical milestone) ----------
+		{
+			id: "5A11E0F107010031"
+			x: 0.0d
+			y: 16.5d
+			shape: "rsquare"
+			title: "AE2 Autocrafting"
+			subtitle: "Request 256 brass. Walk away."
+			description: [
+				"Set up AE2 autocrafting with at least one Pattern Provider and one crafting CPU. Request 256 brass ingots via the terminal. The ME network handles the rest."
+				""
+				"Honor-system: complete on the first successful autocraft."
+			]
+			icon: "ae2:crafting_unit"
+			tasks: [{
+				id: "5A11E0F107020032"
+				type: "checkmark"
+				title: "Successfully autocraft an item via AE2 crafting CPU"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030061", type: "xp", xp: 100 }
+				{ id: "5A11E0F107030062", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F107010017"
+				"5A11E0F107010029"
+			]
+		}
+
+		# ---------- Q32: Crafting CPU ----------
+		{
+			id: "5A11E0F107010032"
+			x: -2.5d
+			y: 15.5d
+			title: "Crafting CPU"
+			subtitle: "Cores + storage + co-processors."
+			description: [
+				"Build at least a 3x3 crafting CPU cluster. The Charter pays a small bonus for Foremen who scale beyond a single Crafting Unit."
+			]
+			icon: "ae2:crafting_unit"
+			tasks: [{
+				id: "5A11E0F107020033"
+				type: "item"
+				item: { Count: 1b, id: "ae2:crafting_unit" }
+				count: 9L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030063", type: "xp", xp: 60 }
+				{ id: "5A11E0F107030064", type: "item", item: "ae2:crafting_storage_4k" }
+			]
+			dependencies: ["5A11E0F107010017"]
+		}
+
+		# ---------- Q33: Wireless Terminal ----------
+		{
+			id: "5A11E0F107010033"
+			x: 2.5d
+			y: 15.5d
+			title: "Wireless Terminal"
+			subtitle: "ME from anywhere on the fragment."
+			description: [
+				"Craft a Wireless Terminal. The Charter's mobile auditors recognize a Foreman with one — 'that one's been to seminars.'"
+			]
+			icon: "ae2:wireless_terminal"
+			tasks: [{
+				id: "5A11E0F107020034"
+				type: "item"
+				item: "ae2:wireless_terminal"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030065", type: "xp", xp: 60 }
+				{ id: "5A11E0F107030066", type: "item", item: "ae2:wireless_access_point" }
+			]
+			dependencies: ["5A11E0F107010015"]
+		}
+
+		# ---------- Q34: Sky Stone ----------
+		{
+			id: "5A11E0F107010034"
+			x: 4.5d
+			y: 15.5d
+			title: "Sky Stone"
+			subtitle: "AE2's spacestone. The Charter's atmosphere mapper logs it."
+			description: [
+				"Find or craft Sky Stone (sky stone meteor — AE2's natural deposit). Used for the most advanced AE network housings."
+			]
+			icon: "ae2:sky_stone_block"
+			tasks: [{
+				id: "5A11E0F107020035"
+				type: "item"
+				item: { Count: 1b, id: "ae2:sky_stone_block" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F107030067", type: "xp", xp: 50 }
+				{ id: "5A11E0F107030068", type: "item", item: { id: "ae2:sky_stone_block", Count: 8b } }
+			]
+			dependencies: ["5A11E0F107010011"]
+		}
+
+		# ---------- Q35: Spatial Anchor (advanced AE) ----------
+		{
+			id: "5A11E0F107010035"
+			x: -4.5d
+			y: 15.5d
+			title: "Spatial Anchor"
+			subtitle: "Keep the workshop loaded. Always."
+			description: [
+				"Craft a Spatial Anchor. Place it in the workshop. The chunks stay loaded — the Workshops never sleep, neither does the warehouse."
+			]
+			icon: "ae2:spatial_anchor"
+			tasks: [{
+				id: "5A11E0F107020036"
+				type: "item"
+				item: "ae2:spatial_anchor"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030069", type: "xp", xp: 50 }
+				{ id: "5A11E0F107030070", type: "item", item: "ae2:chunk_loader" }
+			]
+			dependencies: ["5A11E0F107010013"]
+		}
+
+		# ---------- Q36: Mekanism Tier-3 Factory ----------
+		{
+			id: "5A11E0F107010036"
+			x: -6.5d
+			y: 11.0d
+			title: "Mekanism Tier-3 Factory"
+			subtitle: "Elite Smelting Factory. Seven smelt slots."
+			description: [
+				"Craft an Elite Smelting Factory (Mekanism tier 3). The Foreman's industrial output doubles when this enters the workshop."
+			]
+			icon: "mekanism:elite_smelting_factory"
+			tasks: [{
+				id: "5A11E0F107020037"
+				type: "checkmark"
+				title: "Craft an Elite (tier-3) Mekanism factory of any variety"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030071", type: "xp", xp: 60 }
+				{ id: "5A11E0F107030072", type: "item", item: { id: "mekanism:steel_casing", Count: 8b } }
+			]
+			dependencies: ["5A11E0F107010018"]
+		}
+
+		# ---------- Q37: Modern Industrialization Steel ----------
+		{
+			id: "5A11E0F107010037"
+			x: 6.5d
+			y: 11.5d
+			title: "MI Steel"
+			subtitle: "MI's own steel chain. The Charter pays per ingot, regardless of source."
+			description: [
+				"Smelt 32 Modern Industrialization steel ingots. MI's parallel ingot — different recipe, same metal in audit terms."
+			]
+			icon: "modern_industrialization:steel_ingot"
+			tasks: [{
+				id: "5A11E0F107020038"
+				type: "checkmark"
+				title: "Smelt 32 MI steel ingots (or equivalent industrial alloy)"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030073", type: "xp", xp: 50 }
+				{ id: "5A11E0F107030074", type: "item", item: { id: "mekanism:ingot_steel", Count: 16b } }
+			]
+			dependencies: ["5A11E0F107010019"]
+		}
+
+		# ---------- Q38: Workshop Lit 24/7 ----------
+		{
+			id: "5A11E0F107010038"
+			x: -2.5d
+			y: 17.5d
+			title: "Workshop Lit 24/7"
+			subtitle: "The Workshops don't sleep. Neither does the Foreman."
+			description: [
+				"Wire your workshop with Mekanism Universal Cables or Createaddition wires, place enough lamps to be visible at night from your airship. The Charter's surveyors photograph the colony at midnight to confirm."
+			]
+			icon: "minecraft:redstone_lamp"
+			tasks: [{
+				id: "5A11E0F107020039"
+				type: "checkmark"
+				title: "Workshop continuously lit (8+ lamps wired) at midnight"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030075", type: "xp", xp: 40 }
+				{ id: "5A11E0F107030076", type: "item", item: { id: "minecraft:redstone_lamp", Count: 8b } }
+			]
+			dependencies: ["5A11E0F107010027"]
+		}
+
+		# ---------- Q39: Senior Engineer Promotion ----------
+		{
+			id: "5A11E0F107010039"
+			x: 2.5d
+			y: 17.5d
+			title: "Senior Engineer Promotion"
+			subtitle: "The Charter awards a Senior Engineer ribbon."
+			description: [
+				"Erik delivers the docket: Senior Engineer, in recognition of operational Mekanism + AE2 + MI factories. The Foreman's office wall now has four pinned dockets."
+			]
+			icon: "minecraft:diamond_block"
+			tasks: [{
+				id: "5A11E0F107020040"
+				type: "checkmark"
+				title: "Pin the Senior Engineer docket in the office"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030077", type: "xp", xp: 80 }
+				{ id: "5A11E0F107030078", type: "item", item: { id: "minecraft:diamond_block", Count: 1b } }
+			]
+			dependencies: [
+				"5A11E0F107010031"
+				"5A11E0F107010037"
+			]
+		}
+
+		# ---------- Q40: Scene-beat finale — Workshops Light Up ----------
+		{
+			id: "5A11E0F107010040"
+			x: 0.0d
+			y: 19.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Workshops Light Up"
+			subtitle: "Output: continuous."
+			description: [
+				"Midnight. From the airship's deck you watch the workshop windows burn bright while the rest of the fragment sleeps. The Charter's atmospheric mapper records 'continuous industrial output' for the first time."
+				""
+				"Act VIII — The Skyport — begins on completion. The Charter expects a large airship, a magic accent, and a warship under the Foreman's flag."
+			]
+			icon: "mekanism:steel_block"
+			tasks: [{
+				id: "5A11E0F107020041"
+				type: "checkmark"
+				title: "Stand on the airship at midnight, look down at the lit workshop"
+			}]
+			rewards: [
+				{ id: "5A11E0F107030079", type: "xp", xp: 120 }
+				{ id: "5A11E0F107030080", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F107030081", type: "item", item: "ars_nouveau:source_gem" }
+			]
+			dependencies: [
+				"5A11E0F107010031"
+				"5A11E0F107010039"
+			]
+		}
+	]
+}

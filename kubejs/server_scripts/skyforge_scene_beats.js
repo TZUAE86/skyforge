@@ -114,6 +114,40 @@ const SCENE_BEATS = {
         sound: "minecraft:item.book.put",
         pitch: 1.0,
         lore: "Act VI closes. The colony pays its own bills. Act VII — The Workshops — begins on the first Mekanism steel ingot."
+    },
+    // ---- Act VII — The Workshops ----
+    "5A11E0F107010001": {
+        title: "The Senior Engineer's Compendium",
+        subtitle: "Third volume opened.",
+        color: 0xA0A0B0,
+        sound: "minecraft:item.book.put",
+        pitch: 0.9,
+        lore: "Act VII — The Workshops. Steel is smelted. Mekanism + AE2 + MI enter the workshop."
+    },
+    "5A11E0F107010040": {
+        title: "The Workshops Light Up",
+        subtitle: "Output: continuous.",
+        color: 0xFFD060,
+        sound: "minecraft:block.beacon.activate",
+        pitch: 1.0,
+        lore: "Act VII closes. The workshop windows burn bright at midnight. Act VIII — The Skyport — begins on the first Source Gem."
+    },
+    // ---- Act VIII — The Skyport ----
+    "5A11E0F108010001": {
+        title: "First Source Gem",
+        subtitle: "Engineer's chemistry kit opens.",
+        color: 0x80E0FF,
+        sound: "minecraft:block.amethyst_block.chime",
+        pitch: 1.4,
+        lore: "Act VIII — The Skyport. The Foreman holds Source for the first time. Ars Creo bridges the workshop to the alchemist's bench."
+    },
+    "5A11E0F108010040": {
+        title: "Warship Launch",
+        subtitle: "Crew of twelve. Cargo of eight.",
+        color: 0xE08040,
+        sound: "minecraft:block.bell.use",
+        pitch: 0.8,
+        lore: "Act VIII closes. The warship rises on Source-powered lifts at sunset. Act IX — Aether's Edge — opens the Aether portal."
     }
 };
 

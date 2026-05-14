@@ -1,0 +1,985 @@
+# Skyforge — Act VIII: The Skyport (40 quests, Turn 4 part 2).
+# TONE: Steampunk colonial. The Foreman builds a large warship and
+# touches the alchemist's bench for the first time. Magic enters
+# the workshop as the engineer's chemistry.
+# THEME BIBLE: Big Cannons AT + Connected + Copycats+ aesthetics
+# + Ars Nouveau (engineer's alchemy) + Ars Creo (handshake mod)
+# + Forbidden & Arcanus (rare materials prospecting).
+# TODO verify Ars + F&A + Big Cannons AT item IDs.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_08_the_skyport"
+	group: "5A11E0F100000001"
+	icon: "create:cannon_carriage"
+	id: "5A11E0F108000000"
+	images: [ ]
+	order_index: 7
+	quest_links: [ ]
+	subtitle: ["A warship under your flag. Crew of twelve. Cargo of eight."]
+	title: "Act VIII — The Skyport"
+	quests: [
+
+		# ---------- Q01: Scene-beat opener — Source Gem ----------
+		{
+			id: "5A11E0F108010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "First Source Gem"
+			subtitle: "The engineer's chemistry kit opens here."
+			description: [
+				"The Source Gem from Act VII's reward catches the workshop light. Ars Nouveau calls this 'mana' — the Charter calls it 'enriched quartz' — Erik calls it 'pretty.' All three are right."
+			]
+			icon: "ars_nouveau:source_gem"
+			tasks: [{
+				id: "5A11E0F108020001"
+				type: "item"
+				item: "ars_nouveau:source_gem"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030001", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030002", type: "item", item: { id: "ars_nouveau:source_gem", Count: 4b } }
+			]
+			dependencies: ["5A11E0F107010040"]
+		}
+
+		# ---------- Q02: Magebloom ----------
+		{
+			id: "5A11E0F108010002"
+			x: -2.5d
+			y: 1.5d
+			title: "Magebloom"
+			subtitle: "Source-bonded crop. Patient farming."
+			description: [
+				"Grow Magebloom in a tilled bed. Ars Nouveau's first crop — the alchemist's first harvest."
+			]
+			icon: "ars_nouveau:magebloom"
+			tasks: [{
+				id: "5A11E0F108020002"
+				type: "checkmark"
+				title: "Harvest at least 8 Magebloom"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030003", type: "xp", xp: 25 }
+				{ id: "5A11E0F108030004", type: "item", item: { id: "ars_nouveau:source_gem", Count: 4b } }
+			]
+			dependencies: ["5A11E0F108010001"]
+		}
+
+		# ---------- Q03: Source Jar ----------
+		{
+			id: "5A11E0F108010003"
+			x: 2.5d
+			y: 1.5d
+			title: "Source Jar"
+			subtitle: "Mana storage. The Charter calls it 'a battery for engineers.'"
+			description: [
+				"Craft a Source Jar. Place it near a Source Relay or natural Source emitter. Watch the mana fill."
+			]
+			icon: "ars_nouveau:source_jar"
+			tasks: [{
+				id: "5A11E0F108020003"
+				type: "item"
+				item: "ars_nouveau:source_jar"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030005", type: "xp", xp: 30 }
+				{ id: "5A11E0F108030006", type: "item", item: "ars_nouveau:source_jar" }
+			]
+			dependencies: ["5A11E0F108010001"]
+		}
+
+		# ---------- Q04: Spellbook (mechanical milestone) ----------
+		{
+			id: "5A11E0F108010004"
+			x: 0.0d
+			y: 3.0d
+			shape: "rsquare"
+			title: "Novice Spellbook"
+			subtitle: "Formulas at the bench."
+			description: [
+				"Craft your first Spellbook. Inscribe one Glyph in it: Projectile + Break + Fire, or any three the Charter's alchemists approve of."
+			]
+			icon: "ars_nouveau:novice_spell_book"
+			tasks: [{
+				id: "5A11E0F108020004"
+				type: "item"
+				item: "ars_nouveau:novice_spell_book"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030007", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030008", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F108010002"
+				"5A11E0F108010003"
+			]
+		}
+
+		# ---------- Q05: First Glyph ----------
+		{
+			id: "5A11E0F108010005"
+			x: -2.5d
+			y: 4.5d
+			title: "First Glyph"
+			subtitle: "Projectile. Break. Touch. Pick any starter."
+			description: [
+				"Craft any Ars Nouveau Glyph item. The Foreman's first formula."
+			]
+			icon: "ars_nouveau:glyph_projectile"
+			tasks: [{
+				id: "5A11E0F108020005"
+				type: "checkmark"
+				title: "Craft any Ars Nouveau Glyph item (Projectile / Break / Touch / etc.)"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030009", type: "xp", xp: 30 }
+				{ id: "5A11E0F108030010", type: "item", item: { id: "ars_nouveau:source_gem", Count: 4b } }
+			]
+			dependencies: ["5A11E0F108010004"]
+		}
+
+		# ---------- Q06: Ars Creo Handshake ----------
+		{
+			id: "5A11E0F108010006"
+			x: 2.5d
+			y: 4.5d
+			title: "Ars Creo Handshake"
+			subtitle: "Source meets shaft."
+			description: [
+				"Craft any Ars Creo block — the explicit bridge between Create and Ars Nouveau. The Charter's senior engineers consider this 'the moment alchemy joined the workshop properly.'"
+			]
+			icon: "ars_creo:source_motor"
+			tasks: [{
+				id: "5A11E0F108020006"
+				type: "checkmark"
+				title: "Craft any Ars Creo bridge component"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030011", type: "xp", xp: 40 }
+				{ id: "5A11E0F108030012", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F108010004"]
+		}
+
+		# ---------- Q07: Forbidden & Arcanus Crystal ----------
+		{
+			id: "5A11E0F108010007"
+			x: -4.5d
+			y: 3.0d
+			title: "Arcane Crystal"
+			subtitle: "Forbidden & Arcanus' rare prospecting."
+			description: [
+				"Find an Arcane Crystal — Forbidden & Arcanus' first rare material. The Charter's prospectors get bonuses for documenting deposits."
+			]
+			icon: "forbidden_arcanus:arcane_crystal"
+			tasks: [{
+				id: "5A11E0F108020007"
+				type: "checkmark"
+				title: "Acquire any Forbidden & Arcanus crystal or rare material"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030013", type: "xp", xp: 40 }
+				{ id: "5A11E0F108030014", type: "item", item: { id: "minecraft:amethyst_shard", Count: 4b } }
+			]
+			dependencies: ["5A11E0F108010001"]
+		}
+
+		# ---------- Q08: Stella Arcanum ----------
+		{
+			id: "5A11E0F108010008"
+			x: -6.5d
+			y: 4.0d
+			title: "Stella Arcanum"
+			subtitle: "A fragment of fallen star."
+			description: [
+				"Find a Stella Arcanum from a meteor — Forbidden & Arcanus' rarest celestial drop. The Charter's astronomers consider every find a footnote in the next annual."
+			]
+			icon: "forbidden_arcanus:stella_arcanum"
+			tasks: [{
+				id: "5A11E0F108020008"
+				type: "checkmark"
+				title: "Acquire a Stella Arcanum (meteor crash or trade)"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030015", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030016", type: "item", item: { id: "minecraft:nether_star", Count: 1b } }
+			]
+			dependencies: ["5A11E0F108010007"]
+		}
+
+		# ---------- Q09: Create Connected Block ----------
+		{
+			id: "5A11E0F108010009"
+			x: 4.5d
+			y: 3.0d
+			title: "Create: Connected"
+			subtitle: "Pulleys, pivots, advanced contraptions."
+			description: [
+				"Craft any Create: Connected block. The Charter's structural engineers approve every bonus pulley."
+			]
+			icon: "create_connected:pulley_block"
+			tasks: [{
+				id: "5A11E0F108020009"
+				type: "checkmark"
+				title: "Craft any Create: Connected addon block"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030017", type: "xp", xp: 30 }
+				{ id: "5A11E0F108030018", type: "item", item: { id: "create:precision_mechanism", Count: 4b } }
+			]
+			dependencies: ["5A11E0F107010040"]
+		}
+
+		# ---------- Q10: Copycats+ Block ----------
+		{
+			id: "5A11E0F108010010"
+			x: 6.5d
+			y: 4.0d
+			title: "Copycats+ Aesthetic"
+			subtitle: "A block that looks like anything you want."
+			description: [
+				"Craft any Create: Copycats+ block and copy a texture onto it. The Foreman's airship suddenly looks like polished mahogany even though the hull is brass."
+			]
+			icon: "copycats:copycat_panel"
+			tasks: [{
+				id: "5A11E0F108020010"
+				type: "checkmark"
+				title: "Craft and texture any Copycats+ block"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030019", type: "xp", xp: 30 }
+				{ id: "5A11E0F108030020", type: "item", item: { id: "create:brass_block", Count: 2b } }
+			]
+			dependencies: ["5A11E0F108010009"]
+		}
+
+		# ---------- Q11: Bronze Cannon (Big Cannons AT) ----------
+		{
+			id: "5A11E0F108010011"
+			x: -2.5d
+			y: 6.0d
+			title: "Bronze Cannon"
+			subtitle: "Heavier than cast iron. Longer range."
+			description: [
+				"Craft a Bronze Cannon barrel piece — Big Cannons Advanced Technologies tier 2. The Charter's siege auditors note bronze as 'minimum for first-class merchant defense.'"
+			]
+			icon: "createbigcannons:bronze_cannon_barrel"
+			tasks: [{
+				id: "5A11E0F108020011"
+				type: "item"
+				item: "createbigcannons:bronze_cannon_barrel"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030021", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030022", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F107010001"]
+		}
+
+		# ---------- Q12: Steel Cannon ----------
+		{
+			id: "5A11E0F108010012"
+			x: 2.5d
+			y: 6.0d
+			title: "Steel Cannon"
+			subtitle: "Big Cannons AT tier 3. The Charter audits steel."
+			description: [
+				"Craft a Steel Cannon barrel — Big Cannons AT tier 3, the largest standard cannon. The Foreman's warship now has teeth."
+			]
+			icon: "createbigcannons:steel_cannon_barrel"
+			tasks: [{
+				id: "5A11E0F108020012"
+				type: "item"
+				item: "createbigcannons:steel_cannon_barrel"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030023", type: "xp", xp: 60 }
+				{ id: "5A11E0F108030024", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F107010001"
+				"5A11E0F108010011"
+			]
+		}
+
+		# ---------- Q13: Sliding Breech ----------
+		{
+			id: "5A11E0F108010013"
+			x: -4.5d
+			y: 7.5d
+			title: "Sliding Breech"
+			subtitle: "Faster reload. Lower fatigue."
+			description: [
+				"Craft a Cast Iron Sliding Breech block. Mount it on the cannon's chamber side. Reload time drops noticeably."
+			]
+			icon: "createbigcannons:cast_iron_sliding_breech"
+			tasks: [{
+				id: "5A11E0F108020013"
+				type: "item"
+				item: "createbigcannons:cast_iron_sliding_breech"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030025", type: "xp", xp: 40 }
+				{ id: "5A11E0F108030026", type: "item", item: { id: "createbigcannons:cast_iron_sliding_breechblock", Count: 2b } }
+			]
+			dependencies: ["5A11E0F108010011"]
+		}
+
+		# ---------- Q14: Quickfiring Breech ----------
+		{
+			id: "5A11E0F108010014"
+			x: 4.5d
+			y: 7.5d
+			title: "Quickfiring Breech"
+			subtitle: "Bronze tier. Quicker still."
+			description: [
+				"Craft a Cast Iron Quickfiring Breech. Tier-2 breech mechanism. The Foreman's siege rate keeps climbing."
+			]
+			icon: "createbigcannons:cast_iron_quickfiring_breech"
+			tasks: [{
+				id: "5A11E0F108020014"
+				type: "item"
+				item: "createbigcannons:cast_iron_quickfiring_breech"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030027", type: "xp", xp: 40 }
+				{ id: "5A11E0F108030028", type: "item", item: { id: "minecraft:gunpowder", Count: 16b } }
+			]
+			dependencies: ["5A11E0F108010012"]
+		}
+
+		# ---------- Q15: Large Airship Hull (mechanical milestone) ----------
+		{
+			id: "5A11E0F108010015"
+			x: 0.0d
+			y: 9.0d
+			shape: "rsquare"
+			title: "Large Airship Hull"
+			subtitle: "Sixty-four hull blocks. The warship's bones."
+			description: [
+				"Build a large airship hull: at least 64 hull blocks (planks, casings, brass, anything structural). The Charter's shipwright surveyors photograph hulls of this size from above."
+			]
+			icon: "create:brass_block"
+			tasks: [{
+				id: "5A11E0F108020015"
+				type: "checkmark"
+				title: "Build a 64+ block airship hull"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030029", type: "xp", xp: 80 }
+				{ id: "5A11E0F108030030", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F108010012"]
+		}
+
+		# ---------- Q16: Four Propellers Mounted ----------
+		{
+			id: "5A11E0F108010016"
+			x: -2.5d
+			y: 10.5d
+			title: "Four Propellers Mounted"
+			subtitle: "The warship pulls hard."
+			description: [
+				"Mount four Andesite (or higher tier) Propellers on the warship. Aeronautics' tier ladder: andesite < wooden < smart. Pick the Foreman's preferred ratio."
+			]
+			icon: "aeronautics:andesite_propeller"
+			tasks: [{
+				id: "5A11E0F108020016"
+				type: "item"
+				item: { Count: 1b, id: "aeronautics:andesite_propeller" }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F108030031", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030032", type: "item", item: { id: "aeronautics:andesite_propeller", Count: 2b } }
+			]
+			dependencies: ["5A11E0F108010015"]
+		}
+
+		# ---------- Q17: Two Cannons Mounted ----------
+		{
+			id: "5A11E0F108010017"
+			x: 2.5d
+			y: 10.5d
+			title: "Two Cannons Mounted"
+			subtitle: "Port and starboard."
+			description: [
+				"Mount at least two bronze-or-better cannons on the warship — port and starboard, the Charter's traditional layout."
+			]
+			icon: "createbigcannons:bronze_cannon_barrel"
+			tasks: [{
+				id: "5A11E0F108020017"
+				type: "checkmark"
+				title: "Mount 2+ cannons on the warship (port + starboard)"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030033", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030034", type: "item", item: { id: "createbigcannons:powder_charge", Count: 16b } }
+			]
+			dependencies: [
+				"5A11E0F108010011"
+				"5A11E0F108010015"
+			]
+		}
+
+		# ---------- Q18: Source Cannon ----------
+		{
+			id: "5A11E0F108010018"
+			x: -4.5d
+			y: 9.0d
+			title: "Source Cannon"
+			subtitle: "Magic-powered artillery. The Charter calls it 'experimental.'"
+			description: [
+				"Use Ars Creo to bind a Source flow to the warship's cannon-loading mechanism. The Charter calls this 'magic-powered artillery' — Erik calls it 'genuinely terrifying.'"
+			]
+			icon: "ars_nouveau:source_jar"
+			tasks: [{
+				id: "5A11E0F108020018"
+				type: "checkmark"
+				title: "Connect Ars Creo (Source) to a cannon-loading mechanism"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030035", type: "xp", xp: 60 }
+				{ id: "5A11E0F108030036", type: "item", item: { id: "ars_nouveau:source_gem", Count: 8b } }
+			]
+			dependencies: [
+				"5A11E0F108010006"
+				"5A11E0F108010014"
+			]
+		}
+
+		# ---------- Q19: Warship Crew (Guards) ----------
+		{
+			id: "5A11E0F108010019"
+			x: 4.5d
+			y: 9.0d
+			title: "Warship Crew"
+			subtitle: "Twelve Guards. The Charter calls this a 'crew.'"
+			description: [
+				"Hire at least twelve MineColonies Guards (from the existing Guard Tower / Barracks). The Foreman's warship has a crew now."
+			]
+			icon: "minecolonies:blockhutbarracks"
+			tasks: [{
+				id: "5A11E0F108020019"
+				type: "checkmark"
+				title: "Have at least 12 Guards hired in the colony"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030037", type: "xp", xp: 60 }
+				{ id: "5A11E0F108030038", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F108010015"]
+		}
+
+		# ---------- Q20: Skyport Dock ----------
+		{
+			id: "5A11E0F108010020"
+			x: 0.0d
+			y: 12.0d
+			title: "Skyport Dock"
+			subtitle: "Where warships sleep. Where Foremen drink coffee."
+			description: [
+				"Build a dedicated warship dock: 12x12 platform with at least two cargo loading mechanisms, lit perimeter, brass roof. The Charter calls a dock of this size 'a skyport.'"
+			]
+			icon: "minecraft:dispenser"
+			tasks: [{
+				id: "5A11E0F108020020"
+				type: "checkmark"
+				title: "Build a 12x12+ warship dock with cargo loading + lit perimeter"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030039", type: "xp", xp: 60 }
+				{ id: "5A11E0F108030040", type: "item", item: { id: "create:brass_block", Count: 8b } }
+			]
+			dependencies: ["5A11E0F108010015"]
+		}
+
+		# ---------- Q21: Source Relay ----------
+		{
+			id: "5A11E0F108010021"
+			x: -6.5d
+			y: 6.0d
+			title: "Source Relay"
+			subtitle: "Beam Source from a relay to a Jar."
+			description: [
+				"Place a Source Relay near a Source Jar. The Charter's alchemists consider this 'a beam of mana' — practically a wireless power transfer."
+			]
+			icon: "ars_nouveau:relay"
+			tasks: [{
+				id: "5A11E0F108020021"
+				type: "item"
+				item: "ars_nouveau:relay"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030041", type: "xp", xp: 30 }
+				{ id: "5A11E0F108030042", type: "item", item: { id: "ars_nouveau:source_gem", Count: 4b } }
+			]
+			dependencies: ["5A11E0F108010003"]
+		}
+
+		# ---------- Q22: Imbuement Chamber ----------
+		{
+			id: "5A11E0F108010022"
+			x: -6.5d
+			y: 7.5d
+			title: "Imbuement Chamber"
+			subtitle: "Glyphs are scribed here."
+			description: [
+				"Build an Imbuement Chamber. Use it to scribe new glyphs into your spellbook."
+			]
+			icon: "ars_nouveau:imbuement_chamber"
+			tasks: [{
+				id: "5A11E0F108020022"
+				type: "item"
+				item: "ars_nouveau:imbuement_chamber"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030043", type: "xp", xp: 40 }
+				{ id: "5A11E0F108030044", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F108010005"]
+		}
+
+		# ---------- Q23: Magic Combat ----------
+		{
+			id: "5A11E0F108010023"
+			x: -6.5d
+			y: 9.0d
+			title: "Magic Combat"
+			subtitle: "Cast a damaging spell. Hit a target."
+			description: [
+				"Cast a spell with at least Projectile + Damage glyphs at a hostile mob. The Foreman's first 'practical alchemy in the field.'"
+			]
+			icon: "ars_nouveau:novice_spell_book"
+			tasks: [{
+				id: "5A11E0F108020023"
+				type: "checkmark"
+				title: "Cast a damaging spell at a hostile mob and kill it"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030045", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030046", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F108010005"]
+		}
+
+		# ---------- Q24: Connected Funnel (Create Connected) ----------
+		{
+			id: "5A11E0F108010024"
+			x: 6.5d
+			y: 6.0d
+			title: "Connected Funnel"
+			subtitle: "Create: Connected's belt-side funnel."
+			description: [
+				"Craft a Create: Connected funnel variant. Mount it on a belt edge. Items flow with no central tunnel."
+			]
+			icon: "create_connected:funnel"
+			tasks: [{
+				id: "5A11E0F108020024"
+				type: "checkmark"
+				title: "Craft and place any Create: Connected funnel variant"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030047", type: "xp", xp: 30 }
+				{ id: "5A11E0F108030048", type: "item", item: "create:brass_tunnel" }
+			]
+			dependencies: ["5A11E0F108010009"]
+		}
+
+		# ---------- Q25: Copycats+ Mimic Wall ----------
+		{
+			id: "5A11E0F108010025"
+			x: 6.5d
+			y: 7.5d
+			title: "Copycat Mimic Wall"
+			subtitle: "A workshop wall that looks like mahogany. Inside, it's brass."
+			description: [
+				"Use Copycats+ blocks to clad at least sixteen wall-sections with a chosen aesthetic. The Charter's interior designers approve."
+			]
+			icon: "copycats:copycat_block"
+			tasks: [{
+				id: "5A11E0F108020025"
+				type: "checkmark"
+				title: "Clad 16+ wall sections with Copycats+ blocks"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030049", type: "xp", xp: 30 }
+				{ id: "5A11E0F108030050", type: "item", item: { id: "minecraft:oak_planks", Count: 32b } }
+			]
+			dependencies: ["5A11E0F108010010"]
+		}
+
+		# ---------- Q26: Forbidden & Arcanus Forge ----------
+		{
+			id: "5A11E0F108010026"
+			x: -4.5d
+			y: 10.5d
+			title: "Hephaestus Forge"
+			subtitle: "F&A's apex crafting station."
+			description: [
+				"Build a Forbidden & Arcanus Hephaestus Forge (or equivalent advanced workstation). Used to craft Arcane materials."
+			]
+			icon: "forbidden_arcanus:hephaestus_forge"
+			tasks: [{
+				id: "5A11E0F108020026"
+				type: "checkmark"
+				title: "Build a Forbidden & Arcanus Hephaestus Forge or advanced workstation"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030051", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030052", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F108010007"
+				"5A11E0F108010008"
+			]
+		}
+
+		# ---------- Q27: Mahogany Wood ----------
+		{
+			id: "5A11E0F108010027"
+			x: 4.5d
+			y: 10.5d
+			title: "Mahogany Wood"
+			subtitle: "The Charter's traditional warship deck."
+			description: [
+				"Stockpile 32 mahogany planks (or equivalent dark-toned premium wood — F&A's signature wood, or any decorative dark plank)."
+			]
+			icon: "forbidden_arcanus:mysterywood_planks"
+			tasks: [{
+				id: "5A11E0F108020027"
+				type: "checkmark"
+				title: "Stockpile 32+ premium dark planks (F&A mahogany or equivalent)"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030053", type: "xp", xp: 30 }
+				{ id: "5A11E0F108030054", type: "item", item: { id: "minecraft:dark_oak_planks", Count: 32b } }
+			]
+			dependencies: ["5A11E0F108010007"]
+		}
+
+		# ---------- Q28: Warship Test Flight ----------
+		{
+			id: "5A11E0F108010028"
+			x: -2.5d
+			y: 13.5d
+			title: "Warship Test Flight"
+			subtitle: "Launch. Fly 500 blocks. Return."
+			description: [
+				"Assemble and fly the warship at least 500 blocks. The Charter's air-traffic clerks log the first sortie."
+			]
+			icon: "aeronautics:propeller_bearing"
+			tasks: [{
+				id: "5A11E0F108020028"
+				type: "checkmark"
+				title: "Assemble warship + fly 500+ blocks + return"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030055", type: "xp", xp: 70 }
+				{ id: "5A11E0F108030056", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F108010016"
+				"5A11E0F108010017"
+				"5A11E0F108010019"
+			]
+		}
+
+		# ---------- Q29: Pirate Squadron Engaged ----------
+		{
+			id: "5A11E0F108010029"
+			x: 2.5d
+			y: 13.5d
+			title: "Pirate Squadron Engaged"
+			subtitle: "Eight pirates from the warship deck."
+			description: [
+				"Engage and defeat at least eight Born in Chaos sky-pirates from the warship's deck in a single engagement. The Charter calls this 'fleet combat.'"
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F108020029"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F108030057", type: "xp", xp: 80 }
+				{ id: "5A11E0F108030058", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F108010028"]
+		}
+
+		# ---------- Q30: Spell Bow ----------
+		{
+			id: "5A11E0F108010030"
+			x: -6.5d
+			y: 11.5d
+			title: "Spell Bow"
+			subtitle: "An ordinary bow that loads spells, not arrows."
+			description: [
+				"Craft a Spell Bow. Inscribe a spell. Fire at a target — projectile-modified by the spell on the bow."
+			]
+			icon: "ars_nouveau:spell_bow"
+			tasks: [{
+				id: "5A11E0F108020030"
+				type: "item"
+				item: "ars_nouveau:spell_bow"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030059", type: "xp", xp: 40 }
+				{ id: "5A11E0F108030060", type: "item", item: { id: "ars_nouveau:spell_bow", Count: 1b } }
+			]
+			dependencies: ["5A11E0F108010005"]
+		}
+
+		# ---------- Q31: Warding Crystal ----------
+		{
+			id: "5A11E0F108010031"
+			x: -4.5d
+			y: 13.5d
+			title: "Warding Crystal"
+			subtitle: "Pirates avoid warded fragments."
+			description: [
+				"Craft and place a Forbidden & Arcanus Warding Crystal (or equivalent magical-defense fixture). The Charter's pirate-deterrent rating ticks up again."
+			]
+			icon: "forbidden_arcanus:warding_crystal"
+			tasks: [{
+				id: "5A11E0F108020031"
+				type: "checkmark"
+				title: "Place any Forbidden & Arcanus defensive crystal or warding fixture"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030061", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030062", type: "item", item: { id: "minecraft:amethyst_cluster", Count: 1b } }
+			]
+			dependencies: ["5A11E0F108010026"]
+		}
+
+		# ---------- Q32: Cargo Capacity of Eight ----------
+		{
+			id: "5A11E0F108010032"
+			x: 0.0d
+			y: 15.0d
+			title: "Cargo Capacity of Eight"
+			subtitle: "Eight ME storage cells in the warship's hold."
+			description: [
+				"Mount at least eight item storage cells (any tier) in the warship's hold — connected via Pattern Provider to the home network. The Charter calls this 'long-haul logistics.'"
+			]
+			icon: "ae2:item_storage_cell_1k"
+			tasks: [{
+				id: "5A11E0F108020032"
+				type: "checkmark"
+				title: "Mount 8+ ME storage cells in the warship's hold + connect to home network"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030063", type: "xp", xp: 70 }
+				{ id: "5A11E0F108030064", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F108010020"
+				"5A11E0F107010014"
+			]
+		}
+
+		# ---------- Q33: Magic-Powered Lift ----------
+		{
+			id: "5A11E0F108010033"
+			x: -8.5d
+			y: 9.0d
+			title: "Magic-Powered Lift"
+			subtitle: "Source flows. Hull lifts."
+			description: [
+				"Bind a Source Jar via Ars Creo to an Aeronautics Levitite block. The lift now runs on alchemy. The Charter's surveyors note this in the annual."
+			]
+			icon: "aeronautics:levitite"
+			tasks: [{
+				id: "5A11E0F108020033"
+				type: "checkmark"
+				title: "Connect a Source supply to an Aeronautics Levitite block"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030065", type: "xp", xp: 60 }
+				{ id: "5A11E0F108030066", type: "item", item: { id: "aeronautics:levitite", Count: 4b } }
+			]
+			dependencies: [
+				"5A11E0F108010006"
+				"5A11E0F108010003"
+			]
+		}
+
+		# ---------- Q34: Warship Painted ----------
+		{
+			id: "5A11E0F108010034"
+			x: 8.5d
+			y: 9.0d
+			title: "Warship Painted"
+			subtitle: "Brass-on-mahogany. The Foreman's livery."
+			description: [
+				"Paint, dye, or decorate the warship with at least four distinct colours/materials visible from the dock. The Charter recognises liveries in annual fleet photographs."
+			]
+			icon: "minecraft:white_banner"
+			tasks: [{
+				id: "5A11E0F108020034"
+				type: "checkmark"
+				title: "Decorate the warship with 4+ distinct colours / materials"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030067", type: "xp", xp: 30 }
+				{ id: "5A11E0F108030068", type: "item", item: { id: "minecraft:white_banner", Count: 4b } }
+			]
+			dependencies: ["5A11E0F108010015"]
+		}
+
+		# ---------- Q35: Long-Haul Trade Run ----------
+		{
+			id: "5A11E0F108010035"
+			x: -2.5d
+			y: 15.5d
+			title: "Long-Haul Trade Run"
+			subtitle: "2000 blocks, 256 brass, one warship."
+			description: [
+				"Run the warship 2000 blocks with at least 256 brass ingots in the hold. Deliver, return. The Charter pays first-class merchant rates on the round trip."
+			]
+			icon: "create:brass_block"
+			tasks: [{
+				id: "5A11E0F108020035"
+				type: "checkmark"
+				title: "Warship cargo run: 2000+ blocks, 256+ brass ingots delivered"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030069", type: "xp", xp: 90 }
+				{ id: "5A11E0F108030070", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F108010032"]
+		}
+
+		# ---------- Q36: Source Crystal Network ----------
+		{
+			id: "5A11E0F108010036"
+			x: -8.5d
+			y: 7.0d
+			title: "Source Crystal Network"
+			subtitle: "Three Source Jars. One Relay."
+			description: [
+				"Build a Source distribution network: three Source Jars + one Relay routing Source between them. The Charter's alchemists consider this 'a working mana grid.'"
+			]
+			icon: "ars_nouveau:source_jar"
+			tasks: [{
+				id: "5A11E0F108020036"
+				type: "item"
+				item: { Count: 1b, id: "ars_nouveau:source_jar" }
+				count: 3L
+			}]
+			rewards: [
+				{ id: "5A11E0F108030071", type: "xp", xp: 40 }
+				{ id: "5A11E0F108030072", type: "item", item: { id: "ars_nouveau:source_gem_block", Count: 1b } }
+			]
+			dependencies: ["5A11E0F108010021"]
+		}
+
+		# ---------- Q37: Skyport Lighthouse ----------
+		{
+			id: "5A11E0F108010037"
+			x: 8.5d
+			y: 11.5d
+			title: "Skyport Lighthouse"
+			subtitle: "A beacon visible 200 blocks out."
+			description: [
+				"Place a Beacon (vanilla) on top of the skyport. The colony's longest-range navigation aid. The Charter logs your fragment as 'all-weather-accessible.'"
+			]
+			icon: "minecraft:beacon"
+			tasks: [{
+				id: "5A11E0F108020037"
+				type: "item"
+				item: "minecraft:beacon"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030073", type: "xp", xp: 60 }
+				{ id: "5A11E0F108030074", type: "item", item: { id: "minecraft:nether_star", Count: 1b } }
+			]
+			dependencies: ["5A11E0F108010020"]
+		}
+
+		# ---------- Q38: Ars Nouveau Familiar ----------
+		{
+			id: "5A11E0F108010038"
+			x: 4.5d
+			y: 13.5d
+			title: "Familiar"
+			subtitle: "A bound spirit. The Foreman's first apprentice."
+			description: [
+				"Bind any Ars Nouveau Familiar entity. The Charter calls this 'the alchemist's apprentice' and pretends not to notice that it follows you everywhere."
+			]
+			icon: "ars_nouveau:wilden_horn"
+			tasks: [{
+				id: "5A11E0F108020038"
+				type: "checkmark"
+				title: "Bind an Ars Nouveau Familiar (wilden, drygmy, or similar)"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030075", type: "xp", xp: 50 }
+				{ id: "5A11E0F108030076", type: "item", item: { id: "ars_nouveau:source_gem", Count: 8b } }
+			]
+			dependencies: ["5A11E0F108010022"]
+		}
+
+		# ---------- Q39: Skyport Master Promotion ----------
+		{
+			id: "5A11E0F108010039"
+			x: -4.5d
+			y: 15.5d
+			title: "Skyport Master Promotion"
+			subtitle: "The fifth docket. The Charter's senior rank."
+			description: [
+				"Erik delivers the Charter's fifth docket: Skyport Master, in recognition of operational warship + alchemist's bench + skyport dock + Big Cannons AT-tier defense. Five dockets on the office wall."
+			]
+			icon: "minecraft:netherite_ingot"
+			tasks: [{
+				id: "5A11E0F108020039"
+				type: "checkmark"
+				title: "Pin the Skyport Master docket in the office"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030077", type: "xp", xp: 100 }
+				{ id: "5A11E0F108030078", type: "item", item: { id: "minecraft:netherite_ingot", Count: 2b } }
+			]
+			dependencies: [
+				"5A11E0F108010028"
+				"5A11E0F108010029"
+				"5A11E0F108010035"
+			]
+		}
+
+		# ---------- Q40: Scene-beat finale — Warship Launch ----------
+		{
+			id: "5A11E0F108010040"
+			x: 0.0d
+			y: 17.5d
+			shape: "diamond"
+			size: 1.5d
+			title: "Warship Launch"
+			subtitle: "A warship under your flag. Crew of twelve. Cargo of eight."
+			description: [
+				"Stand on the skyport dock at sunset. The warship rises from its moorings on Source-powered lifts, twelve guards on deck, eight cargo cells in the hold. The Charter's atmospheric mapper logs the launch in the annual."
+				""
+				"Act IX — Aether's Edge — begins on completion. The Charter expects exploration: the Aether dimension, Aerial Hell, Cataclysm pre-bosses, the Iron's Spellbooks academy."
+			]
+			icon: "aeronautics:propeller_bearing"
+			tasks: [{
+				id: "5A11E0F108020040"
+				type: "checkmark"
+				title: "Launch the warship from the skyport dock at sunset with crew + cargo"
+			}]
+			rewards: [
+				{ id: "5A11E0F108030079", type: "xp", xp: 150 }
+				{ id: "5A11E0F108030080", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F108030081", type: "item", item: "aether:aether_portal_frame" }
+			]
+			dependencies: ["5A11E0F108010039"]
+		}
+	]
+}

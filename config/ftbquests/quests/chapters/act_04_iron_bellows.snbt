@@ -962,7 +962,7 @@
 			rewards: [
 				{ id: "5A11E0F104030079", type: "xp", xp: 100 }
 				{ id: "5A11E0F104030080", type: "random", table_id: 6490215866393690115L }
-				{ id: "5A11E0F104030081", type: "item", item: "create_aeronautics:propeller" }
+				{ id: "5A11E0F104030081", type: "item", item: "aeronautics:andesite_propeller" }
 			]
 			dependencies: [
 				"5A11E0F104010016"

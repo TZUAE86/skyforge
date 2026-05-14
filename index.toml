@@ -18,11 +18,11 @@ hash = "8f900cf32fae53c6b1d1b75b6cb1a986ee6949869499a8123f13ea58ac11440c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_04_iron_bellows.snbt"
-hash = "29e481488687e158b1973150c6bd017ad129d3a19cac64ce331199d18d5c7a01"
+hash = "7e30dc44795ba67d20b78e5585f50c0d1d3b60a93cbe6114ab6c97a7ece487b3"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_05_wings_and_anchors.snbt"
-hash = "6ddd62b56b497ef6d16d228bb11411c7ece9b4f5ae64d72b8bc012b1b3816dfc"
+hash = "08d27f5cd2f9a01b7547de6e61376fa79c391f202b10b50a48e3f5cfaf87251a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_06_trade_routes.snbt"

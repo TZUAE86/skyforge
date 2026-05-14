@@ -12,7 +12,7 @@
 	default_quest_shape: ""
 	filename: "act_05_wings_and_anchors"
 	group: "5A11E0F100000001"
-	icon: "create_aeronautics:andesite_propeller"
+	icon: "aeronautics:andesite_propeller"
 	id: "5A11E0F105000000"
 	images: [ ]
 	order_index: 4
@@ -33,15 +33,15 @@
 			description: [
 				"You hold the Create Aeronautics Propeller Erik handed you at the audit. Place it somewhere on your fragment — anywhere — and the Charter recognizes you as a Foreman with sky ambitions."
 			]
-			icon: "create_aeronautics:andesite_propeller"
+			icon: "aeronautics:andesite_propeller"
 			tasks: [{
 				id: "5A11E0F105020001"
 				type: "item"
-				item: "create_aeronautics:andesite_propeller"
+				item: "aeronautics:andesite_propeller"
 			}]
 			rewards: [
 				{ id: "5A11E0F105030001", type: "xp", xp: 50 }
-				{ id: "5A11E0F105030002", type: "item", item: { id: "create_aeronautics:andesite_propeller", Count: 2b } }
+				{ id: "5A11E0F105030002", type: "item", item: { id: "aeronautics:andesite_propeller", Count: 2b } }
 			]
 			dependencies: ["5A11E0F104010040"]
 		}
@@ -56,11 +56,11 @@
 			description: [
 				"Craft a second Propeller. Two pulling together steady a small airship the way one alone never will."
 			]
-			icon: "create_aeronautics:andesite_propeller"
+			icon: "aeronautics:andesite_propeller"
 			tasks: [{
 				id: "5A11E0F105020002"
 				type: "item"
-				item: { Count: 1b, id: "create_aeronautics:andesite_propeller" }
+				item: { Count: 1b, id: "aeronautics:andesite_propeller" }
 				count: 2L
 			}]
 			rewards: [
@@ -80,15 +80,15 @@
 			description: [
 				"Craft a Lift Block — Aeronautics' answer to gravity. The Charter's airships use them stacked along the keel."
 			]
-			icon: "create_aeronautics:levitite"
+			icon: "aeronautics:levitite"
 			tasks: [{
 				id: "5A11E0F105020003"
 				type: "item"
-				item: "create_aeronautics:levitite"
+				item: "aeronautics:levitite"
 			}]
 			rewards: [
 				{ id: "5A11E0F105030005", type: "xp", xp: 35 }
-				{ id: "5A11E0F105030006", type: "item", item: "create_aeronautics:levitite" }
+				{ id: "5A11E0F105030006", type: "item", item: "aeronautics:levitite" }
 			]
 			dependencies: ["5A11E0F105010001"]
 		}
@@ -103,7 +103,7 @@
 			description: [
 				"Craft an Aileron. With it the airship rolls; without it the airship goes wherever the wind decides."
 			]
-			icon: "create_aeronautics:andesite_propeller"
+			icon: "aeronautics:andesite_propeller"
 			tasks: [{
 				id: "5A11E0F105020004"
 				type: "checkmark"
@@ -111,7 +111,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F105030007", type: "xp", xp: 30 }
-				{ id: "5A11E0F105030008", type: "item", item: { id: "create_aeronautics:andesite_propeller", Count: 1b } }
+				{ id: "5A11E0F105030008", type: "item", item: { id: "aeronautics:andesite_propeller", Count: 1b } }
 			]
 			dependencies: ["5A11E0F105010002"]
 		}
@@ -126,7 +126,7 @@
 			description: [
 				"Craft a Rudder. Mounted aft, it lets the airship turn left or right without rolling. The Charter audits Foremen who fly without one as 'optimists.'"
 			]
-			icon: "create_aeronautics:gyroscopic_propeller_bearing"
+			icon: "aeronautics:gyroscopic_propeller_bearing"
 			tasks: [{
 				id: "5A11E0F105020005"
 				type: "checkmark"
@@ -134,7 +134,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F105030009", type: "xp", xp: 30 }
-				{ id: "5A11E0F105030010", type: "item", item: { id: "create_aeronautics:gyroscopic_propeller_bearing", Count: 1b } }
+				{ id: "5A11E0F105030010", type: "item", item: { id: "aeronautics:gyroscopic_propeller_bearing", Count: 1b } }
 			]
 			dependencies: ["5A11E0F105010003"]
 		}
@@ -149,11 +149,11 @@
 			description: [
 				"Craft an Airship Helm — the seat from which a Foreman commands wind, weight, and a slightly nervous crew. The Charter's surveyors photograph helms from the front."
 			]
-			icon: "create_aeronautics:propeller_bearing"
+			icon: "aeronautics:propeller_bearing"
 			tasks: [{
 				id: "5A11E0F105020006"
 				type: "item"
-				item: "create_aeronautics:propeller_bearing"
+				item: "aeronautics:propeller_bearing"
 			}]
 			rewards: [
 				{ id: "5A11E0F105030011", type: "xp", xp: 40 }
@@ -226,7 +226,7 @@
 				""
 				"Honor-system: complete when the assembly succeeds."
 			]
-			icon: "create_aeronautics:propeller_bearing"
+			icon: "aeronautics:propeller_bearing"
 			tasks: [{
 				id: "5A11E0F105020009"
 				type: "checkmark"
@@ -253,7 +253,7 @@
 			description: [
 				"Lift the airship five blocks above where it stood. Hold it there for ten seconds. The Charter calls this 'controlled ascent' — Erik calls it 'the first time you trust your own welding.'"
 			]
-			icon: "create_aeronautics:levitite"
+			icon: "aeronautics:levitite"
 			tasks: [{
 				id: "5A11E0F105020010"
 				type: "checkmark"
@@ -261,7 +261,7 @@
 			}]
 			rewards: [
 				{ id: "5A11E0F105030019", type: "xp", xp: 50 }
-				{ id: "5A11E0F105030020", type: "item", item: "create_aeronautics:levitite" }
+				{ id: "5A11E0F105030020", type: "item", item: "aeronautics:levitite" }
 			]
 			dependencies: ["5A11E0F105010009"]
 		}
@@ -276,7 +276,7 @@
 			description: [
 				"Fly the airship at least fifty blocks horizontally from its launch point. The Charter calls this 'the first commute' — for some Foremen, the start of a lifetime."
 			]
-			icon: "create_aeronautics:andesite_propeller"
+			icon: "aeronautics:andesite_propeller"
 			tasks: [{
 				id: "5A11E0F105020011"
 				type: "checkmark"
@@ -555,7 +555,7 @@
 			description: [
 				"Build a larger airship — at least 32 hull blocks, mast at least eight blocks. The Charter calls this 'second-class merchant' — Foremen call it 'finally enough cargo capacity.'"
 			]
-			icon: "create_aeronautics:andesite_propeller"
+			icon: "aeronautics:andesite_propeller"
 			tasks: [{
 				id: "5A11E0F105020023"
 				type: "checkmark"
@@ -578,16 +578,16 @@
 			description: [
 				"Mount at least four Propellers on the larger airship. The Charter notes the new top speed in the surveyor's almanac."
 			]
-			icon: "create_aeronautics:andesite_propeller"
+			icon: "aeronautics:andesite_propeller"
 			tasks: [{
 				id: "5A11E0F105020024"
 				type: "item"
-				item: { Count: 1b, id: "create_aeronautics:andesite_propeller" }
+				item: { Count: 1b, id: "aeronautics:andesite_propeller" }
 				count: 4L
 			}]
 			rewards: [
 				{ id: "5A11E0F105030047", type: "xp", xp: 40 }
-				{ id: "5A11E0F105030048", type: "item", item: { id: "create_aeronautics:andesite_propeller", Count: 1b } }
+				{ id: "5A11E0F105030048", type: "item", item: { id: "aeronautics:andesite_propeller", Count: 1b } }
 			]
 			dependencies: ["5A11E0F105010023"]
 		}
@@ -769,9 +769,9 @@
 			]
 			icon: "minecraft:chest"
 			tasks: [
-				{ id: "5A11E0F105020032", type: "item", item: { Count: 1b, id: "create_aeronautics:andesite_propeller" }, count: 4L }
-				{ id: "5A11E0F105020033", type: "item", item: { Count: 1b, id: "create_aeronautics:levitite" }, count: 2L }
-				{ id: "5A11E0F105020034", type: "item", item: { Count: 1b, id: "create_aeronautics:andesite_propeller" }, count: 2L }
+				{ id: "5A11E0F105020032", type: "item", item: { Count: 1b, id: "aeronautics:andesite_propeller" }, count: 4L }
+				{ id: "5A11E0F105020033", type: "item", item: { Count: 1b, id: "aeronautics:levitite" }, count: 2L }
+				{ id: "5A11E0F105020034", type: "item", item: { Count: 1b, id: "aeronautics:andesite_propeller" }, count: 2L }
 			]
 			rewards: [
 				{ id: "5A11E0F105030063", type: "xp", xp: 50 }
@@ -905,16 +905,16 @@
 			description: [
 				"Mount at least four Ailerons on the airship for refined roll control. The Charter's aerobatic surveyors approve."
 			]
-			icon: "create_aeronautics:andesite_propeller"
+			icon: "aeronautics:andesite_propeller"
 			tasks: [{
 				id: "5A11E0F105020040"
 				type: "item"
-				item: { Count: 1b, id: "create_aeronautics:andesite_propeller" }
+				item: { Count: 1b, id: "aeronautics:andesite_propeller" }
 				count: 4L
 			}]
 			rewards: [
 				{ id: "5A11E0F105030075", type: "xp", xp: 30 }
-				{ id: "5A11E0F105030076", type: "item", item: { id: "create_aeronautics:andesite_propeller", Count: 2b } }
+				{ id: "5A11E0F105030076", type: "item", item: { id: "aeronautics:andesite_propeller", Count: 2b } }
 			]
 			dependencies: ["5A11E0F105010024"]
 		}
@@ -959,7 +959,7 @@
 				""
 				"Act VI — Trade Routes — begins on completion. The Charter expects ledgers, stations, traders, a colony economy that runs without the Foreman's hand on every lever."
 			]
-			icon: "create_aeronautics:andesite_propeller"
+			icon: "aeronautics:andesite_propeller"
 			tasks: [{
 				id: "5A11E0F105020042"
 				type: "checkmark"

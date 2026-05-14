@@ -63,6 +63,23 @@ const SCENE_BEATS = {
         sound: "minecraft:block.bell.use",
         pitch: 1.2,
         lore: "Act III closes. The audit drone left a clean docket. The flag is raised. Act IV — Iron Bellows — begins on the first turn of a Steam Engine."
+    },
+    // ---- Act IV — Iron Bellows ----
+    "5A11E0F104010001": {
+        title: "The Boiler in the Yard",
+        subtitle: "Steam, before the audit.",
+        color: 0xB05030,
+        sound: "minecraft:block.fire.ambient",
+        pitch: 0.9,
+        lore: "Act IV — Iron Bellows. The Steam Engine sits in the yard. The bronze tier begins on first heat."
+    },
+    "5A11E0F104010040": {
+        title: "The First Whistle Echoes",
+        subtitle: "Off the cliffs, off the cloud-banks.",
+        color: 0xE08040,
+        sound: "minecraft:block.bell.use",
+        pitch: 0.85,
+        lore: "Act IV closes. Steam, brass, electric, diesel — all on tap. Act V — Wings & Anchors — begins when the Foreman takes to the sky."
     }
 };
 

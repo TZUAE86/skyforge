@@ -1,0 +1,974 @@
+# Skyforge — Act IV: Iron Bellows (40 quests, Turn 2 part 2).
+# TONE: Steampunk colonial. The forge gets steam, the fragment gets
+# a railway, the Foreman gets a horn-pull rope and a cannon. Bronze
+# tier blooms.
+# THEME BIBLE: Create steam engine + Steam 'n Rails locomotive +
+# Big Cannons basics + Createaddition electric primer + Diesel
+# Generators. Brass casings everywhere.
+# TODO verify all icon + task item IDs at NeoForge 21.1 mod versions.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_04_iron_bellows"
+	group: "5A11E0F100000001"
+	icon: "create:steam_engine"
+	id: "5A11E0F104000000"
+	images: [ ]
+	order_index: 3
+	quest_links: [ ]
+	subtitle: ["The first locomotive whistle echoes off the cliffs."]
+	title: "Act IV — Iron Bellows"
+	quests: [
+
+		# ---------- Q01: Scene-beat opener — Steam Engine Placed ----------
+		{
+			id: "5A11E0F104010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Boiler in the Yard"
+			subtitle: "Brass-bound, vessel-sealed, hungry."
+			description: [
+				"You set the Steam Engine in the yard behind the workshop. The Charter's auditors will not look it over until you light it. Place it where you mean to keep it."
+			]
+			icon: "create:steam_engine"
+			tasks: [{
+				id: "5A11E0F104020001"
+				type: "item"
+				item: "create:steam_engine"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030001", type: "xp", xp: 50 }
+				{ id: "5A11E0F104030002", type: "item", item: { id: "create:fluid_tank", Count: 4b } }
+			]
+			dependencies: ["5A11E0F103010040"]
+		}
+
+		# ---------- Q02: A Cylinder of Water ----------
+		{
+			id: "5A11E0F104010002"
+			x: -2.5d
+			y: 1.5d
+			title: "A Cylinder of Water"
+			subtitle: "Four tanks stacked. The Charter calls this 'a vessel.'"
+			description: [
+				"Stack four Fluid Tanks above the Steam Engine. Fill them with water from the Reservoir or piped from a Hose Pulley. The Charter pays no Foreman for an empty boiler."
+			]
+			icon: "create:fluid_tank"
+			tasks: [{
+				id: "5A11E0F104020002"
+				type: "item"
+				item: { Count: 1b, id: "create:fluid_tank" }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F104030003", type: "xp", xp: 30 }
+				{ id: "5A11E0F104030004", type: "item", item: { id: "create:fluid_pipe", Count: 8b } }
+			]
+			dependencies: ["5A11E0F104010001"]
+		}
+
+		# ---------- Q03: Lit Blaze Burner ----------
+		{
+			id: "5A11E0F104010003"
+			x: 2.5d
+			y: 1.5d
+			title: "Lit Blaze Burner"
+			subtitle: "A flame that turns iron into intent."
+			description: [
+				"Catch a Blaze in the Nether (or trade one from a Charter agent). Place it in your Empty Blaze Burner under the boiler. Heat is the first lesson of every Foreman's second year."
+			]
+			icon: "create:blaze_burner"
+			tasks: [{
+				id: "5A11E0F104020003"
+				type: "item"
+				item: "create:blaze_burner"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030005", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030006", type: "item", item: { id: "minecraft:blaze_powder", Count: 8b } }
+			]
+			dependencies: ["5A11E0F104010001"]
+		}
+
+		# ---------- Q04: The First Whistle (mechanical milestone) ----------
+		{
+			id: "5A11E0F104010004"
+			x: 0.0d
+			y: 3.0d
+			shape: "rsquare"
+			title: "The First Whistle"
+			subtitle: "Steam hisses. Brass holds."
+			description: [
+				"Sustain steam pressure long enough for the Steam Engine to spin a network. Stress units flow. The Charter calls a Foreman who reaches this milestone 'an engineer of the second rank.'"
+			]
+			icon: "create:steam_whistle"
+			tasks: [{
+				id: "5A11E0F104020004"
+				type: "item"
+				item: "create:steam_whistle"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030007", type: "xp", xp: 60 }
+				{ id: "5A11E0F104030008", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F104010002"
+				"5A11E0F104010003"
+			]
+		}
+
+		# ---------- Q05: Brass Casing Stockpile ----------
+		{
+			id: "5A11E0F104010005"
+			x: -2.5d
+			y: 4.0d
+			title: "Brass Casing Stockpile"
+			subtitle: "Bronze tier runs on casings."
+			description: [
+				"Stockpile sixteen Brass Casings. The Charter audits stockpiles, not promises."
+			]
+			icon: "create:brass_casing"
+			tasks: [{
+				id: "5A11E0F104020005"
+				type: "item"
+				item: { Count: 1b, id: "create:brass_casing" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F104030009", type: "xp", xp: 30 }
+				{ id: "5A11E0F104030010", type: "item", item: { id: "create:brass_ingot", Count: 8b } }
+			]
+			dependencies: ["5A11E0F104010004"]
+		}
+
+		# ---------- Q06: A Train Track ----------
+		{
+			id: "5A11E0F104010006"
+			x: 2.5d
+			y: 4.0d
+			title: "A Train Track"
+			subtitle: "Bend the future under your boots."
+			description: [
+				"Craft a Train Track block. With it the Charter expects steel rails climbing the spine of your fragment within the year."
+			]
+			icon: "create:track"
+			tasks: [{
+				id: "5A11E0F104020006"
+				type: "item"
+				item: "create:track"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030011", type: "xp", xp: 30 }
+				{ id: "5A11E0F104030012", type: "item", item: { id: "create:track", Count: 16b } }
+			]
+			dependencies: ["5A11E0F104010004"]
+		}
+
+		# ---------- Q07: Lay Track ----------
+		{
+			id: "5A11E0F104010007"
+			x: 4.5d
+			y: 5.5d
+			title: "Lay Track"
+			subtitle: "Twenty blocks. End to end. The Charter measures."
+			description: [
+				"Place at least twenty Train Track blocks in a contiguous line. The Charter's surveyors photograph track from above; straight lines audit well."
+			]
+			icon: "create:track"
+			tasks: [{
+				id: "5A11E0F104020007"
+				type: "item"
+				item: { Count: 1b, id: "create:track" }
+				count: 20L
+			}]
+			rewards: [
+				{ id: "5A11E0F104030013", type: "xp", xp: 35 }
+				{ id: "5A11E0F104030014", type: "item", item: { id: "create:railway_casing", Count: 4b } }
+			]
+			dependencies: ["5A11E0F104010006"]
+		}
+
+		# ---------- Q08: The Station ----------
+		{
+			id: "5A11E0F104010008"
+			x: 6.5d
+			y: 6.5d
+			title: "The Station"
+			subtitle: "Where trains stop. Where Foremen wait."
+			description: [
+				"Place a Train Station block at one end of your line. The Charter recommends marking the platform with brass — pirates avoid stations that look operational even when they aren't."
+			]
+			icon: "create:track_station"
+			tasks: [{
+				id: "5A11E0F104020008"
+				type: "item"
+				item: "create:track_station"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030015", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030016", type: "item", item: "create:track_signal" }
+			]
+			dependencies: ["5A11E0F104010007"]
+		}
+
+		# ---------- Q09: The Train Controller ----------
+		{
+			id: "5A11E0F104010009"
+			x: 4.5d
+			y: 7.5d
+			title: "The Train Controller"
+			subtitle: "Schedule. Whistle. Acknowledge."
+			description: [
+				"Craft a Train Controller — the chair-block from which a Foreman commands a locomotive. The Charter has opinions about Foremen who skip the seat-belt."
+			]
+			icon: "create:controls"
+			tasks: [{
+				id: "5A11E0F104020009"
+				type: "item"
+				item: "create:controls"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030017", type: "xp", xp: 30 }
+				{ id: "5A11E0F104030018", type: "item", item: "create:schedule" }
+			]
+			dependencies: ["5A11E0F104010008"]
+		}
+
+		# ---------- Q10: Locomotive Built (mechanical milestone) ----------
+		{
+			id: "5A11E0F104010010"
+			x: 0.0d
+			y: 5.5d
+			shape: "rsquare"
+			title: "Locomotive Built"
+			subtitle: "A boiler on wheels. A whistle the Charter can hear from orbit."
+			description: [
+				"Assemble a locomotive contraption: chassis + Steam Engine + boiler + Train Controller + cargo car. Mount it on the track. The Charter pays a stipend on first assembly."
+				""
+				"Honor-system: complete on the first 'whistle pull' that actually moves the train."
+			]
+			icon: "create:bell"
+			tasks: [{
+				id: "5A11E0F104020010"
+				type: "checkmark"
+				title: "Assemble a working locomotive contraption and drive it"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030019", type: "xp", xp: 80 }
+				{ id: "5A11E0F104030020", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F104010009"]
+		}
+
+		# ---------- Q11: Drive a Locomotive 200 Blocks ----------
+		{
+			id: "5A11E0F104010011"
+			x: -2.5d
+			y: 7.0d
+			title: "Drive a Locomotive 200 Blocks"
+			subtitle: "Sit. Whistle. Press W."
+			description: [
+				"Drive your locomotive at least 200 blocks in a single trip. The Charter calls this 'a first run' — Erik calls it 'finally, a Foreman who can sit still.'"
+			]
+			icon: "create:schedule"
+			tasks: [{
+				id: "5A11E0F104020011"
+				type: "checkmark"
+				title: "Drive a locomotive at least 200 blocks in one trip"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030021", type: "xp", xp: 50 }
+				{ id: "5A11E0F104030022", type: "item", item: { id: "create:schedule", Count: 1b } }
+			]
+			dependencies: ["5A11E0F104010010"]
+		}
+
+		# ---------- Q12: Basic Cannon Casting ----------
+		{
+			id: "5A11E0F104010012"
+			x: 6.5d
+			y: 2.5d
+			title: "Basic Cannon Casting"
+			subtitle: "Pour iron into a mould the size of your arm."
+			description: [
+				"Craft a Cast Iron Cannon — Big Cannons' first lesson. The Charter does not care if you fire it. Yet."
+			]
+			icon: "createbigcannons:cast_iron_cannon"
+			tasks: [{
+				id: "5A11E0F104020012"
+				type: "item"
+				item: "createbigcannons:cast_iron_cannon"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030023", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030024", type: "item", item: { id: "createbigcannons:cast_iron_nugget", Count: 8b } }
+			]
+			dependencies: ["5A11E0F104010005"]
+		}
+
+		# ---------- Q13: Cannon Mount ----------
+		{
+			id: "5A11E0F104010013"
+			x: 8.5d
+			y: 3.5d
+			title: "Cannon Mount"
+			subtitle: "A swivel, a wheel, a Foreman with leverage."
+			description: [
+				"Craft a Cannon Mount (or Cannon Chassis). The Charter's siege auditors note: a cannon without a mount is an aspiration."
+			]
+			icon: "createbigcannons:cannon_mount"
+			tasks: [{
+				id: "5A11E0F104020013"
+				type: "item"
+				item: "createbigcannons:cannon_mount"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030025", type: "xp", xp: 30 }
+				{ id: "5A11E0F104030026", type: "item", item: "createbigcannons:cannon_loader" }
+			]
+			dependencies: ["5A11E0F104010012"]
+		}
+
+		# ---------- Q14: Powder Charge ----------
+		{
+			id: "5A11E0F104010014"
+			x: 8.5d
+			y: 5.0d
+			title: "Powder Charge"
+			subtitle: "Black powder, brass casing, hush."
+			description: [
+				"Craft sixteen Powder Charges. Pack them carefully. The Charter's surveyors expect a Foreman who knows the difference between 'rate of fire' and 'rate of loss.'"
+			]
+			icon: "createbigcannons:powder_charge"
+			tasks: [{
+				id: "5A11E0F104020014"
+				type: "item"
+				item: { Count: 1b, id: "createbigcannons:powder_charge" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F104030027", type: "xp", xp: 30 }
+				{ id: "5A11E0F104030028", type: "item", item: { id: "minecraft:gunpowder", Count: 16b } }
+			]
+			dependencies: ["5A11E0F104010013"]
+		}
+
+		# ---------- Q15: First Shot Fired ----------
+		{
+			id: "5A11E0F104010015"
+			x: 6.5d
+			y: 4.5d
+			title: "First Shot Fired"
+			subtitle: "The Charter requests a clear field."
+			description: [
+				"Fire the cannon at least once at a target. Hit, miss — the Charter only audits the boom."
+			]
+			icon: "createbigcannons:cannonball"
+			tasks: [{
+				id: "5A11E0F104020015"
+				type: "checkmark"
+				title: "Fire your cannon at least once"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030029", type: "xp", xp: 50 }
+				{ id: "5A11E0F104030030", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F104010014"]
+		}
+
+		# ---------- Q16: Autocannon ----------
+		{
+			id: "5A11E0F104010016"
+			x: 6.0d
+			y: 11.5d
+			title: "The Autocannon"
+			subtitle: "Crank-fed brass. Loud."
+			description: [
+				"Craft an Autocannon. Heavier than the cast-iron, faster than a Foreman's pulse. The Charter recommends a Guard Tower nearby."
+			]
+			icon: "createbigcannons:autocannon"
+			tasks: [{
+				id: "5A11E0F104020016"
+				type: "item"
+				item: "createbigcannons:autocannon"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030031", type: "xp", xp: 50 }
+				{ id: "5A11E0F104030032", type: "item", item: { id: "createbigcannons:autocannon_cartridge", Count: 8b } }
+			]
+			dependencies: ["5A11E0F104010015"]
+		}
+
+		# ---------- Q17: The Alternator (Createaddition electric) ----------
+		{
+			id: "5A11E0F104010017"
+			x: -4.5d
+			y: 4.0d
+			title: "The Alternator"
+			subtitle: "Rotation in. Current out."
+			description: [
+				"Craft an Alternator from Create: Crafts & Additions. Connect a rotating shaft on one end. Wire on the other. The Foreman's first generated amp."
+			]
+			icon: "createaddition:alternator"
+			tasks: [{
+				id: "5A11E0F104020017"
+				type: "item"
+				item: "createaddition:alternator"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030033", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030034", type: "item", item: { id: "createaddition:capacitor", Count: 1b } }
+			]
+			dependencies: ["5A11E0F104010004"]
+		}
+
+		# ---------- Q18: The Electric Motor ----------
+		{
+			id: "5A11E0F104010018"
+			x: -6.5d
+			y: 5.0d
+			title: "The Electric Motor"
+			subtitle: "Current in. Rotation out. The opposite of an Alternator."
+			description: [
+				"Craft an Electric Motor. Wire it from a battery. The Foreman's first motion-without-coal."
+			]
+			icon: "createaddition:electric_motor"
+			tasks: [{
+				id: "5A11E0F104020018"
+				type: "item"
+				item: "createaddition:electric_motor"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030035", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030036", type: "item", item: { id: "createaddition:wire", Count: 16b } }
+			]
+			dependencies: ["5A11E0F104010017"]
+		}
+
+		# ---------- Q19: Copper Wire ----------
+		{
+			id: "5A11E0F104010019"
+			x: -4.5d
+			y: 5.5d
+			title: "Copper Wire"
+			subtitle: "Sixteen meters of patience."
+			description: [
+				"Press copper sheets into wire. The Charter's electricians live for the smell of warm copper."
+			]
+			icon: "createaddition:copper_wire"
+			tasks: [{
+				id: "5A11E0F104020019"
+				type: "item"
+				item: { Count: 1b, id: "createaddition:copper_wire" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F104030037", type: "xp", xp: 25 }
+				{ id: "5A11E0F104030038", type: "item", item: { id: "minecraft:copper_ingot", Count: 8b } }
+			]
+			dependencies: ["5A11E0F104010017"]
+		}
+
+		# ---------- Q20: Capacitor ----------
+		{
+			id: "5A11E0F104010020"
+			x: -6.5d
+			y: 6.5d
+			title: "The Capacitor"
+			subtitle: "Storage. For lightning."
+			description: [
+				"Craft a Capacitor. The Charter calls it 'a battery for Foremen who think in seconds, not days.'"
+			]
+			icon: "createaddition:capacitor"
+			tasks: [{
+				id: "5A11E0F104020020"
+				type: "item"
+				item: "createaddition:capacitor"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030039", type: "xp", xp: 35 }
+				{ id: "5A11E0F104030040", type: "item", item: { id: "createaddition:capacitor", Count: 1b } }
+			]
+			dependencies: ["5A11E0F104010019"]
+		}
+
+		# ---------- Q21: Diesel Generator ----------
+		{
+			id: "5A11E0F104010021"
+			x: -4.5d
+			y: 8.5d
+			title: "The Diesel Generator"
+			subtitle: "Crude oil in. Watts out. The Charter sniffs."
+			description: [
+				"Craft a Diesel Generator. With the right fuel — biodiesel, gasoline, fuel oil — it will spin shafts faster than any blaze-burner-fed boiler. The Charter respects efficiency."
+			]
+			icon: "createdieselgenerators:diesel_generator"
+			tasks: [{
+				id: "5A11E0F104020021"
+				type: "item"
+				item: "createdieselgenerators:diesel_generator"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030041", type: "xp", xp: 50 }
+				{ id: "5A11E0F104030042", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F104010018"]
+		}
+
+		# ---------- Q22: Large Diesel Generator ----------
+		{
+			id: "5A11E0F104010022"
+			x: -6.5d
+			y: 9.5d
+			title: "Large Diesel Generator"
+			subtitle: "Bigger. Smokier. Louder."
+			description: [
+				"Build a Large Diesel Generator. The Foreman who places one in their workshop signs an unspoken treaty with their neighbours regarding noise after 10pm."
+			]
+			icon: "createdieselgenerators:large_diesel_generator"
+			tasks: [{
+				id: "5A11E0F104020022"
+				type: "item"
+				item: "createdieselgenerators:large_diesel_generator"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030043", type: "xp", xp: 60 }
+				{ id: "5A11E0F104030044", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F104010021"]
+		}
+
+		# ---------- Q23: Steam Whistle Whistle ----------
+		{
+			id: "5A11E0F104010023"
+			x: 2.5d
+			y: 6.5d
+			title: "Steam Whistle on the Roof"
+			subtitle: "Three blasts at noon."
+			description: [
+				"Mount a Steam Whistle on top of the workshop, connected to the steam network. Three blasts at noon; one at sunset. Colony tradition — the Charter pretends it's policy."
+			]
+			icon: "create:steam_whistle"
+			tasks: [{
+				id: "5A11E0F104020023"
+				type: "item"
+				item: "create:steam_whistle"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030045", type: "xp", xp: 25 }
+				{ id: "5A11E0F104030046", type: "item", item: "create:steam_whistle" }
+			]
+			dependencies: ["5A11E0F104010004"]
+		}
+
+		# ---------- Q24: Brass-Bound Goggles ----------
+		{
+			id: "5A11E0F104010024"
+			x: 4.5d
+			y: 3.0d
+			title: "Brass-Bound Goggles"
+			subtitle: "Read the stress. Read the speed. Read your peers."
+			description: [
+				"Craft Engineer's Goggles. With them you read stress units, capacity, speed on every Create block by looking at it. The Foreman without goggles is a Foreman who guesses."
+			]
+			icon: "create:goggles"
+			tasks: [{
+				id: "5A11E0F104020024"
+				type: "item"
+				item: "create:goggles"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030047", type: "xp", xp: 25 }
+				{ id: "5A11E0F104030048", type: "item", item: "create:goggles" }
+			]
+			dependencies: ["5A11E0F104010005"]
+		}
+
+		# ---------- Q25: Mechanical Crafter Array ----------
+		{
+			id: "5A11E0F104010025"
+			x: -2.5d
+			y: 10.0d
+			title: "Mechanical Crafter Array"
+			subtitle: "Crafting without a Foreman's hands."
+			description: [
+				"Craft a Mechanical Crafter. Place at least three together and they auto-craft items along a slot pattern. The Charter loves a five-crafter array more than its surveyors will admit."
+			]
+			icon: "create:mechanical_crafter"
+			tasks: [{
+				id: "5A11E0F104020025"
+				type: "item"
+				item: { Count: 1b, id: "create:mechanical_crafter" }
+				count: 3L
+			}]
+			rewards: [
+				{ id: "5A11E0F104030049", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030050", type: "item", item: "create:mechanical_crafter" }
+			]
+			dependencies: ["5A11E0F104010005"]
+		}
+
+		# ---------- Q26: Locomotive Schedule ----------
+		{
+			id: "5A11E0F104010026"
+			x: -4.5d
+			y: 10.5d
+			title: "Schedule the Locomotive"
+			subtitle: "Where to. When. With which cargo."
+			description: [
+				"Write a Schedule for your locomotive: at least two stations, one cargo stop. The Foreman who schedules saves three hours a week. The Foreman who reschedules saves three more."
+			]
+			icon: "create:schedule"
+			tasks: [{
+				id: "5A11E0F104020026"
+				type: "checkmark"
+				title: "Write and install a Schedule on the Train Controller with 2+ stations"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030051", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030052", type: "item", item: { id: "create:schedule", Count: 1b } }
+			]
+			dependencies: ["5A11E0F104010011"]
+		}
+
+		# ---------- Q27: Second Station ----------
+		{
+			id: "5A11E0F104010027"
+			x: -2.5d
+			y: 11.5d
+			title: "Second Station"
+			subtitle: "Two stations is a route. One is a hobby."
+			description: [
+				"Place a second Train Station block elsewhere on your fragment. Now the locomotive has a 'from' and a 'to.'"
+			]
+			icon: "create:track_station"
+			tasks: [{
+				id: "5A11E0F104020027"
+				type: "item"
+				item: { Count: 1b, id: "create:track_station" }
+				count: 2L
+			}]
+			rewards: [
+				{ id: "5A11E0F104030053", type: "xp", xp: 35 }
+				{ id: "5A11E0F104030054", type: "item", item: "create:track_observer" }
+			]
+			dependencies: ["5A11E0F104010026"]
+		}
+
+		# ---------- Q28: Steam 'n Rails Buffer ----------
+		{
+			id: "5A11E0F104010028"
+			x: 4.5d
+			y: 8.5d
+			title: "End-of-Line Buffer"
+			subtitle: "A wall the train hits politely."
+			description: [
+				"Place a Track Buffer at the end of each line. The Charter has lost two Foremen to under-engineered terminals. Erik mentions this often."
+			]
+			icon: "railways:track_buffer"
+			tasks: [{
+				id: "5A11E0F104020028"
+				type: "item"
+				item: "railways:track_buffer"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030055", type: "xp", xp: 25 }
+				{ id: "5A11E0F104030056", type: "item", item: { id: "minecraft:dispenser", Count: 1b } }
+			]
+			dependencies: ["5A11E0F104010008"]
+		}
+
+		# ---------- Q29: Train Signal ----------
+		{
+			id: "5A11E0F104010029"
+			x: 6.5d
+			y: 9.5d
+			title: "A Train Signal"
+			subtitle: "Red. Yellow. Green. Slow Foreman. Faster Foreman."
+			description: [
+				"Place a Track Signal. The Charter signals you to slow before a curve; the signal signals the train. Symmetry."
+			]
+			icon: "create:track_signal"
+			tasks: [{
+				id: "5A11E0F104020029"
+				type: "item"
+				item: "create:track_signal"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030057", type: "xp", xp: 30 }
+				{ id: "5A11E0F104030058", type: "item", item: "create:track_signal" }
+			]
+			dependencies: ["5A11E0F104010008"]
+		}
+
+		# ---------- Q30: Bigger Boiler (level 2) ----------
+		{
+			id: "5A11E0F104010030"
+			x: 2.5d
+			y: 8.5d
+			title: "Bigger Boiler"
+			subtitle: "Eight tanks. Heat from three burners. Steam for the colony."
+			description: [
+				"Expand your boiler: eight Fluid Tanks, three lit Blaze Burners. The Steam Engine reports a higher capacity rating. The Charter notices."
+			]
+			icon: "create:fluid_tank"
+			tasks: [{
+				id: "5A11E0F104020030"
+				type: "checkmark"
+				title: "Build a level-2 boiler: 8 fluid tanks + 3 lit Blaze Burners"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030059", type: "xp", xp: 50 }
+				{ id: "5A11E0F104030060", type: "item", item: { id: "create:steam_engine", Count: 1b } }
+			]
+			dependencies: ["5A11E0F104010004"]
+		}
+
+		# ---------- Q31: Cannon Loader Automated ----------
+		{
+			id: "5A11E0F104010031"
+			x: 8.5d
+			y: 6.5d
+			title: "Cannon Loader Automated"
+			subtitle: "Powder, charge, ball. Without a Foreman's hands."
+			description: [
+				"Place a Cannon Loader behind your cannon. Feed it with belts. The Foreman who automates the loading is the Foreman who survives the second siege."
+			]
+			icon: "createbigcannons:cannon_loader"
+			tasks: [{
+				id: "5A11E0F104020031"
+				type: "item"
+				item: "createbigcannons:cannon_loader"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030061", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030062", type: "item", item: "createbigcannons:cannon_loader" }
+			]
+			dependencies: ["5A11E0F104010015"]
+		}
+
+		# ---------- Q32: Tesla Coil (intro defense) ----------
+		{
+			id: "5A11E0F104010032"
+			x: -8.5d
+			y: 6.5d
+			title: "The Tesla Coil"
+			subtitle: "Voltage in. Pirates out."
+			description: [
+				"Craft a Tesla Coil from Createaddition. Wire it from a Capacitor. Drop a pirate before they reach the cobble wall. The Charter calls this 'first-class deterrent infrastructure.'"
+			]
+			icon: "createaddition:tesla_coil"
+			tasks: [{
+				id: "5A11E0F104020032"
+				type: "item"
+				item: "createaddition:tesla_coil"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030063", type: "xp", xp: 45 }
+				{ id: "5A11E0F104030064", type: "item", item: { id: "createaddition:wire", Count: 16b } }
+			]
+			dependencies: ["5A11E0F104010020"]
+		}
+
+		# ---------- Q33: Crushing Wheels x2 ----------
+		{
+			id: "5A11E0F104010033"
+			x: 4.5d
+			y: 1.5d
+			title: "Crushing Wheels Stockpile"
+			subtitle: "A second pair. The first wore out before the audit."
+			description: [
+				"Stockpile a second pair of Crushing Wheels. The Charter audits redundancy."
+			]
+			icon: "create:crushing_wheel"
+			tasks: [{
+				id: "5A11E0F104020033"
+				type: "item"
+				item: { Count: 1b, id: "create:crushing_wheel" }
+				count: 2L
+			}]
+			rewards: [
+				{ id: "5A11E0F104030065", type: "xp", xp: 25 }
+				{ id: "5A11E0F104030066", type: "item", item: { id: "create:crushing_wheel", Count: 2b } }
+			]
+			dependencies: ["5A11E0F104010005"]
+		}
+
+		# ---------- Q34: Cargo Run ----------
+		{
+			id: "5A11E0F104010034"
+			x: -4.5d
+			y: 12.0d
+			title: "Cargo Run"
+			subtitle: "Sixty-four iron from Station A to Station B."
+			description: [
+				"Run a cargo train: load 64 iron ingots into a cargo car at Station A, deliver to Station B. Erik signs the docket on arrival."
+			]
+			icon: "minecraft:chest"
+			tasks: [{
+				id: "5A11E0F104020034"
+				type: "checkmark"
+				title: "Deliver 64 iron ingots via cargo train between two stations"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030067", type: "xp", xp: 50 }
+				{ id: "5A11E0F104030068", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F104010027"]
+		}
+
+		# ---------- Q35: Wired Workshop ----------
+		{
+			id: "5A11E0F104010035"
+			x: -8.5d
+			y: 8.0d
+			title: "Wired Workshop"
+			subtitle: "Three lights. One switch. The Foreman saves a candle a week."
+			description: [
+				"Wire at least three Createaddition lamps (or any electric block) to a Capacitor. The Foreman's electric era opens on the first switch-flick."
+			]
+			icon: "minecraft:redstone_lamp"
+			tasks: [{
+				id: "5A11E0F104020035"
+				type: "checkmark"
+				title: "Wire 3+ electric devices to a Createaddition power source"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030069", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030070", type: "item", item: { id: "createaddition:wire", Count: 32b } }
+			]
+			dependencies: ["5A11E0F104010032"]
+		}
+
+		# ---------- Q36: Steam Mixer ----------
+		{
+			id: "5A11E0F104010036"
+			x: 2.5d
+			y: 10.5d
+			title: "Steam-Driven Mixer"
+			subtitle: "Brass alloyed at twenty-four hours uninterrupted."
+			description: [
+				"Power your Mechanical Mixer from the Steam Engine, not a Hand Crank or a Water Wheel. The mix runs day and night. The Charter approves."
+			]
+			icon: "create:mechanical_mixer"
+			tasks: [{
+				id: "5A11E0F104020036"
+				type: "checkmark"
+				title: "Power a Mechanical Mixer from a Steam Engine for at least one in-game day"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030071", type: "xp", xp: 40 }
+				{ id: "5A11E0F104030072", type: "item", item: { id: "create:brass_ingot", Count: 16b } }
+			]
+			dependencies: ["5A11E0F104010030"]
+		}
+
+		# ---------- Q37: A Brass Bell ----------
+		{
+			id: "5A11E0F104010037"
+			x: 0.0d
+			y: 11.5d
+			title: "A Brass Bell"
+			subtitle: "Rung at sundown. Rung at audit. Rung when a Foreman gets engaged."
+			description: [
+				"Place a Brass Bell (or vanilla Bell) above the Town Hall. The Charter's colonies recognize each other by their bells."
+			]
+			icon: "minecraft:bell"
+			tasks: [{
+				id: "5A11E0F104020037"
+				type: "item"
+				item: "minecraft:bell"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030073", type: "xp", xp: 20 }
+				{ id: "5A11E0F104030074", type: "item", item: { id: "create:brass_ingot", Count: 4b } }
+			]
+			dependencies: ["5A11E0F104010005"]
+		}
+
+		# ---------- Q38: Iron Pile ----------
+		{
+			id: "5A11E0F104010038"
+			x: 4.5d
+			y: 12.5d
+			title: "Iron Pile"
+			subtitle: "A hundred ingots. The Charter pays per ton."
+			description: [
+				"Stockpile 100 iron ingots somewhere in the colony — Warehouse, your office, a Forester's chest if you trust her. The Charter pays a stipend at the 100-mark."
+			]
+			icon: "minecraft:iron_ingot"
+			tasks: [{
+				id: "5A11E0F104020038"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:iron_ingot" }
+				count: 100L
+			}]
+			rewards: [
+				{ id: "5A11E0F104030075", type: "xp", xp: 50 }
+				{ id: "5A11E0F104030076", type: "item", item: { id: "minecraft:gold_ingot", Count: 8b } }
+			]
+			dependencies: ["5A11E0F104010005"]
+		}
+
+		# ---------- Q39: The Charter's Promotion ----------
+		{
+			id: "5A11E0F104010039"
+			x: -2.5d
+			y: 13.0d
+			title: "The Charter's Promotion"
+			subtitle: "First-Class Foreman. The docket is wax-sealed."
+			description: [
+				"Erik delivers a docket from the Charter: 'In recognition of services rendered to Fragment 0x174A, Foreman is hereby promoted to First Class.' Pinned on the office wall."
+			]
+			icon: "minecraft:gold_ingot"
+			tasks: [{
+				id: "5A11E0F104020039"
+				type: "checkmark"
+				title: "Hang a banner or sign in your office marking the First-Class promotion"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030077", type: "xp", xp: 60 }
+				{ id: "5A11E0F104030078", type: "item", item: { id: "minecraft:gold_block", Count: 1b } }
+			]
+			dependencies: [
+				"5A11E0F104010034"
+				"5A11E0F104010038"
+			]
+		}
+
+		# ---------- Q40: Scene-beat finale — The First Whistle Echoes ----------
+		{
+			id: "5A11E0F104010040"
+			x: 0.0d
+			y: 14.5d
+			shape: "diamond"
+			size: 1.5d
+			title: "The First Whistle Echoes"
+			subtitle: "Off the cliffs. Off the cloud-banks. Off Erik's hammer."
+			description: [
+				"You pull the whistle cord at sundown. The note travels across the fragment, off the cliffs, back. The colony stops what it's doing. Even the pirates listen."
+				""
+				"Act V — Wings & Anchors — begins on completion. The Charter expects the Foreman to take to the sky. The Aeronautics blueprints are on the bench."
+			]
+			icon: "create:bell"
+			tasks: [{
+				id: "5A11E0F104020040"
+				type: "checkmark"
+				title: "Pull the steam whistle at the Town Hall square at sundown"
+			}]
+			rewards: [
+				{ id: "5A11E0F104030079", type: "xp", xp: 100 }
+				{ id: "5A11E0F104030080", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F104030081", type: "item", item: "create_aeronautics:propeller" }
+			]
+			dependencies: [
+				"5A11E0F104010016"
+				"5A11E0F104010022"
+				"5A11E0F104010039"
+			]
+		}
+	]
+}

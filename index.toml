@@ -30,7 +30,7 @@ hash = "54609e47c845eacf995bb6682395362d499f6ba1b374c2181bbe0e040df7ac2d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_07_the_workshops.snbt"
-hash = "b966727f5b3a980775280c4af30141b000e5189dc62a58eb064e6c504f60b239"
+hash = "77b5b175f82fb3f5a826f53114a6123d8ce72192184e1828689ea008d59bfbb3"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_08_the_skyport.snbt"
@@ -38,11 +38,11 @@ hash = "9972f179e39239ab86a5676cdef58d36ab95a76d22878354d01f7c8568ccbe48"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_09_aethers_edge.snbt"
-hash = "38957bb64d96573cff43c4d64e1e5dab47eb1b46b72058077a66475a8864d2a1"
+hash = "250596f84c6d3469c784f8331bd00724cd7974494c0fdefa8e8c7365c374a30a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_10_the_citadel.snbt"
-hash = "e47bdb22d5535d2d5d318abc74dac57bb7fc23e46a7e4eb847563dd15f071494"
+hash = "378730cfcbdfa5ace4c3e016fdb48943b1426bc3bd86cb5c740a71da011f20dc"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -62,7 +62,7 @@ hash = "66da70f14da54d298a3f5ade01701801c5200db93ed37429bf74db5bb7aac0bd"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/tier3_advanced.snbt"
-hash = "ffa1cd7075ed4d87b3f1d69d94ebfcf46e059fab25a68e10c1bfafbafcfd2346"
+hash = "46652a953c250af2192415cad8f3e93164cc35cbcd5524708ab907b9fb29ed2e"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_challenges.js"

@@ -173,7 +173,7 @@
 			description: [
 				"Cast a tier-4 (Ascendant) or higher Iron's Spellbooks spell. The Foreman is, by academy standards, a senior mage now."
 			]
-			icon: "ironsspellbooks:spell_book"
+			icon: "irons_spellbooks:spell_book"
 			tasks: [{
 				id: "5A11E0F10A020008"
 				type: "checkmark"
@@ -358,7 +358,7 @@
 			description: [
 				"Cast a damaging Iron's Spells spell at hostile mobs during an active engagement. The Charter calls battlefield casting 'practical mastery.'"
 			]
-			icon: "ironsspellbooks:spell_book"
+			icon: "irons_spellbooks:spell_book"
 			tasks: [{
 				id: "5A11E0F10A020016"
 				type: "checkmark"

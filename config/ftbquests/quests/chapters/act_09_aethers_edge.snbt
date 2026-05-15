@@ -219,15 +219,15 @@
 			description: [
 				"Craft an Iron's Spells 'n Spellbooks Spell Book. The Charter's senior alchemists ('mages,' in academy terms) consider this 'Tier 1 enrollment.'"
 			]
-			icon: "ironsspellbooks:spell_book"
+			icon: "irons_spellbooks:spell_book"
 			tasks: [{
 				id: "5A11E0F109020009"
 				type: "item"
-				item: "ironsspellbooks:spell_book"
+				item: "irons_spellbooks:spell_book"
 			}]
 			rewards: [
 				{ id: "5A11E0F109030017", type: "xp", xp: 40 }
-				{ id: "5A11E0F109030018", type: "item", item: "ironsspellbooks:spell_book" }
+				{ id: "5A11E0F109030018", type: "item", item: "irons_spellbooks:spell_book" }
 			]
 			dependencies: ["5A11E0F108010040"]
 		}
@@ -242,7 +242,7 @@
 			description: [
 				"Acquire any Iron's Spellbooks tier-1 spell scroll. The Charter's mages award one for completing the entrance examination."
 			]
-			icon: "ironsspellbooks:scroll"
+			icon: "irons_spellbooks:scroll"
 			tasks: [{
 				id: "5A11E0F109020010"
 				type: "checkmark"
@@ -266,7 +266,7 @@
 			description: [
 				"Cast any Iron's Spellbooks spell at a mob. Damage them, freeze them, heal yourself — doesn't matter, only that you cast and the spell connects."
 			]
-			icon: "ironsspellbooks:spell_book"
+			icon: "irons_spellbooks:spell_book"
 			tasks: [{
 				id: "5A11E0F109020011"
 				type: "checkmark"
@@ -451,7 +451,7 @@
 			description: [
 				"Acquire and cast an Iron's Spellbooks tier-2 spell. The Charter's mage-academy enrollment rises one tier."
 			]
-			icon: "ironsspellbooks:scroll"
+			icon: "irons_spellbooks:scroll"
 			tasks: [{
 				id: "5A11E0F109020019"
 				type: "checkmark"
@@ -638,7 +638,7 @@
 			description: [
 				"Equip any Iron's Spellbooks armor piece (robe, cape, hood). The Foreman now looks the part."
 			]
-			icon: "ironsspellbooks:wandering_magician_robe"
+			icon: "irons_spellbooks:wandering_magician_robe"
 			tasks: [{
 				id: "5A11E0F109020027"
 				type: "checkmark"
@@ -780,7 +780,7 @@
 			description: [
 				"Cast a tier-3 Iron's Spells spell. The Foreman's academy enrollment now reads 'senior.'"
 			]
-			icon: "ironsspellbooks:scroll"
+			icon: "irons_spellbooks:scroll"
 			tasks: [{
 				id: "5A11E0F109020033"
 				type: "checkmark"

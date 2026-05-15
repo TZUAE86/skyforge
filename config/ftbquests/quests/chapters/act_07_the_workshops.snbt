@@ -201,11 +201,11 @@
 			description: [
 				"Craft a Heat Generator. The Foreman's first Mekanism power source. The Charter's electricians consider it 'a starter set.'"
 			]
-			icon: "mekanism:heat_generator"
+			icon: "mekanismgenerators:heat_generator"
 			tasks: [{
 				id: "5A11E0F107020008"
 				type: "item"
-				item: "mekanism:heat_generator"
+				item: "mekanismgenerators:heat_generator"
 			}]
 			rewards: [
 				{ id: "5A11E0F107030015", type: "xp", xp: 30 }
@@ -224,15 +224,15 @@
 			description: [
 				"Craft a Solar Generator. Place it on the roof. The Foreman who learns the term 'capacity factor' here."
 			]
-			icon: "mekanism:solar_generator"
+			icon: "mekanismgenerators:solar_generator"
 			tasks: [{
 				id: "5A11E0F107020009"
 				type: "item"
-				item: "mekanism:solar_generator"
+				item: "mekanismgenerators:solar_generator"
 			}]
 			rewards: [
 				{ id: "5A11E0F107030017", type: "xp", xp: 30 }
-				{ id: "5A11E0F107030018", type: "item", item: { id: "mekanism:solar_generator", Count: 1b } }
+				{ id: "5A11E0F107030018", type: "item", item: { id: "mekanismgenerators:solar_generator", Count: 1b } }
 			]
 			dependencies: ["5A11E0F107010008"]
 		}

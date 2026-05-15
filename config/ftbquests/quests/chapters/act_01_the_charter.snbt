@@ -701,6 +701,8 @@
 				"Stand a Millstone next to a Hand Crank. Connect them with a shaft. Drop wheat in the top. Turn until your shoulder complains."
 				""
 				"Four flour. That's the Charter's threshold for 'you understand rotation now.'"
+				""
+				"The Tinker's Bench side chapter goes deeper on Create automation — open it after Act II finishes if you want guided builds for Sequenced Assembly, contraptions, item vaults, and decorative work."
 			]
 			icon: "create:millstone"
 			tasks: [

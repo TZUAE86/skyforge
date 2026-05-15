@@ -224,6 +224,23 @@ const SCENE_BEATS = {
         sound: "minecraft:block.bell.use",
         pitch: 1.1,
         lore: "Act XII finale — the Court is in session permanently. The Foreman has work for as long as they care to take it. Quarterly cycle reset every 7+ in-game days."
+    },
+    // ---- Side: The Tinker's Bench ----
+    "5A11E0F1B0010001": {
+        title: "The Apprentice Returns to Their Bench",
+        subtitle: "Copper-trimmed Engineer's Cap. The Tinker's Bench opens.",
+        color: 0xC8A060,
+        sound: "minecraft:block.amethyst_block.chime",
+        pitch: 1.0,
+        lore: "Tinker's Bench side chapter opened. Optional Create automation deep-dive. The Charter doesn't audit it; the senior mechanics know each other by sight."
+    },
+    "5A11E0F1B001001E": {
+        title: "The Tinker's Bench",
+        subtitle: "Every Create concept on one fragment.",
+        color: 0xE0B070,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 1.0,
+        lore: "Tinker's Bench complete. Sequenced Assembly + bulk processing + contraptions + Item Vaults + decoration — all live in the workshop. The Foreman is a senior mechanic now."
     }
 };
 

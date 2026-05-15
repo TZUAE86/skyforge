@@ -596,6 +596,8 @@
 			subtitle: "Crafting without a Foreman's hands."
 			description: [
 				"Craft a Mechanical Crafter. Place at least three together and they auto-craft items along a slot pattern. The Charter loves a five-crafter array more than its surveyors will admit."
+				""
+				"The Tinker's Bench side chapter has deep Mechanical Crafter + Item Vault + Schematicannon quests if you want senior-mechanic guided builds."
 			]
 			icon: "create:mechanical_crafter"
 			tasks: [{

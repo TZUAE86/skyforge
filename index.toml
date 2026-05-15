@@ -6,11 +6,11 @@ hash = "d390a9816680c40d9809630ac555ca0518997553c412053b841ed8d4a89ef35f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_01_the_charter.snbt"
-hash = "22c3f94a0d8e42f35d79ee061b947257e8008f3a4c0794a15b128ca172d401ec"
+hash = "b8c3123ef41c9ca606cf544191e0de4b27d8ab4af56ca879e83c14d1d14eda97"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_02_first_smoke.snbt"
-hash = "1cf41f0b425f33c6087ad11241116a059c16244ad82c5e0df4368a5b99bf9aea"
+hash = "99e1a5bea98532b42b9b64e7b59f15fce650ad7c84409f3e5f3f1ac435f3e271"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_03_the_foreman.snbt"
@@ -18,7 +18,7 @@ hash = "f6de3ee3e0addfa0f72e65a6303244d97de47e7b74087a7b6cdc3ac24d1541e6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_04_iron_bellows.snbt"
-hash = "7e30dc44795ba67d20b78e5585f50c0d1d3b60a93cbe6114ab6c97a7ece487b3"
+hash = "1091c7c572613276cc731f9669a88bd01cdfc1edfc430664ac970b81b465d43c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_05_wings_and_anchors.snbt"
@@ -51,6 +51,10 @@ hash = "07f3f0d05829b74c4760e1e754ede1bb70d7fc4a04f3ef6981170bdd99b6c48a"
 [[files]]
 file = "config/ftbquests/quests/chapters/act_12_the_charters_court.snbt"
 hash = "190a44b892c54f43102f751a599cb12c838515ac65e0d839bdb19ac87b434860"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/side_tinkers_bench.snbt"
+hash = "89887f60e581d44e87007126a767b8c543239156f0bb7bdcb0020b3cfc042bef"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -86,7 +90,7 @@ hash = "cf736ec614206cc0f79a2166dc53b6221e4e1829bea12d82be4a3aa34e97924c"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"
-hash = "830b38432343de187629c1727fd483ee85660b19eea8529411962b8e634da256"
+hash = "f6b06bd19994207c2a85ae19a39e70d85904f8708a65aad0432eb066d68b40d1"
 
 [[files]]
 file = "mods/advancedae.pw.toml"

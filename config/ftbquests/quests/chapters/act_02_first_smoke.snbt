@@ -389,6 +389,8 @@
 				"Place two Crushing Wheels facing each other. Counter-rotate them. Drop cobble between them and it returns as gravel. Drop ore, you get more ore."
 				""
 				"Craft a pair."
+				""
+				"The Tinker's Bench side chapter covers bulk processing in depth — Encased Fan smelt/wash/smoke/haunt chains, plus the Spout + Item Drain fluid system."
 			]
 			icon: "create:crushing_wheel"
 			tasks: [{

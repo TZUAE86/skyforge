@@ -1,0 +1,785 @@
+# Skyforge — Side Chapter: The Tinker's Bench (~30 quests).
+# TONE: Steampunk colonial. Optional Create automation deep-dive.
+# Gate: Act II Q40 complete. Players who want Create depth opt in;
+# main-spine players can skip without penalty.
+# THEME BIBLE: Build this, then that, then this. Sequenced Assembly,
+# bulk processing, contraptions, item vaults, stress management,
+# decorative Create. Erik supervises every step.
+# TODO verify Create core IDs at NeoForge 21.1.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "side_tinkers_bench"
+	group: "5A11E0F100000002"
+	icon: "create:goggles"
+	id: "5A11E0F1B0000000"
+	images: [ ]
+	order_index: 100
+	quest_links: [ ]
+	subtitle: ["Build this. Then that. Then this. The Create deep dive."]
+	title: "Side — The Tinker's Bench"
+	quests: [
+
+		# ====== SECTION A — ANDESITE MASTERY (Q1-Q5) ======
+
+		# ---------- Q01: Scene-beat opener — The Apprentice Returns ----------
+		{
+			id: "5A11E0F1B0010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Apprentice Returns to Their Bench"
+			subtitle: "Erik hands you a copper-trimmed cap. The Tinker's Bench docket."
+			description: [
+				"Erik catches you in the workshop after Smoke Rises. \"Foreman, the Charter trains administrators. But it also trains mechanics. There's a different ladder if you want it.\""
+				""
+				"He hands you a copper-trimmed Engineer's Cap and a thinner docket: the Tinker's Bench. Optional. The Charter doesn't audit it. But the senior mechanics know each other by the cap."
+				""
+				"Hold four Precision Mechanisms to signal you're ready for Sequenced Assembly."
+			]
+			icon: "create:goggles"
+			tasks: [{
+				id: "5A11E0F1B0020001"
+				type: "item"
+				item: { Count: 1b, id: "create:precision_mechanism" }
+				count: 4L
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030001", type: "xp", xp: 60 }
+				{ id: "5A11E0F1B0030002", type: "item", item: { id: "create:precision_mechanism", Count: 4b } }
+			]
+			dependencies: ["5A11E0F102010040"]
+		}
+
+		# ---------- Q02: Sequenced Assembly (mechanical milestone) ----------
+		{
+			id: "5A11E0F1B0010002"
+			x: 0.0d
+			y: 2.0d
+			shape: "rsquare"
+			title: "Sequenced Assembly"
+			subtitle: "Deployer + Press + Mixer on a belt. Iron + andesite alloy in, Precision Mechanism out."
+			description: [
+				"The Charter's most-celebrated Create technique: a belt running under a Deployer (adding andesite), a Press (flattening), and a Mixer (refining). The item exits as a fully-formed Precision Mechanism without your hand touching it."
+				""
+				"Set it up. Auto-craft eight Precision Mechanisms via Sequenced Assembly. The hand-crafted four don't count — the Charter records only what the belt produces."
+			]
+			icon: "create:precision_mechanism"
+			tasks: [{
+				id: "5A11E0F1B0020002"
+				type: "checkmark"
+				title: "Build a Sequenced Assembly line and produce 8+ Precision Mechanisms from it"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030003", type: "xp", xp: 100 }
+				{ id: "5A11E0F1B0030004", type: "item", item: { id: "create:precision_mechanism", Count: 8b } }
+			]
+			dependencies: ["5A11E0F1B0010001"]
+		}
+
+		# ---------- Q03: Andesite Funnel + Tunnel ----------
+		{
+			id: "5A11E0F1B0010003"
+			x: -2.5d
+			y: 3.5d
+			title: "Andesite Funnel + Tunnel"
+			subtitle: "The pre-brass sorting tier. Cheap. Reliable."
+			description: [
+				"Brass funnels and tunnels are great, but they're brass-tier. Before brass, andesite versions do most of the same work — slower, but cheaper. Worth knowing both."
+				""
+				"Craft 4 Andesite Funnels and 4 Andesite Tunnels."
+			]
+			icon: "create:andesite_funnel"
+			tasks: [
+				{ id: "5A11E0F1B0020003", type: "item", item: { Count: 1b, id: "create:andesite_funnel" }, count: 4L }
+				{ id: "5A11E0F1B0020004", type: "item", item: { Count: 1b, id: "create:andesite_tunnel" }, count: 4L }
+			]
+			rewards: [
+				{ id: "5A11E0F1B0030005", type: "xp", xp: 30 }
+				{ id: "5A11E0F1B0030006", type: "item", item: { id: "create:andesite_alloy", Count: 16b } }
+			]
+			dependencies: ["5A11E0F1B0010001"]
+		}
+
+		# ---------- Q04: Rotation Speed Controller ----------
+		{
+			id: "5A11E0F1B0010004"
+			x: 2.5d
+			y: 3.5d
+			title: "Rotation Speed Controller"
+			subtitle: "Set RPM by hand. The Charter's preferred control surface."
+			description: [
+				"Place a Rotation Speed Controller on a shaft + a large cogwheel above it. Right-click to set the RPM precisely. Now your network runs at *exactly* the speed your Mechanical Mixer needs."
+			]
+			icon: "create:rotation_speed_controller"
+			tasks: [{
+				id: "5A11E0F1B0020005"
+				type: "item"
+				item: "create:rotation_speed_controller"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030007", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030008", type: "item", item: { id: "create:cogwheel", Count: 4b } }
+			]
+			dependencies: ["5A11E0F1B0010002"]
+		}
+
+		# ---------- Q05: Encased Chain Drive ----------
+		{
+			id: "5A11E0F1B0010005"
+			x: 0.0d
+			y: 5.0d
+			title: "Encased Chain Drive"
+			subtitle: "One rotation source feeds three parallel shafts. Compact."
+			description: [
+				"Place an Encased Chain Drive between two parallel shafts. The chain transfers rotation perpendicular — useful when you want one engine to drive multiple parallel networks without tangling cogwheels."
+			]
+			icon: "create:encased_chain_drive"
+			tasks: [{
+				id: "5A11E0F1B0020006"
+				type: "item"
+				item: { Count: 1b, id: "create:encased_chain_drive" }
+				count: 2L
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030009", type: "xp", xp: 30 }
+				{ id: "5A11E0F1B0030010", type: "item", item: { id: "create:encased_chain_drive", Count: 2b } }
+			]
+			dependencies: ["5A11E0F1B0010004"]
+		}
+
+		# ====== SECTION B — BULK PROCESSING (Q6-Q10) ======
+
+		# ---------- Q06: Bulk Smelting ----------
+		{
+			id: "5A11E0F1B0010006"
+			x: -2.5d
+			y: 6.5d
+			title: "Bulk Smelting"
+			subtitle: "Encased Fan over lava. Iron ore in, iron ingots out, by the ton."
+			description: [
+				"Set up a bulk-smelting station: belt running under an Encased Fan that's blowing through a lava source. Drop iron ore on the belt; collect iron ingots at the end."
+				""
+				"Process 32 iron ingots through it. The Charter's stipend per ingot is identical to hand-smelting — but your time is freed up."
+			]
+			icon: "minecraft:iron_ingot"
+			tasks: [{
+				id: "5A11E0F1B0020007"
+				type: "checkmark"
+				title: "Set up bulk smelting and process 32+ iron ingots through it"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030011", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030012", type: "item", item: { id: "minecraft:iron_ingot", Count: 16b } }
+			]
+			dependencies: ["5A11E0F1B0010005"]
+		}
+
+		# ---------- Q07: Bulk Washing ----------
+		{
+			id: "5A11E0F1B0010007"
+			x: 2.5d
+			y: 6.5d
+			title: "Bulk Washing"
+			subtitle: "Encased Fan + water. Gravel by the stack."
+			description: [
+				"Same station, different liquid: Encased Fan above water. Drop gravel/soul sand/red sand on the belt under it. Collect washed outputs (flint, gold, lapis, quartz, etc.) at the end."
+				""
+				"Wash 32 blocks total of any combination."
+			]
+			icon: "minecraft:gravel"
+			tasks: [{
+				id: "5A11E0F1B0020008"
+				type: "checkmark"
+				title: "Bulk wash 32+ blocks (gravel/soul sand/red sand) through fan"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030013", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030014", type: "item", item: { id: "minecraft:flint", Count: 16b } }
+			]
+			dependencies: ["5A11E0F1B0010005"]
+		}
+
+		# ---------- Q08: Bulk Smoking ----------
+		{
+			id: "5A11E0F1B0010008"
+			x: -2.5d
+			y: 8.0d
+			title: "Bulk Smoking"
+			subtitle: "Encased Fan + campfire. Cook 16 food items at once."
+			description: [
+				"Encased Fan above a campfire. Drop raw food on the belt. Cooked food drops off the other end. The Charter's restaurants envy your throughput."
+			]
+			icon: "minecraft:cooked_beef"
+			tasks: [{
+				id: "5A11E0F1B0020009"
+				type: "checkmark"
+				title: "Bulk smoke 16+ raw food into cooked via fan + campfire"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030015", type: "xp", xp: 30 }
+				{ id: "5A11E0F1B0030016", type: "item", item: { id: "minecraft:cooked_beef", Count: 16b } }
+			]
+			dependencies: ["5A11E0F1B0010006"]
+		}
+
+		# ---------- Q09: Bulk Haunting ----------
+		{
+			id: "5A11E0F1B0010009"
+			x: 2.5d
+			y: 8.0d
+			title: "Bulk Haunting"
+			subtitle: "Encased Fan + soul fire. Cobblestone goes spooky."
+			description: [
+				"Soul fire under an Encased Fan haunts items as they pass through — cobblestone → cobbled deepslate, planks → mushroom variants. The Charter calls this 'the night shift.'"
+			]
+			icon: "minecraft:soul_torch"
+			tasks: [{
+				id: "5A11E0F1B0020010"
+				type: "checkmark"
+				title: "Bulk haunt 8+ blocks via fan + soul fire"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030017", type: "xp", xp: 30 }
+				{ id: "5A11E0F1B0030018", type: "item", item: { id: "minecraft:soul_torch", Count: 8b } }
+			]
+			dependencies: ["5A11E0F1B0010007"]
+		}
+
+		# ---------- Q10: Spout + Item Drain (mechanical milestone) ----------
+		{
+			id: "5A11E0F1B0010010"
+			x: 0.0d
+			y: 9.5d
+			shape: "rsquare"
+			title: "Spout + Item Drain"
+			subtitle: "Fluid recipes: fill bottles, then extract back. The Create fluid system intro."
+			description: [
+				"Place a Spout above a Basin or belt. Pipe water (or any fluid) to it. Items passing under the Spout get filled (e.g. empty bottle → water bottle)."
+				""
+				"Reverse: place an Item Drain. Filled containers passing through have their fluid extracted back into the network."
+				""
+				"Demonstrate: fill 8 bottles with water via Spout, then drain them via Item Drain."
+			]
+			icon: "create:spout"
+			tasks: [
+				{ id: "5A11E0F1B0020011", type: "item", item: "create:spout" }
+				{ id: "5A11E0F1B0020012", type: "item", item: "create:item_drain" }
+			]
+			rewards: [
+				{ id: "5A11E0F1B0030019", type: "xp", xp: 80 }
+				{ id: "5A11E0F1B0030020", type: "item", item: { id: "create:fluid_pipe", Count: 8b } }
+			]
+			dependencies: [
+				"5A11E0F1B0010008"
+				"5A11E0F1B0010009"
+			]
+		}
+
+		# ====== SECTION C — CONTRAPTIONS (Q11-Q18) ======
+
+		# ---------- Q11: Mechanical Bearing Flying Machine (milestone) ----------
+		{
+			id: "5A11E0F1B0010011"
+			x: -2.5d
+			y: 11.0d
+			shape: "rsquare"
+			title: "Mechanical Bearing Flying Machine"
+			subtitle: "A 2x2 platform that rotates 360°. The Foreman's first flying contraption."
+			description: [
+				"Place a Mechanical Bearing pointing up. Build a 2x2 platform attached to its rotating face. Power the bearing with rotation. The platform spins."
+				""
+				"Optional advanced: attach sticky pistons to make a self-extending tower. The Charter's structural surveyors call this 'the first real contraption.'"
+			]
+			icon: "create:mechanical_bearing"
+			tasks: [{
+				id: "5A11E0F1B0020013"
+				type: "item"
+				item: "create:mechanical_bearing"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030021", type: "xp", xp: 100 }
+				{ id: "5A11E0F1B0030022", type: "item", item: "create:sticky_mechanical_piston" }
+			]
+			dependencies: ["5A11E0F1B0010010"]
+		}
+
+		# ---------- Q12: Cart Assembler ----------
+		{
+			id: "5A11E0F1B0010012"
+			x: 2.5d
+			y: 11.0d
+			title: "Cart Assembler"
+			subtitle: "Build a minecart contraption. Old-school but reliable."
+			description: [
+				"Place a Cart Assembler on a rail. Stack any blocks on top. Powered rail beneath the Assembler turns the stack into a movable contraption mounted on a minecart."
+				""
+				"Build one. Attach at least one chest as cargo. Roll it 100 blocks."
+			]
+			icon: "create:cart_assembler"
+			tasks: [{
+				id: "5A11E0F1B0020014"
+				type: "item"
+				item: "create:cart_assembler"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030023", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030024", type: "item", item: { id: "minecraft:minecart", Count: 2b } }
+			]
+			dependencies: ["5A11E0F1B0010011"]
+		}
+
+		# ---------- Q13: Drive the Minecart Contraption ----------
+		{
+			id: "5A11E0F1B0010013"
+			x: 4.5d
+			y: 12.0d
+			title: "Drive the Minecart Contraption"
+			subtitle: "100 blocks on rails. Doors close themselves, the world goes by."
+			description: [
+				"Ride your minecart contraption at least 100 blocks. The Charter's surveyors approve every Foreman who's logged time as cargo conductor."
+			]
+			icon: "minecraft:minecart"
+			tasks: [{
+				id: "5A11E0F1B0020015"
+				type: "checkmark"
+				title: "Drive a minecart contraption 100+ blocks on rails"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030025", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030026", type: "item", item: { id: "minecraft:powered_rail", Count: 8b } }
+			]
+			dependencies: ["5A11E0F1B0010012"]
+		}
+
+		# ---------- Q14: Mechanical Drill ----------
+		{
+			id: "5A11E0F1B0010014"
+			x: -4.5d
+			y: 12.0d
+			title: "Mechanical Drill on a Contraption"
+			subtitle: "Break a 1x1x5 column without lifting a pickaxe."
+			description: [
+				"Mount a Mechanical Drill on a moving contraption (piston-pushed, bearing-rotated, or minecart). Use it to break a 1x1x5 stone column."
+				""
+				"The Charter records 'first automated mining' for any Foreman who reaches this."
+			]
+			icon: "create:mechanical_drill"
+			tasks: [{
+				id: "5A11E0F1B0020016"
+				type: "item"
+				item: "create:mechanical_drill"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030027", type: "xp", xp: 50 }
+				{ id: "5A11E0F1B0030028", type: "item", item: { id: "minecraft:cobblestone", Count: 32b } }
+			]
+			dependencies: ["5A11E0F1B0010011"]
+		}
+
+		# ---------- Q15: Mechanical Saw ----------
+		{
+			id: "5A11E0F1B0010015"
+			x: -2.5d
+			y: 13.5d
+			title: "Mechanical Saw on a Contraption"
+			subtitle: "Cut down 4 trees automatically."
+			description: [
+				"Mount a Mechanical Saw on a contraption (piston-tower works well). Position it to cut tree-trunks. Watch four trees fall in sequence."
+			]
+			icon: "create:mechanical_saw"
+			tasks: [{
+				id: "5A11E0F1B0020017"
+				type: "item"
+				item: "create:mechanical_saw"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030029", type: "xp", xp: 50 }
+				{ id: "5A11E0F1B0030030", type: "item", item: { id: "minecraft:oak_log", Count: 32b } }
+			]
+			dependencies: ["5A11E0F1B0010014"]
+		}
+
+		# ---------- Q16: Mechanical Harvester ----------
+		{
+			id: "5A11E0F1B0010016"
+			x: 0.0d
+			y: 14.5d
+			title: "Mechanical Harvester"
+			subtitle: "32 wheat from a 9x9 field. Without bending."
+			description: [
+				"Mount a Mechanical Harvester on a Bearing-driven boom rotating over a 9x9 wheat field. Wait for one harvest cycle. Collect 32+ wheat from the run."
+			]
+			icon: "create:mechanical_harvester"
+			tasks: [{
+				id: "5A11E0F1B0020018"
+				type: "item"
+				item: "create:mechanical_harvester"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030031", type: "xp", xp: 50 }
+				{ id: "5A11E0F1B0030032", type: "item", item: { id: "minecraft:wheat", Count: 32b } }
+			]
+			dependencies: ["5A11E0F1B0010015"]
+		}
+
+		# ---------- Q17: Mechanical Plough ----------
+		{
+			id: "5A11E0F1B0010017"
+			x: 2.5d
+			y: 13.5d
+			title: "Mechanical Plough"
+			subtitle: "Till a 9x9 field via contraption."
+			description: [
+				"Mount a Mechanical Plough on a contraption. Pass it over a 9x9 dirt field. Watch the dirt become farmland automatically."
+				""
+				"The Charter's agricultural inspectors approve mechanised tillage."
+			]
+			icon: "create:mechanical_plough"
+			tasks: [{
+				id: "5A11E0F1B0020019"
+				type: "item"
+				item: "create:mechanical_plough"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030033", type: "xp", xp: 50 }
+				{ id: "5A11E0F1B0030034", type: "item", item: { id: "minecraft:wheat_seeds", Count: 32b } }
+			]
+			dependencies: ["5A11E0F1B0010016"]
+		}
+
+		# ---------- Q18: Schematicannon ----------
+		{
+			id: "5A11E0F1B0010018"
+			x: 4.5d
+			y: 14.5d
+			title: "Schematicannon"
+			subtitle: "Load a Schematic. Place 32 blocks from it. The Foreman builds with paper."
+			description: [
+				"Craft a Schematicannon. Use a Schematic & Quill to capture any existing structure (a wall, a tower, the workshop). Load the Schematic into the Schematicannon, supply blocks + gunpowder, and watch it build the structure for you."
+				""
+				"Place at least 32 blocks via Schematicannon. The Charter calls this 'industrial-scale construction.'"
+			]
+			icon: "create:schematicannon"
+			tasks: [{
+				id: "5A11E0F1B0020020"
+				type: "item"
+				item: "create:schematicannon"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030035", type: "xp", xp: 80 }
+				{ id: "5A11E0F1B0030036", type: "item", item: { id: "create:empty_schematic", Count: 4b } }
+			]
+			dependencies: ["5A11E0F1B0010017"]
+		}
+
+		# ====== SECTION D — STORAGE + SIGNALING (Q19-Q24) ======
+
+		# ---------- Q19: Item Vault ----------
+		{
+			id: "5A11E0F1B0010019"
+			x: -4.5d
+			y: 15.5d
+			title: "Item Vault"
+			subtitle: "Create's tile-able storage. Single unit, larger inside than a chest."
+			description: [
+				"Craft an Item Vault. Place it in the workshop. Note how the inventory size scales with the vault's external dimensions — a single Item Vault stores more than a vanilla chest already."
+			]
+			icon: "create:item_vault"
+			tasks: [{
+				id: "5A11E0F1B0020021"
+				type: "item"
+				item: "create:item_vault"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030037", type: "xp", xp: 50 }
+				{ id: "5A11E0F1B0030038", type: "item", item: { id: "create:item_vault", Count: 2b } }
+			]
+			dependencies: ["5A11E0F1B0010010"]
+		}
+
+		# ---------- Q20: Item Vault Multiblock (milestone) ----------
+		{
+			id: "5A11E0F1B0010020"
+			x: -2.5d
+			y: 16.5d
+			shape: "rsquare"
+			title: "Item Vault Multiblock"
+			subtitle: "3x3x1 stacked vaults. Inventory size: vast."
+			description: [
+				"Stack at least nine Item Vaults in a 3x3x1 configuration. Adjacent vaults merge into one shared inventory. The Charter's storage auditors photograph the result."
+				""
+				"Stockpile 9+ Item Vault blocks placed adjacent."
+			]
+			icon: "create:item_vault"
+			tasks: [{
+				id: "5A11E0F1B0020022"
+				type: "item"
+				item: { Count: 1b, id: "create:item_vault" }
+				count: 9L
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030039", type: "xp", xp: 100 }
+				{ id: "5A11E0F1B0030040", type: "item", item: { id: "create:item_vault", Count: 9b } }
+			]
+			dependencies: ["5A11E0F1B0010019"]
+		}
+
+		# ---------- Q21: Stockpile Switch ----------
+		{
+			id: "5A11E0F1B0010021"
+			x: 0.0d
+			y: 16.5d
+			title: "Stockpile Switch"
+			subtitle: "Redstone gating by inventory fullness."
+			description: [
+				"Place a Stockpile Switch on a chest. Configure thresholds. Now redstone flows when the chest crosses a fullness threshold — useful for shutting down a production line when storage is full."
+			]
+			icon: "create:stockpile_switch"
+			tasks: [{
+				id: "5A11E0F1B0020023"
+				type: "item"
+				item: "create:stockpile_switch"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030041", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030042", type: "item", item: { id: "minecraft:redstone", Count: 16b } }
+			]
+			dependencies: ["5A11E0F1B0010019"]
+		}
+
+		# ---------- Q22: Display Link ----------
+		{
+			id: "5A11E0F1B0010022"
+			x: 2.5d
+			y: 16.5d
+			title: "Display Link"
+			subtitle: "Show inventory counts on a sign. The Charter's favorite quality-of-life."
+			description: [
+				"Place a Display Link on a chest or Item Vault. Connect to a sign. The sign now updates in real time showing the chest's contents."
+				""
+				"Erik says: 'I love this block more than any Mekanism multiblock.'"
+			]
+			icon: "create:display_link"
+			tasks: [{
+				id: "5A11E0F1B0020024"
+				type: "item"
+				item: "create:display_link"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030043", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030044", type: "item", item: { id: "minecraft:oak_sign", Count: 4b } }
+			]
+			dependencies: ["5A11E0F1B0010021"]
+		}
+
+		# ---------- Q23: Train Signal ----------
+		{
+			id: "5A11E0F1B0010023"
+			x: -2.5d
+			y: 18.0d
+			title: "Train Signal + Observer"
+			subtitle: "Multi-train networks need signals. Build one."
+			description: [
+				"Place a Track Signal + Track Observer combo on your train network. Configure a section where one train waits while another passes. The Charter's air-traffic controllers respect this."
+			]
+			icon: "create:track_signal"
+			tasks: [
+				{ id: "5A11E0F1B0020025", type: "item", item: "create:track_signal" }
+				{ id: "5A11E0F1B0020026", type: "item", item: "create:track_observer" }
+			]
+			rewards: [
+				{ id: "5A11E0F1B0030045", type: "xp", xp: 50 }
+				{ id: "5A11E0F1B0030046", type: "item", item: { id: "create:track_signal", Count: 1b } }
+			]
+			dependencies: ["5A11E0F104010029"]
+		}
+
+		# ---------- Q24: Train Brake Setup ----------
+		{
+			id: "5A11E0F1B0010024"
+			x: 2.5d
+			y: 18.0d
+			title: "Train Brake Setup"
+			subtitle: "Brake a train at a specific block. Reliable cargo unloading."
+			description: [
+				"Configure a Train Station's brake / approach behaviour so a scheduled train stops at exactly the unload block. The Charter's logistics auditors photograph the inch-perfect stop."
+			]
+			icon: "create:track_station"
+			tasks: [{
+				id: "5A11E0F1B0020027"
+				type: "checkmark"
+				title: "Configure a Train Station to brake a scheduled train at a specific unload block"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030047", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030048", type: "item", item: "create:track_station" }
+			]
+			dependencies: ["5A11E0F1B0010023"]
+		}
+
+		# ====== SECTION E — STRESS + DECORATION + MASTERY (Q25-Q30) ======
+
+		# ---------- Q25: Stress Management ----------
+		{
+			id: "5A11E0F1B0010025"
+			x: -4.5d
+			y: 19.5d
+			title: "Stress Management"
+			subtitle: "Gearbox + Gearshift + Clutch. All three in one network."
+			description: [
+				"Build a single Create network containing all three rotation-management blocks:"
+				"- **Gearbox** — turns rotation 90°"
+				"- **Gearshift** — redstone-toggle rotation direction"
+				"- **Clutch** — redstone-toggle rotation on/off"
+				""
+				"Demonstrate by powering the same machine via three different rotation paths."
+			]
+			icon: "create:gearbox"
+			tasks: [
+				{ id: "5A11E0F1B0020028", type: "item", item: "create:gearbox" }
+				{ id: "5A11E0F1B0020029", type: "item", item: "create:gearshift" }
+				{ id: "5A11E0F1B0020030", type: "item", item: "create:clutch" }
+			]
+			rewards: [
+				{ id: "5A11E0F1B0030049", type: "xp", xp: 60 }
+				{ id: "5A11E0F1B0030050", type: "item", item: { id: "create:cogwheel", Count: 8b } }
+			]
+			dependencies: ["5A11E0F1B0010005"]
+		}
+
+		# ---------- Q26: Encased Network ----------
+		{
+			id: "5A11E0F1B0010026"
+			x: 0.0d
+			y: 19.5d
+			title: "Encased Network"
+			subtitle: "8 encased rotation blocks. Compact + tidy."
+			description: [
+				"Replace 8 visible shafts/cogwheels in your workshop with encased variants (Encased Shafts, Encased Cogwheels). The network's footprint shrinks; the aesthetic improves."
+			]
+			icon: "create:encased_cogwheel"
+			tasks: [{
+				id: "5A11E0F1B0020031"
+				type: "item"
+				item: { Count: 1b, id: "create:encased_cogwheel" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030051", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030052", type: "item", item: { id: "create:encased_cogwheel", Count: 4b } }
+			]
+			dependencies: ["5A11E0F1B0010025"]
+		}
+
+		# ---------- Q27: Copycats+ Mastery ----------
+		{
+			id: "5A11E0F1B0010027"
+			x: 4.5d
+			y: 19.5d
+			title: "Copycats+ Mastery"
+			subtitle: "16 wall sections clad with copy-textured blocks."
+			description: [
+				"Use Copycats+ blocks to clad 16 wall-sections of the workshop with a chosen aesthetic — copy any texture you like. Brass-on-mahogany is the Charter's traditional; Foremen often differ."
+			]
+			icon: "minecraft:oak_planks"
+			tasks: [{
+				id: "5A11E0F1B0020032"
+				type: "checkmark"
+				title: "Clad 16+ wall sections with Copycats+ blocks (any aesthetic)"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030053", type: "xp", xp: 40 }
+				{ id: "5A11E0F1B0030054", type: "item", item: { id: "minecraft:oak_planks", Count: 32b } }
+			]
+			dependencies: ["5A11E0F1B0010026"]
+		}
+
+		# ---------- Q28: Framed Glass ----------
+		{
+			id: "5A11E0F1B0010028"
+			x: -2.5d
+			y: 21.0d
+			title: "Framed Glass"
+			subtitle: "16 framed-glass panes in the workshop windows."
+			description: [
+				"Replace your workshop's vanilla glass windows with Create's Framed Glass — visible frame, premium aesthetic. The Charter's interior decorators record this in the annual."
+			]
+			icon: "create:framed_glass"
+			tasks: [{
+				id: "5A11E0F1B0020033"
+				type: "item"
+				item: { Count: 1b, id: "create:framed_glass" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030055", type: "xp", xp: 30 }
+				{ id: "5A11E0F1B0030056", type: "item", item: { id: "create:framed_glass", Count: 16b } }
+			]
+			dependencies: ["5A11E0F1B0010027"]
+		}
+
+		# ---------- Q29: Master Mechanic Promotion (milestone) ----------
+		{
+			id: "5A11E0F1B0010029"
+			x: 2.5d
+			y: 21.0d
+			shape: "rsquare"
+			title: "Master Mechanic"
+			subtitle: "Tinker's Bench docket. Copper-trimmed. Tenth on the office wall."
+			description: [
+				"Erik delivers the Tinker's Bench docket: Master Mechanic, in recognition of operational Sequenced Assembly + Contraptions + Vaults + Decoration. Copper-trimmed frame, the tenth on the office wall."
+				""
+				"You're a senior mechanic AND a Federation administrator now. The Charter respects both ladders."
+			]
+			icon: "minecraft:copper_block"
+			tasks: [{
+				id: "5A11E0F1B0020034"
+				type: "checkmark"
+				title: "Pin the Master Mechanic docket in the office (10th, copper-trimmed)"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030057", type: "xp", xp: 150 }
+				{ id: "5A11E0F1B0030058", type: "item", item: { id: "minecraft:copper_block", Count: 4b } }
+			]
+			dependencies: [
+				"5A11E0F1B0010018"
+				"5A11E0F1B0010020"
+				"5A11E0F1B0010024"
+				"5A11E0F1B0010028"
+			]
+		}
+
+		# ---------- Q30: Scene-beat finale — The Tinker's Bench ----------
+		{
+			id: "5A11E0F1B001001E"
+			x: 0.0d
+			y: 22.5d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Tinker's Bench"
+			subtitle: "Every Create concept demonstrated on one fragment."
+			description: [
+				"Stand in the workshop at sunset. The Sequenced Assembly line runs. The Encased Fan bulk-smelts. The Bearing-mounted contraption rotates. The Item Vault stack stocks itself. The Display Links update on every wall."
+				""
+				"This is the Foreman's bench, complete. The Charter doesn't pay extra for this — but every Foreman who reaches this point recognises every other one by sight, by the way they reach for a Wrench without looking."
+				""
+				"Tinker's Bench: complete."
+			]
+			icon: "create:goggles"
+			tasks: [{
+				id: "5A11E0F1B0020035"
+				type: "checkmark"
+				title: "Stand in the workshop at sunset with all Tinker's Bench systems running"
+			}]
+			rewards: [
+				{ id: "5A11E0F1B0030059", type: "xp", xp: 300 }
+				{ id: "5A11E0F1B0030060", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F1B0030061", type: "item", item: { id: "create:goggles", Count: 1b } }
+			]
+			dependencies: ["5A11E0F1B0010029"]
+		}
+	]
+}

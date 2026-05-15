@@ -1,0 +1,1215 @@
+# Skyforge — Act XI: The Federation (50 quests, post-questline expansion).
+# TONE: Steampunk colonial. The Foreman becomes a regional administrator.
+# Three threads: sister colonies (Thread A), Charter NPC cities (Thread B),
+# dimensional outposts (Thread C). Federation milestones close the chapter.
+# THEME BIBLE: The Charter has a network. You've graduated from operating
+# one colony to administering many. Federation Administrator promotion.
+# TODO verify MC + Aether + Aerial Hell IDs at NeoForge 21.1.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_11_the_federation"
+	group: "5A11E0F100000001"
+	icon: "minecraft:filled_map"
+	id: "5A11E0F10B000000"
+	images: [ ]
+	order_index: 10
+	quest_links: [ ]
+	subtitle: ["You administer a network now."]
+	title: "Act XI — The Federation"
+	quests: [
+
+		# ---------- Q01: Scene-beat opener — The Charter Hands You a Map ----------
+		{
+			id: "5A11E0F10B010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Charter Hands You a Map"
+			subtitle: "Three new fragments. Four city pins. The Foreman administers a network."
+			description: [
+				"Erik delivers the invitation at sunrise: a map with three blank sky-fragments marked for player claim and four pins for Charter cities you've never visited."
+				""
+				"\"They're not asking you to retire. They're asking you to govern.\""
+				""
+				"Open the Charter's regional administration docket — any writable book will do."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F10B020001"
+				type: "item"
+				item: "minecraft:writable_book"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030001", type: "xp", xp: 100 }
+				{ id: "5A11E0F10B030002", type: "item", item: { id: "minecraft:filled_map", Count: 2b } }
+			]
+			dependencies: ["5A11E0F10A010035"]
+		}
+
+		# ====== THREAD A — SISTER COLONIES (Q02-Q15) ======
+
+		# ---------- Q02: Survey North Buttress ----------
+		{
+			id: "5A11E0F10B010002"
+			x: -3.0d
+			y: 1.5d
+			title: "Survey North Buttress"
+			subtitle: "A neighbouring fragment. The Charter has reserved it."
+			description: [
+				"Fly the warship to the fragment north of home — call it North Buttress, the Charter's first reserved claim for you. Plant a survey beacon (any torch + sign with the name)."
+			]
+			icon: "minecraft:compass"
+			tasks: [{
+				id: "5A11E0F10B020002"
+				type: "checkmark"
+				title: "Fly to a neighbouring fragment and mark it as North Buttress on Xaero"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030003", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030004", type: "item", item: "minecolonies:supplycampdeployer" }
+			]
+			dependencies: ["5A11E0F10B010001"]
+		}
+
+		# ---------- Q03: North Buttress Town Hall ----------
+		{
+			id: "5A11E0F10B010003"
+			x: -5.0d
+			y: 2.5d
+			title: "North Buttress Town Hall"
+			subtitle: "A second colony, founded in your name."
+			description: [
+				"Place a second MineColonies Town Hall on North Buttress. The Charter recognises a second colony under your administration — your provisional Federation membership ticks up a notch."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [{
+				id: "5A11E0F10B020003"
+				type: "checkmark"
+				title: "Place a Town Hall on North Buttress + name the colony"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030005", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030006", type: "item", item: "minecolonies:blockhutbuilder" }
+			]
+			dependencies: ["5A11E0F10B010002"]
+		}
+
+		# ---------- Q04: North Buttress Builder + Miner ----------
+		{
+			id: "5A11E0F10B010004"
+			x: -7.0d
+			y: 3.5d
+			title: "North Buttress Mining Charter"
+			subtitle: "Builder hut + Miner hut. The fragment's purpose: ore."
+			description: [
+				"North Buttress is mining-themed. Place a Builder's Hut and a Miner's Hut. Hire two citizens for each. Erik recommends one of his second cousins for the Builder — if the Charter approves."
+			]
+			icon: "minecolonies:blockhutminer"
+			tasks: [
+				{ id: "5A11E0F10B020004", type: "item", item: "minecolonies:blockhutbuilder" }
+				{ id: "5A11E0F10B020005", type: "item", item: "minecolonies:blockhutminer" }
+			]
+			rewards: [
+				{ id: "5A11E0F10B030007", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030008", type: "item", item: { id: "minecraft:iron_pickaxe", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10B010003"]
+		}
+
+		# ---------- Q05: First Sister Colony milestone ----------
+		{
+			id: "5A11E0F10B010005"
+			x: -5.0d
+			y: 4.5d
+			shape: "rsquare"
+			title: "First Sister Colony"
+			subtitle: "Five citizens at North Buttress. The Charter records the milestone."
+			description: [
+				"Have five citizens housed and employed at North Buttress. The Charter's regional ledger now lists two colonies under your administration — a milestone."
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F10B020006"
+				type: "checkmark"
+				title: "Have 5+ citizens at North Buttress"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030009", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030010", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010004"]
+		}
+
+		# ---------- Q06: North Buttress Smithery ----------
+		{
+			id: "5A11E0F10B010006"
+			x: -7.0d
+			y: 5.5d
+			title: "North Buttress Smithery"
+			subtitle: "Iron to brass to tools, all on the new fragment."
+			description: [
+				"Place a Smeltery on North Buttress. The fragment's mining output becomes tools for its own citizens within the same colony — the Charter calls this 'closed-loop industrial.'"
+			]
+			icon: "minecolonies:blockhutsmeltery"
+			tasks: [{
+				id: "5A11E0F10B020007"
+				type: "item"
+				item: "minecolonies:blockhutsmeltery"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030011", type: "xp", xp: 40 }
+				{ id: "5A11E0F10B030012", type: "item", item: { id: "minecraft:iron_ingot", Count: 16b } }
+			]
+			dependencies: ["5A11E0F10B010004"]
+		}
+
+		# ---------- Q07: Survey South Reef ----------
+		{
+			id: "5A11E0F10B010007"
+			x: 3.0d
+			y: 1.5d
+			title: "Survey South Reef"
+			subtitle: "Coastal fragment, low altitude, agriculture-friendly."
+			description: [
+				"Fly the warship south of home to the next reserved fragment — South Reef. Lower altitude, river-rich, the Charter's preferred profile for agriculture-focused colonies."
+			]
+			icon: "minecraft:compass"
+			tasks: [{
+				id: "5A11E0F10B020008"
+				type: "checkmark"
+				title: "Fly to a southern fragment and mark it as South Reef on Xaero"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030013", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030014", type: "item", item: "minecolonies:supplycampdeployer" }
+			]
+			dependencies: ["5A11E0F10B010001"]
+		}
+
+		# ---------- Q08: South Reef Town Hall ----------
+		{
+			id: "5A11E0F10B010008"
+			x: 5.0d
+			y: 2.5d
+			title: "South Reef Town Hall"
+			subtitle: "The third colony. The Federation takes notice."
+			description: [
+				"Place a Town Hall on South Reef. Three colonies under your administration now. Erik's smile gets slightly larger every time the Charter's clerk signs a new docket on your behalf."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [{
+				id: "5A11E0F10B020009"
+				type: "checkmark"
+				title: "Place a Town Hall on South Reef + name the colony"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030015", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030016", type: "item", item: "minecolonies:blockhutbuilder" }
+			]
+			dependencies: ["5A11E0F10B010007"]
+		}
+
+		# ---------- Q09: South Reef Farmer + Fisherman ----------
+		{
+			id: "5A11E0F10B010009"
+			x: 7.0d
+			y: 3.5d
+			title: "South Reef Agricultural Charter"
+			subtitle: "Farmer hut + Fisherman hut. Food for the network."
+			description: [
+				"South Reef is agricultural. Place a Farmer's Hut and a Fisherman's Hut. The Charter's food-route auditors will draw a thick line on next quarter's map between Home and South Reef."
+			]
+			icon: "minecolonies:blockhutfarmer"
+			tasks: [
+				{ id: "5A11E0F10B020010", type: "item", item: "minecolonies:blockhutfarmer" }
+				{ id: "5A11E0F10B020011", type: "item", item: "minecolonies:blockhutfisherman" }
+			]
+			rewards: [
+				{ id: "5A11E0F10B030017", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030018", type: "item", item: { id: "minecraft:wheat_seeds", Count: 16b } }
+			]
+			dependencies: ["5A11E0F10B010008"]
+		}
+
+		# ---------- Q10: South Reef Restaurant + Tavern ----------
+		{
+			id: "5A11E0F10B010010"
+			x: 5.0d
+			y: 4.5d
+			title: "South Reef Trade Quarter"
+			subtitle: "Restaurant + Tavern. Visitors stop here for the chowder."
+			description: [
+				"Place a Kitchen (Restaurant) and a Tavern at South Reef. The fragment's traffic profile shifts from 'agricultural depot' to 'destination.' The Charter pays a small tourism stipend."
+			]
+			icon: "minecolonies:blockhutkitchen"
+			tasks: [
+				{ id: "5A11E0F10B020012", type: "item", item: "minecolonies:blockhutkitchen" }
+				{ id: "5A11E0F10B020013", type: "item", item: "minecolonies:blockhuttavern" }
+			]
+			rewards: [
+				{ id: "5A11E0F10B030019", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030020", type: "item", item: { id: "farmersdelight:vegetable_soup", Count: 6b } }
+			]
+			dependencies: ["5A11E0F10B010009"]
+		}
+
+		# ---------- Q11: South Reef five citizens ----------
+		{
+			id: "5A11E0F10B010011"
+			x: 7.0d
+			y: 5.5d
+			title: "South Reef — Five Citizens"
+			subtitle: "Three colonies, twenty citizens collectively."
+			description: [
+				"Have five citizens housed and employed at South Reef. The Charter's regional ledger now lists three colonies — your provisional council membership becomes 'observer' status."
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F10B020014"
+				type: "checkmark"
+				title: "Have 5+ citizens at South Reef"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030021", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030022", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010010"]
+		}
+
+		# ---------- Q12: Trade Route — Home to North Buttress ----------
+		{
+			id: "5A11E0F10B010012"
+			x: -3.0d
+			y: 6.5d
+			title: "Trade Route — Home to North Buttress"
+			subtitle: "Airship or train. Iron travels south, food travels north."
+			description: [
+				"Establish a regular trade route between Home and North Buttress: at least one airship trip OR train connection per in-game week, delivering iron in one direction and food in the other."
+			]
+			icon: "create:schedule"
+			tasks: [{
+				id: "5A11E0F10B020015"
+				type: "checkmark"
+				title: "Complete a Home <-> North Buttress trade run with cargo both directions"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030023", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030024", type: "item", item: { id: "minecraft:emerald", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10B010005"]
+		}
+
+		# ---------- Q13: Trade Route — Home to South Reef ----------
+		{
+			id: "5A11E0F10B010013"
+			x: 3.0d
+			y: 6.5d
+			title: "Trade Route — Home to South Reef"
+			subtitle: "Food travels north, brass travels south."
+			description: [
+				"Establish a regular trade route between Home and South Reef. Food + planks one way; brass + iron tools the other."
+			]
+			icon: "create:schedule"
+			tasks: [{
+				id: "5A11E0F10B020016"
+				type: "checkmark"
+				title: "Complete a Home <-> South Reef trade run with cargo both directions"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030025", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030026", type: "item", item: { id: "minecraft:emerald", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10B010011"]
+		}
+
+		# ---------- Q14: Triangle Route ----------
+		{
+			id: "5A11E0F10B010014"
+			x: 0.0d
+			y: 7.5d
+			title: "Triangle Route"
+			subtitle: "North Buttress <-> South Reef. The colonies trade with each other."
+			description: [
+				"Establish a third route directly between North Buttress and South Reef — they trade with each other now, not just through Home. The Charter calls this 'mature regional logistics.'"
+			]
+			icon: "create:schedule"
+			tasks: [{
+				id: "5A11E0F10B020017"
+				type: "checkmark"
+				title: "Complete a North Buttress <-> South Reef direct trade run"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030027", type: "xp", xp: 70 }
+				{ id: "5A11E0F10B030028", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F10B010012"
+				"5A11E0F10B010013"
+			]
+		}
+
+		# ---------- Q15: Multi-Colony Train Network (milestone) ----------
+		{
+			id: "5A11E0F10B010015"
+			x: 0.0d
+			y: 9.0d
+			shape: "rsquare"
+			title: "Multi-Colony Train Network"
+			subtitle: "Three Train Stations linked across three fragments."
+			description: [
+				"Build Create Train Stations at all three colonies (Home + North Buttress + South Reef) with at least one shared schedule covering the triangle. The Charter's logistics auditors photograph the network from above and file it as 'regional grid: operational.'"
+			]
+			icon: "create:track_station"
+			tasks: [{
+				id: "5A11E0F10B020018"
+				type: "checkmark"
+				title: "Operate a 3-station Train Network connecting Home + North Buttress + South Reef"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030029", type: "xp", xp: 100 }
+				{ id: "5A11E0F10B030030", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10B010014"]
+		}
+
+		# ====== THREAD B — CHARTER CITIES (Q16-Q30) ======
+
+		# ---------- Q16: Travel to Brassgrip's Reach ----------
+		{
+			id: "5A11E0F10B010016"
+			x: -6.0d
+			y: 7.5d
+			title: "Travel to Brassgrip's Reach"
+			subtitle: "Erik's cousin Mara has been expecting you."
+			description: [
+				"Fly to the Charter city of Brassgrip's Reach (any existing village or worldgen-generated settlement on your map, designated as Brassgrip's Reach). Mara Brassgrip — Erik's cousin, the city administrator — has been expecting you."
+			]
+			icon: "create:wrench"
+			tasks: [{
+				id: "5A11E0F10B020019"
+				type: "checkmark"
+				title: "Travel to and name any worldgen settlement as Brassgrip's Reach on Xaero"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030031", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030032", type: "item", item: { id: "minecraft:emerald", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10B010015"]
+		}
+
+		# ---------- Q17: Brassgrip's Favour ----------
+		{
+			id: "5A11E0F10B010017"
+			x: -8.0d
+			y: 8.5d
+			title: "Brassgrip's Favour"
+			subtitle: "Mara needs 64 iron ingots for the city's smithery."
+			description: [
+				"Mara asks for 64 iron ingots. The city's smithery is behind on tool repairs. Deliver them and Mara stamps her seal on your roster — your first Charter-city alliance."
+			]
+			icon: "minecraft:iron_ingot"
+			tasks: [{
+				id: "5A11E0F10B020020"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:iron_ingot" }
+				count: 64L
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030033", type: "xp", xp: 70 }
+				{ id: "5A11E0F10B030034", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010016"]
+		}
+
+		# ---------- Q18: Travel to Brassmere ----------
+		{
+			id: "5A11E0F10B010018"
+			x: 6.0d
+			y: 7.5d
+			title: "Travel to Brassmere"
+			subtitle: "Agricultural hub. Emerald trading. Long lunches."
+			description: [
+				"Fly to Brassmere — the Charter's agricultural / emerald hub, on a low river-fragment. The administrator is named **Halloran Brassmere**, and his tea is reportedly excellent."
+			]
+			icon: "minecraft:emerald"
+			tasks: [{
+				id: "5A11E0F10B020021"
+				type: "checkmark"
+				title: "Travel to and name any worldgen settlement as Brassmere on Xaero"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030035", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030036", type: "item", item: { id: "minecraft:emerald", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10B010015"]
+		}
+
+		# ---------- Q19: Brassmere's Favour ----------
+		{
+			id: "5A11E0F10B010019"
+			x: 8.0d
+			y: 8.5d
+			title: "Brassmere's Favour"
+			subtitle: "Thirty-two cooked meals + sixteen emeralds."
+			description: [
+				"Halloran's annual harvest festival is in three days and the kitchens are short. Deliver 32 cooked meals + 16 emeralds for the visitor stipend. He returns the favour by sending a Brassmere trader to your colony."
+			]
+			icon: "farmersdelight:vegetable_soup"
+			tasks: [
+				{ id: "5A11E0F10B020022", type: "item", item: { Count: 1b, id: "minecraft:cooked_beef" }, count: 32L }
+				{ id: "5A11E0F10B020023", type: "item", item: { Count: 1b, id: "minecraft:emerald" }, count: 16L }
+			]
+			rewards: [
+				{ id: "5A11E0F10B030037", type: "xp", xp: 70 }
+				{ id: "5A11E0F10B030038", type: "item", item: { id: "minecraft:emerald", Count: 16b } }
+			]
+			dependencies: ["5A11E0F10B010018"]
+		}
+
+		# ---------- Q20: Travel to Storm-on-Stilts ----------
+		{
+			id: "5A11E0F10B010020"
+			x: -6.0d
+			y: 10.0d
+			title: "Travel to Storm-on-Stilts"
+			subtitle: "The Charter's military shipyard. Contested airspace nearby."
+			description: [
+				"Fly to Storm-on-Stilts — built on pilings at the edge of contested airspace. The administrator is **Captain Yoki Stilts**, a former Charter air-marshal who took the post after Aragdal's first raid."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10B020024"
+				type: "checkmark"
+				title: "Travel to and name any worldgen settlement as Storm-on-Stilts on Xaero"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030039", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030040", type: "item", item: { id: "minecraft:iron_sword", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10B010015"]
+		}
+
+		# ---------- Q21: Storm's Favour ----------
+		{
+			id: "5A11E0F10B010021"
+			x: -8.0d
+			y: 11.0d
+			title: "Storm's Favour"
+			subtitle: "Defend the city from a wave of raiders."
+			description: [
+				"Yoki asks you to defend Storm-on-Stilts during a scheduled pirate probe — 6 hostile mobs near the city. The Charter's military payroll covers the bonus."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10B020025"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 6L
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030041", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030042", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10B010020"]
+		}
+
+		# ---------- Q22: Travel to Veridian Pier ----------
+		{
+			id: "5A11E0F10B010022"
+			x: 6.0d
+			y: 10.0d
+			title: "Travel to Veridian Pier"
+			subtitle: "Magical / alchemical hub. Ars Nouveau focus."
+			description: [
+				"Fly to Veridian Pier — the Charter's alchemists' enclave. The administrator is **Saskia Veridian**, who corresponds with the Charter mostly by carrier wisp. Look for an atmospheric building (witch hut, mage tower, any worldgen mage-themed structure) and name it Veridian Pier."
+			]
+			icon: "ars_nouveau:source_gem"
+			tasks: [{
+				id: "5A11E0F10B020026"
+				type: "checkmark"
+				title: "Travel to and name any worldgen mage / witch / alchemical structure as Veridian Pier"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030043", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030044", type: "item", item: { id: "ars_nouveau:source_gem", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10B010015"]
+		}
+
+		# ---------- Q23: Veridian's Favour ----------
+		{
+			id: "5A11E0F10B010023"
+			x: 8.0d
+			y: 11.0d
+			title: "Veridian's Favour"
+			subtitle: "Sixteen Source Gems + a magical curio."
+			description: [
+				"Saskia asks for sixteen Source Gems and any magical curio (Forbidden & Arcanus crystal, Reliquary trinket, or Iron's Spells scroll). She offers a tier-2 Iron's Spells scroll in return."
+			]
+			icon: "ars_nouveau:source_gem"
+			tasks: [{
+				id: "5A11E0F10B020027"
+				type: "item"
+				item: { Count: 1b, id: "ars_nouveau:source_gem" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030045", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030046", type: "item", item: "irons_spellbooks:scroll" }
+			]
+			dependencies: ["5A11E0F10B010022"]
+		}
+
+		# ---------- Q24: Mara Comes to Visit ----------
+		{
+			id: "5A11E0F10B010024"
+			x: -4.5d
+			y: 9.0d
+			title: "Mara Comes to Visit"
+			subtitle: "Brassgrip cousin lands at your skyport."
+			description: [
+				"Mara Brassgrip arrives on her own brass-trimmed glider. She wants to inspect the colony Erik talks about every Sunday. Show her around (signpost it in your office)."
+			]
+			icon: "minecraft:painting"
+			tasks: [{
+				id: "5A11E0F10B020028"
+				type: "checkmark"
+				title: "Host Mara at the colony (place a 'Mara was here' sign or painting)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030047", type: "xp", xp: 40 }
+				{ id: "5A11E0F10B030048", type: "item", item: { id: "minecraft:painting", Count: 2b } }
+			]
+			dependencies: ["5A11E0F10B010017"]
+		}
+
+		# ---------- Q25: Halloran Sends a Banner ----------
+		{
+			id: "5A11E0F10B010025"
+			x: 4.5d
+			y: 9.0d
+			title: "Halloran Sends a Banner"
+			subtitle: "Brassmere's livery flies above your Town Hall."
+			description: [
+				"As a gesture of alliance, Halloran sends a Brassmere city banner. Mount it above your Town Hall — your colony is officially a Federation partner with Brassmere now."
+			]
+			icon: "minecraft:green_banner"
+			tasks: [{
+				id: "5A11E0F10B020029"
+				type: "checkmark"
+				title: "Mount a Brassmere banner above the Town Hall"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030049", type: "xp", xp: 40 }
+				{ id: "5A11E0F10B030050", type: "item", item: { id: "minecraft:green_banner", Count: 2b } }
+			]
+			dependencies: ["5A11E0F10B010019"]
+		}
+
+		# ---------- Q26: Yoki Recommends a Cannon ----------
+		{
+			id: "5A11E0F10B010026"
+			x: -4.5d
+			y: 12.0d
+			title: "Yoki Recommends a Cannon"
+			subtitle: "Storm's military advisor on your fragment."
+			description: [
+				"Yoki sends one of her marine officers to advise your citadel's defenses. Mount one additional cannon (any tier) on the citadel walls under her supervision."
+			]
+			icon: "createbigcannons:cast_iron_cannon_barrel"
+			tasks: [{
+				id: "5A11E0F10B020030"
+				type: "checkmark"
+				title: "Mount one additional cannon under Yoki's advisory (any tier)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030051", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030052", type: "item", item: { id: "createbigcannons:powder_charge", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10B010021"]
+		}
+
+		# ---------- Q27: Saskia's Apprentice ----------
+		{
+			id: "5A11E0F10B010027"
+			x: 4.5d
+			y: 12.0d
+			title: "Saskia's Apprentice"
+			subtitle: "An Ars Nouveau Familiar joins your colony."
+			description: [
+				"Saskia sends an apprentice — a bound Ars Nouveau Familiar — to assist your alchemist's bench. Bind / equip the familiar at your home colony."
+			]
+			icon: "ars_nouveau:source_jar"
+			tasks: [{
+				id: "5A11E0F10B020031"
+				type: "checkmark"
+				title: "Bind / equip an Ars Nouveau Familiar at your home colony"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030053", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030054", type: "item", item: { id: "ars_nouveau:source_gem", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10B010023"]
+		}
+
+		# ---------- Q28: Inter-City Cargo Run ----------
+		{
+			id: "5A11E0F10B010028"
+			x: 0.0d
+			y: 10.5d
+			title: "Inter-City Cargo Run"
+			subtitle: "Brassgrip iron -> Brassmere food -> Storm's powder -> Veridian's scrolls. One trip."
+			description: [
+				"Run a single cargo loop touching all four Charter cities. Pick up at one, deliver at the next, and so on. The Charter's customs clerks photograph the inbound manifest."
+			]
+			icon: "minecraft:chest"
+			tasks: [{
+				id: "5A11E0F10B020032"
+				type: "checkmark"
+				title: "Complete a cargo loop touching all 4 Charter cities in one trip"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030055", type: "xp", xp: 100 }
+				{ id: "5A11E0F10B030056", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F10B010017"
+				"5A11E0F10B010019"
+				"5A11E0F10B010021"
+				"5A11E0F10B010023"
+			]
+		}
+
+		# ---------- Q29: Charter Festival ----------
+		{
+			id: "5A11E0F10B010029"
+			x: -2.5d
+			y: 13.5d
+			title: "Charter Festival"
+			subtitle: "Fireworks at all three of your colonies on the same night."
+			description: [
+				"Light off fireworks at Home, North Buttress, and South Reef on the same in-game night. The Charter's photographer captures the three plumes across the fragment-bank."
+			]
+			icon: "minecraft:firework_rocket"
+			tasks: [{
+				id: "5A11E0F10B020033"
+				type: "checkmark"
+				title: "Set off fireworks at all 3 colonies on the same night"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030057", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030058", type: "item", item: { id: "minecraft:firework_rocket", Count: 32b } }
+			]
+			dependencies: ["5A11E0F10B010015"]
+		}
+
+		# ---------- Q30: All Four Cities Visited (milestone) ----------
+		{
+			id: "5A11E0F10B010030"
+			x: 0.0d
+			y: 14.0d
+			shape: "rsquare"
+			title: "All Four Cities Visited"
+			subtitle: "Brassgrip's Reach. Brassmere. Storm-on-Stilts. Veridian Pier."
+			description: [
+				"All four Charter cities visited, all four favours completed, all four administrators have stamped their seals on your alliance roster. The Federation Council notes your standing."
+			]
+			icon: "minecraft:filled_map"
+			tasks: [{
+				id: "5A11E0F10B020034"
+				type: "checkmark"
+				title: "All 4 Charter cities visited + all 4 favours completed"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030059", type: "xp", xp: 120 }
+				{ id: "5A11E0F10B030060", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10B010028"]
+		}
+
+		# ====== THREAD C — DIMENSIONAL OUTPOSTS (Q31-Q45) ======
+
+		# ---------- Q31: Aerial Hell Outpost — Site Survey ----------
+		{
+			id: "5A11E0F10B010031"
+			x: -6.0d
+			y: 14.0d
+			title: "Aerial Hell — Site Survey"
+			subtitle: "Below the cloud-bank. Hot, dark, contested."
+			description: [
+				"Cross into Aerial Hell (the portal you built in Act IX). Survey for a safe building site — somewhere defensible, near a fluid source for cooling, away from natural Aerial Hell mob spawners."
+			]
+			icon: "aerialhell:shadow_grass_block"
+			tasks: [{
+				id: "5A11E0F10B020035"
+				type: "checkmark"
+				title: "Survey a viable Aerial Hell outpost site"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030061", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030062", type: "item", item: { id: "minecraft:obsidian", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10B010001"]
+		}
+
+		# ---------- Q32: Aerial Hell Outpost — Town Hall ----------
+		{
+			id: "5A11E0F10B010032"
+			x: -8.0d
+			y: 15.0d
+			title: "Aerial Hell Town Hall"
+			subtitle: "Three citizens, in the corrupted-sky."
+			description: [
+				"Place a Town Hall in Aerial Hell. Hire three citizens via the Tavern (they get hazard pay). Place a Spatial Anchor adjacent to keep the chunks loaded."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [
+				{ id: "5A11E0F10B020036", type: "item", item: "minecolonies:blockhuttownhall" }
+				{ id: "5A11E0F10B020037", type: "item", item: "ae2:spatial_anchor" }
+			]
+			rewards: [
+				{ id: "5A11E0F10B030063", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030064", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010031"]
+		}
+
+		# ---------- Q33: Aerial Hell Outpost Operational ----------
+		{
+			id: "5A11E0F10B010033"
+			x: -6.0d
+			y: 16.0d
+			title: "Aerial Hell Outpost Operational"
+			subtitle: "Three citizens, two huts, one workshop."
+			description: [
+				"Have three citizens at the Aerial Hell outpost with at least two MC hut buildings staffed. The Charter's atmospheric mapper logs the second cross-dimensional permanent presence."
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F10B020038"
+				type: "checkmark"
+				title: "3+ citizens + 2+ huts at the Aerial Hell outpost"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030065", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030066", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010032"]
+		}
+
+		# ---------- Q34: Aerial Hell Survey Loot ----------
+		{
+			id: "5A11E0F10B010034"
+			x: -4.0d
+			y: 15.0d
+			title: "Aerial Hell Survey Loot"
+			subtitle: "Sixteen unique Aerial Hell items returned home."
+			description: [
+				"Survey the Aerial Hell biome thoroughly — return with at least 16 distinct Aerial Hell native items at the home warehouse. The Charter pays per-species."
+			]
+			icon: "aerialhell:lapis_robinia_planks"
+			tasks: [{
+				id: "5A11E0F10B020039"
+				type: "checkmark"
+				title: "Return 16+ unique Aerial Hell items to home warehouse"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030067", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030068", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010033"]
+		}
+
+		# ---------- Q35: Aerial Hell Defended ----------
+		{
+			id: "5A11E0F10B010035"
+			x: -8.0d
+			y: 17.0d
+			title: "Aerial Hell Defended"
+			subtitle: "Eight Aerial Hell hostiles at the outpost gates."
+			description: [
+				"Defeat at least eight hostile Aerial Hell mobs at or near the outpost in a single defensive engagement. The Charter calls this 'territory secured.'"
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10B020040"
+				type: "checkmark"
+				title: "Defeat 8+ Aerial Hell hostiles at the outpost"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030069", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030070", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10B010033"]
+		}
+
+		# ---------- Q36: Nether Outpost — Site Survey ----------
+		{
+			id: "5A11E0F10B010036"
+			x: 6.0d
+			y: 14.0d
+			title: "Nether Outpost — Site Survey"
+			subtitle: "Lava-lit, rocky, blaze-prone."
+			description: [
+				"Cross into the Nether. Survey a viable outpost site — Soul Sand Valley or Warped Forest preferred for visibility, near a lava ocean for fuel."
+			]
+			icon: "minecraft:netherrack"
+			tasks: [{
+				id: "5A11E0F10B020041"
+				type: "checkmark"
+				title: "Survey a viable Nether outpost site"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030071", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030072", type: "item", item: { id: "minecraft:netherrack", Count: 16b } }
+			]
+			dependencies: ["5A11E0F10B010001"]
+		}
+
+		# ---------- Q37: Nether Outpost — Town Hall ----------
+		{
+			id: "5A11E0F10B010037"
+			x: 8.0d
+			y: 15.0d
+			title: "Nether Town Hall"
+			subtitle: "The Charter's first Nether-side permanent presence."
+			description: [
+				"Place a Town Hall in the Nether with a Spatial Anchor. Hire two citizens (Netherite hazard pay). The Charter's Nether-survey clerk catalogues this immediately."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [
+				{ id: "5A11E0F10B020042", type: "item", item: "minecolonies:blockhuttownhall" }
+				{ id: "5A11E0F10B020043", type: "item", item: "ae2:spatial_anchor" }
+			]
+			rewards: [
+				{ id: "5A11E0F10B030073", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030074", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010036"]
+		}
+
+		# ---------- Q38: Nether Outpost — Netherworker Hut ----------
+		{
+			id: "5A11E0F10B010038"
+			x: 6.0d
+			y: 16.0d
+			title: "Nether Netherworker Hut"
+			subtitle: "MC specialist for nether logistics."
+			description: [
+				"Place a MineColonies Nether Worker hut at the Nether outpost. The Netherworker harvests nether quartz, glowstone, and netherite for the Charter's logistics network."
+			]
+			icon: "minecolonies:blockhutnetherworker"
+			tasks: [{
+				id: "5A11E0F10B020044"
+				type: "item"
+				item: "minecolonies:blockhutnetherworker"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030075", type: "xp", xp: 50 }
+				{ id: "5A11E0F10B030076", type: "item", item: { id: "minecraft:netherrack", Count: 32b } }
+			]
+			dependencies: ["5A11E0F10B010037"]
+		}
+
+		# ---------- Q39: Nether Cargo Run ----------
+		{
+			id: "5A11E0F10B010039"
+			x: 8.0d
+			y: 17.0d
+			title: "Nether Cargo Run"
+			subtitle: "Return with 32 nether quartz + 16 glowstone."
+			description: [
+				"Make a cargo run between the Nether outpost and home. Return with at least 32 Nether Quartz + 16 Glowstone in the warehouse."
+			]
+			icon: "minecraft:quartz"
+			tasks: [
+				{ id: "5A11E0F10B020045", type: "item", item: { Count: 1b, id: "minecraft:quartz" }, count: 32L }
+				{ id: "5A11E0F10B020046", type: "item", item: { Count: 1b, id: "minecraft:glowstone" }, count: 16L }
+			]
+			rewards: [
+				{ id: "5A11E0F10B030077", type: "xp", xp: 70 }
+				{ id: "5A11E0F10B030078", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010038"]
+		}
+
+		# ---------- Q40: Nether Outpost Operational ----------
+		{
+			id: "5A11E0F10B010040"
+			x: 6.0d
+			y: 18.0d
+			title: "Nether Outpost Operational"
+			subtitle: "Three citizens. Three-hut minimum."
+			description: [
+				"Have three citizens + three MC huts staffed at the Nether outpost. The Charter's third cross-dimensional permanent presence is logged."
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F10B020047"
+				type: "checkmark"
+				title: "3+ citizens + 3+ huts at the Nether outpost"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030079", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030080", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010038"]
+		}
+
+		# ---------- Q41: End Outpost — Site Survey ----------
+		{
+			id: "5A11E0F10B010041"
+			x: 0.0d
+			y: 16.0d
+			title: "End Outpost — Site Survey"
+			subtitle: "Post-Dragon. The End is yours to colonise."
+			description: [
+				"Cross into the End (post-Ender-Dragon defeated from Act IX). Survey a small artificial-island site near the central pillar for the outpost. The Charter's surveyors hold their breath."
+			]
+			icon: "minecraft:end_stone"
+			tasks: [{
+				id: "5A11E0F10B020048"
+				type: "checkmark"
+				title: "Survey a viable End outpost site (near central island, post-Dragon)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030081", type: "xp", xp: 60 }
+				{ id: "5A11E0F10B030082", type: "item", item: { id: "minecraft:end_stone", Count: 16b } }
+			]
+			dependencies: ["5A11E0F10B010001"]
+		}
+
+		# ---------- Q42: End Outpost — Town Hall ----------
+		{
+			id: "5A11E0F10B010042"
+			x: -2.5d
+			y: 17.0d
+			title: "End Town Hall"
+			subtitle: "The Charter's fourth dimensional outpost."
+			description: [
+				"Place a Town Hall in the End with a Spatial Anchor. Hire two citizens (Endermen-proximity hazard pay, plus a small bonus for the view)."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [
+				{ id: "5A11E0F10B020049", type: "item", item: "minecolonies:blockhuttownhall" }
+				{ id: "5A11E0F10B020050", type: "item", item: "ae2:spatial_anchor" }
+			]
+			rewards: [
+				{ id: "5A11E0F10B030083", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030084", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10B010041"]
+		}
+
+		# ---------- Q43: End Outpost — Endman Logistics ----------
+		{
+			id: "5A11E0F10B010043"
+			x: 2.5d
+			y: 17.0d
+			title: "End Logistics"
+			subtitle: "Sixteen Ender Pearls + Eight Shulker Boxes."
+			description: [
+				"Stockpile 16 Ender Pearls and 8 Shulker Boxes at the End outpost warehouse. The Charter's End-survey clerk uses Shulker Boxes as the official End-dimension cargo container."
+			]
+			icon: "minecraft:shulker_box"
+			tasks: [
+				{ id: "5A11E0F10B020051", type: "item", item: { Count: 1b, id: "minecraft:ender_pearl" }, count: 16L }
+				{ id: "5A11E0F10B020052", type: "item", item: { Count: 1b, id: "minecraft:shulker_box" }, count: 8L }
+			]
+			rewards: [
+				{ id: "5A11E0F10B030085", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030086", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010042"]
+		}
+
+		# ---------- Q44: End Outpost — Operational ----------
+		{
+			id: "5A11E0F10B010044"
+			x: 0.0d
+			y: 18.0d
+			title: "End Outpost Operational"
+			subtitle: "Three citizens, two huts, one Charter mapper."
+			description: [
+				"Have three citizens at the End outpost with at least two huts staffed. The Charter's fourth cross-dimensional permanent presence is recorded — full Federation outpost coverage."
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F10B020053"
+				type: "checkmark"
+				title: "3+ citizens + 2+ huts at the End outpost"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030087", type: "xp", xp: 80 }
+				{ id: "5A11E0F10B030088", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10B010043"]
+		}
+
+		# ---------- Q45: All Outposts Operational (milestone) ----------
+		{
+			id: "5A11E0F10B010045"
+			x: 0.0d
+			y: 19.5d
+			shape: "rsquare"
+			title: "All Dimensional Outposts Operational"
+			subtitle: "Aether + Aerial Hell + Nether + End. Four flags."
+			description: [
+				"Four cross-dimensional permanent outposts staffed. The Charter's atmospheric / dimensional auditor records this as the highest exploration tier on file — the Foreman is on the Federation Council's senior shortlist."
+			]
+			icon: "minecraft:end_stone"
+			tasks: [{
+				id: "5A11E0F10B020054"
+				type: "checkmark"
+				title: "Aether + Aerial Hell + Nether + End outposts all operational"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030089", type: "xp", xp: 150 }
+				{ id: "5A11E0F10B030090", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F10B010033"
+				"5A11E0F10B010040"
+				"5A11E0F10B010044"
+			]
+		}
+
+		# ====== THREAD D — FEDERATION MILESTONES (Q46-Q50) ======
+
+		# ---------- Q46: Sixty Citizens ----------
+		{
+			id: "5A11E0F10B010046"
+			x: -4.5d
+			y: 20.5d
+			title: "Sixty Citizens"
+			subtitle: "Across all colonies + all outposts."
+			description: [
+				"Have at least 60 living citizens across all your colonies (Home + North Buttress + South Reef) plus all four dimensional outposts combined. The Charter calls this 'a meaningful network.'"
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F10B020055"
+				type: "checkmark"
+				title: "Have 60+ living citizens across all colonies + outposts"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030091", type: "xp", xp: 150 }
+				{ id: "5A11E0F10B030092", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F10B010005"
+				"5A11E0F10B010011"
+				"5A11E0F10B010045"
+			]
+		}
+
+		# ---------- Q47: Twelve Trade Routes ----------
+		{
+			id: "5A11E0F10B010047"
+			x: 4.5d
+			y: 20.5d
+			title: "Twelve Trade Routes"
+			subtitle: "Counting Waystones + train + airship routes."
+			description: [
+				"Have at least 12 active trade routes (any combination of Waystone-linked, train-linked, or airship-routed). The Charter's logistics auditors print this in next year's annual."
+			]
+			icon: "waystones:waystone"
+			tasks: [{
+				id: "5A11E0F10B020056"
+				type: "checkmark"
+				title: "Have 12+ active trade routes (waystone + train + airship)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030093", type: "xp", xp: 120 }
+				{ id: "5A11E0F10B030094", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F10B010015"
+				"5A11E0F10B010028"
+			]
+		}
+
+		# ---------- Q48: Federation Recognition ----------
+		{
+			id: "5A11E0F10B010048"
+			x: -2.5d
+			y: 22.0d
+			title: "Federation Recognition"
+			subtitle: "All four city administrators have stamped their seals on your roster."
+			description: [
+				"Mara, Halloran, Yoki, Saskia — all four Charter city administrators have stamped their seals on your alliance roster. The Federation Council records you as 'recognised across the network.'"
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F10B020057"
+				type: "checkmark"
+				title: "All 4 Charter city administrators recognise your alliance"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030095", type: "xp", xp: 100 }
+				{ id: "5A11E0F10B030096", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10B010030"]
+		}
+
+		# ---------- Q49: Federation Administrator Promotion ----------
+		{
+			id: "5A11E0F10B010049"
+			x: 2.5d
+			y: 22.0d
+			title: "Federation Administrator Promotion"
+			subtitle: "Eighth docket. Diamond-trimmed. The Charter's regional rank."
+			description: [
+				"Erik delivers the eighth docket: Federation Administrator, in recognition of operational presence across three colonies + four cities + four dimensions. The docket is diamond-trimmed. Eight dockets on the office wall — the seventh in gilt frame (High Foreman), the eighth in diamond trim (this one)."
+			]
+			icon: "minecraft:diamond_block"
+			tasks: [{
+				id: "5A11E0F10B020058"
+				type: "checkmark"
+				title: "Pin the Federation Administrator docket in the office (diamond-trimmed, 8th on the wall)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030097", type: "xp", xp: 200 }
+				{ id: "5A11E0F10B030098", type: "item", item: { id: "minecraft:diamond_block", Count: 2b } }
+			]
+			dependencies: [
+				"5A11E0F10B010046"
+				"5A11E0F10B010047"
+				"5A11E0F10B010048"
+			]
+		}
+
+		# ---------- Q50: Scene-beat finale — The Federation Stands ----------
+		{
+			id: "5A11E0F10B010050"
+			x: 0.0d
+			y: 24.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Federation Stands"
+			subtitle: "Four flags visible across the cloud-bank from the citadel battlements."
+			description: [
+				"Stand on the citadel battlements at dawn. To the north: North Buttress's smoke. To the south: South Reef's banner. To the east: Brassmere's lit window-glow. To the west: Storm-on-Stilts's air-marshal beacon. Beyond — the Aether outpost's portal, the Aerial Hell's torch-line, the Nether's lava-glow, the End's edge."
+				""
+				"The Federation stands. The Charter's regional administration is no longer one fragment, no longer one Foreman — it is a network."
+				""
+				"The next ship at the dock will carry an invitation to the Brass Hall. The Charter's Court will want to know which side you'll choose."
+			]
+			icon: "minecraft:filled_map"
+			tasks: [{
+				id: "5A11E0F10B020059"
+				type: "checkmark"
+				title: "Stand on the citadel battlements at dawn, look out at four colony flags"
+			}]
+			rewards: [
+				{ id: "5A11E0F10B030099", type: "xp", xp: 300 }
+				{ id: "5A11E0F10B030100", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F10B030101", type: "item", item: { id: "minecraft:writable_book", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10B010049"]
+		}
+	]
+}

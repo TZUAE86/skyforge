@@ -182,6 +182,23 @@ const SCENE_BEATS = {
         sound: "minecraft:ui.toast.challenge_complete",
         pitch: 1.0,
         lore: "Act X closes. Aragdal defeated. The pirate fleet routs. Citizens raise the colony banner above the Town Hall. The Foreman is High Foreman now. Fragment 0x174A: completed."
+    },
+    // ---- Act XI — The Federation ----
+    "5A11E0F10B010001": {
+        title: "The Charter Hands You a Map",
+        subtitle: "Three fragments. Four cities. One administrator.",
+        color: 0xB0D080,
+        sound: "minecraft:item.book.put",
+        pitch: 1.1,
+        lore: "Act XI — The Federation. Three fragments reserved. Four Charter cities to visit. The Foreman administers a network now."
+    },
+    "5A11E0F10B010050": {
+        title: "The Federation Stands",
+        subtitle: "Four flags across the cloud-bank.",
+        color: 0xFFE090,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 0.9,
+        lore: "Act XI closes. Three player colonies, four Charter cities, four dimensional outposts — all under the Foreman's administration. The Brass Hall's invitation arrives next quarter. The Charter's Court will want to know which side."
     }
 };
 

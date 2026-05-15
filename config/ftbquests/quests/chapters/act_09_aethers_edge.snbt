@@ -404,6 +404,8 @@
 			subtitle: "A MineColonies camp inside the Aether."
 			description: [
 				"Set up a small MineColonies outpost (Town Hall + 1-2 huts) inside the Aether or adjacent. The Charter's expedition auditors recognize 'cross-dimensional logistics' as a separate audit category."
+				""
+				"The Charter logs your camp as the Federation's first cross-dimensional outpost. Three more will follow — Aerial Hell, the Nether, the End. The pattern is yours to repeat."
 			]
 			icon: "minecolonies:blockhuttownhall"
 			tasks: [{
@@ -710,6 +712,8 @@
 			subtitle: "Sixth docket. The Charter recognises cross-dimensional Foremen."
 			description: [
 				"Erik delivers the docket: Master Explorer, in recognition of operational presence in 3+ dimensions. Six dockets on the office wall."
+				""
+				"The Charter's regional administrators take note — you're on the Federation shortlist. Erik does not mention this. Erik very pointedly does not mention this."
 			]
 			icon: "minecraft:filled_map"
 			tasks: [{

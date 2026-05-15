@@ -451,6 +451,8 @@
 			subtitle: "MineColonies opens trade routes."
 			description: [
 				"Place a MineColonies Trader (or Marketplace) Hut. Citizens negotiate with outside vendors on the colony's behalf."
+				""
+				"The Charter's senior trade routes touch Brassmere weekly and Storm-on-Stilts twice a month. Your trader can route through either with the right paperwork."
 			]
 			icon: "minecolonies:blockhuttavern"
 			tasks: [{
@@ -899,6 +901,8 @@
 			subtitle: "Applied Energistics. The Charter's most senior logistics technology."
 			description: [
 				"Mine certus quartz or look up its recipe in EMI/JEI. Act VII opens the AE2 Workshops thread; this is the warmup."
+				""
+				"Veridian Pier's senior alchemists swear by AE2 — they'll teach you the indexed-mana variant if you ask, but that's a story for the Charter's Court."
 			]
 			icon: "ae2:certus_quartz_crystal"
 			tasks: [{

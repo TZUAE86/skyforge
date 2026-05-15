@@ -552,6 +552,8 @@
 				"Defeat Aragdal the Sky-Tyrant. The pirate fleet, leaderless, scatters across the cloud-banks. The Charter's surveillance clerks photograph the routing."
 				""
 				"Erik stands at the citadel gate, hat in his hand, watching the sky empty out."
+				""
+				"Later, in the office, Erik mentions a name in passing: \"Cornelius Vanguard.\" He doesn't elaborate. The Sky-Tyrant was the Charter's external threat. There are internal ones too."
 			]
 			icon: "minecraft:nether_star"
 			tasks: [{
@@ -789,7 +791,9 @@
 			title: "High Foreman Promotion"
 			subtitle: "The seventh docket. The Charter's apex rank."
 			description: [
-				"Erik delivers the final docket: High Foreman, in recognition of full Charter service. Seven dockets on the office wall, the seventh in gilt frame. The Charter pays a stipend for the rest of the Foreman's life — they call this 'the comfortable retirement.'"
+				"Erik delivers the final docket: High Foreman of Fragment 0x174A — and provisional member of the Federation Council. Seven dockets on the office wall, the seventh in gilt frame."
+				""
+				"The Charter pays a stipend for the rest of the Foreman's life — they call this 'the comfortable retirement.' But the gilt-framed docket has a clause in small print: provisional membership becomes full at the next quarterly Council. The Foreman will receive an invitation."
 			]
 			icon: "minecraft:netherite_block"
 			tasks: [{
@@ -841,9 +845,9 @@
 				""
 				"You are High Foreman now. The Charter's stipend will arrive every quarter for the rest of your life. The fragment is named for the colony. The colony is named by its citizens."
 				""
-				"Fragment 0x174A: completed."
+				"Fragment 0x174A: the founding arc is complete."
 				""
-				"Thank you for playing Skyforge."
+				"The next ship arriving at the dock carries an invitation to the Brass Hall — but that's a story for the next quarter. The Federation will want to see you."
 			]
 			icon: "minecraft:nether_star"
 			tasks: [{

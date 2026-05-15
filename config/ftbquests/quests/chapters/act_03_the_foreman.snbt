@@ -33,6 +33,8 @@
 			description: [
 				"You hear the rotor before you see the ship. A small Charter survey craft. A man in a brass-bound coat steps off, lifts a hammer in salute, and asks where you'd like the Supply Camp placed."
 				""
+				"\"Erik Brassgrip. Fourteen years' service. My cousin Mara still ploughs at Brassgrip's Reach — that's another Charter colony, two hops over the cloud-bank. Maybe you'll visit one day.\""
+				""
 				"Place the Supply Camp Deluxe. Erik will start unpacking."
 			]
 			icon: "minecolonies:supplycampdeployer"
@@ -337,6 +339,8 @@
 			subtitle: "A colony with books trains its own."
 			description: [
 				"Place a Library. Citizens train each other when there's something to read. The Charter pays a small bonus for a colony with a stocked library — call it 'institutional self-respect.'"
+				""
+				"The Charter has fourteen libraries across its network — yours is the third commissioned this decade. The clerks file all fourteen catalogues in one annex of the Brass Hall."
 			]
 			icon: "minecolonies:blockhutlibrary"
 			tasks: [{

@@ -838,6 +838,8 @@
 			subtitle: "Keep the workshop loaded. Always."
 			description: [
 				"Craft a Spatial Anchor. Place it in the workshop. The chunks stay loaded — the Workshops never sleep, neither does the warehouse."
+				""
+				"The Federation's outposts run on these — Aerial Hell, the Nether, the End, the Aether. The Charter pays double for an outpost-grade anchor. File the paperwork now and the next assignment will be easier."
 			]
 			icon: "ae2:spatial_anchor"
 			tasks: [{

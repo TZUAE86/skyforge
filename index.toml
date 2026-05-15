@@ -38,15 +38,19 @@ hash = "9972f179e39239ab86a5676cdef58d36ab95a76d22878354d01f7c8568ccbe48"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_09_aethers_edge.snbt"
-hash = "9a502cc51f35f2e398b600b97e6f4a5ebaa075be1bed48463a72d052e3a56e82"
+hash = "31ec3dbddbf84d492f293df301f4b2c77648efa4cc038052d6f2fa7eb830c2a6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_10_the_citadel.snbt"
-hash = "202b905914752007aad543d4e68d20f06fb6f35b1ad7cacfff930da971fd97b8"
+hash = "ab2f8fc09258b43b6efc5a4527fe9313a1daa6b4f1a5bde64477fc240632d44b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_11_the_federation.snbt"
 hash = "07f3f0d05829b74c4760e1e754ede1bb70d7fc4a04f3ef6981170bdd99b6c48a"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/act_12_the_charters_court.snbt"
+hash = "190a44b892c54f43102f751a599cb12c838515ac65e0d839bdb19ac87b434860"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -66,7 +70,7 @@ hash = "66da70f14da54d298a3f5ade01701801c5200db93ed37429bf74db5bb7aac0bd"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/tier3_advanced.snbt"
-hash = "46652a953c250af2192415cad8f3e93164cc35cbcd5524708ab907b9fb29ed2e"
+hash = "8e37fe3f37ee157de660d2dcd56bccbf346b2d7a44733420d7067042118fb0ed"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_challenges.js"
@@ -82,7 +86,7 @@ hash = "cf736ec614206cc0f79a2166dc53b6221e4e1829bea12d82be4a3aa34e97924c"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"
-hash = "ad77c5903f1bf4b562acbd7918f2909d1d1fad7c8fe5434a49ead25708859ee6"
+hash = "830b38432343de187629c1727fd483ee85660b19eea8529411962b8e634da256"
 
 [[files]]
 file = "mods/advancedae.pw.toml"

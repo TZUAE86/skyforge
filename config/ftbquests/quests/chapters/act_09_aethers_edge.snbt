@@ -219,15 +219,15 @@
 			description: [
 				"Craft an Iron's Spells 'n Spellbooks Spell Book. The Charter's senior alchemists ('mages,' in academy terms) consider this 'Tier 1 enrollment.'"
 			]
-			icon: "irons_spellbooks:spell_book"
+			icon: "irons_spellbooks:wimpy_spell_book"
 			tasks: [{
 				id: "5A11E0F109020009"
 				type: "item"
-				item: "irons_spellbooks:spell_book"
+				item: "irons_spellbooks:wimpy_spell_book"
 			}]
 			rewards: [
 				{ id: "5A11E0F109030017", type: "xp", xp: 40 }
-				{ id: "5A11E0F109030018", type: "item", item: "irons_spellbooks:spell_book" }
+				{ id: "5A11E0F109030018", type: "item", item: "irons_spellbooks:wimpy_spell_book" }
 			]
 			dependencies: ["5A11E0F108010040"]
 		}
@@ -266,7 +266,7 @@
 			description: [
 				"Cast any Iron's Spellbooks spell at a mob. Damage them, freeze them, heal yourself — doesn't matter, only that you cast and the spell connects."
 			]
-			icon: "irons_spellbooks:spell_book"
+			icon: "irons_spellbooks:wimpy_spell_book"
 			tasks: [{
 				id: "5A11E0F109020011"
 				type: "checkmark"
@@ -640,7 +640,7 @@
 			description: [
 				"Equip any Iron's Spellbooks armor piece (robe, cape, hood). The Foreman now looks the part."
 			]
-			icon: "irons_spellbooks:wandering_magician_robe"
+			icon: "irons_spellbooks:wandering_magician_chestplate"
 			tasks: [{
 				id: "5A11E0F109020027"
 				type: "checkmark"

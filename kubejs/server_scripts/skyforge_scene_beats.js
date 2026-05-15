@@ -199,6 +199,31 @@ const SCENE_BEATS = {
         sound: "minecraft:ui.toast.challenge_complete",
         pitch: 0.9,
         lore: "Act XI closes. Three player colonies, four Charter cities, four dimensional outposts — all under the Foreman's administration. The Brass Hall's invitation arrives next quarter. The Charter's Court will want to know which side."
+    },
+    // ---- Act XII — The Charter's Court ----
+    "5A11E0F10C010001": {
+        title: "Invitation to the Brass Hall",
+        subtitle: "The Charter's Court convenes next week.",
+        color: 0xE8C040,
+        sound: "minecraft:item.book.put",
+        pitch: 1.0,
+        lore: "Act XII — The Charter's Court. The annual Council convenes. The Foreman attends as a provisional administrator. Cornelius Vanguard's name is on the docket."
+    },
+    "5A11E0F10C010030": {
+        title: "The Eldritch Tide Repelled",
+        subtitle: "Vanguard. The Tide. The Federation holds.",
+        color: 0x6040A0,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 0.8,
+        lore: "Act XII Tide closes. All four cities defended, the Architect down. Charter Councillor docket (9th, obsidian) pinned in the office. The Court Cycle opens."
+    },
+    "5A11E0F10C010035": {
+        title: "The Council Sits",
+        subtitle: "Always-on endgame.",
+        color: 0xFFD840,
+        sound: "minecraft:block.bell.use",
+        pitch: 1.1,
+        lore: "Act XII finale — the Court is in session permanently. The Foreman has work for as long as they care to take it. Quarterly cycle reset every 7+ in-game days."
     }
 };
 

@@ -7,7 +7,7 @@
 		{ count: 4, item: "ae2:fluix_crystal", weight: 3 }
 		{ count: 1, item: "create:potato_cannon", weight: 1 }
 		{ count: 1, item: "create_aeronautics:propeller", weight: 2 }
-		{ count: 1, item: "irons_spellbooks:spell_book", weight: 1 }
+		{ count: 1, item: "irons_spellbooks:wimpy_spell_book", weight: 1 }
 		{ count: 8, item: "minecraft:diamond", weight: 2 }
 		{ count: 1, item: "mekanism:jetpack", weight: 1 }
 		{ count: 4, item: "ars_nouveau:source_gem", weight: 3 }

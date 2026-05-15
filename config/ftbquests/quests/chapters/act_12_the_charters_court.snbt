@@ -1,0 +1,887 @@
+# Skyforge — Act XII: The Charter's Court (35 quests + recurring loop).
+# TONE: Steampunk colonial. The Federation is comfortable; the Charter
+# itself has politics. Two factions (Reformers, Traditionalists). A
+# rogue Administrator (Cornelius Vanguard). The Eldritch Tide. A
+# repeatable Court Cycle that resets every 7 in-game days.
+# THEME BIBLE: This is the escalation. Internal threat, not external.
+# The Charter is a flawed institution. The Foreman has to choose.
+# TODO verify Iron's Spellbooks Eldritch tier IDs + Cataclysm bosses.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_12_the_charters_court"
+	group: "5A11E0F100000001"
+	icon: "minecraft:gold_block"
+	id: "5A11E0F10C000000"
+	images: [ ]
+	order_index: 11
+	quest_links: [ ]
+	subtitle: ["The Charter isn't a benevolent god anymore."]
+	title: "Act XII — The Charter's Court"
+	quests: [
+
+		# ---------- Q01: Scene-beat opener — Invitation to the Brass Hall ----------
+		{
+			id: "5A11E0F10C010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "Invitation to the Brass Hall"
+			subtitle: "A wax-sealed cable. The Charter's Court convenes next week."
+			description: [
+				"Erik delivers a brass-trimmed envelope at sunrise. Inside: an embossed invitation. The Charter's annual Court — the gathering of all Federation Administrators — convenes at the Brass Hall in seven days. Your attendance is expected."
+				""
+				"Open the invitation (any writable book). The next quarter of the Foreman's career begins here."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F10C020001"
+				type: "item"
+				item: "minecraft:writable_book"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030001", type: "xp", xp: 100 }
+				{ id: "5A11E0F10C030002", type: "item", item: { id: "minecraft:gold_ingot", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10B010050"]
+		}
+
+		# ====== THREAD A — CHARTER COURT POLITICS (Q02-Q10) ======
+
+		# ---------- Q02: Travel to the Brass Hall ----------
+		{
+			id: "5A11E0F10C010002"
+			x: -3.0d
+			y: 1.5d
+			title: "Travel to the Brass Hall"
+			subtitle: "A hidden fragment. Bring formal dress."
+			description: [
+				"Fly the warship to the Charter's secret Council fragment — the Brass Hall sits on a low-altitude island flanked by floating brass spires. Place a Waystone on arrival to mark it on your network."
+			]
+			icon: "waystones:waystone"
+			tasks: [{
+				id: "5A11E0F10C020002"
+				type: "checkmark"
+				title: "Travel to a chosen fragment, mark it as the Brass Hall on Xaero + place a Waystone"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030003", type: "xp", xp: 60 }
+				{ id: "5A11E0F10C030004", type: "item", item: "waystones:waystone" }
+			]
+			dependencies: ["5A11E0F10C010001"]
+		}
+
+		# ---------- Q03: Meet the Reformers ----------
+		{
+			id: "5A11E0F10C010003"
+			x: -5.0d
+			y: 2.5d
+			title: "Meet the Reformers"
+			subtitle: "Saskia Veridian leads the alchemy-friendly faction."
+			description: [
+				"In one of the Brass Hall's side chambers, Saskia Veridian (Veridian Pier) and her allies have set up a tea service. The Reformer position: colony self-governance, alchemy and magic as first-class disciplines, the Charter as a coordinator rather than an enforcer."
+				""
+				"Sit. Listen. The Charter records who attends which tea."
+			]
+			icon: "ars_nouveau:source_gem"
+			tasks: [{
+				id: "5A11E0F10C020003"
+				type: "checkmark"
+				title: "Attend the Reformer tea (visit the Brass Hall's east wing)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030005", type: "xp", xp: 40 }
+				{ id: "5A11E0F10C030006", type: "item", item: { id: "ars_nouveau:source_gem", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10C010002"]
+		}
+
+		# ---------- Q04: Meet the Traditionalists ----------
+		{
+			id: "5A11E0F10C010004"
+			x: 5.0d
+			y: 2.5d
+			title: "Meet the Traditionalists"
+			subtitle: "Captain Yoki Stilts leads the keep-the-old-charter faction."
+			description: [
+				"In the Brass Hall's west wing, Yoki Stilts and the traditionalists have laid out the old industrial blueprints. The Traditionalist position: the Charter as authority, strong central command, suspicion of magic as 'unaccountable infrastructure.'"
+				""
+				"Sit. Listen. The Charter records who attends which tea."
+			]
+			icon: "create:wrench"
+			tasks: [{
+				id: "5A11E0F10C020004"
+				type: "checkmark"
+				title: "Attend the Traditionalist tea (visit the Brass Hall's west wing)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030007", type: "xp", xp: 40 }
+				{ id: "5A11E0F10C030008", type: "item", item: { id: "create:brass_ingot", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10C010002"]
+		}
+
+		# ---------- Q05: Choose Your Side ----------
+		{
+			id: "5A11E0F10C010005"
+			x: 0.0d
+			y: 3.5d
+			shape: "rsquare"
+			title: "Choose Your Side"
+			subtitle: "Reformer or Traditionalist. The Charter records the vote."
+			description: [
+				"At the Council's first formal session you cast a vote. Reformer or Traditionalist — the choice colours your next quarter of Court work."
+				""
+				"This is honour-system: pick the philosophy you actually prefer. The Charter's clerk will note your tea attendance and infer the rest."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F10C020005"
+				type: "checkmark"
+				title: "Cast your Council vote (mark a sign or banner with your choice)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030009", type: "xp", xp: 80 }
+				{ id: "5A11E0F10C030010", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F10C010003"
+				"5A11E0F10C010004"
+			]
+		}
+
+		# ---------- Q06: The Court's First Verdict ----------
+		{
+			id: "5A11E0F10C010006"
+			x: -3.0d
+			y: 5.0d
+			title: "The Court's First Verdict"
+			subtitle: "Routine business. Stamp three dockets."
+			description: [
+				"Sign and stamp three sample dockets (any writable books, three of them). The Charter's clerks teach you the procedure. By the third, your signature is fluent."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F10C020006"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:writable_book" }
+				count: 3L
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030011", type: "xp", xp: 40 }
+				{ id: "5A11E0F10C030012", type: "item", item: { id: "minecraft:writable_book", Count: 3b } }
+			]
+			dependencies: ["5A11E0F10C010005"]
+		}
+
+		# ---------- Q07: Hand-Shake With Halloran ----------
+		{
+			id: "5A11E0F10C010007"
+			x: 3.0d
+			y: 5.0d
+			title: "Hand-Shake With Halloran"
+			subtitle: "Brassmere's Administrator. Allied with both factions, somehow."
+			description: [
+				"Halloran Brassmere appears in both factions' tea sessions. He claims neutrality. His handshake at the Council session ratifies your alliance with Brassmere as a Council-grade pact."
+			]
+			icon: "minecraft:emerald"
+			tasks: [{
+				id: "5A11E0F10C020007"
+				type: "checkmark"
+				title: "Meet with Halloran at the Brass Hall and ratify alliance"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030013", type: "xp", xp: 40 }
+				{ id: "5A11E0F10C030014", type: "item", item: { id: "minecraft:emerald", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10C010005"]
+		}
+
+		# ---------- Q08: The Brass Hall Library ----------
+		{
+			id: "5A11E0F10C010008"
+			x: -5.0d
+			y: 6.0d
+			title: "The Brass Hall Library"
+			subtitle: "Stockpile sixteen books in the Council's library."
+			description: [
+				"Contribute to the Brass Hall's research library: deposit sixteen written/writable books. The Charter notes contributions in the annual."
+			]
+			icon: "minecraft:bookshelf"
+			tasks: [{
+				id: "5A11E0F10C020008"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:book" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030015", type: "xp", xp: 50 }
+				{ id: "5A11E0F10C030016", type: "item", item: { id: "minecraft:bookshelf", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10C010005"]
+		}
+
+		# ---------- Q09: Disturbing Reports ----------
+		{
+			id: "5A11E0F10C010009"
+			x: 5.0d
+			y: 6.0d
+			title: "Disturbing Reports"
+			subtitle: "Trade routes from Storm-on-Stilts have gone dark."
+			description: [
+				"Yoki's intelligence officer corners you between sessions. Three Storm-on-Stilts trade cargos have been raided in the past week — not by pirates, but by someone using Charter codebooks. Erik mentioned a name. Cornelius Vanguard."
+			]
+			icon: "minecraft:paper"
+			tasks: [{
+				id: "5A11E0F10C020009"
+				type: "checkmark"
+				title: "Read the intelligence report (any paper item in inventory + checkmark)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030017", type: "xp", xp: 50 }
+				{ id: "5A11E0F10C030018", type: "item", item: { id: "minecraft:paper", Count: 8b } }
+			]
+			dependencies: ["5A11E0F10C010005"]
+		}
+
+		# ---------- Q10: The Court Adjourns ----------
+		{
+			id: "5A11E0F10C010010"
+			x: 0.0d
+			y: 7.0d
+			title: "The Court Adjourns"
+			subtitle: "First Court complete. The Vanguard problem is on the docket."
+			description: [
+				"The Charter's Court adjourns for the quarter. Erik catches you at the Brass Hall dock. \"Cornelius Vanguard. We can't ignore it. Want the assignment?\""
+			]
+			icon: "minecraft:wooden_sword"
+			tasks: [{
+				id: "5A11E0F10C020010"
+				type: "checkmark"
+				title: "Accept the Vanguard assignment from Erik"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030019", type: "xp", xp: 60 }
+				{ id: "5A11E0F10C030020", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: [
+				"5A11E0F10C010006"
+				"5A11E0F10C010007"
+				"5A11E0F10C010008"
+				"5A11E0F10C010009"
+			]
+		}
+
+		# ====== THREAD B — THE ROGUE ADMINISTRATOR (Q11-Q20) ======
+
+		# ---------- Q11: Vanguard's Trail ----------
+		{
+			id: "5A11E0F10C010011"
+			x: -4.0d
+			y: 8.5d
+			title: "Vanguard's Trail"
+			subtitle: "Three raided cargos. One pattern."
+			description: [
+				"Investigate three raided trade-route waypoints (revisit three Waystones along the Storm-on-Stilts corridor and document each — any sign placed at each site)."
+			]
+			icon: "waystones:waystone"
+			tasks: [{
+				id: "5A11E0F10C020011"
+				type: "checkmark"
+				title: "Document 3+ raided trade route waypoints with signs"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030021", type: "xp", xp: 60 }
+				{ id: "5A11E0F10C030022", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10C010010"]
+		}
+
+		# ---------- Q12: Captured Pirate Interrogation ----------
+		{
+			id: "5A11E0F10C010012"
+			x: -2.0d
+			y: 9.5d
+			title: "Captured Pirate Interrogation"
+			subtitle: "Defeat 5 pirates on the Storm route. Recover Vanguard's letterhead."
+			description: [
+				"Defeat at least five Born in Chaos pirates along Storm-on-Stilts' trade route. One of them carries a forged Charter docket on Vanguard's letterhead. The pattern is confirmed: Vanguard is arming pirates."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10C020012"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 5L
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030023", type: "xp", xp: 70 }
+				{ id: "5A11E0F10C030024", type: "item", item: { id: "minecraft:paper", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10C010011"]
+		}
+
+		# ---------- Q13: Vanguard's Stronghold Located ----------
+		{
+			id: "5A11E0F10C010013"
+			x: 2.0d
+			y: 9.5d
+			title: "Vanguard's Stronghold Located"
+			subtitle: "A fortified worldgen structure. The Charter's secret base, repurposed."
+			description: [
+				"Trace Vanguard's letterhead to a fortified location — find any Yung's Better Stronghold, When Dungeons Arise structure, or other defended worldgen site. Mark it as 'Vanguard's Stronghold' on Xaero."
+			]
+			icon: "minecraft:filled_map"
+			tasks: [{
+				id: "5A11E0F10C020013"
+				type: "checkmark"
+				title: "Locate a defended worldgen structure and mark as Vanguard's Stronghold"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030025", type: "xp", xp: 60 }
+				{ id: "5A11E0F10C030026", type: "item", item: { id: "minecraft:filled_map", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10C010012"]
+		}
+
+		# ---------- Q14: Bring the Charter Cities In ----------
+		{
+			id: "5A11E0F10C010014"
+			x: 4.0d
+			y: 8.5d
+			title: "Bring the Charter Cities In"
+			subtitle: "Three of four city administrators pledge support."
+			description: [
+				"Visit at least three of the four Charter cities and brief them on Vanguard's treason. Mara, Halloran, Yoki, Saskia — at least three pledge troops or supplies (honor-system checkmark per visit + flag at your office naming each pledge)."
+			]
+			icon: "minecraft:white_banner"
+			tasks: [{
+				id: "5A11E0F10C020014"
+				type: "checkmark"
+				title: "Get 3+ Charter city administrators to pledge support (mark 3 flags in office)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030027", type: "xp", xp: 70 }
+				{ id: "5A11E0F10C030028", type: "item", item: { id: "minecraft:white_banner", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10C010013"]
+		}
+
+		# ---------- Q15: Siege Preparations ----------
+		{
+			id: "5A11E0F10C010015"
+			x: -2.0d
+			y: 11.0d
+			title: "Siege Preparations"
+			subtitle: "Stockpile 32 powder charges + 16 cooked meals at the citadel."
+			description: [
+				"Prepare for the assault on Vanguard's Stronghold. Stockpile 32 powder charges + 16 cooked meals at the home citadel. The Federation's combined fleet will rally there."
+			]
+			icon: "createbigcannons:powder_charge"
+			tasks: [
+				{ id: "5A11E0F10C020015", type: "item", item: { Count: 1b, id: "createbigcannons:powder_charge" }, count: 32L }
+				{ id: "5A11E0F10C020016", type: "item", item: { Count: 1b, id: "minecraft:cooked_beef" }, count: 16L }
+			]
+			rewards: [
+				{ id: "5A11E0F10C030029", type: "xp", xp: 60 }
+				{ id: "5A11E0F10C030030", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010014"]
+		}
+
+		# ---------- Q16: Approach the Stronghold ----------
+		{
+			id: "5A11E0F10C010016"
+			x: 2.0d
+			y: 11.0d
+			title: "Approach the Stronghold"
+			subtitle: "Six perimeter guards. Quick kills."
+			description: [
+				"Approach Vanguard's stronghold and clear the perimeter — at least six hostile mobs (any combat-mod enemies). Speed matters; Vanguard knows you're coming."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10C020017"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 6L
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030031", type: "xp", xp: 70 }
+				{ id: "5A11E0F10C030032", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10C010015"]
+		}
+
+		# ---------- Q17: Breach the Wall ----------
+		{
+			id: "5A11E0F10C010017"
+			x: -4.0d
+			y: 12.5d
+			title: "Breach the Wall"
+			subtitle: "One TNT charge. One gate down."
+			description: [
+				"Detonate at least one TNT charge against the stronghold's wall to breach it. The Charter's siege auditors photograph the entry point (place + detonate any TNT or cannon shot near the stronghold's marked location)."
+			]
+			icon: "minecraft:tnt"
+			tasks: [{
+				id: "5A11E0F10C020018"
+				type: "item"
+				item: "minecraft:tnt"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030033", type: "xp", xp: 50 }
+				{ id: "5A11E0F10C030034", type: "item", item: { id: "minecraft:tnt", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10C010016"]
+		}
+
+		# ---------- Q18: Inner Sanctum ----------
+		{
+			id: "5A11E0F10C010018"
+			x: 0.0d
+			y: 12.5d
+			title: "Inner Sanctum"
+			subtitle: "Clear the interior. Eight more guards."
+			description: [
+				"Clear Vanguard's interior guards — eight more kills inside the stronghold. The Charter's senior auditors brace for the boss confrontation."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10C020019"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030035", type: "xp", xp: 80 }
+				{ id: "5A11E0F10C030036", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010017"]
+		}
+
+		# ---------- Q19: Cornelius Vanguard Confronted ----------
+		{
+			id: "5A11E0F10C010019"
+			x: 4.0d
+			y: 12.5d
+			shape: "rsquare"
+			title: "Cornelius Vanguard Confronted"
+			subtitle: "Half HP. A traitor in brass robes."
+			description: [
+				"Confront Cornelius Vanguard. Reduce him to half HP. He monologues about Charter corruption, about the Reformers being naive, about Aragdal being 'merely a symptom.' All standard rogue-administrator material."
+				""
+				"For balance: Vanguard is a re-named Cataclysm boss (use the Ender Guardian, Ignis, or Maledictus depending on availability — Charter's combat surveyors approve any of the three)."
+			]
+			icon: "minecraft:netherite_sword"
+			tasks: [{
+				id: "5A11E0F10C020020"
+				type: "checkmark"
+				title: "Confront Vanguard (any Cataclysm boss reskin) and reduce to <= 50% HP"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030037", type: "xp", xp: 150 }
+				{ id: "5A11E0F10C030038", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010018"]
+		}
+
+		# ---------- Q20: Vanguard Defeated ----------
+		{
+			id: "5A11E0F10C010020"
+			x: 0.0d
+			y: 14.0d
+			shape: "rsquare"
+			title: "Vanguard Defeated"
+			subtitle: "The corrupt Administrator falls. The Charter quietly cremates the docket."
+			description: [
+				"Defeat Cornelius Vanguard. The Charter's auditors arrive within the hour to take possession of his stronghold and his ledger. His name is removed from all Federation lists. Erik posts a small notice on the office wall."
+			]
+			icon: "minecraft:netherite_block"
+			tasks: [{
+				id: "5A11E0F10C020021"
+				type: "checkmark"
+				title: "Defeat Vanguard (kill the renamed Cataclysm boss)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030039", type: "xp", xp: 300 }
+				{ id: "5A11E0F10C030040", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F10C030041", type: "item", item: { id: "minecraft:nether_star", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10C010019"]
+		}
+
+		# ====== THREAD C — THE ELDRITCH TIDE (Q21-Q30) ======
+
+		# ---------- Q21: Dark Tide on the Horizon ----------
+		{
+			id: "5A11E0F10C010021"
+			x: -4.0d
+			y: 15.5d
+			title: "Dark Tide on the Horizon"
+			subtitle: "Saskia reports magical disturbances below the cloud-bank."
+			description: [
+				"Saskia delivers a coded cable: something stirs below the cloud-bank. Iron's Spellbooks Eldritch-tier creatures — Liches, Necromancers, Architects — have been sighted by Charter alchemists. The Federation's outposts will need to defend in turn."
+			]
+			icon: "irons_spellbooks:wimpy_spell_book"
+			tasks: [{
+				id: "5A11E0F10C020022"
+				type: "item"
+				item: "irons_spellbooks:wimpy_spell_book"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030042", type: "xp", xp: 80 }
+				{ id: "5A11E0F10C030043", type: "item", item: { id: "irons_spellbooks:scroll", Count: 2b } }
+			]
+			dependencies: ["5A11E0F10C010020"]
+		}
+
+		# ---------- Q22: Defend Veridian Pier ----------
+		{
+			id: "5A11E0F10C010022"
+			x: -6.0d
+			y: 16.5d
+			title: "Defend Veridian Pier"
+			subtitle: "First Eldritch wave. Six tier-3 Iron's Spells casters defeated."
+			description: [
+				"Travel to Veridian Pier and defend it from the first Eldritch wave. Defeat at least six high-tier Iron's Spellbooks mobs (or Cataclysm boss-tier mobs as fallback). Saskia's apprentices fight alongside."
+			]
+			icon: "irons_spellbooks:scroll"
+			tasks: [{
+				id: "5A11E0F10C020023"
+				type: "checkmark"
+				title: "Defend Veridian Pier from 6+ Iron's Spells / Cataclysm tier-3 mobs"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030044", type: "xp", xp: 100 }
+				{ id: "5A11E0F10C030045", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010021"]
+		}
+
+		# ---------- Q23: Defend Storm-on-Stilts ----------
+		{
+			id: "5A11E0F10C010023"
+			x: -2.0d
+			y: 16.5d
+			title: "Defend Storm-on-Stilts"
+			subtitle: "Yoki's air-marshal forces flank you."
+			description: [
+				"Travel to Storm-on-Stilts. Defend its airspace from the second Eldritch wave — six more high-tier mobs. Yoki's air-marshals provide flanking support."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10C020024"
+				type: "checkmark"
+				title: "Defend Storm-on-Stilts from 6+ tier-3 mobs"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030046", type: "xp", xp: 100 }
+				{ id: "5A11E0F10C030047", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010022"]
+		}
+
+		# ---------- Q24: Defend Brassmere ----------
+		{
+			id: "5A11E0F10C010024"
+			x: 2.0d
+			y: 16.5d
+			title: "Defend Brassmere"
+			subtitle: "Halloran's harvest festival is interrupted by a Lich."
+			description: [
+				"Travel to Brassmere. Defend it from the third Eldritch wave during the harvest festival. Defeat a Lich-tier boss (or fallback: any Cataclysm boss). Halloran retreats to the cellar with the festival barrels."
+			]
+			icon: "minecraft:wither_skeleton_skull"
+			tasks: [{
+				id: "5A11E0F10C020025"
+				type: "checkmark"
+				title: "Defend Brassmere — defeat a Lich-tier boss (Iron's Spells or Cataclysm)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030048", type: "xp", xp: 150 }
+				{ id: "5A11E0F10C030049", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010023"]
+		}
+
+		# ---------- Q25: Defend Brassgrip's Reach ----------
+		{
+			id: "5A11E0F10C010025"
+			x: 6.0d
+			y: 16.5d
+			title: "Defend Brassgrip's Reach"
+			subtitle: "Mara stands beside you at the mine entrance."
+			description: [
+				"Defend Brassgrip's Reach. Defeat a Necromancer-tier boss (or Cataclysm equivalent). Mara fights from the mine entrance with a brass-trimmed pickaxe she swears was forged on Fragment 0x174A."
+			]
+			icon: "minecraft:bone"
+			tasks: [{
+				id: "5A11E0F10C020026"
+				type: "checkmark"
+				title: "Defend Brassgrip's Reach — defeat a Necromancer-tier boss"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030050", type: "xp", xp: 150 }
+				{ id: "5A11E0F10C030051", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010024"]
+		}
+
+		# ---------- Q26: Defend the Citadel ----------
+		{
+			id: "5A11E0F10C010026"
+			x: 0.0d
+			y: 18.0d
+			title: "Defend the Home Citadel"
+			subtitle: "Twelve elite hostiles at your walls."
+			description: [
+				"The tide rolls north to home. Defend the home citadel from at least twelve elite hostile mobs in a single engagement. Erik fights beside you, third docket pinned to his coat."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10C020027"
+				type: "checkmark"
+				title: "Defend the home citadel from 12+ elite hostile mobs"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030052", type: "xp", xp: 150 }
+				{ id: "5A11E0F10C030053", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010025"]
+		}
+
+		# ---------- Q27: Iron's Spells Tier-4 Cast ----------
+		{
+			id: "5A11E0F10C010027"
+			x: -4.0d
+			y: 18.5d
+			title: "Iron's Spells Tier-4 Cast"
+			subtitle: "Saskia teaches you a Legendary spell."
+			description: [
+				"Saskia comes to your colony post-Tide and teaches you a Legendary-tier (Tier 4+) Iron's Spellbooks spell. Cast it once at a target."
+			]
+			icon: "irons_spellbooks:scroll"
+			tasks: [{
+				id: "5A11E0F10C020028"
+				type: "checkmark"
+				title: "Cast a Tier-4 / Legendary Iron's Spellbooks spell"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030054", type: "xp", xp: 120 }
+				{ id: "5A11E0F10C030055", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010024"]
+		}
+
+		# ---------- Q28: The Eldritch Architect ----------
+		{
+			id: "5A11E0F10C010028"
+			x: 4.0d
+			y: 18.5d
+			shape: "rsquare"
+			title: "The Eldritch Architect"
+			subtitle: "The Tide's source. A grand-mage-tier antagonist."
+			description: [
+				"Trace the Tide to its source. Confront and defeat the Eldritch Architect — Iron's Spellbooks' senior boss (or fallback: any Cataclysm apex boss). Reduce to half HP."
+			]
+			icon: "irons_spellbooks:legendary_spell_book"
+			tasks: [{
+				id: "5A11E0F10C020029"
+				type: "checkmark"
+				title: "Confront the Eldritch Architect and reduce to <= 50% HP"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030056", type: "xp", xp: 200 }
+				{ id: "5A11E0F10C030057", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010026"]
+		}
+
+		# ---------- Q29: Architect Defeated ----------
+		{
+			id: "5A11E0F10C010029"
+			x: -2.0d
+			y: 20.0d
+			shape: "rsquare"
+			title: "The Architect Defeated"
+			subtitle: "The Tide collapses. The Charter's archives note: Eldritch wave repelled."
+			description: [
+				"Defeat the Eldritch Architect. The Tide collapses. Federation outposts ring the all-clear bell. Erik raises a glass at the next Council session."
+			]
+			icon: "irons_spellbooks:legendary_spell_book"
+			tasks: [{
+				id: "5A11E0F10C020030"
+				type: "checkmark"
+				title: "Defeat the Eldritch Architect"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030058", type: "xp", xp: 400 }
+				{ id: "5A11E0F10C030059", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F10C030060", type: "item", item: "irons_spellbooks:legendary_spell_book" }
+			]
+			dependencies: ["5A11E0F10C010028"]
+		}
+
+		# ---------- Q30: Scene-beat — The Eldritch Tide Repelled ----------
+		{
+			id: "5A11E0F10C010030"
+			x: 2.0d
+			y: 20.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Eldritch Tide Repelled"
+			subtitle: "Vanguard, then the Tide. The Federation holds."
+			description: [
+				"All four Charter cities defended, the home citadel held, the Architect down. The Federation stands stronger than it did six months ago. The Charter's archives note: 'first full Eldritch wave: repelled.'"
+				""
+				"Erik delivers the ninth docket: Charter Councillor — the senior rank below only the Council Chair itself. Nine dockets on the office wall, the ninth in obsidian frame."
+			]
+			icon: "minecraft:obsidian"
+			tasks: [{
+				id: "5A11E0F10C020031"
+				type: "checkmark"
+				title: "Pin the Charter Councillor docket (9th, obsidian-framed) in the office"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030061", type: "xp", xp: 400 }
+				{ id: "5A11E0F10C030062", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F10C030063", type: "item", item: { id: "minecraft:obsidian", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10C010029"]
+		}
+
+		# ====== THREAD D — REPEATABLE COURT CYCLE (Q31-Q35) ======
+
+		# ---------- Q31: The Court Cycle Opens ----------
+		{
+			id: "5A11E0F10C010031"
+			x: -3.0d
+			y: 21.5d
+			title: "The Court Cycle Opens"
+			subtitle: "Quarterly contracts. Reset every 7 in-game days."
+			description: [
+				"The Charter's Court convenes quarterly. Each cycle, four contracts are available: defend a trade route, escort a cargo train, hunt a Cataclysm boss for a Court contract, or run a long-haul cargo to a chosen Charter city."
+				""
+				"Honor-system loop: complete any one Court contract every 7+ in-game days, then mark this quest complete. It resets in the Charter's quarterly cycle."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F10C020032"
+				type: "checkmark"
+				title: "Complete any one Court contract (defend / escort / hunt / cargo) in the current cycle"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030064", type: "xp", xp: 80 }
+				{ id: "5A11E0F10C030065", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010030"]
+		}
+
+		# ---------- Q32: Defend a Trade Route ----------
+		{
+			id: "5A11E0F10C010032"
+			x: -5.0d
+			y: 22.5d
+			title: "Court Contract — Defend a Trade Route"
+			subtitle: "Six raiders along any trade route."
+			description: [
+				"This cycle's defensive contract: kill six hostile mobs along any of your trade routes. The Charter pays in emeralds + xp at the next Council."
+			]
+			icon: "minecraft:emerald"
+			tasks: [{
+				id: "5A11E0F10C020033"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 6L
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030066", type: "xp", xp: 100 }
+				{ id: "5A11E0F10C030067", type: "item", item: { id: "minecraft:emerald", Count: 16b } }
+			]
+			dependencies: ["5A11E0F10C010031"]
+		}
+
+		# ---------- Q33: Escort a Cargo Train ----------
+		{
+			id: "5A11E0F10C010033"
+			x: -1.0d
+			y: 22.5d
+			title: "Court Contract — Escort a Cargo Train"
+			subtitle: "One full cargo train delivered safely."
+			description: [
+				"This cycle's logistics contract: complete one full cargo-train run (any two stations, any cargo). The Charter rates timing strictly — no stalled trains."
+			]
+			icon: "create:schedule"
+			tasks: [{
+				id: "5A11E0F10C020034"
+				type: "checkmark"
+				title: "Successfully complete one cargo-train escort (2+ stations)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030068", type: "xp", xp: 80 }
+				{ id: "5A11E0F10C030069", type: "item", item: { id: "minecraft:gold_ingot", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10C010031"]
+		}
+
+		# ---------- Q34: Hunt a Court Boss ----------
+		{
+			id: "5A11E0F10C010034"
+			x: 1.0d
+			y: 22.5d
+			title: "Court Contract — Hunt a Court Boss"
+			subtitle: "Any Cataclysm boss returned to the Charter for bounty."
+			description: [
+				"This cycle's hunt contract: defeat any Cataclysm boss (Netherite Monstrosity, Wadjet, Ender Guardian, Ignis, Maledictus, Lava Pyramid) for the Charter's bounty."
+			]
+			icon: "cataclysm:netherite_monstrosity_chunk"
+			tasks: [{
+				id: "5A11E0F10C020035"
+				type: "checkmark"
+				title: "Defeat any Cataclysm boss for the Court's bounty"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030070", type: "xp", xp: 200 }
+				{ id: "5A11E0F10C030071", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10C010031"]
+		}
+
+		# ---------- Q35: Scene-beat finale — The Council Sits ----------
+		{
+			id: "5A11E0F10C010035"
+			x: 3.0d
+			y: 22.5d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Council Sits"
+			subtitle: "Always-on endgame. The Court will reconvene next quarter, and the next, and the next."
+			description: [
+				"You take your seat at the Council. Erik, standing behind you, places a hand on your shoulder. Whatever side you chose, whatever Federation Administrator you'll become, the Charter holds. The Court will sit again next quarter, and the next, and the next."
+				""
+				"The story ends here, technically. But the Court Cycle is always open. The Charter pays per contract. The Foreman has work for as long as they care to take it."
+				""
+				"Fragment 0x174A: still operational. The Foreman: First-Class. The Court: in session."
+			]
+			icon: "minecraft:gold_block"
+			tasks: [{
+				id: "5A11E0F10C020036"
+				type: "checkmark"
+				title: "Take your seat at the Charter's Council"
+			}]
+			rewards: [
+				{ id: "5A11E0F10C030072", type: "xp", xp: 500 }
+				{ id: "5A11E0F10C030073", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F10C030074", type: "item", item: { id: "minecraft:gold_block", Count: 4b } }
+			]
+			dependencies: [
+				"5A11E0F10C010032"
+				"5A11E0F10C010033"
+				"5A11E0F10C010034"
+			]
+		}
+	]
+}

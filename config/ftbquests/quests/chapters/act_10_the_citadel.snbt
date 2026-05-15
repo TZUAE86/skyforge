@@ -1,0 +1,863 @@
+# Skyforge — Act X: The Citadel (35 quests, Turn 5 part 2).
+# TONE: Steampunk colonial. The endgame. AE2 autocrafting + MekaSuit
+# + MI nuclear + Iron's Spellbooks ascendant. The Foreman commands
+# the fleet. Aragdal the Sky-Tyrant raids. The colony defends.
+# THEME BIBLE: This is the payoff, not the hollow victory. After
+# Aragdal, the citizens raise a flag. The Charter promotes to
+# High Foreman. The epilogue is a colony at rest.
+# TODO verify endgame item IDs (Mekanism MekaSuit, MI nuclear, BiC
+# Aragdal entity).
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_10_the_citadel"
+	group: "5A11E0F100000001"
+	icon: "ae2:controller"
+	id: "5A11E0F10A000000"
+	images: [ ]
+	order_index: 9
+	quest_links: [ ]
+	subtitle: ["The pirate fleet routs. The citizens raise a flag."]
+	title: "Act X — The Skyforge Citadel"
+	quests: [
+
+		# ---------- Q01: Scene-beat opener — MekaSuit Helmet ----------
+		{
+			id: "5A11E0F10A010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "MekaSuit Helmet"
+			subtitle: "The Foreman puts on the senior engineer's helmet."
+			description: [
+				"Erik delivers the helmet at the Aether sundown audit. The Charter calls the MekaSuit 'the senior engineer's standard kit.' Equip it. The endgame opens here."
+			]
+			icon: "mekanism:mekasuit_helmet"
+			tasks: [{
+				id: "5A11E0F10A020001"
+				type: "item"
+				item: "mekanism:mekasuit_helmet"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030001", type: "xp", xp: 100 }
+				{ id: "5A11E0F10A030002", type: "item", item: { id: "mekanism:hdpe_pellet", Count: 4b } }
+			]
+			dependencies: ["5A11E0F109010040"]
+		}
+
+		# ---------- Q02: MekaSuit Chestpiece ----------
+		{
+			id: "5A11E0F10A010002"
+			x: -2.5d
+			y: 1.5d
+			title: "MekaSuit Chestpiece"
+			subtitle: "Eight charged modules in the body. The Foreman flies."
+			description: [
+				"Craft a MekaSuit Bodyarmor. Insert at least one module — Jetpack unit, Geiger counter, anything. The Charter notes the equipment update."
+			]
+			icon: "mekanism:mekasuit_bodyarmor"
+			tasks: [{
+				id: "5A11E0F10A020002"
+				type: "item"
+				item: "mekanism:mekasuit_bodyarmor"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030003", type: "xp", xp: 70 }
+				{ id: "5A11E0F10A030004", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010001"]
+		}
+
+		# ---------- Q03: MekaSuit Legs + Boots ----------
+		{
+			id: "5A11E0F10A010003"
+			x: 2.5d
+			y: 1.5d
+			title: "MekaSuit Legs + Boots"
+			subtitle: "Full suit. The Foreman walks taller."
+			description: [
+				"Craft the MekaSuit Pants and Boots. The complete suit confers Jetpack flight, fall damage immunity, swim assistance, and a senior-engineer's bearing."
+			]
+			icon: "mekanism:mekasuit_pants"
+			tasks: [
+				{ id: "5A11E0F10A020003", type: "item", item: "mekanism:mekasuit_pants" }
+				{ id: "5A11E0F10A020004", type: "item", item: "mekanism:mekasuit_boots" }
+			]
+			rewards: [
+				{ id: "5A11E0F10A030005", type: "xp", xp: 80 }
+				{ id: "5A11E0F10A030006", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010001"]
+		}
+
+		# ---------- Q04: Induction Matrix Core (mechanical milestone) ----------
+		{
+			id: "5A11E0F10A010004"
+			x: 0.0d
+			y: 3.0d
+			shape: "rsquare"
+			title: "Induction Matrix"
+			subtitle: "Mekanism's largest power-storage multi-block."
+			description: [
+				"Build a Mekanism Induction Matrix multiblock: ports + cells + casing. The Charter's electricians consider this 'industrial-scale capacity.'"
+			]
+			icon: "mekanism:induction_casing"
+			tasks: [{
+				id: "5A11E0F10A020005"
+				type: "checkmark"
+				title: "Build a Mekanism Induction Matrix multiblock"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030007", type: "xp", xp: 100 }
+				{ id: "5A11E0F10A030008", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010003"]
+		}
+
+		# ---------- Q05: MI Nuclear Reactor ----------
+		{
+			id: "5A11E0F10A010005"
+			x: -2.5d
+			y: 4.5d
+			title: "MI Nuclear Reactor"
+			subtitle: "Modern Industrialization's apex."
+			description: [
+				"Build a Modern Industrialization Nuclear Reactor multiblock. The Charter's nuclear-regulation auditors are surprisingly chill about it — they like efficient industry."
+			]
+			icon: "modern_industrialization:nuclear_reactor_block"
+			tasks: [{
+				id: "5A11E0F10A020006"
+				type: "checkmark"
+				title: "Build a Modern Industrialization Nuclear Reactor multiblock"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030009", type: "xp", xp: 120 }
+				{ id: "5A11E0F10A030010", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010001"]
+		}
+
+		# ---------- Q06: Quantum Bridge (Advanced AE) ----------
+		{
+			id: "5A11E0F10A010006"
+			x: 2.5d
+			y: 4.5d
+			title: "Quantum Bridge"
+			subtitle: "AE2 link across distance / dimensions."
+			description: [
+				"Build an AE2 Quantum Network Bridge. The Foreman's ME network now spans dimensions — colony, Aether outpost, warship all linked."
+			]
+			icon: "ae2:quantum_link"
+			tasks: [{
+				id: "5A11E0F10A020007"
+				type: "checkmark"
+				title: "Build a working AE2 Quantum Network Bridge"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030011", type: "xp", xp: 100 }
+				{ id: "5A11E0F10A030012", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010001"]
+		}
+
+		# ---------- Q07: Iron's Spellbooks Ascendant ----------
+		{
+			id: "5A11E0F10A010007"
+			x: 0.0d
+			y: 6.0d
+			shape: "rsquare"
+			title: "Ascendant Spell"
+			subtitle: "The academy's apex curriculum."
+			description: [
+				"Cast a tier-4 (Ascendant) or higher Iron's Spellbooks spell. The Foreman is, by academy standards, a senior mage now."
+			]
+			icon: "ironsspellbooks:spell_book"
+			tasks: [{
+				id: "5A11E0F10A020008"
+				type: "checkmark"
+				title: "Cast an Iron's Spellbooks Ascendant-tier (T4+) spell"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030013", type: "xp", xp: 100 }
+				{ id: "5A11E0F10A030014", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010040"]
+		}
+
+		# ---------- Q08: Thirty Citizens ----------
+		{
+			id: "5A11E0F10A010008"
+			x: -4.5d
+			y: 3.0d
+			title: "Thirty Citizens — Defense Phase"
+			subtitle: "The colony is at audit-tier readiness."
+			description: [
+				"Have at least 30 citizens armed, housed, and audit-ready at the home colony. The Charter classifies your fragment as 'siege-ready.'"
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F10A020009"
+				type: "checkmark"
+				title: "Have 30+ armed + housed citizens at the home colony"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030015", type: "xp", xp: 80 }
+				{ id: "5A11E0F10A030016", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010038"]
+		}
+
+		# ---------- Q09: Citadel Defensive Walls ----------
+		{
+			id: "5A11E0F10A010009"
+			x: 4.5d
+			y: 3.0d
+			title: "Citadel Walls"
+			subtitle: "Reinforced perimeter. Iron bars. Brass guard posts."
+			description: [
+				"Build a reinforced perimeter wall around the colony — at least 64 blocks of fortification (cobblestone walls, iron bars, brass blocks, anything structural). The Charter calls this 'siege-grade.'"
+			]
+			icon: "minecraft:cobblestone_wall"
+			tasks: [{
+				id: "5A11E0F10A020010"
+				type: "checkmark"
+				title: "Build 64+ blocks of reinforced wall around the colony"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030017", type: "xp", xp: 60 }
+				{ id: "5A11E0F10A030018", type: "item", item: { id: "minecraft:cobblestone_wall", Count: 32b } }
+			]
+			dependencies: ["5A11E0F10A010008"]
+		}
+
+		# ---------- Q10: Fleet Assembly ----------
+		{
+			id: "5A11E0F10A010010"
+			x: 0.0d
+			y: 7.5d
+			title: "Fleet Assembly"
+			subtitle: "Three airships docked at the skyport."
+			description: [
+				"Have at least three assembled airships docked at the skyport. The Charter's air-traffic commander records 'a fleet, not a vessel' — formal classification."
+			]
+			icon: "aeronautics:propeller_bearing"
+			tasks: [{
+				id: "5A11E0F10A020011"
+				type: "checkmark"
+				title: "Have 3+ assembled airships docked at the skyport simultaneously"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030019", type: "xp", xp: 100 }
+				{ id: "5A11E0F10A030020", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F108010040"]
+		}
+
+		# ---------- Q11: Cannon Battery ----------
+		{
+			id: "5A11E0F10A010011"
+			x: -2.5d
+			y: 6.0d
+			title: "Cannon Battery"
+			subtitle: "Twelve cannons on the citadel walls."
+			description: [
+				"Mount at least twelve cannons (any tier) on the citadel walls or rooftops. The Charter calls this 'siege deterrent infrastructure, mature.'"
+			]
+			icon: "createbigcannons:cast_iron_cannon_barrel"
+			tasks: [{
+				id: "5A11E0F10A020012"
+				type: "checkmark"
+				title: "Mount 12+ cannons on the citadel defenses"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030021", type: "xp", xp: 80 }
+				{ id: "5A11E0F10A030022", type: "item", item: { id: "createbigcannons:powder_charge", Count: 32b } }
+			]
+			dependencies: ["5A11E0F10A010009"]
+		}
+
+		# ---------- Q12: Tesla Field ----------
+		{
+			id: "5A11E0F10A010012"
+			x: 2.5d
+			y: 6.0d
+			title: "Tesla Field"
+			subtitle: "Four Tesla coils. Pirates' bad day."
+			description: [
+				"Place at least four Createaddition Tesla Coils, wired to an Induction Matrix. The Charter classifies this as 'kinetic-electric defense, layered.'"
+			]
+			icon: "createaddition:tesla_coil"
+			tasks: [{
+				id: "5A11E0F10A020013"
+				type: "checkmark"
+				title: "Place 4+ Tesla coils wired to a power source"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030023", type: "xp", xp: 70 }
+				{ id: "5A11E0F10A030024", type: "item", item: { id: "createaddition:wire", Count: 32b } }
+			]
+			dependencies: ["5A11E0F10A010004"]
+		}
+
+		# ---------- Q13: Pirate Fleet Patrol ----------
+		{
+			id: "5A11E0F10A010013"
+			x: 6.5d
+			y: 5.5d
+			title: "Pirate Fleet Patrol"
+			subtitle: "The first reconnaissance encounter."
+			description: [
+				"Engage a Born in Chaos pirate fleet patrol from your warship's deck. Defeat at least 12 hostile mobs in a single engagement."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10A020014"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 12L
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030025", type: "xp", xp: 100 }
+				{ id: "5A11E0F10A030026", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010010"]
+		}
+
+		# ---------- Q14: Mekanism Jetpack ----------
+		{
+			id: "5A11E0F10A010014"
+			x: -4.5d
+			y: 5.5d
+			title: "Mekanism Jetpack"
+			subtitle: "The Foreman flies without an airship."
+			description: [
+				"Craft a Mekanism Jetpack. Fuel it with Hydrogen. Fly without the warship; the Charter's air-traffic clerks log every flight, even personal."
+			]
+			icon: "mekanism:jetpack"
+			tasks: [{
+				id: "5A11E0F10A020015"
+				type: "item"
+				item: "mekanism:jetpack"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030027", type: "xp", xp: 80 }
+				{ id: "5A11E0F10A030028", type: "item", item: { id: "mekanism:hydrogen_tank", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10A010001"]
+		}
+
+		# ---------- Q15: Iron's Spells Battlefield Cast ----------
+		{
+			id: "5A11E0F10A010015"
+			x: -6.5d
+			y: 6.5d
+			title: "Iron's Spells Battlefield Cast"
+			subtitle: "Cast under fire. Survive."
+			description: [
+				"Cast a damaging Iron's Spells spell at hostile mobs during an active engagement. The Charter calls battlefield casting 'practical mastery.'"
+			]
+			icon: "ironsspellbooks:spell_book"
+			tasks: [{
+				id: "5A11E0F10A020016"
+				type: "checkmark"
+				title: "Cast a damaging Iron's Spells spell during an active mob engagement"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030029", type: "xp", xp: 60 }
+				{ id: "5A11E0F10A030030", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10A010007"]
+		}
+
+		# ---------- Q16: Cargo Reserve (siege stocks) ----------
+		{
+			id: "5A11E0F10A010016"
+			x: 4.5d
+			y: 7.0d
+			title: "Siege Stocks"
+			subtitle: "Food for 30 citizens, 60 days."
+			description: [
+				"Stockpile at least 256 cooked meals (any combination of Farmer's Delight + vanilla) at the colony Warehouse. The Charter calls this 'pre-siege provisioning.'"
+			]
+			icon: "minecraft:cooked_beef"
+			tasks: [{
+				id: "5A11E0F10A020017"
+				type: "checkmark"
+				title: "Stockpile 256+ cooked meals at the warehouse"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030031", type: "xp", xp: 60 }
+				{ id: "5A11E0F10A030032", type: "item", item: { id: "minecraft:cooked_beef", Count: 32b } }
+			]
+			dependencies: ["5A11E0F10A010008"]
+		}
+
+		# ---------- Q17: Steel Stockpile (final) ----------
+		{
+			id: "5A11E0F10A010017"
+			x: -4.5d
+			y: 7.0d
+			title: "Final Steel Stockpile"
+			subtitle: "1024 ingots. The Charter records it in the annual."
+			description: [
+				"Stockpile 1024 steel ingots. The Foreman's deepest reserve. The Charter's annual prints this as 'industrial fluency at the citadel grade.'"
+			]
+			icon: "mekanism:ingot_steel"
+			tasks: [{
+				id: "5A11E0F10A020018"
+				type: "item"
+				item: { Count: 1b, id: "mekanism:ingot_steel" }
+				count: 1024L
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030033", type: "xp", xp: 150 }
+				{ id: "5A11E0F10A030034", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F107010029"]
+		}
+
+		# ---------- Q18: First Aragdal Sighting ----------
+		{
+			id: "5A11E0F10A010018"
+			x: 8.5d
+			y: 6.5d
+			title: "First Aragdal Sighting"
+			subtitle: "The Sky-Tyrant's silhouette through the cloud-bank."
+			description: [
+				"Spot Aragdal the Sky-Tyrant — the Born in Chaos warlord — from a safe distance. The Charter's surveillance clerks photograph from beyond cannon range."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10A020019"
+				type: "checkmark"
+				title: "Spot Aragdal the Sky-Tyrant (sighting, do not engage)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030035", type: "xp", xp: 80 }
+				{ id: "5A11E0F10A030036", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10A010013"]
+		}
+
+		# ---------- Q19: AE2 Autocraft the Endgame ----------
+		{
+			id: "5A11E0F10A010019"
+			x: 6.5d
+			y: 8.5d
+			title: "AE2 Autocraft the Endgame"
+			subtitle: "Request 4 MekaSuit modules via terminal."
+			description: [
+				"Set up autocrafting patterns for at least 4 distinct MekaSuit module upgrades. Request them via terminal. The colony's ME network handles the rest."
+			]
+			icon: "ae2:pattern_provider"
+			tasks: [{
+				id: "5A11E0F10A020020"
+				type: "checkmark"
+				title: "Autocraft 4+ distinct MekaSuit module upgrades via AE2"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030037", type: "xp", xp: 100 }
+				{ id: "5A11E0F10A030038", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F107010031"]
+		}
+
+		# ---------- Q20: The Tyrant's Fleet (mechanical milestone) ----------
+		{
+			id: "5A11E0F10A010020"
+			x: 0.0d
+			y: 10.0d
+			shape: "rsquare"
+			title: "The Tyrant's Fleet"
+			subtitle: "First wave. Twenty pirates."
+			description: [
+				"Aragdal's first wave hits the fragment. Defeat at least twenty Born in Chaos pirates in a single defensive engagement at the citadel walls."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10A020021"
+				type: "kill"
+				entity: "born_in_chaos_v1:zombie_pirate"
+				value: 20L
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030039", type: "xp", xp: 150 }
+				{ id: "5A11E0F10A030040", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F10A010009"
+				"5A11E0F10A010011"
+				"5A11E0F10A010013"
+			]
+		}
+
+		# ---------- Q21: Second Wave Defended ----------
+		{
+			id: "5A11E0F10A010021"
+			x: -2.5d
+			y: 11.5d
+			title: "Second Wave Defended"
+			subtitle: "Eight Cataclysm-tier mobs at the wall."
+			description: [
+				"Aragdal sends elite raiders. Defeat at least eight Cataclysm-mod hostile mobs (Born in Chaos elites, Cataclysm ravagers, etc.) at the citadel."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F10A020022"
+				type: "checkmark"
+				title: "Defeat 8+ Cataclysm-tier elite hostile mobs at the citadel"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030041", type: "xp", xp: 150 }
+				{ id: "5A11E0F10A030042", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010020"]
+		}
+
+		# ---------- Q22: Aragdal Engaged (mechanical milestone) ----------
+		{
+			id: "5A11E0F10A010022"
+			x: 2.5d
+			y: 11.5d
+			shape: "rsquare"
+			title: "Aragdal Engaged"
+			subtitle: "The Foreman commands. The Sky-Tyrant lands."
+			description: [
+				"The warlord himself crosses into citadel range. Engage. Reduce Aragdal's health to half. Survive."
+			]
+			icon: "minecraft:nether_star"
+			tasks: [{
+				id: "5A11E0F10A020023"
+				type: "checkmark"
+				title: "Engage Aragdal directly and reduce him to <= 50% HP"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030043", type: "xp", xp: 200 }
+				{ id: "5A11E0F10A030044", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010021"]
+		}
+
+		# ---------- Q23: Aragdal Defeated (mechanical milestone) ----------
+		{
+			id: "5A11E0F10A010023"
+			x: 0.0d
+			y: 13.0d
+			shape: "rsquare"
+			title: "Aragdal Defeated"
+			subtitle: "The Sky-Tyrant routs. The pirate fleet scatters."
+			description: [
+				"Defeat Aragdal the Sky-Tyrant. The pirate fleet, leaderless, scatters across the cloud-banks. The Charter's surveillance clerks photograph the routing."
+				""
+				"Erik stands at the citadel gate, hat in his hand, watching the sky empty out."
+			]
+			icon: "minecraft:nether_star"
+			tasks: [{
+				id: "5A11E0F10A020024"
+				type: "checkmark"
+				title: "Defeat Aragdal the Sky-Tyrant"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030045", type: "xp", xp: 500 }
+				{ id: "5A11E0F10A030046", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F10A030047", type: "item", item: { id: "minecraft:nether_star", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10A010022"]
+		}
+
+		# ---------- Q24: Epilogue — Citizens Raise a Flag ----------
+		{
+			id: "5A11E0F10A010024"
+			x: -4.5d
+			y: 13.5d
+			title: "Citizens Raise a Flag"
+			subtitle: "Above the Town Hall. White on brass."
+			description: [
+				"At sunrise after the battle, the citizens raise a flag above the Town Hall. Erik does not organise it; everyone shows up. The Charter's photographer captures it for next year's cover."
+				""
+				"Place a banner of your colours atop the Town Hall."
+			]
+			icon: "minecraft:white_banner"
+			tasks: [{
+				id: "5A11E0F10A020025"
+				type: "checkmark"
+				title: "Place a banner of your livery atop the Town Hall"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030048", type: "xp", xp: 100 }
+				{ id: "5A11E0F10A030049", type: "item", item: { id: "minecraft:white_banner", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10A010023"]
+		}
+
+		# ---------- Q25: Trade Routes Reopen ----------
+		{
+			id: "5A11E0F10A010025"
+			x: 4.5d
+			y: 13.5d
+			title: "Trade Routes Reopen"
+			subtitle: "Without Aragdal, the routes are clear."
+			description: [
+				"Run a victory cargo trip — any cargo, any distance, no pirate engagements possible. The Charter's atlas updates: Fragment 0x174A trade routes graded 'safe.'"
+			]
+			icon: "create:track"
+			tasks: [{
+				id: "5A11E0F10A020026"
+				type: "checkmark"
+				title: "Complete a pirate-free cargo trip post-Aragdal"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030050", type: "xp", xp: 80 }
+				{ id: "5A11E0F10A030051", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010023"]
+		}
+
+		# ---------- Q26: Aether Outpost Permanence ----------
+		{
+			id: "5A11E0F10A010026"
+			x: 6.5d
+			y: 12.0d
+			title: "Aether Outpost Permanence"
+			subtitle: "Ten citizens at the Aether outpost."
+			description: [
+				"Grow the Aether outpost to at least ten citizens. The Charter's atlas grades 'cross-dimensional permanent presence' — the highest exploration tier."
+			]
+			icon: "aether:aether_grass_block"
+			tasks: [{
+				id: "5A11E0F10A020027"
+				type: "checkmark"
+				title: "Have 10+ citizens at the Aether outpost"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030052", type: "xp", xp: 80 }
+				{ id: "5A11E0F10A030053", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010035"]
+		}
+
+		# ---------- Q27: Cosmetic Armor (the retirement project) ----------
+		{
+			id: "5A11E0F10A010027"
+			x: -6.5d
+			y: 11.5d
+			title: "Cosmetic Armor"
+			subtitle: "The Foreman wears the MekaSuit but looks like the original Wrench-Foreman of Act I."
+			description: [
+				"Use Cosmetic Armor Reworked Forked to overlay your MekaSuit with a custom appearance — Charter brass-bound coat, Act I starter set, anything. The endgame Foreman dresses how they please."
+			]
+			icon: "cosmeticarmorreworked:ca_chestplate"
+			tasks: [{
+				id: "5A11E0F10A020028"
+				type: "checkmark"
+				title: "Equip cosmetic armor overlay on the MekaSuit"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030054", type: "xp", xp: 30 }
+				{ id: "5A11E0F10A030055", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F10A010003"]
+		}
+
+		# ---------- Q28: Retirement Project — Greenhouse ----------
+		{
+			id: "5A11E0F10A010028"
+			x: -2.5d
+			y: 15.0d
+			title: "Retirement Project — Greenhouse"
+			subtitle: "Hobby. Not industry."
+			description: [
+				"Build a small greenhouse somewhere on the fragment — glass, flowers, a Drygmy, a small fountain. The Charter pays no stipend for it; that's the point."
+			]
+			icon: "minecraft:flower_pot"
+			tasks: [{
+				id: "5A11E0F10A020029"
+				type: "checkmark"
+				title: "Build a greenhouse (glass + flowers + 1+ Drygmy) on the fragment"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030056", type: "xp", xp: 40 }
+				{ id: "5A11E0F10A030057", type: "item", item: { id: "minecraft:flower_pot", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10A010024"]
+		}
+
+		# ---------- Q29: Retirement Project — Library ----------
+		{
+			id: "5A11E0F10A010029"
+			x: 2.5d
+			y: 15.0d
+			title: "Retirement Project — Library"
+			subtitle: "Erik will read here on Sundays."
+			description: [
+				"Build a personal library — at least 16 bookshelves, a lectern, a chair. The Charter quietly approves; the next Foreman will inherit something to read."
+			]
+			icon: "minecraft:bookshelf"
+			tasks: [{
+				id: "5A11E0F10A020030"
+				type: "checkmark"
+				title: "Build a personal library (16+ bookshelves + lectern + chair)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030058", type: "xp", xp: 40 }
+				{ id: "5A11E0F10A030059", type: "item", item: { id: "minecraft:bookshelf", Count: 16b } }
+			]
+			dependencies: ["5A11E0F10A010024"]
+		}
+
+		# ---------- Q30: Erik's Personal Hut ----------
+		{
+			id: "5A11E0F10A010030"
+			x: 6.5d
+			y: 14.0d
+			title: "Erik's Personal Hut"
+			subtitle: "Upgrade Erik's quarters. He's earned it."
+			description: [
+				"Build Erik Brassgrip a personal hut — separate from the Builder's Hut, on the colony's prime real estate, with a brass-bound roof. Fourteen years of service deserve fourteen-square-meters."
+			]
+			icon: "minecolonies:blockhutbuilder"
+			tasks: [{
+				id: "5A11E0F10A020031"
+				type: "checkmark"
+				title: "Build Erik's personal hut (5x5+ private quarters, brass roof)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030060", type: "xp", xp: 60 }
+				{ id: "5A11E0F10A030061", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F10A010024"]
+		}
+
+		# ---------- Q31: Skyforge Citadel Banner ----------
+		{
+			id: "5A11E0F10A010031"
+			x: -6.5d
+			y: 14.0d
+			title: "Skyforge Citadel Banner"
+			subtitle: "Forge + sky + propeller. Sewn together."
+			description: [
+				"Stitch a banner combining the Charter's traditional brass with your personal colours, and the Skyforge insignia. Mount it on the citadel's highest point."
+			]
+			icon: "minecraft:loom"
+			tasks: [{
+				id: "5A11E0F10A020032"
+				type: "checkmark"
+				title: "Stitch and mount a custom Skyforge Citadel banner"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030062", type: "xp", xp: 50 }
+				{ id: "5A11E0F10A030063", type: "item", item: { id: "minecraft:loom", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10A010024"]
+		}
+
+		# ---------- Q32: Charter's Annual Photograph ----------
+		{
+			id: "5A11E0F10A010032"
+			x: 0.0d
+			y: 16.5d
+			title: "Charter's Annual Photograph"
+			subtitle: "The Foreman, Erik, the colony — one frame."
+			description: [
+				"At sunset stand outside the Town Hall with Erik present. The Charter's photographer takes the annual cover shot. The Foreman is High-Foreman-eligible now."
+			]
+			icon: "minecraft:painting"
+			tasks: [{
+				id: "5A11E0F10A020033"
+				type: "checkmark"
+				title: "Stand with Erik at the Town Hall at sunset for the Charter photo"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030064", type: "xp", xp: 80 }
+				{ id: "5A11E0F10A030065", type: "item", item: { id: "minecraft:painting", Count: 4b } }
+			]
+			dependencies: [
+				"5A11E0F10A010028"
+				"5A11E0F10A010029"
+				"5A11E0F10A010030"
+				"5A11E0F10A010031"
+			]
+		}
+
+		# ---------- Q33: High Foreman Promotion ----------
+		{
+			id: "5A11E0F10A010033"
+			x: -4.5d
+			y: 16.5d
+			title: "High Foreman Promotion"
+			subtitle: "The seventh docket. The Charter's apex rank."
+			description: [
+				"Erik delivers the final docket: High Foreman, in recognition of full Charter service. Seven dockets on the office wall, the seventh in gilt frame. The Charter pays a stipend for the rest of the Foreman's life — they call this 'the comfortable retirement.'"
+			]
+			icon: "minecraft:netherite_block"
+			tasks: [{
+				id: "5A11E0F10A020034"
+				type: "checkmark"
+				title: "Pin the High Foreman docket in the office (seventh on the wall)"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030066", type: "xp", xp: 200 }
+				{ id: "5A11E0F10A030067", type: "item", item: { id: "minecraft:netherite_block", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10A010032"]
+		}
+
+		# ---------- Q34: Pass the Hammer ----------
+		{
+			id: "5A11E0F10A010034"
+			x: 4.5d
+			y: 16.5d
+			title: "Pass the Hammer"
+			subtitle: "The next Foreman will inherit a colony that runs."
+			description: [
+				"Place Erik's hammer (or any iconic tool from your Act I starter kit) on display in the office. Future Foremen visiting the fragment will recognise it. The Charter pays a small bonus for legacy displays."
+			]
+			icon: "create:wrench"
+			tasks: [{
+				id: "5A11E0F10A020035"
+				type: "checkmark"
+				title: "Display an Act I starter tool prominently in the office"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030068", type: "xp", xp: 80 }
+				{ id: "5A11E0F10A030069", type: "item", item: "create:wrench" }
+			]
+			dependencies: ["5A11E0F10A010033"]
+		}
+
+		# ---------- Q35: Scene-beat finale — Citizens Raise the Flag ----------
+		{
+			id: "5A11E0F10A010035"
+			x: 0.0d
+			y: 18.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Citizens Raise a Flag"
+			subtitle: "The pirate fleet routs. The citizens raise a flag."
+			description: [
+				"You stand on the citadel battlements at dawn. The pirate fleet is gone — Aragdal's wreckage clouding the sky-bank below. Citizens raise the colony banner above the Town Hall in unison. Erik salutes, takes his hat off, places it on his chest."
+				""
+				"You are High Foreman now. The Charter's stipend will arrive every quarter for the rest of your life. The fragment is named for the colony. The colony is named by its citizens."
+				""
+				"Fragment 0x174A: completed."
+				""
+				"Thank you for playing Skyforge."
+			]
+			icon: "minecraft:nether_star"
+			tasks: [{
+				id: "5A11E0F10A020036"
+				type: "checkmark"
+				title: "Stand on the citadel battlements at dawn after the battle"
+			}]
+			rewards: [
+				{ id: "5A11E0F10A030070", type: "xp", xp: 500 }
+				{ id: "5A11E0F10A030071", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F10A030072", type: "item", item: { id: "minecraft:nether_star", Count: 1b } }
+				{ id: "5A11E0F10A030073", type: "item", item: { id: "minecraft:netherite_ingot", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10A010034"]
+		}
+	]
+}

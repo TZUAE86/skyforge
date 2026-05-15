@@ -1,0 +1,970 @@
+# Skyforge — Act IX: Aether's Edge (40 quests, Turn 5 part 1).
+# TONE: Steampunk colonial. The Foreman crosses into other realms.
+# Aether (peaceful sky-realm), Aerial Hell (corrupted opposite),
+# Nullscape (End rework), Iron's Spellbooks academy, Reliquary
+# trinkets, Cataclysm pre-bosses, Alex's + Mowzie's bestiary.
+# THEME BIBLE: Exploration is prospecting. Every dimension is a
+# survey expedition. Combat is opposition the Foreman handles.
+# TODO verify Aether/Aerial Hell/Cataclysm/IronsSpells item IDs.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_09_aethers_edge"
+	group: "5A11E0F100000001"
+	icon: "aether:aether_grass_block"
+	id: "5A11E0F109000000"
+	images: [ ]
+	order_index: 8
+	quest_links: [ ]
+	subtitle: ["You came back with strange ores. The Charter pays the same per ton."]
+	title: "Act IX — Aether's Edge"
+	quests: [
+
+		# ---------- Q01: Scene-beat opener — Aether Portal Frame ----------
+		{
+			id: "5A11E0F109010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Portal Frame"
+			subtitle: "Glowstone bound in a square. The fragment behind. The sky above."
+			description: [
+				"You set the portal frame Erik delivered after the warship launch. The Charter's exploration auditors are listed in next year's annual under whichever Foreman crosses the frame first this quarter."
+			]
+			icon: "aether:aether_portal_frame"
+			tasks: [{
+				id: "5A11E0F109020001"
+				type: "item"
+				item: "aether:aether_portal_frame"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030001", type: "xp", xp: 80 }
+				{ id: "5A11E0F109030002", type: "item", item: { id: "minecraft:glowstone", Count: 8b } }
+			]
+			dependencies: ["5A11E0F108010040"]
+		}
+
+		# ---------- Q02: Through the Portal ----------
+		{
+			id: "5A11E0F109010002"
+			x: 0.0d
+			y: 2.0d
+			shape: "rsquare"
+			title: "Through the Portal"
+			subtitle: "The Aether opens. The Foreman breathes thinner air."
+			description: [
+				"Splash a water bucket inside the glowstone frame. The portal opens. Step through. The Charter's atmospheric mapper logs your arrival in the Aether."
+			]
+			icon: "aether:aether_grass_block"
+			tasks: [{
+				id: "5A11E0F109020002"
+				type: "checkmark"
+				title: "Enter the Aether dimension"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030003", type: "xp", xp: 60 }
+				{ id: "5A11E0F109030004", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010001"]
+		}
+
+		# ---------- Q03: Aether Grass ----------
+		{
+			id: "5A11E0F109010003"
+			x: -2.5d
+			y: 3.5d
+			title: "Aether Grass"
+			subtitle: "Soft. Blue-green. The Charter's surveyors trade for it."
+			description: [
+				"Collect eight Aether Grass blocks. The Charter's interior decorators consider them 'premium.'"
+			]
+			icon: "aether:aether_grass_block"
+			tasks: [{
+				id: "5A11E0F109020003"
+				type: "item"
+				item: { Count: 1b, id: "aether:aether_grass_block" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F109030005", type: "xp", xp: 25 }
+				{ id: "5A11E0F109030006", type: "item", item: { id: "aether:aether_dirt", Count: 8b } }
+			]
+			dependencies: ["5A11E0F109010002"]
+		}
+
+		# ---------- Q04: Zanite Ore ----------
+		{
+			id: "5A11E0F109010004"
+			x: 2.5d
+			y: 3.5d
+			title: "Zanite Ore"
+			subtitle: "Aether's iron equivalent."
+			description: [
+				"Mine eight Zanite ore (or equivalent Aether ore — Zanite is the basic tool material)."
+			]
+			icon: "aether:zanite_gemstone"
+			tasks: [{
+				id: "5A11E0F109020004"
+				type: "checkmark"
+				title: "Mine 8+ Aether ores (Zanite or any Aether material)"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030007", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030008", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010002"]
+		}
+
+		# ---------- Q05: Gravitite ----------
+		{
+			id: "5A11E0F109010005"
+			x: 0.0d
+			y: 5.0d
+			title: "Gravitite"
+			subtitle: "Floats. Mocks gravity. The Charter pays double."
+			description: [
+				"Mine four Gravitite ore (Aether's signature gravity-defying material)."
+			]
+			icon: "aether:gravitite_ore"
+			tasks: [{
+				id: "5A11E0F109020005"
+				type: "checkmark"
+				title: "Mine 4+ Gravitite ore from the Aether"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030009", type: "xp", xp: 50 }
+				{ id: "5A11E0F109030010", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010004"]
+		}
+
+		# ---------- Q06: Aether Dungeon ----------
+		{
+			id: "5A11E0F109010006"
+			x: -2.5d
+			y: 6.0d
+			title: "Aether Dungeon"
+			subtitle: "Bronze, Silver, or Gold."
+			description: [
+				"Find and clear at least one Aether dungeon (Bronze / Silver / Gold). The Charter's exploration auditors photograph cleared dungeons."
+			]
+			icon: "aether:bronze_dungeon_key"
+			tasks: [{
+				id: "5A11E0F109020006"
+				type: "checkmark"
+				title: "Clear any Aether dungeon (Bronze / Silver / Gold)"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030011", type: "xp", xp: 80 }
+				{ id: "5A11E0F109030012", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010005"]
+		}
+
+		# ---------- Q07: Aerial Hell ----------
+		{
+			id: "5A11E0F109010007"
+			x: 2.5d
+			y: 6.0d
+			title: "Aerial Hell"
+			subtitle: "The corrupted opposite of the Aether."
+			description: [
+				"Build an Aerial Hell portal (or trigger entry). The Charter's atmospheric mapper logs the descent — Aerial Hell sits below the cloud-banks, the dark cousin of the Aether."
+			]
+			icon: "aerialhell:lapis_robinia_planks"
+			tasks: [{
+				id: "5A11E0F109020007"
+				type: "checkmark"
+				title: "Enter the Aerial Hell dimension"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030013", type: "xp", xp: 60 }
+				{ id: "5A11E0F109030014", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010001"]
+		}
+
+		# ---------- Q08: Aerial Hell Loot ----------
+		{
+			id: "5A11E0F109010008"
+			x: 4.5d
+			y: 7.5d
+			title: "Aerial Hell Loot"
+			subtitle: "Eight unique items from the dimension."
+			description: [
+				"Collect at least eight unique Aerial Hell items (blocks, plants, ores — anything native to the dimension). The Charter's survey-clerk catalogue thanks you."
+			]
+			icon: "aerialhell:shadow_grass_block"
+			tasks: [{
+				id: "5A11E0F109020008"
+				type: "checkmark"
+				title: "Collect 8+ unique Aerial Hell native items"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030015", type: "xp", xp: 50 }
+				{ id: "5A11E0F109030016", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010007"]
+		}
+
+		# ---------- Q09: Iron's Spellbook ----------
+		{
+			id: "5A11E0F109010009"
+			x: -4.5d
+			y: 4.5d
+			title: "Iron's Spellbook"
+			subtitle: "The academy enrolls the Foreman."
+			description: [
+				"Craft an Iron's Spells 'n Spellbooks Spell Book. The Charter's senior alchemists ('mages,' in academy terms) consider this 'Tier 1 enrollment.'"
+			]
+			icon: "ironsspellbooks:spell_book"
+			tasks: [{
+				id: "5A11E0F109020009"
+				type: "item"
+				item: "ironsspellbooks:spell_book"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030017", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030018", type: "item", item: "ironsspellbooks:spell_book" }
+			]
+			dependencies: ["5A11E0F108010040"]
+		}
+
+		# ---------- Q10: First Spell Scroll ----------
+		{
+			id: "5A11E0F109010010"
+			x: -6.5d
+			y: 5.5d
+			title: "First Spell Scroll"
+			subtitle: "Tier 1 magic."
+			description: [
+				"Acquire any Iron's Spellbooks tier-1 spell scroll. The Charter's mages award one for completing the entrance examination."
+			]
+			icon: "ironsspellbooks:scroll"
+			tasks: [{
+				id: "5A11E0F109020010"
+				type: "checkmark"
+				title: "Acquire any Iron's Spellbooks spell scroll"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030019", type: "xp", xp: 30 }
+				{ id: "5A11E0F109030020", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010009"]
+		}
+
+		# ---------- Q11: Cast a Spell (mechanical milestone) ----------
+		{
+			id: "5A11E0F109010011"
+			x: -4.5d
+			y: 6.5d
+			shape: "rsquare"
+			title: "Cast a Spell"
+			subtitle: "The Foreman's first Iron's-Spells cast."
+			description: [
+				"Cast any Iron's Spellbooks spell at a mob. Damage them, freeze them, heal yourself — doesn't matter, only that you cast and the spell connects."
+			]
+			icon: "ironsspellbooks:spell_book"
+			tasks: [{
+				id: "5A11E0F109020011"
+				type: "checkmark"
+				title: "Cast an Iron's Spellbooks spell at a hostile mob"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030021", type: "xp", xp: 50 }
+				{ id: "5A11E0F109030022", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010010"]
+		}
+
+		# ---------- Q12: Reliquary Trinket ----------
+		{
+			id: "5A11E0F109010012"
+			x: 4.5d
+			y: 5.0d
+			title: "Reliquary Trinket"
+			subtitle: "Charter-issued field kit."
+			description: [
+				"Acquire any Reliquary trinket — the Charter calls these 'institutional accessories.' Apprentices envy the Foreman who wears one."
+			]
+			icon: "reliquary:rib_bone"
+			tasks: [{
+				id: "5A11E0F109020012"
+				type: "checkmark"
+				title: "Acquire any Reliquary trinket / token / charm"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030023", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030024", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F108010040"]
+		}
+
+		# ---------- Q13: Netherite Monstrosity ----------
+		{
+			id: "5A11E0F109010013"
+			x: 0.0d
+			y: 8.5d
+			shape: "rsquare"
+			title: "Netherite Monstrosity"
+			subtitle: "An Old Industry forge-warden. Cleared for loot."
+			description: [
+				"Defeat the Cataclysm Netherite Monstrosity. The Charter calls it 'a dead industrial-scale forge-warden' — Erik calls it 'the Charter's favorite drop event.'"
+			]
+			icon: "cataclysm:netherite_monstrosity_chunk"
+			tasks: [{
+				id: "5A11E0F109020013"
+				type: "checkmark"
+				title: "Defeat L_Ender's Cataclysm Netherite Monstrosity"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030025", type: "xp", xp: 150 }
+				{ id: "5A11E0F109030026", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010006"]
+		}
+
+		# ---------- Q14: Wadjet ----------
+		{
+			id: "5A11E0F109010014"
+			x: 2.5d
+			y: 9.5d
+			title: "Wadjet of the Sluice"
+			subtitle: "A collapsed sluice-station's guardian."
+			description: [
+				"Defeat the Cataclysm Wadjet boss. The Charter calls the Wadjet 'a flooded-station guardian' — the loot includes infrastructure ledger entries the Charter pays for."
+			]
+			icon: "cataclysm:wadjet_skull"
+			tasks: [{
+				id: "5A11E0F109020014"
+				type: "checkmark"
+				title: "Defeat L_Ender's Cataclysm Wadjet boss"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030027", type: "xp", xp: 150 }
+				{ id: "5A11E0F109030028", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010013"]
+		}
+
+		# ---------- Q15: Alex's Mobs Bestiary ----------
+		{
+			id: "5A11E0F109010015"
+			x: 6.5d
+			y: 4.0d
+			title: "Alex's Bestiary"
+			subtitle: "Five distinct mob species photographed."
+			description: [
+				"Encounter and document at least five distinct Alex's Mobs creatures. The Charter's bestiary editor keeps a running annual."
+			]
+			icon: "alexsmobs:spawn_egg_grizzly_bear"
+			tasks: [{
+				id: "5A11E0F109020015"
+				type: "checkmark"
+				title: "Encounter 5+ distinct Alex's Mobs species"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030029", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030030", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010001"]
+		}
+
+		# ---------- Q16: Mowzie's Bestiary ----------
+		{
+			id: "5A11E0F109010016"
+			x: 8.5d
+			y: 5.0d
+			title: "Mowzie's Bestiary"
+			subtitle: "Three distinct mob species."
+			description: [
+				"Encounter at least three distinct Mowzie's Mobs creatures. The Charter pays per species, not per kill."
+			]
+			icon: "mowziesmobs:spear"
+			tasks: [{
+				id: "5A11E0F109020016"
+				type: "checkmark"
+				title: "Encounter 3+ distinct Mowzie's Mobs species"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030031", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030032", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010015"]
+		}
+
+		# ---------- Q17: Aether Expedition Camp (MC) ----------
+		{
+			id: "5A11E0F109010017"
+			x: -2.5d
+			y: 9.5d
+			title: "Aether Expedition Camp"
+			subtitle: "A MineColonies camp inside the Aether."
+			description: [
+				"Set up a small MineColonies outpost (Town Hall + 1-2 huts) inside the Aether or adjacent. The Charter's expedition auditors recognize 'cross-dimensional logistics' as a separate audit category."
+			]
+			icon: "minecolonies:blockhuttownhall"
+			tasks: [{
+				id: "5A11E0F109020017"
+				type: "checkmark"
+				title: "Place a MC Town Hall + 1+ hut in the Aether or near its portal"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030033", type: "xp", xp: 60 }
+				{ id: "5A11E0F109030034", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010005"]
+		}
+
+		# ---------- Q18: Aether Stockpile ----------
+		{
+			id: "5A11E0F109010018"
+			x: -4.5d
+			y: 9.5d
+			title: "Aether Stockpile"
+			subtitle: "32 Zanite + 16 Gravitite. The Charter pays."
+			description: [
+				"Stockpile 32 Zanite gemstones and 16 Gravitite chunks at the colony Warehouse. The Charter's exploration stipend escalates."
+			]
+			icon: "aether:zanite_gemstone"
+			tasks: [{
+				id: "5A11E0F109020018"
+				type: "checkmark"
+				title: "Stockpile 32+ Zanite + 16+ Gravitite at the colony Warehouse"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030035", type: "xp", xp: 60 }
+				{ id: "5A11E0F109030036", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010005"]
+		}
+
+		# ---------- Q19: Iron's Tier 2 Spell ----------
+		{
+			id: "5A11E0F109010019"
+			x: -6.5d
+			y: 7.5d
+			title: "Iron's Tier 2 Spell"
+			subtitle: "The academy promotes."
+			description: [
+				"Acquire and cast an Iron's Spellbooks tier-2 spell. The Charter's mage-academy enrollment rises one tier."
+			]
+			icon: "ironsspellbooks:scroll"
+			tasks: [{
+				id: "5A11E0F109020019"
+				type: "checkmark"
+				title: "Cast an Iron's Spellbooks tier-2 spell"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030037", type: "xp", xp: 60 }
+				{ id: "5A11E0F109030038", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010011"]
+		}
+
+		# ---------- Q20: Reliquary Set ----------
+		{
+			id: "5A11E0F109010020"
+			x: 6.5d
+			y: 6.0d
+			title: "Reliquary Set"
+			subtitle: "Three trinkets, simultaneously equipped."
+			description: [
+				"Equip at least three distinct Reliquary trinkets at once. The Charter's stipend recognises 'institutional dressing.'"
+			]
+			icon: "reliquary:rib_bone"
+			tasks: [{
+				id: "5A11E0F109020020"
+				type: "checkmark"
+				title: "Equip 3+ distinct Reliquary trinkets simultaneously"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030039", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030040", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010012"]
+		}
+
+		# ---------- Q21: Nullscape ----------
+		{
+			id: "5A11E0F109010021"
+			x: 4.5d
+			y: 8.5d
+			title: "Nullscape"
+			subtitle: "The End, redrawn."
+			description: [
+				"Reach the End with Nullscape's terrain modifications loaded. The Charter's atmospheric mapper logs the visit; the Foreman returns with eight End Stone."
+			]
+			icon: "minecraft:end_stone"
+			tasks: [{
+				id: "5A11E0F109020021"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:end_stone" }
+				count: 8L
+			}]
+			rewards: [
+				{ id: "5A11E0F109030041", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030042", type: "item", item: { id: "minecraft:end_stone", Count: 16b } }
+			]
+			dependencies: ["5A11E0F109010001"]
+		}
+
+		# ---------- Q22: Ender Eye Stockpile ----------
+		{
+			id: "5A11E0F109010022"
+			x: 6.5d
+			y: 8.0d
+			title: "Ender Eye Stockpile"
+			subtitle: "Sixteen eyes. The Charter audits."
+			description: [
+				"Stockpile sixteen Ender Eyes. The Foreman who keeps a deep reserve never panics at portal-build time."
+			]
+			icon: "minecraft:ender_eye"
+			tasks: [{
+				id: "5A11E0F109020022"
+				type: "item"
+				item: { Count: 1b, id: "minecraft:ender_eye" }
+				count: 16L
+			}]
+			rewards: [
+				{ id: "5A11E0F109030043", type: "xp", xp: 50 }
+				{ id: "5A11E0F109030044", type: "item", item: { id: "minecraft:ender_pearl", Count: 16b } }
+			]
+			dependencies: ["5A11E0F109010021"]
+		}
+
+		# ---------- Q23: Slay the Ender Dragon ----------
+		{
+			id: "5A11E0F109010023"
+			x: 4.5d
+			y: 10.0d
+			title: "Slay the Ender Dragon"
+			subtitle: "A Charter trophy. Loud."
+			description: [
+				"Defeat the Ender Dragon. The Charter awards the trophy in the next annual; Erik posts the photograph on the office wall."
+			]
+			icon: "minecraft:dragon_head"
+			tasks: [{
+				id: "5A11E0F109020023"
+				type: "kill"
+				entity: "minecraft:ender_dragon"
+				value: 1L
+			}]
+			rewards: [
+				{ id: "5A11E0F109030045", type: "xp", xp: 200 }
+				{ id: "5A11E0F109030046", type: "item", item: { id: "minecraft:dragon_egg", Count: 1b } }
+			]
+			dependencies: ["5A11E0F109010022"]
+		}
+
+		# ---------- Q24: Aether Boss ----------
+		{
+			id: "5A11E0F109010024"
+			x: 2.5d
+			y: 11.0d
+			title: "Slider / Aether Boss"
+			subtitle: "The Aether's dungeon king."
+			description: [
+				"Defeat any Aether dungeon boss (Slider in Bronze, Valkyrie Queen in Silver, Sun Spirit in Gold). The Charter calls this 'an Aether milestone.'"
+			]
+			icon: "aether:bronze_dungeon_key"
+			tasks: [{
+				id: "5A11E0F109020024"
+				type: "checkmark"
+				title: "Defeat any Aether dungeon boss"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030047", type: "xp", xp: 150 }
+				{ id: "5A11E0F109030048", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010006"]
+		}
+
+		# ---------- Q25: Sky-Hunter Sub-Thread ----------
+		{
+			id: "5A11E0F109010025"
+			x: 8.5d
+			y: 6.5d
+			title: "Sky Hunter — Tame an Animal"
+			subtitle: "Side-thread teaser: bring Alex's, Mowzie's, BiC into one bestiary."
+			description: [
+				"Tame or befriend any Alex's Mobs / Mowzie's Mobs / Born in Chaos creature you encountered. The Sky Hunter side chapter (separate) covers the full bestiary; this single quest is the Charter's invitation."
+			]
+			icon: "alexsmobs:spawn_egg_grizzly_bear"
+			tasks: [{
+				id: "5A11E0F109020025"
+				type: "checkmark"
+				title: "Tame / befriend any mod-added creature"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030049", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030050", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010015"]
+		}
+
+		# ---------- Q26: Tectonic Cave Survey ----------
+		{
+			id: "5A11E0F109010026"
+			x: -8.5d
+			y: 9.0d
+			title: "Tectonic Cave Survey"
+			subtitle: "Find a Tectonic-generated cave biome. Photograph it."
+			description: [
+				"Travel to a Tectonic-generated cave (lush, ravine, cherry, etc.) and document it. The Charter's terrain auditors keep records of which Foremen explored which biome systems."
+			]
+			icon: "minecraft:torch"
+			tasks: [{
+				id: "5A11E0F109020026"
+				type: "checkmark"
+				title: "Discover any Tectonic cave biome and mark on Xaero"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030051", type: "xp", xp: 30 }
+				{ id: "5A11E0F109030052", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F108010040"]
+		}
+
+		# ---------- Q27: Iron's Spellbook Cape ----------
+		{
+			id: "5A11E0F109010027"
+			x: -6.5d
+			y: 9.5d
+			title: "Iron's Spellbook Cape"
+			subtitle: "The academy issues robes."
+			description: [
+				"Equip any Iron's Spellbooks armor piece (robe, cape, hood). The Foreman now looks the part."
+			]
+			icon: "ironsspellbooks:wandering_magician_robe"
+			tasks: [{
+				id: "5A11E0F109020027"
+				type: "checkmark"
+				title: "Equip any Iron's Spellbooks magic robe / armor piece"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030053", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030054", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010011"]
+		}
+
+		# ---------- Q28: Returning with Ores ----------
+		{
+			id: "5A11E0F109010028"
+			x: -2.5d
+			y: 11.0d
+			title: "Returning with Strange Ores"
+			subtitle: "Aether + Aerial Hell + End ores in one chest."
+			description: [
+				"Stockpile representative ores from the Aether (Zanite or Gravitite), Aerial Hell (any native ore), and the End (Ender Pearl or End Stone). The Charter's customs clerks sign the docket."
+			]
+			icon: "minecraft:chest"
+			tasks: [{
+				id: "5A11E0F109020028"
+				type: "checkmark"
+				title: "Stockpile native materials from 3+ dimensions in one chest"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030055", type: "xp", xp: 50 }
+				{ id: "5A11E0F109030056", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F109010018"
+				"5A11E0F109010008"
+				"5A11E0F109010021"
+			]
+		}
+
+		# ---------- Q29: Phoenix Armor (Aether) ----------
+		{
+			id: "5A11E0F109010029"
+			x: 0.0d
+			y: 12.5d
+			title: "Phoenix Armor"
+			subtitle: "Aether's premier armor set."
+			description: [
+				"Craft or acquire any Phoenix armor piece (or equivalent Aether tier-3 armor). The Charter pays the Aether-tier stipend."
+			]
+			icon: "aether:phoenix_helmet"
+			tasks: [{
+				id: "5A11E0F109020029"
+				type: "checkmark"
+				title: "Acquire any Aether tier-3 armor piece (Phoenix or Gravitite)"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030057", type: "xp", xp: 70 }
+				{ id: "5A11E0F109030058", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010024"]
+		}
+
+		# ---------- Q30: Master Explorer Promotion ----------
+		{
+			id: "5A11E0F109010030"
+			x: -4.5d
+			y: 12.0d
+			title: "Master Explorer Promotion"
+			subtitle: "Sixth docket. The Charter recognises cross-dimensional Foremen."
+			description: [
+				"Erik delivers the docket: Master Explorer, in recognition of operational presence in 3+ dimensions. Six dockets on the office wall."
+			]
+			icon: "minecraft:filled_map"
+			tasks: [{
+				id: "5A11E0F109020030"
+				type: "checkmark"
+				title: "Pin the Master Explorer docket in the office"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030059", type: "xp", xp: 80 }
+				{ id: "5A11E0F109030060", type: "item", item: { id: "minecraft:filled_map", Count: 4b } }
+			]
+			dependencies: ["5A11E0F109010028"]
+		}
+
+		# ---------- Q31: Born in Chaos Pirate King ----------
+		{
+			id: "5A11E0F109010031"
+			x: 4.5d
+			y: 12.0d
+			title: "Pirate King Spotted"
+			subtitle: "Born in Chaos' senior antagonist."
+			description: [
+				"Encounter (don't engage yet — Act X is the burn) a Born in Chaos boss-tier sky-pirate. The Charter's surveillance clerks photograph from a safe distance."
+			]
+			icon: "minecraft:iron_sword"
+			tasks: [{
+				id: "5A11E0F109020031"
+				type: "checkmark"
+				title: "Encounter a Born in Chaos boss-tier pirate (sighting, not kill)"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030061", type: "xp", xp: 60 }
+				{ id: "5A11E0F109030062", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010028"]
+		}
+
+		# ---------- Q32: Hostile Mob Trophy ----------
+		{
+			id: "5A11E0F109010032"
+			x: -6.5d
+			y: 11.5d
+			title: "Hostile Mob Trophy Wall"
+			subtitle: "Eight unique mob heads or trophies."
+			description: [
+				"Mount eight distinct mob heads or boss trophies somewhere visible (your office, the Town Hall, the airship). The Charter's interior decorators record this in the annual."
+			]
+			icon: "minecraft:zombie_head"
+			tasks: [{
+				id: "5A11E0F109020032"
+				type: "checkmark"
+				title: "Mount 8+ distinct mob heads / trophies somewhere visible"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030063", type: "xp", xp: 40 }
+				{ id: "5A11E0F109030064", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010013"]
+		}
+
+		# ---------- Q33: Iron's Spells — Tier 3 ----------
+		{
+			id: "5A11E0F109010033"
+			x: -8.5d
+			y: 7.5d
+			title: "Iron's Tier 3 Spell"
+			subtitle: "The academy's senior curriculum."
+			description: [
+				"Cast a tier-3 Iron's Spells spell. The Foreman's academy enrollment now reads 'senior.'"
+			]
+			icon: "ironsspellbooks:scroll"
+			tasks: [{
+				id: "5A11E0F109020033"
+				type: "checkmark"
+				title: "Cast an Iron's Spellbooks tier-3 spell"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030065", type: "xp", xp: 80 }
+				{ id: "5A11E0F109030066", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010019"]
+		}
+
+		# ---------- Q34: Cataclysm Loot Run ----------
+		{
+			id: "5A11E0F109010034"
+			x: 2.5d
+			y: 13.0d
+			title: "Cataclysm Loot Run"
+			subtitle: "Five Cataclysm chests cleared in one expedition."
+			description: [
+				"Clear at least five Cataclysm dungeon chests in a single expedition. The Charter's loot-clerk catalogue thanks you."
+			]
+			icon: "minecraft:chest"
+			tasks: [{
+				id: "5A11E0F109020034"
+				type: "checkmark"
+				title: "Loot 5+ Cataclysm dungeon chests in one expedition"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030067", type: "xp", xp: 80 }
+				{ id: "5A11E0F109030068", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010014"]
+		}
+
+		# ---------- Q35: Aether Outpost Population ----------
+		{
+			id: "5A11E0F109010035"
+			x: -2.5d
+			y: 13.5d
+			title: "Aether Outpost Population"
+			subtitle: "Five Aether-stationed citizens."
+			description: [
+				"Have at least five MineColonies citizens working at the Aether outpost. The Charter calls a cross-dimensional colony 'mature exploration.'"
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F109020035"
+				type: "checkmark"
+				title: "Have 5+ MC citizens stationed at the Aether outpost"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030069", type: "xp", xp: 60 }
+				{ id: "5A11E0F109030070", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010017"]
+		}
+
+		# ---------- Q36: Drygmy Charmer (Ars Nouveau) ----------
+		{
+			id: "5A11E0F109010036"
+			x: 6.5d
+			y: 10.0d
+			title: "Drygmy Charmer"
+			subtitle: "Drygmies harvest mob drops on their own."
+			description: [
+				"Bind a Drygmy familiar to your colony. With Drygmies, mob drops arrive at the warehouse without the Foreman swinging a sword."
+			]
+			icon: "ars_nouveau:drygmy_shard"
+			tasks: [{
+				id: "5A11E0F109020036"
+				type: "checkmark"
+				title: "Bind a Drygmy familiar (Ars Nouveau) and harvest mob drops"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030071", type: "xp", xp: 50 }
+				{ id: "5A11E0F109030072", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F109010015"]
+		}
+
+		# ---------- Q37: Cross-Dimensional Cargo ----------
+		{
+			id: "5A11E0F109010037"
+			x: -4.5d
+			y: 14.5d
+			title: "Cross-Dimensional Cargo"
+			subtitle: "Iron from the overworld, Zanite from the Aether, Ender Pearls from the End."
+			description: [
+				"Deliver one cargo run that includes materials from three dimensions (overworld + Aether + End) to a single warehouse. The Charter's customs auditors sign for it."
+			]
+			icon: "minecraft:chest"
+			tasks: [{
+				id: "5A11E0F109020037"
+				type: "checkmark"
+				title: "Deliver a multi-dimensional cargo to a single warehouse"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030073", type: "xp", xp: 80 }
+				{ id: "5A11E0F109030074", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F109010018"
+				"5A11E0F109010022"
+			]
+		}
+
+		# ---------- Q38: Forty Citizens ----------
+		{
+			id: "5A11E0F109010038"
+			x: 0.0d
+			y: 14.5d
+			title: "Forty Citizens"
+			subtitle: "Cross-fragment, cross-dimension."
+			description: [
+				"Have at least 40 living citizens across the home colony + Aether outpost. The Charter records 'multi-site administration.'"
+			]
+			icon: "minecraft:player_head"
+			tasks: [{
+				id: "5A11E0F109020038"
+				type: "checkmark"
+				title: "Have at least 40 living citizens total across all colonies"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030075", type: "xp", xp: 100 }
+				{ id: "5A11E0F109030076", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F109010035"]
+		}
+
+		# ---------- Q39: Final Charter Audit ----------
+		{
+			id: "5A11E0F109010039"
+			x: 4.5d
+			y: 14.0d
+			title: "Final Charter Audit"
+			subtitle: "Three audit drones. Erik makes tea. The Foreman exhales."
+			description: [
+				"Pass the Charter's final pre-citadel audit: 40 citizens, 3 dimensions explored, Master Explorer docket, all Cataclysm pre-bosses cleared."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F109020039"
+				type: "checkmark"
+				title: "Pass final pre-Citadel audit (all milestones cleared)"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030077", type: "xp", xp: 120 }
+				{ id: "5A11E0F109030078", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: [
+				"5A11E0F109010030"
+				"5A11E0F109010038"
+				"5A11E0F109010013"
+				"5A11E0F109010014"
+			]
+		}
+
+		# ---------- Q40: Scene-beat finale — Return with Strange Ores ----------
+		{
+			id: "5A11E0F109010040"
+			x: 0.0d
+			y: 16.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "Returning with Strange Ores"
+			subtitle: "The Charter pays the same per ton."
+			description: [
+				"At sundown the warship docks at the skyport. The hold contains Aether ores, Aerial Hell stone, Ender Pearls, Reliquary trinkets, Iron's-Spells scrolls. The Charter's customs clerk stamps the docket without reading the manifest — by now the Foreman's signature is authority enough."
+				""
+				"Act X — The Citadel — begins on completion. The Charter prepares the final endgame: defeat Aragdal the Sky-Tyrant. The colony will defend itself; the Foreman commands the fleet."
+			]
+			icon: "minecraft:chest"
+			tasks: [{
+				id: "5A11E0F109020040"
+				type: "checkmark"
+				title: "Return to the skyport at sundown with cross-dimensional cargo"
+			}]
+			rewards: [
+				{ id: "5A11E0F109030079", type: "xp", xp: 150 }
+				{ id: "5A11E0F109030080", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F109030081", type: "item", item: "mekanism:mekasuit_helmet" }
+			]
+			dependencies: ["5A11E0F109010039"]
+		}
+	]
+}

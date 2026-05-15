@@ -148,6 +148,40 @@ const SCENE_BEATS = {
         sound: "minecraft:block.bell.use",
         pitch: 0.8,
         lore: "Act VIII closes. The warship rises on Source-powered lifts at sunset. Act IX — Aether's Edge — opens the Aether portal."
+    },
+    // ---- Act IX — Aether's Edge ----
+    "5A11E0F109010001": {
+        title: "The Portal Frame",
+        subtitle: "Glowstone bound in a square.",
+        color: 0xFFE8A0,
+        sound: "minecraft:block.amethyst_cluster.place",
+        pitch: 1.2,
+        lore: "Act IX — Aether's Edge. The portal frame is set. The Foreman is about to cross."
+    },
+    "5A11E0F109010040": {
+        title: "Returning with Strange Ores",
+        subtitle: "Cross-dimensional cargo.",
+        color: 0xD0C0E0,
+        sound: "minecraft:item.book.put",
+        pitch: 1.0,
+        lore: "Act IX closes. Three dimensions surveyed, all Cataclysm pre-bosses cleared. Act X — The Citadel — begins on the MekaSuit helmet."
+    },
+    // ---- Act X — The Skyforge Citadel ----
+    "5A11E0F10A010001": {
+        title: "MekaSuit Helmet",
+        subtitle: "The endgame opens.",
+        color: 0xC0E0FF,
+        sound: "minecraft:item.armor.equip_netherite",
+        pitch: 1.0,
+        lore: "Act X — The Skyforge Citadel. The Foreman puts on the senior engineer's helmet. Aragdal will arrive at the citadel before the audit closes."
+    },
+    "5A11E0F10A010035": {
+        title: "The Citizens Raise a Flag",
+        subtitle: "Fragment 0x174A: completed.",
+        color: 0xFFD060,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 1.0,
+        lore: "Act X closes. Aragdal defeated. The pirate fleet routs. Citizens raise the colony banner above the Town Hall. The Foreman is High Foreman now. Fragment 0x174A: completed."
     }
 };
 

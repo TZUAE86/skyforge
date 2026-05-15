@@ -37,6 +37,14 @@ file = "config/ftbquests/quests/chapters/act_08_the_skyport.snbt"
 hash = "9972f179e39239ab86a5676cdef58d36ab95a76d22878354d01f7c8568ccbe48"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/act_09_aethers_edge.snbt"
+hash = "38957bb64d96573cff43c4d64e1e5dab47eb1b46b72058077a66475a8864d2a1"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/act_10_the_citadel.snbt"
+hash = "e47bdb22d5535d2d5d318abc74dac57bb7fc23e46a7e4eb847563dd15f071494"
+
+[[files]]
 file = "config/ftbquests/quests/data.snbt"
 hash = "e86765d3c3791461f5581af4a0d7e20c53a166d305643a2797999a5f0ee3430c"
 
@@ -70,7 +78,7 @@ hash = "cf736ec614206cc0f79a2166dc53b6221e4e1829bea12d82be4a3aa34e97924c"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"
-hash = "ef2062f169f4022233e34b5908e2a08daaf5e9a616b6d95ab4dea3f67f660be6"
+hash = "3692cc5672fdda59a74b4aca42e76a3163c1ec64460da2e3a95c535ac977968d"
 
 [[files]]
 file = "mods/advancedae.pw.toml"

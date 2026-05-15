@@ -1,0 +1,577 @@
+# Skyforge — Side Chapter: The Project Docket (~31 quests, automation checklist).
+# TONE: Steampunk colonial. Honor-system checklist of automation projects.
+# Hub-and-spoke layout — Q1 at center, 30 spokes fan out, Q31 fires
+# when 25 of 30 docket pages are ticked.
+# GATE: Tinker's Bench Q29 (Master Mechanic) complete.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "side_project_docket"
+	group: "5A11E0F100000002"
+	icon: "minecraft:writable_book"
+	id: "5A11E0F1C0000000"
+	images: [ ]
+	order_index: 101
+	quest_links: [ ]
+	subtitle: ["Build it. Tick the page. The Charter signs whatever you sign."]
+	title: "Side — The Project Docket"
+	quests: [
+
+		# ---------- Q01: HUB — Docket Opened (scene-beat) ----------
+		{
+			id: "5A11E0F1C0010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Project Docket Opened"
+			subtitle: "Erik hands you the senior engineer's clipboard."
+			description: [
+				"\"Foreman. Thirty automation projects. Pick any. Skip any. The Charter doesn't grade the order — just the inventory.\""
+				""
+				"Erik hands you a brass-trimmed clipboard with thirty blank docket pages. Each page is one automation goal. Tick what you build. File the docket at twenty-five and the Charter recognises you as a Project Manager."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{
+				id: "5A11E0F1C0020001"
+				type: "checkmark"
+				title: "Accept the Project Docket from Erik"
+			}]
+			rewards: [
+				{ id: "5A11E0F1C0030001", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C0030002", type: "item", item: { id: "minecraft:writable_book", Count: 4b } }
+			]
+			dependencies: ["5A11E0F1B0010029"]
+		}
+
+		# ====== CLUSTER A — PRODUCTION (top) ======
+
+		{
+			id: "5A11E0F1C001000A"
+			x: -4.0d
+			y: -3.0d
+			title: "A1 — Auto-Iron 60/min"
+			subtitle: "300 iron ingots in 5 minutes, unattended."
+			description: ["Build an automation chain (Mekanism factory, Bulk Smelter, or AE2 autocraft) that produces 300+ iron ingots in five in-game minutes from a stopped baseline."]
+			icon: "minecraft:iron_ingot"
+			tasks: [{ id: "5A11E0F1C002000A", type: "checkmark", title: "Produce 300+ iron ingots in 5 minutes hands-off" }]
+			rewards: [
+				{ id: "5A11E0F1C003000A", type: "xp", xp: 60 }
+				{ id: "5A11E0F1C003000B", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C001000B"
+			x: -2.0d
+			y: -5.0d
+			title: "A2 — Auto-Brass Alloy 64"
+			subtitle: "Mixer chain alloys 64 brass without touching the controls."
+			description: ["Set up a Mechanical Mixer fed with copper + zinc nuggets that produces 64 brass ingots hands-off."]
+			icon: "create:brass_ingot"
+			tasks: [{ id: "5A11E0F1C002000B", type: "checkmark", title: "Auto-alloy 64+ brass ingots via Mixer chain" }]
+			rewards: [
+				{ id: "5A11E0F1C003000C", type: "xp", xp: 60 }
+				{ id: "5A11E0F1C003000D", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C001000C"
+			x: 0.0d
+			y: -6.0d
+			title: "A3 — Auto-Precision Mechanism 32"
+			subtitle: "Sequenced Assembly producing 32 PMs hands-off."
+			description: ["Run a Deployer + Press + Mixer Sequenced Assembly line that outputs 32 Precision Mechanisms without manual input."]
+			icon: "create:precision_mechanism"
+			tasks: [{ id: "5A11E0F1C002000C", type: "checkmark", title: "Auto-produce 32+ Precision Mechanisms via Sequenced Assembly" }]
+			rewards: [
+				{ id: "5A11E0F1C003000E", type: "xp", xp: 60 }
+				{ id: "5A11E0F1C003000F", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C001000D"
+			x: 2.0d
+			y: -5.0d
+			title: "A4 — Auto-Food 64"
+			subtitle: "Farmer's Delight chain or Bulk Smoke producing 64 cooked meals."
+			description: ["Build an automation chain (FD cooking pot + Mechanical Harvester + Bulk Smoking, or any equivalent) that produces 64 cooked meals hands-off."]
+			icon: "minecraft:cooked_beef"
+			tasks: [{ id: "5A11E0F1C002000D", type: "checkmark", title: "Auto-produce 64+ cooked food items hands-off" }]
+			rewards: [
+				{ id: "5A11E0F1C0050001", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C0050002", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C001000E"
+			x: 4.0d
+			y: -3.0d
+			title: "A5 — Auto-Charcoal 64"
+			subtitle: "Auto-tree to auto-smelt chain producing 64 charcoal."
+			description: ["Combine Mechanical Saw + auto-replant + Bulk Smelting (over campfire to smoke logs into charcoal) for 64 charcoal hands-off."]
+			icon: "minecraft:charcoal"
+			tasks: [{ id: "5A11E0F1C002000E", type: "checkmark", title: "Auto-produce 64+ charcoal hands-off" }]
+			rewards: [
+				{ id: "5A11E0F1C0050003", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C0050004", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+
+		# ====== CLUSTER B — RESOURCE EXTRACTION (top-right) ======
+
+		{
+			id: "5A11E0F1C001000F"
+			x: 6.0d
+			y: -5.0d
+			title: "B1 — Auto-Cobble 256"
+			subtitle: "Generator + drill running unattended."
+			description: ["Water+lava cobble generator with a Mechanical Drill collecting into a chest. Produce 256+ cobble hands-off."]
+			icon: "minecraft:cobblestone"
+			tasks: [{ id: "5A11E0F1C002000F", type: "checkmark", title: "Auto-produce 256+ cobblestone via cobble generator + drill" }]
+			rewards: [
+				{ id: "5A11E0F1C0050005", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C0050006", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010010"
+			x: 8.0d
+			y: -3.0d
+			title: "B2 — Auto-Flint 64"
+			subtitle: "Bulk washing gravel for flint."
+			description: ["Encased Fan + water bulk-washing gravel for 64+ flint hands-off."]
+			icon: "minecraft:flint"
+			tasks: [{ id: "5A11E0F1C0020010", type: "checkmark", title: "Auto-produce 64+ flint via bulk washing" }]
+			rewards: [
+				{ id: "5A11E0F1C0050007", type: "xp", xp: 40 }
+				{ id: "5A11E0F1C0050008", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010011"
+			x: 9.0d
+			y: -1.0d
+			title: "B3 — Auto-Nether Quartz 64"
+			subtitle: "MC Netherworker or self-built nether farm."
+			description: ["Either the MineColonies Netherworker hut delivers 64+ quartz, or build a quartz farm. Either path counts."]
+			icon: "minecraft:quartz"
+			tasks: [{ id: "5A11E0F1C0020011", type: "checkmark", title: "Stockpile 64+ nether quartz from automation (not hand-mined)" }]
+			rewards: [
+				{ id: "5A11E0F1C0050009", type: "xp", xp: 60 }
+				{ id: "5A11E0F1C005000A", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010012"
+			x: 8.0d
+			y: 1.0d
+			title: "B4 — Auto-Mob Drops"
+			subtitle: "Drygmy familiar or mob farm producing 32 of any drop."
+			description: ["Either bind a Drygmy familiar to harvest drops at a mob, or build a mob farm. 32+ of any mob-specific drop hands-off."]
+			icon: "minecraft:rotten_flesh"
+			tasks: [{ id: "5A11E0F1C0020012", type: "checkmark", title: "Auto-harvest 32+ of any mob-specific drop" }]
+			rewards: [
+				{ id: "5A11E0F1C005000B", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C005000C", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010013"
+			x: 6.0d
+			y: 3.0d
+			title: "B5 — Auto-XP Farm 30 Levels"
+			subtitle: "Any XP source producing 30+ levels in one session."
+			description: ["Mob farm, Mekanism XP-output, or any continuous XP source. Gain 30+ levels in one in-game sitting from automated source."]
+			icon: "minecraft:experience_bottle"
+			tasks: [{ id: "5A11E0F1C0020013", type: "checkmark", title: "Gain 30+ levels from an automated XP source in one session" }]
+			rewards: [
+				{ id: "5A11E0F1C005000D", type: "xp", xp: 100 }
+				{ id: "5A11E0F1C005000E", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+
+		# ====== CLUSTER C — LOGISTICS (right) ======
+
+		{
+			id: "5A11E0F1C0010014"
+			x: 10.0d
+			y: 5.0d
+			title: "C1 — Sorted Warehouse 4 Categories"
+			subtitle: "Iron / copper / brass / gold to separate barrels."
+			description: ["Build an automatic sorting system (Modular Routers, brass funnels + filters, or AE2) that routes 4 distinct ingot types into 4 separate barrels."]
+			icon: "sophisticatedstorage:barrel"
+			tasks: [{ id: "5A11E0F1C0020014", type: "checkmark", title: "Build a 4-category automatic sorting yard" }]
+			rewards: [
+				{ id: "5A11E0F1C005000F", type: "xp", xp: 60 }
+				{ id: "5A11E0F1C0050010", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010015"
+			x: 9.0d
+			y: 7.0d
+			title: "C2 — Auto-Restock Chest"
+			subtitle: "Refills below threshold via Sender Module or Stockpile Switch."
+			description: ["Configure a chest that auto-refills when its inventory drops below a threshold (Stockpile Switch + Modular Routers Sender, or AE2 Pattern Provider on a level emitter)."]
+			icon: "minecraft:chest"
+			tasks: [{ id: "5A11E0F1C0020015", type: "checkmark", title: "Build an auto-restock chest triggered by threshold" }]
+			rewards: [
+				{ id: "5A11E0F1C0050011", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C0050012", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010016"
+			x: 8.0d
+			y: 9.0d
+			title: "C3 — Multi-Station Cargo Train"
+			subtitle: "3-station schedule running for 10 in-game minutes."
+			description: ["Run a Create train on a 3-station schedule with cargo for 10+ in-game minutes hands-off. Stations load/unload automatically."]
+			icon: "create:track_station"
+			tasks: [{ id: "5A11E0F1C0020016", type: "checkmark", title: "Run a 3-station cargo train schedule for 10+ in-game min" }]
+			rewards: [
+				{ id: "5A11E0F1C0050013", type: "xp", xp: 80 }
+				{ id: "5A11E0F1C0050014", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010017"
+			x: 7.0d
+			y: 11.0d
+			title: "C4 — Inter-Colony Airship Cargo"
+			subtitle: "Home to sister colony, automated cargo."
+			description: ["Run an airship route between Home and a sister colony (North Buttress or South Reef) where cargo loads/unloads automatically at each end."]
+			icon: "aeronautics:andesite_propeller"
+			tasks: [{ id: "5A11E0F1C0020017", type: "checkmark", title: "Automate an inter-colony airship cargo run" }]
+			rewards: [
+				{ id: "5A11E0F1C0030020", type: "xp", xp: 80 }
+				{ id: "5A11E0F1C0030021", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010018"
+			x: 6.0d
+			y: 12.0d
+			title: "C5 — AE2 Craft-on-Demand 3 Items"
+			subtitle: "Pattern Provider auto-crafts 3 distinct items from a terminal request."
+			description: ["Set up AE2 autocrafting for 3 distinct items via Pattern Provider. Request each from the terminal and verify the network produces them."]
+			icon: "ae2:pattern_provider"
+			tasks: [{ id: "5A11E0F1C0020018", type: "checkmark", title: "AE2 autocraft 3 distinct items on-demand via terminal" }]
+			rewards: [
+				{ id: "5A11E0F1C0030022", type: "xp", xp: 80 }
+				{ id: "5A11E0F1C0030023", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+
+		# ====== CLUSTER D — DEFENSE AUTOMATION (bottom-right) ======
+
+		{
+			id: "5A11E0F1C0010019"
+			x: 5.0d
+			y: 14.0d
+			title: "D1 — Auto-Cannon"
+			subtitle: "Cannon Loader auto-feeds + fires at a target."
+			description: ["Configure a Big Cannons Cannon Loader fed via belt with powder + projectile. Fire the cannon at a target hands-off."]
+			icon: "createbigcannons:cannon_loader"
+			tasks: [{ id: "5A11E0F1C0020019", type: "checkmark", title: "Build an auto-loading + auto-firing cannon emplacement" }]
+			rewards: [
+				{ id: "5A11E0F1C0030024", type: "xp", xp: 70 }
+				{ id: "5A11E0F1C0030025", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C001001A"
+			x: 3.0d
+			y: 15.0d
+			title: "D2 — Tesla Coil Grid"
+			subtitle: "4 Tesla Coils on one switch."
+			description: ["Place 4 Createaddition Tesla Coils wired to a single switch. Activate. All four fire at hostile targets in range."]
+			icon: "createaddition:tesla_coil"
+			tasks: [{ id: "5A11E0F1C002001A", type: "checkmark", title: "Build a 4-Tesla coil grid on a single switch" }]
+			rewards: [
+				{ id: "5A11E0F1C0030026", type: "xp", xp: 60 }
+				{ id: "5A11E0F1C0030027", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C001001B"
+			x: 1.0d
+			y: 16.0d
+			title: "D3 — MC Guard Patrol"
+			subtitle: "At least one Guard with a non-default patrol path."
+			description: ["Configure a MineColonies Guard with a custom multi-waypoint patrol path. The Charter calls a patrol with 3+ waypoints 'a real route.'"]
+			icon: "minecolonies:blockhutguardtower"
+			tasks: [{ id: "5A11E0F1C002001B", type: "checkmark", title: "Configure a MC Guard with a 3+ waypoint patrol path" }]
+			rewards: [
+				{ id: "5A11E0F1C0030028", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C0030029", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C001001C"
+			x: -1.0d
+			y: 16.0d
+			title: "D4 — Alert System"
+			subtitle: "Stockpile Switch triggers a redstone alarm bell."
+			description: ["A Stockpile Switch or Display Link triggers a redstone pulse that rings a bell or activates a noteblock at the citadel walls. Test it."]
+			icon: "minecraft:bell"
+			tasks: [{ id: "5A11E0F1C002001C", type: "checkmark", title: "Build a redstone alert system triggered by a Stockpile or Display Link" }]
+			rewards: [
+				{ id: "5A11E0F1C003002A", type: "xp", xp: 40 }
+				{ id: "5A11E0F1C003002B", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C001001D"
+			x: -3.0d
+			y: 15.0d
+			title: "D5 — Pirate-Detection Beacon"
+			subtitle: "Lit beacon visible from all 3 colonies + warship deck."
+			description: ["Place a Minecraft Beacon high enough that its beam is visible from Home + North Buttress + South Reef + the warship's deck."]
+			icon: "minecraft:beacon"
+			tasks: [{ id: "5A11E0F1C002001D", type: "checkmark", title: "Place a beacon visible from 3 colonies + warship deck" }]
+			rewards: [
+				{ id: "5A11E0F1C003002C", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C003002D", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+
+		# ====== CLUSTER E — MAGIC-TECH BRIDGES (bottom) ======
+
+		{
+			id: "5A11E0F1C001001E"
+			x: -5.0d
+			y: 14.0d
+			title: "E1 — Auto-Source Production"
+			subtitle: "Source Relay network producing without manual refill."
+			description: ["Build an Ars Nouveau Source generator + Relay network that fills your Source Jars without you having to top them up manually."]
+			icon: "ars_nouveau:source_jar"
+			tasks: [{ id: "5A11E0F1C002001E", type: "checkmark", title: "Build an auto-Source production network" }]
+			rewards: [
+				{ id: "5A11E0F1C003002E", type: "xp", xp: 60 }
+				{ id: "5A11E0F1C003002F", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C001001F"
+			x: -6.0d
+			y: 12.0d
+			title: "E2 — Source-Powered Create"
+			subtitle: "Source flow powers any Create network."
+			description: ["Use Ars Creo to bind a Source flow to a Create rotation source. Power any Create machine via mana, not coal."]
+			icon: "ars_creo:source_motor"
+			tasks: [{ id: "5A11E0F1C002001F", type: "checkmark", title: "Power a Create network via Ars Creo (Source-driven)" }]
+			rewards: [
+				{ id: "5A11E0F1C0050015", type: "xp", xp: 70 }
+				{ id: "5A11E0F1C0050016", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010020"
+			x: -7.0d
+			y: 11.0d
+			title: "E3 — Auto-Potion Brewing"
+			subtitle: "Spout fills 8 bottles with a brewed potion automatically."
+			description: ["Brewing Stand + Spout + Item Drain chain that produces 8 filled potion bottles of any potion hands-off."]
+			icon: "minecraft:potion"
+			tasks: [{ id: "5A11E0F1C0020020", type: "checkmark", title: "Auto-produce 8+ brewed potion bottles" }]
+			rewards: [
+				{ id: "5A11E0F1C0050017", type: "xp", xp: 60 }
+				{ id: "5A11E0F1C0050018", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010021"
+			x: -8.0d
+			y: 9.0d
+			title: "E4 — Iron's Spells Auto-Cast"
+			subtitle: "Ars Creo + Iron's Spells auto-casts at a mob spawner."
+			description: ["Combine Ars Creo with an Iron's Spells projectile spell to create a contraption that auto-fires at hostile spawns."]
+			icon: "irons_spellbooks:wimpy_spell_book"
+			tasks: [{ id: "5A11E0F1C0020021", type: "checkmark", title: "Build a spell-firing automation aimed at hostile spawns" }]
+			rewards: [
+				{ id: "5A11E0F1C0050019", type: "xp", xp: 80 }
+				{ id: "5A11E0F1C005001A", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010022"
+			x: -9.0d
+			y: 7.0d
+			title: "E5 — Familiar Farm Assistant"
+			subtitle: "Familiar gathers crops or drops continuously."
+			description: ["Bind an Ars Nouveau Familiar (Drygmy, Wilden, or similar) and have it continuously gather drops or crops at your colony."]
+			icon: "ars_nouveau:source_gem"
+			tasks: [{ id: "5A11E0F1C0020022", type: "checkmark", title: "Bind a Familiar that continuously gathers drops/crops" }]
+			rewards: [
+				{ id: "5A11E0F1C005001B", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C005001C", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+
+		# ====== CLUSTER F — QUALITY OF LIFE (left) ======
+
+		{
+			id: "5A11E0F1C0010023"
+			x: -10.0d
+			y: 5.0d
+			title: "F1 — Display Link Dashboard"
+			subtitle: "4+ Display Links on a wall showing colony stats."
+			description: ["Build a dashboard: 4+ Create Display Links wired to chests, train stations, or other readable Create blocks. The wall updates in real time."]
+			icon: "create:display_link"
+			tasks: [{ id: "5A11E0F1C0020023", type: "checkmark", title: "Build a Display Link dashboard with 4+ live readouts" }]
+			rewards: [
+				{ id: "5A11E0F1C005001D", type: "xp", xp: 40 }
+				{ id: "5A11E0F1C005001E", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010024"
+			x: -9.0d
+			y: 3.0d
+			title: "F2 — Comforts Sleep Kit"
+			subtitle: "Sleep in any 3 distinct Comforts beds (bedroll / sleeping bag / hammock)."
+			description: ["Carry a Comforts bedroll, sleeping bag, and hammock in your inventory. Sleep in all three across one play session."]
+			icon: "comforts:sleeping_bag_red"
+			tasks: [{ id: "5A11E0F1C0020024", type: "checkmark", title: "Sleep in 3 distinct Comforts bed variants" }]
+			rewards: [
+				{ id: "5A11E0F1C005001F", type: "xp", xp: 30 }
+				{ id: "5A11E0F1C0050020", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010025"
+			x: -8.0d
+			y: 1.0d
+			title: "F3 — Repeating Beacon Network"
+			subtitle: "4-beam beacons on a single redstone pulse."
+			description: ["Place 4 beacons across the colony, each on its own pyramid, wired so a single redstone pulse toggles all four beams."]
+			icon: "minecraft:beacon"
+			tasks: [{ id: "5A11E0F1C0020025", type: "checkmark", title: "Toggle 4 beacons simultaneously from one redstone source" }]
+			rewards: [
+				{ id: "5A11E0F1C0050021", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C0050022", type: "random", table_id: 6490215866393690115L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010026"
+			x: -9.0d
+			y: -1.0d
+			title: "F4 — XP Sphere Collector"
+			subtitle: "Hopper/funnel collecting XP orbs into a single point."
+			description: ["Build a passive XP orb collector — a single block where XP orbs flow to from a wider area. The Foreman never chases orbs again."]
+			icon: "minecraft:experience_bottle"
+			tasks: [{ id: "5A11E0F1C0020026", type: "checkmark", title: "Build a passive XP orb collector at a single point" }]
+			rewards: [
+				{ id: "5A11E0F1C0050023", type: "xp", xp: 40 }
+				{ id: "5A11E0F1C0050024", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+		{
+			id: "5A11E0F1C0010027"
+			x: -7.0d
+			y: -3.0d
+			title: "F5 — One-Button Workshop Power"
+			subtitle: "Single lever toggles all workshop machines."
+			description: ["Wire all your workshop's rotation-management blocks (Clutches) to a single lever. One flip stops everything. Another starts everything."]
+			icon: "minecraft:lever"
+			tasks: [{ id: "5A11E0F1C0020027", type: "checkmark", title: "Wire the workshop's machines to a single master power lever" }]
+			rewards: [
+				{ id: "5A11E0F1C0050025", type: "xp", xp: 50 }
+				{ id: "5A11E0F1C0050026", type: "random", table_id: 6490215866393690114L }
+			]
+			dependencies: ["5A11E0F1C0010001"]
+		}
+
+		# ---------- Q31: Docket Filed (scene-beat finale) ----------
+		# 25 of 30 docket pages required (min_required_dependencies)
+		{
+			id: "5A11E0F1C0010031"
+			x: 0.0d
+			y: 19.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Project Docket Filed"
+			subtitle: "Twenty-five pages of automation. The Charter promotes you."
+			description: [
+				"Erik counts the ticked pages on the clipboard. Twenty-five. He stamps it with the Charter's wax seal."
+				""
+				"\"Project Manager,\" he says, and pins the eleventh docket — brass-trimmed — on your office wall. \"Five pages still blank. That's the Foreman's privilege. Some projects you finish for the Charter; some you leave for the next quarter.\""
+			]
+			icon: "create:brass_block"
+			tasks: [{
+				id: "5A11E0F1C0020031"
+				type: "checkmark"
+				title: "Project Docket filed — 25 of 30 pages ticked, the Charter signs off"
+			}]
+			rewards: [
+				{ id: "5A11E0F1C0030031", type: "xp", xp: 300 }
+				{ id: "5A11E0F1C0030032", type: "random", table_id: 6490215866393690115L }
+				{ id: "5A11E0F1C0030033", type: "item", item: { id: "create:brass_block", Count: 4b } }
+			]
+			min_required_dependencies: 25L
+			dependencies: [
+				"5A11E0F1C001000A"
+				"5A11E0F1C001000B"
+				"5A11E0F1C001000C"
+				"5A11E0F1C001000D"
+				"5A11E0F1C001000E"
+				"5A11E0F1C001000F"
+				"5A11E0F1C0010010"
+				"5A11E0F1C0010011"
+				"5A11E0F1C0010012"
+				"5A11E0F1C0010013"
+				"5A11E0F1C0010014"
+				"5A11E0F1C0010015"
+				"5A11E0F1C0010016"
+				"5A11E0F1C0010017"
+				"5A11E0F1C0010018"
+				"5A11E0F1C0010019"
+				"5A11E0F1C001001A"
+				"5A11E0F1C001001B"
+				"5A11E0F1C001001C"
+				"5A11E0F1C001001D"
+				"5A11E0F1C001001E"
+				"5A11E0F1C001001F"
+				"5A11E0F1C0010020"
+				"5A11E0F1C0010021"
+				"5A11E0F1C0010022"
+				"5A11E0F1C0010023"
+				"5A11E0F1C0010024"
+				"5A11E0F1C0010025"
+				"5A11E0F1C0010026"
+				"5A11E0F1C0010027"
+			]
+		}
+	]
+}

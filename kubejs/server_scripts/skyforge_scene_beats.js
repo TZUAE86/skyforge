@@ -241,6 +241,23 @@ const SCENE_BEATS = {
         sound: "minecraft:ui.toast.challenge_complete",
         pitch: 1.0,
         lore: "Tinker's Bench complete. Sequenced Assembly + bulk processing + contraptions + Item Vaults + decoration — all live in the workshop. The Foreman is a senior mechanic now."
+    },
+    // ---- Side: The Project Docket ----
+    "5A11E0F1C0010001": {
+        title: "The Project Docket Opened",
+        subtitle: "Erik hands you the senior engineer's clipboard.",
+        color: 0xC8A060,
+        sound: "minecraft:item.book.page_turn",
+        pitch: 1.0,
+        lore: "Project Docket opened. Thirty automation projects, no required order. Tick any page once the automation is built. The Charter trusts the Foreman's signature."
+    },
+    "5A11E0F1C0010031": {
+        title: "The Project Docket Filed",
+        subtitle: "Project Manager. The brass clip is yours.",
+        color: 0xE8C070,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 1.0,
+        lore: "Project Docket filed — 25 of 30 automation pages ticked. The Charter's clerk has the inventory. The Foreman is a Project Manager now; the eleventh docket goes on the office wall, brass-trimmed."
     }
 };
 

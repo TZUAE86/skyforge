@@ -226,7 +226,7 @@ hash = "cacf211cf399947b11c622724ab6137a7d15998c1f9a2dba712e1d987061e0dc"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_challenges.js"
-hash = "c8c3e5f65e038233a2c409f15dd1c3931f93e0c19ed0686158159e85f86c2c76"
+hash = "adc3ed9e9173ad881ef7f421809d9cbb47f2386486e0b7616f8bdba86c9e28e6"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_custom_tasks.js"

@@ -81,6 +81,10 @@ file = "config/ftbquests/quests/reward_tables/tier3_advanced.snbt"
 hash = "8e37fe3f37ee157de660d2dcd56bccbf346b2d7a44733420d7067042118fb0ed"
 
 [[files]]
+file = "config/inventoryhud-client.toml"
+hash = "fa9b299378daecab5e30c71df48ae4a0bcf2f0b1d31fb1b059fe93feda2ca6a1"
+
+[[files]]
 file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/categories/bestiary.json"
 hash = "b9ee98bfb758bd8ca32b10c4437feb3dd9c46775234a9231df9e0f9a8de99ae1"
 

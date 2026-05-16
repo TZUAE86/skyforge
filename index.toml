@@ -270,6 +270,26 @@ hash = "fb53bc6c0d543cd7e88a5faba1e3235dca6c556e0cf8c1a534bbdec581c3c2f8"
 metafile = true
 
 [[files]]
+file = "mods/apotheosis.pw.toml"
+hash = "89213937ee347c19bde57055ab13a93e9dd84978363c95810e34dbf44d44e1bc"
+metafile = true
+
+[[files]]
+file = "mods/apothic-attributes.pw.toml"
+hash = "014ee07aad95d234a4be89ab018d7cc72b9b41999bf0d5f45de11b509a10bd5e"
+metafile = true
+
+[[files]]
+file = "mods/apothic-enchanting.pw.toml"
+hash = "96354bc8654702df8ccc9ce6d91479e2e8fd4a3b60f5eb001ab761608de5c22d"
+metafile = true
+
+[[files]]
+file = "mods/apothic-spawners.pw.toml"
+hash = "73c6535aa33ece6287b6434c21edc5c16635003442e95c57b410b3acb4957a95"
+metafile = true
+
+[[files]]
 file = "mods/appleskin.pw.toml"
 hash = "ede3f1a1a9966ecba76bd49ecc839ca1a726fcfa5686d7aad64a46854984db99"
 metafile = true
@@ -716,12 +736,27 @@ metafile = true
 
 [[files]]
 file = "mods/patchouli.pw.toml"
-hash = "d7f360ebb9f009d6dc0b368cd8fa399bdff70c0f6ef931687b2a35137f72715d"
+hash = "3718e8a37d0dc2939cc350cce74bcb9c36b59f48baf4560e62804f7ca6478185"
+metafile = true
+
+[[files]]
+file = "mods/placebo.pw.toml"
+hash = "201e0be56d2d9430843688b4a04dea207732b6d60f8001fb9e6396d48aea287f"
 metafile = true
 
 [[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "93284ca7f2f23f0bb76d42b797cabf2aea1914ee9825bec82bf6ffe4c60dda0d"
+metafile = true
+
+[[files]]
+file = "mods/project-mmo.pw.toml"
+hash = "5d2ac8fa47bc4499ebcc8fe140b91d17b6628b10512bf871f84e24c045a642ff"
+metafile = true
+
+[[files]]
+file = "mods/puffish-skills.pw.toml"
+hash = "3069dab66ea67e1801b66543913b59def769deb46915aa2409d476f04c072a82"
 metafile = true
 
 [[files]]

@@ -371,7 +371,7 @@ metafile = true
 
 [[files]]
 file = "mods/cosmetic-armor-reworked-forked.pw.toml"
-hash = "968ce7b239311fd943a8640fcb27e8a2a88ab38fb51152164b541857b6d7cee5"
+hash = "a46ca4af9976720616c93d993965bd15317ed82746230c702c55eaf447be88fd"
 metafile = true
 
 [[files]]

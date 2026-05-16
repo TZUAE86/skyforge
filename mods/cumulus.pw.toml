@@ -1,6 +1,6 @@
 name = "Cumulus"
 filename = "cumulus_menus-1.21.1-2.0.8-neoforge.jar"
-side = "both"
+side = "client"
 
 [download]
 url = "https://cdn.modrinth.com/data/sq1f0DCq/versions/J49frL2W/cumulus_menus-1.21.1-2.0.8-neoforge.jar"

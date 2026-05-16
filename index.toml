@@ -271,7 +271,7 @@ metafile = true
 
 [[files]]
 file = "mods/appleskin.pw.toml"
-hash = "716d930feff599bf9ce732e05979fbae8025dc8a3c13ccf4f1cb207a70883bc6"
+hash = "ede3f1a1a9966ecba76bd49ecc839ca1a726fcfa5686d7aad64a46854984db99"
 metafile = true
 
 [[files]]
@@ -371,7 +371,7 @@ metafile = true
 
 [[files]]
 file = "mods/cosmetic-armor-reworked-forked.pw.toml"
-hash = "a46ca4af9976720616c93d993965bd15317ed82746230c702c55eaf447be88fd"
+hash = "968ce7b239311fd943a8640fcb27e8a2a88ab38fb51152164b541857b6d7cee5"
 metafile = true
 
 [[files]]
@@ -441,7 +441,7 @@ metafile = true
 
 [[files]]
 file = "mods/cumulus.pw.toml"
-hash = "9fe2e19ed010b60a54f3eeaa8b3e72929b1346daa61079b0171332a15a802ee3"
+hash = "38fa93c3d8c71317474bb1baa0faa305ea6ceaf85f5c349cee18d28b79820cb9"
 metafile = true
 
 [[files]]
@@ -451,7 +451,7 @@ metafile = true
 
 [[files]]
 file = "mods/distanthorizons.pw.toml"
-hash = "a98dd7f86518a0de7bb3451bee7c8e1d7cec1b7fe00d97504ce7afd7e715ae2d"
+hash = "56cb2e8e396bf26b56ffe0a44c794984435c35e15959ff46539bb8aead85ad77"
 metafile = true
 
 [[files]]
@@ -466,7 +466,7 @@ metafile = true
 
 [[files]]
 file = "mods/emi.pw.toml"
-hash = "d3c9b48d7caa2ed964e5d1a4dab1da5655c63f0a7e4a59231c4369be7ffc30e1"
+hash = "b07d7101e05c3551bdda0695b71cf87ade3b24e3374d26827c9cf1b0374df4b3"
 metafile = true
 
 [[files]]
@@ -576,12 +576,12 @@ metafile = true
 
 [[files]]
 file = "mods/jade.pw.toml"
-hash = "b6e0a61fea06f8d6d8e1672cf07b682625c4b74efd548d5093cd9c1fed167eec"
+hash = "b4ada8cc3723fd50ce5b4116784434d6ce9edc9e611eca2c5994dba8146d194e"
 metafile = true
 
 [[files]]
 file = "mods/jei.pw.toml"
-hash = "5367193d3f87b7bc5a81bcd64a5b96a843e76d4df7a83c8bb7e1911aa82dd52e"
+hash = "8da46348495ee032dbac80374ff4691351e41dfee9957dc27811e0957fe13e4e"
 metafile = true
 
 [[files]]
@@ -601,12 +601,12 @@ metafile = true
 
 [[files]]
 file = "mods/krypton-fnp.pw.toml"
-hash = "5a96006110f4cdd98460a994373153909a5f0bf6cb68c5ac3a64adbda86eb302"
+hash = "b29d9a3650624cc28e132f5416f24ac7b92ee6e2919db600a483ec524f2d1316"
 metafile = true
 
 [[files]]
 file = "mods/ksyxis.pw.toml"
-hash = "24108936876681291323c2ba37f0a8da6ae4a779411e360d480f21ab145c396b"
+hash = "758851ddf4f98e7852e2aa4b4a1e2efed4f2fafb33a41afc3bf445240b3f9c15"
 metafile = true
 
 [[files]]
@@ -861,12 +861,12 @@ metafile = true
 
 [[files]]
 file = "mods/xaeros-minimap.pw.toml"
-hash = "d609fad21021c5578750019bbe247515af55b0d1284ef838e42ef4ad0d5fbff4"
+hash = "2dea95045b782554e51b6d718e059f8736481814817ec760f0df25999e126747"
 metafile = true
 
 [[files]]
 file = "mods/xaeros-world-map.pw.toml"
-hash = "ac287f392613eddfa285620dcecb3fea25ee6232a201009cde5c5511b6a39fb9"
+hash = "9b18b4fc1350b8a90768034abf77fa31a46ef9f61c4a0d8c9543cbc72f018768"
 metafile = true
 
 [[files]]

@@ -1,6 +1,6 @@
 name = "Cosmetic Armor Reworked Forked"
 filename = "cosmeticarmorreworkedforked-neoforge-1.21.1-0.0.4.jar"
-side = "both"
+side = "client"
 
 [download]
 url = "https://cdn.modrinth.com/data/6cpT8CUC/versions/U6kExSSz/cosmeticarmorreworkedforked-neoforge-1.21.1-0.0.4.jar"

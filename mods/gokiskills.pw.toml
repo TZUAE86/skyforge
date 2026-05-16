@@ -1,0 +1,13 @@
+name = "GokiSkills"
+filename = "GokiSkills-neoforge-1.1.3b-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/8ThKJGCF/versions/ZcNUkIY5/GokiSkills-neoforge-1.1.3b-1.21.1.jar"
+hash-format = "sha512"
+hash = "f66b7ba3de4101c3f76344dc9ed3691cc6d6afae2e5711fda06479fdadaeb4d8e95f5562572a82e6f6881e46522cfe3361076c976e92e8eb5d15d6fc5a78ead0"
+
+[update]
+[update.modrinth]
+mod-id = "8ThKJGCF"
+version = "ZcNUkIY5"

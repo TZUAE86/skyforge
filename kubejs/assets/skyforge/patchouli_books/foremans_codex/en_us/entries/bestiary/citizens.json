@@ -1,0 +1,23 @@
+{
+  "name": "Citizen Workers",
+  "icon": "minecraft:emerald",
+  "category": "skyforge:bestiary",
+  "advancement": "skyforge:codex_workshop",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Your Citizens",
+      "text": "The Charter assigns citizens to each colony as the Town Hall is upgraded. A citizen is not, strictly, the Foreman's $(o)employee$() — they are the Charter's worker, on loan, audited at the same cycle as the rest of the books.$(br2)A senior Foreman keeps them fed, housed, and in honest work. The Charter rewards this in tax credit at audit."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Trades the Charter Recognises",
+      "text": "$(l)Builder$() — Erik's trade. The first hire on every colony.$(br2)$(l)Forester$() — wood at scale.$(br2)$(l)Miner$() — stone, ore, the deep terraces.$(br2)$(l)Farmer / Fisher$() — food, without which the audit fails.$(br2)$(l)Smelter$() — ingots at scale.$(br2)$(l)Guard$() — the Charter does not provide armies, but it provides Guards.$(br2)$(l)Mechanic$() — Workshop-tier. Comes in late. Worth the wait."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "A citizen who falls in service is, on the Charter's audit, $(o)\"transferred to permanent rest, with thanks.\"$() The Charter pays the Foreman a small docket-credit and seeds a replacement at the next survey.$(br2)Most senior Foremen learn their citizens' names anyway."
+    }
+  ]
+}

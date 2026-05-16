@@ -1,0 +1,22 @@
+{
+  "name": "Saskia Veridian",
+  "icon": "minecraft:potion",
+  "category": "skyforge:personnel",
+  "advancement": "skyforge:codex_diplomacy",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Saskia Veridian",
+      "text": "$(l)Senior Foreman, Veridian Pier. Reformer bloc leader.$()$(br2)Saskia took the Veridian Pier docket eleven years ago. By year three she had hybridised the forge with source-work. By year seven she had a healing potion subscription running between three Federation colonies."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "She is polite, exact, and entirely uninterested in your opinion of magic. She wrote her dissenting letter to the Charter in 5,200 words and she has, since, written approximately one such letter per quarter.$(br2)The Charter has not, officially, replied."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Saskia drinks her tea black and her wine red. She will invite you to Veridian Pier at some point. The invitation is not optional, in the way that a Charter docket is not optional. You may refuse. You will be invited again."
+    }
+  ]
+}

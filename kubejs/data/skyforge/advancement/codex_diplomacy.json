@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:story/root",
+  "display": {
+    "icon": { "id": "minecraft:gold_block" },
+    "title": { "text": "Codex: Diplomacy" },
+    "description": { "text": "The Brass Hall. The factions. The tea." },
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": { "default": { "trigger": "minecraft:impossible" } },
+  "rewards": {}
+}

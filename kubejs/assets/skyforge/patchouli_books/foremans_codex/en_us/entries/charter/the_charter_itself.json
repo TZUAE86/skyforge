@@ -1,0 +1,22 @@
+{
+  "name": "The Charter Itself",
+  "icon": "minecraft:writable_book",
+  "category": "skyforge:charter",
+  "advancement": "skyforge:codex_foundations",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Charter",
+      "text": "The $(l)Charter$() is the governing body of every floating fragment under the sky. It is older than most of the colonies it audits. It is slower than most of the storms that cross them.$(br2)Its job is simple. A surveyor finds a fragment. The Charter files a claim under a Foreman's name. The Foreman builds. The Charter audits. Everyone signs."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The Charter does not own your fragment. It $(o)witnesses$() it. The wax seal on a docket is older than gunpowder, older than steam, older than most living memory.$(br2)What the Charter signs, it defends. What the Charter does not sign, it does not defend. That clause has settled a hundred border disputes and started a few. Read every docket carefully."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Most Charter business runs on a quarterly $(l)audit cycle$(). A clerk visits, counts citizens, weighs ingots, reads the build log, tips a hat, leaves. If the books balance, the Foreman keeps the docket.$(br2)If they don't balance — that's the Charter's other job."
+    }
+  ]
+}

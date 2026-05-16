@@ -14,7 +14,7 @@ hash = "99e1a5bea98532b42b9b64e7b59f15fce650ad7c84409f3e5f3f1ac435f3e271"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_03_the_foreman.snbt"
-hash = "f6de3ee3e0addfa0f72e65a6303244d97de47e7b74087a7b6cdc3ac24d1541e6"
+hash = "e650fdadf7fa0b52bea6a6f14b2617390effbb9444bc89c42900c1c834cc3854"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/act_04_iron_bellows.snbt"
@@ -81,6 +81,150 @@ file = "config/ftbquests/quests/reward_tables/tier3_advanced.snbt"
 hash = "8e37fe3f37ee157de660d2dcd56bccbf346b2d7a44733420d7067042118fb0ed"
 
 [[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/categories/bestiary.json"
+hash = "b9ee98bfb758bd8ca32b10c4437feb3dd9c46775234a9231df9e0f9a8de99ae1"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/categories/charter.json"
+hash = "276e8c09a543f976360c19c3495cd4b4c45b5b8163f7a73e8b7c41b5bdb2b9dc"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/categories/factions.json"
+hash = "b10a0e5bbcf7c81025a27fb7a9d732da7da65cfd1e99f02353ec1b7b12d75244"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/categories/personnel.json"
+hash = "2e74f26233d12469c7ec83b42422c15f6904bf9e9f80f5e8081e12b7ae83cbbe"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/categories/places.json"
+hash = "92222243509e6b2badcb4646aa33bcfe2135aa60aa44f84b78ba998818fadf9e"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/bestiary/citizens.json"
+hash = "62ec1aa4f5623ce2f007da65383421cefd246005554a85199ce9f740c8218f5a"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/bestiary/eldritch_tide.json"
+hash = "776e554f3cc23cdf07f2afb9c1ff5feb18f960de42d7282d171317c6f7ea23f5"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/bestiary/sky_wildlife.json"
+hash = "446d3567cc0bec69318ba5c4a2a2033c13990fbd0b3929d0df8419413150e608"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/bestiary/wave_born.json"
+hash = "40b9d5aa401fa64ef5ef15fe7bde37e8b9ca31fd5add55ab891ee5197c436563"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/charter/the_charter_itself.json"
+hash = "8ed4497ece8194a3a1d1b317da36673d4d16493f7c14f8b38bb59c0516c068ea"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/charter/the_crisis.json"
+hash = "fc325d1f36de3d52b4a9633f3230dce005c052306079576b876079651a134547"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/charter/the_docket_system.json"
+hash = "f86b902331afa5972ebf4543e91d105f0f22001d4ba7dc4ec032cfd89b9ba921"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/charter/the_office_wall.json"
+hash = "5ce5c9f6ac697fa814756616a9f8b204e6b408ac10344663698dddeceb6e91dc"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/charter/the_tablet.json"
+hash = "f206de572c8e7c8a839d8d0642184c734596ee6006261b5a312d2c0c88d85c08"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/factions/pirates_of_the_wave.json"
+hash = "d53db250d6360656478c9fc871dbbd5cfa26ee8ef0f6a8f9fff067f955775c75"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/factions/reformers.json"
+hash = "0f21476e340bce239f77b9f3e32bfb98e84fa8602dc75f75873ac2fa6eccece5"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/factions/the_charter.json"
+hash = "332d74cd8ee817d356f0ac27fcb3f7e84014d835da27e3e869b181fbcadd95e3"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/factions/the_federation.json"
+hash = "15239388b3599a5eff3124817205722b72d749f13d2ed635a3890619d45c147c"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/factions/traditionalists.json"
+hash = "28b11946876fdee772aca11f2aa5e1227204f79739e690d17808b252855ffe74"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/personnel/cornelius_vanguard.json"
+hash = "d5d8abb681e0d50ccb3d021af8f9fc66123bb1f6210762cd4821a5c66729ba9a"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/personnel/erik_brassgrip.json"
+hash = "54ed6127115fb3416299afe58e3483244d25ad49e1fcb84bf773aaf0719a74fa"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/personnel/halloran_brassmere.json"
+hash = "4893a89bd4bef1a08a0da738f39deb5681fa90da9d85f532b3e75d28f7bf072b"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/personnel/saskia_veridian.json"
+hash = "1ce4a9b9284b0502f844fc1b123830a055c47dba4221f07a2c420fc8c737f4fa"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/personnel/yoki_stilts.json"
+hash = "16b3a0eaccb91dc58de18f3f6b003a16ee98f4b7f69ac9cbd7809fdab73316ca"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/places/aethers_edge.json"
+hash = "2096ac2155446df4299a5ac834bff6040de53d1d319dbd2837c6a7efac8e5acf"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/places/brass_hall.json"
+hash = "84f0c4a1ad577b14461297f284f524343f88b6397cebf39e9e2e37c47bc3e209"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/places/fragment_0x174a.json"
+hash = "acdc1d134223be0f809f832ee4dd988a9a358be9b6cd488f66809a25657d8fb0"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/places/sister_colonies.json"
+hash = "484caac6b796edc4d0f8cf34decbb54b4e063d077afaa7a7db974c0b8b2de935"
+
+[[files]]
+file = "kubejs/assets/skyforge/patchouli_books/foremans_codex/en_us/entries/places/the_citadel.json"
+hash = "e4803a630a8584130e94d5bb4a8a8b4cc4b140508125161a963ad651fbd706c0"
+
+[[files]]
+file = "kubejs/data/skyforge/advancement/codex_crisis.json"
+hash = "00d4a3de9b2e3c0cb2f245e74ab8d88b1f486cca4fbd158296a4f37d37a18979"
+
+[[files]]
+file = "kubejs/data/skyforge/advancement/codex_diplomacy.json"
+hash = "99251427cad5fd7d6af2ffb09acfe0cf7c42528c46acc5e3279cfa08e663fd3a"
+
+[[files]]
+file = "kubejs/data/skyforge/advancement/codex_endgame.json"
+hash = "739f8cb47b8e0106f6d0ecd6298bab35a5f6002748618a702a48a50cf623952c"
+
+[[files]]
+file = "kubejs/data/skyforge/advancement/codex_federation.json"
+hash = "f892e41981dc02be5a63a284a141b0a76ae3931b326880b04ff9b04a27aa58f6"
+
+[[files]]
+file = "kubejs/data/skyforge/advancement/codex_foundations.json"
+hash = "25663a9abe841762043f79213fbccaea66fb2d3d80d9e0320e51ced403387095"
+
+[[files]]
+file = "kubejs/data/skyforge/advancement/codex_workshop.json"
+hash = "3c76164d860c0e61ffbbf4248d3ea40b400230a01e699fa575269ebadbefd4fa"
+
+[[files]]
+file = "kubejs/data/skyforge/patchouli_books/foremans_codex/book.json"
+hash = "cacf211cf399947b11c622724ab6137a7d15998c1f9a2dba712e1d987061e0dc"
+
+[[files]]
 file = "kubejs/server_scripts/skyforge_challenges.js"
 hash = "953db6db44db1a36131e4d7320072f5a0982592ad3b199dc3f85f1464652e839"
 
@@ -89,12 +233,16 @@ file = "kubejs/server_scripts/skyforge_custom_tasks.js"
 hash = "8ffaf80d1bf212c45d1fc99d53344e6f79b23d4b01379de143fcc7eee9536a8e"
 
 [[files]]
+file = "kubejs/server_scripts/skyforge_office.js"
+hash = "fbbf8b30a6a707345593a49fa8984ef5fd26253514210b0d95d77cb54cba6c9f"
+
+[[files]]
 file = "kubejs/server_scripts/skyforge_player_setup.js"
 hash = "cf736ec614206cc0f79a2166dc53b6221e4e1829bea12d82be4a3aa34e97924c"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"
-hash = "2655933e9f72f562274972068a2f045bb4ce85ce70fde178737717fb8f58a20f"
+hash = "e83d98823b7b2f0ee091edca994e8911481c2000f697d7f1d423cb4cf1aac0b3"
 
 [[files]]
 file = "mods/advancedae.pw.toml"

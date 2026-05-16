@@ -1,0 +1,23 @@
+{
+  "name": "The Office Wall",
+  "icon": "minecraft:item_frame",
+  "category": "skyforge:charter",
+  "advancement": "skyforge:codex_foundations",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Twelve Dockets",
+      "text": "A senior Foreman's office wall holds, in order, twelve framed dockets. Each marks a level of Charter recognition.$(br2)Most Foremen will earn five or six. A few earn nine. The full row of twelve — one for every act of a Foreman's tenure plus the brass-trimmed Project Manager — is rare enough that the Charter prints a roll-call once a year.$(br2)Type $(l)/skyforge office$() to see your own wall, however many it currently holds."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Row, In Order",
+      "text": "$(l) 1.$() Foreman of Record$(br)$(l) 2.$() First Smoke Filed$(br)$(l) 3.$() Builder of Record (Erik signs)$(br)$(l) 4.$() Iron Bellows Operator$(br)$(l) 5.$() Sky Wright$(br)$(l) 6.$() Federation Liaison$(br)$(l) 7.$() Workshop Foreman$(br)$(l) 8.$() Sky Captain$(br)$(l) 9.$() Frontier Engineer$(br)$(l)10.$() Citadel Witness$(br)$(l)11.$() Brass Hall Councilor$(br)$(l)12.$() Project Manager"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The twelfth — $(l)Project Manager$() — is brass-trimmed. The Charter awards it when a senior Foreman has filed a Project Docket of 25 or more independent automation pages.$(br2)It is the only docket on the wall that is not about $(o)what you built$() — it is about $(o)how much of it runs without you$()."
+    }
+  ]
+}

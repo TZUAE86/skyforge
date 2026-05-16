@@ -1,0 +1,22 @@
+{
+  "name": "The Brass Hall",
+  "icon": "minecraft:gold_block",
+  "category": "skyforge:places",
+  "advancement": "skyforge:codex_diplomacy",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Brass Hall",
+      "text": "The $(l)Brass Hall$() is where the Federation Council meets. It is not on any Charter map. The Charter does not, officially, acknowledge it exists.$(br2)It exists. The senior Foreman of every full Federation colony has been there at least once. They do not write down the route."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The Hall itself is a floating chamber, brass-plated, copper-roofed. A long table at the centre. Eleven chairs.$(br2)The chairs are not assigned by rank. They are assigned by $(o)attendance$(). The senior Foremen who keep showing up are the ones who decide things. The rest are guests."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The Charter knows about the Brass Hall. The Charter has never raided it.$(br2)Some senior Foremen take this as proof that the Charter does not mind. Some senior Foremen take it as proof that the Charter is waiting for the Hall to do something the Charter can audit.$(br2)Halloran sits in the eleventh chair."
+    }
+  ]
+}

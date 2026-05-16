@@ -1,0 +1,22 @@
+{
+  "name": "The Aether's Edge",
+  "icon": "minecraft:end_stone",
+  "category": "skyforge:places",
+  "advancement": "skyforge:codex_endgame",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Aether's Edge",
+      "text": "Past the last charted fragment, the sky $(o)thins$(). Surveyors call this the $(l)Aether's Edge$(). It is where the Charter's maps stop being useful and start being polite.$(br2)Source fonts are common past the Edge. So are things the Charter does not have a clerk for."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The Reformers want to colonise the Edge. They have, twice, applied for a survey docket. The Charter has, twice, refused. The reasons given are $(o)\"audit difficulty.\"$()$(br2)The reasons not given are longer."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "A senior Foreman who works on the Aether's Edge is doing magic-tech the Charter cannot fully account for. Some Foremen take that as a thrill. The Charter takes it as a $(o)problem to solve later$(). Later, in the Charter, is a long time."
+    }
+  ]
+}

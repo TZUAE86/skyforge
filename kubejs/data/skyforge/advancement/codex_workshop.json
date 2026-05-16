@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:story/root",
+  "display": {
+    "icon": { "id": "minecraft:emerald" },
+    "title": { "text": "Codex: Workshop" },
+    "description": { "text": "Citizens, hires, hut shelves." },
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": { "default": { "trigger": "minecraft:impossible" } },
+  "rewards": {}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Erik Brassgrip",
+  "icon": "minecraft:leather_helmet",
+  "category": "skyforge:personnel",
+  "advancement": "skyforge:codex_foundations",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Erik Brassgrip",
+      "text": "$(l)Senior Builder. Fourteen years in Charter service.$()$(br2)Erik is the Builder the Charter assigns to your colony. He tips his cap when he disembarks, says his name, mentions his cousin in another colony, and then he gets to work."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "His cousin is $(l)Mara Brassgrip$(), who still ploughs at Brassgrip's Reach — a Charter colony two hops over the cloud-bank. Erik mentions her at least once per audit cycle. He is fond of her.$(br2)Erik does not talk about his own family. Whatever the Charter knows, it does not share."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Erik will build anything you sign for, in the order you sign, at the speed his hut allows. Upgrade his hut and he gets faster. Stock his shelves and he gets faster still.$(br2)He has, in fourteen years of service, never filed a complaint. The Charter has noted this twice in his record. It is the highest compliment a clerk knows how to write."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "If the Charter ever recalls Erik, he will go. He has said so out loud once, while sober. He has not said it twice.$(br2)Erik is the Foreman's first friend. Most Foremen do not realise this until much later."
+    }
+  ]
+}

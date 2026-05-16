@@ -1,0 +1,23 @@
+{
+  "name": "Sister Colonies",
+  "icon": "minecraft:minecart",
+  "category": "skyforge:places",
+  "advancement": "skyforge:codex_federation",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Sister Colonies",
+      "text": "Your fragment is not, despite the early survey, alone. The Federation maintains regular cargo routes between $(l)sister colonies$() — Charter fragments within a few cloud-hops, willing to coordinate.$(br2)Common partners on the audit map:"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "The Roster",
+      "text": "$(l)North Buttress$() — high-altitude, granite-rich, ten senior builders. Reliable iron.$(br2)$(l)Brassgrip's Reach$() — Erik's cousin's colony. Grain, livestock, a working windmill.$(br2)$(l)Veridian Pier$() — Saskia's. Alchemy, brewed potions, mixed forge.$(br2)$(l)High Ridge$() — Yoki's. Old-Charter standards, clean ledgers.$(br2)$(l)Loomspur$() — textile-focused, the Federation's robes and uniforms.$(br2)$(l)Drift Quarry$() — stone, gravel, sand, and the largest hopper bank in the Federation."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Federation cargo runs are not Charter-mandated. They run on $(o)standing dockets$() — long-form agreements signed between senior Foremen, witnessed by Halloran when he is in the neighbourhood.$(br2)A new Foreman is welcome at any sister colony's port. The tea will be poured. The docket will be drafted. The Foreman will be invited back."
+    }
+  ]
+}

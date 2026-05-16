@@ -54,7 +54,7 @@ const SCENE_BEATS = {
         color: 0xB8A06C,
         sound: "minecraft:entity.villager.yes",
         pitch: 1.0,
-        lore: "Act III — The Foreman. The survey ship landed. Erik tipped his cap. The colony is filed under your name."
+        lore: "Act III — The Foreman. The survey ship landed. Erik tipped his cap. The colony is filed under your name. Erik handed you a leather-bound book — the Foreman's Codex. He said every senior keeps one."
     },
     "5A11E0F103010040": {
         title: "The Colony Is Named",
@@ -261,7 +261,7 @@ const SCENE_BEATS = {
     }
 };
 
-function fireSceneBeat(player, beat) {
+function fireSceneBeat(player, beat, qid) {
     if (!player || !beat) return;
     var hexColor = '#' + beat.color.toString(16).padStart(6, '0');
     try {
@@ -282,7 +282,7 @@ function fireSceneBeat(player, beat) {
         var lore = (raw && raw.length > 0) ? JSON.parse(raw) : {};
         var uuid = player.uuid.toString();
         if (!lore[uuid]) lore[uuid] = [];
-        lore[uuid].push({ ts: Date.now(), text: beat.lore });
+        lore[uuid].push({ ts: Date.now(), text: beat.lore, qid: qid });
         server.persistentData.putString('skyforge_lore', JSON.stringify(lore));
     } catch (e) {
         console.error('[Skyforge] beat lore log failed: ' + e);
@@ -296,7 +296,7 @@ Object.keys(SCENE_BEATS).forEach(function(qid) {
             var beat = SCENE_BEATS[qid];
             var players = event.notifiedPlayers;
             for (var i = 0; i < players.size(); i++) {
-                fireSceneBeat(players.get(i), beat);
+                fireSceneBeat(players.get(i), beat, qid);
             }
         } catch (e) {
             console.error('[Skyforge] scene-beat ' + qid + ' failed: ' + e);

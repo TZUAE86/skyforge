@@ -1,0 +1,22 @@
+{
+  "name": "The Citadel",
+  "icon": "minecraft:stone_bricks",
+  "category": "skyforge:places",
+  "advancement": "skyforge:codex_endgame",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Citadel",
+      "text": "The $(l)Citadel$() is the largest single Charter structure in the known sky. A fortress-fragment, walled, towered, audited end-to-end. The Charter's central archives are filed there.$(br2)The senior administrators work out of the Citadel when they are not in transit."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Every senior Foreman, at some point, is invited to the Citadel. The invitation is a black-wax docket — not a recall, but a $(o)witnessing$(). The Charter wants the Foreman to see, in person, the institution they sign for.$(br2)It is a long flight. Survey ships are provided."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "What the Foreman sees at the Citadel depends on what the Charter has decided to show them.$(br2)Most see the archive. Some see the audit chambers. A few see what is on the Citadel's lowest floor, and the Charter does not, after, ask them to write a docket about it."
+    }
+  ]
+}

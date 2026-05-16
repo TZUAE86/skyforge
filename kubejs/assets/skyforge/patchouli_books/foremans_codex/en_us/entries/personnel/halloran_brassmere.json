@@ -1,0 +1,22 @@
+{
+  "name": "Halloran Brassmere",
+  "icon": "minecraft:clock",
+  "category": "skyforge:personnel",
+  "advancement": "skyforge:codex_diplomacy",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Halloran Brassmere",
+      "text": "$(l)Charter Administrator. Senior. Neutral.$()$(br2)Halloran is the administrator who shows up to every tea, sits between Saskia and Yoki, and says almost nothing. He drinks one cup. He listens. He leaves before the bell."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "What Halloran does is not, strictly, on record. He is an administrator. He administrates.$(br2)What is on record: every faction tea Halloran attends ends without bloodshed. Every audit Halloran witnesses ends with a signed ledger. Every Foreman who has met Halloran says the same thing afterward — $(o)\"he listens.\"$()"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Halloran is the senior Charter administrator most likely to be in the room when something difficult happens. Most senior Foremen take this as a comfort.$(br2)A few take it as a warning. Both readings have, in the Charter's history, been correct."
+    }
+  ]
+}

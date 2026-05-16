@@ -1,0 +1,22 @@
+{
+  "name": "The Federation",
+  "icon": "minecraft:white_banner",
+  "category": "skyforge:factions",
+  "advancement": "skyforge:codex_federation",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Federation",
+      "text": "The $(l)Federation$() is what a constellation of Charter colonies calls itself when they decide to coordinate without asking the Charter.$(br2)Cargo runs. Joint defence. Shared smelters. The Federation is the practical answer to the Charter's slowness."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "It is not, strictly, a separate government. The Charter still signs the dockets. The Charter still audits the books. The Federation is a $(o)Foreman's club$() — senior engineers from the major colonies who meet, drink, and agree on standards the Charter is too slow to write.$(br2)Some say the Federation is the Charter's future. Some say it is the Charter's mistake."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The $(l)Brass Hall$() is where the Federation meets. It is not on any Charter map. The senior Foreman of every full Federation colony knows where it is. They do not write it down."
+    }
+  ]
+}

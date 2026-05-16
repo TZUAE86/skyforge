@@ -1,0 +1,22 @@
+{
+  "name": "The Reformers",
+  "icon": "minecraft:brewing_stand",
+  "category": "skyforge:factions",
+  "advancement": "skyforge:codex_diplomacy",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Reformers",
+      "text": "The $(l)Reformers$() are the Federation bloc that wants the Charter to move faster, write less, and recognise alchemy and source-work as Charter-grade engineering.$(br2)They are led, informally, by $(l)Saskia Veridian$() of Veridian Pier."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Reformer colonies tend to be the ones with $(o)mixed forges$() — brass and source, steam and alchemy, builders and Source Relays standing in the same yard.$(br2)The Charter has not, officially, decided what to do with them. The Charter rarely officially decides anything."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Reformers are not radicals. They write very polite letters. The trouble is that they write very $(o)many$() of them, and they expect responses, and the Charter clerks are slow."
+    }
+  ]
+}

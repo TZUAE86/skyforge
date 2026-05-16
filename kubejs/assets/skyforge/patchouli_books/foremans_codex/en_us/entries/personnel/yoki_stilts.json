@@ -1,0 +1,22 @@
+{
+  "name": "Yoki Stilts",
+  "icon": "minecraft:anvil",
+  "category": "skyforge:personnel",
+  "advancement": "skyforge:codex_diplomacy",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Yoki Stilts",
+      "text": "$(l)Senior Foreman, High Ridge. Traditionalist bloc leader.$()$(br2)Yoki is older than Saskia by a decade and runs her colony on iron, steam, and wax. There is no Source Relay on the High Ridge. There has never been one. There will not be one while Yoki signs the docket."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Yoki is not, despite the rumours, anti-magic. She is anti-$(o)unaudited$(). A potion that cannot be assayed by the Charter clerk's scales is, to Yoki, a $(o)liability$(). She has said this in writing, in 320 words, and the Charter has signed it.$(br2)She and Saskia are, in person, perfectly cordial. They send each other tea at festivals."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Yoki's colony is the one Foreman trainees are sent to when the Charter wants them to learn $(o)how the old books were kept$(). Most senior Foremen have signed at least one audit ledger on the High Ridge.$(br2)Yoki remembers their names."
+    }
+  ]
+}

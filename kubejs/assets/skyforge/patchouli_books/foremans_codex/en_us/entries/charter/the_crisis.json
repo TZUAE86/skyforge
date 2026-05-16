@@ -1,0 +1,22 @@
+{
+  "name": "The Charter's Crisis",
+  "icon": "minecraft:redstone_torch",
+  "category": "skyforge:charter",
+  "advancement": "skyforge:codex_crisis",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "A Quiet Crisis",
+      "text": "The Charter is not at war. The Charter is rarely at war. The Charter writes letters.$(br2)But for the last two audit cycles, the letters have been getting odd. Dockets filed without surveyor signatures. Wax of the wrong colour. An entire Brass Hall session — minutes never published."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Senior Foremen speak of it in low voices at the back of teas. The phrase that gets used is $(o)\"a rogue administrator.\"$() Nobody names the administrator out loud. Nobody is sure if there is just the one.$(br2)What is sure: forged Charter letterhead has surfaced in three colonies. The Charter has not acknowledged it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "A senior Foreman is, by old Charter convention, $(l)deputised$() during a crisis. The brass clip on the office desk is not decorative.$(br2)Erik says the same thing he always says. $(o)\"Keep the books clean. The Charter audits eventually. Even itself.\"$()"
+    }
+  ]
+}

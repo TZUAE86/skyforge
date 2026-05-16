@@ -46,6 +46,11 @@
 			rewards: [
 				{ id: "5A11E0F103030001", type: "xp", xp: 50 }
 				{ id: "5A11E0F103030002", type: "item", item: "minecolonies:blockhuttownhall" }
+				{
+					id: "5A11E0F103030007"
+					type: "item"
+					item: { id: "patchouli:guide_book", Count: 1b, components: { "patchouli:book": "skyforge:foremans_codex" } }
+				}
 			]
 			dependencies: ["5A11E0F102010040"]
 		}

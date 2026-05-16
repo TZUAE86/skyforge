@@ -1,0 +1,22 @@
+{
+  "name": "The Wave-Born",
+  "icon": "minecraft:crossbow",
+  "category": "skyforge:bestiary",
+  "advancement": "skyforge:codex_federation",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Wave-Born",
+      "text": "The cloud-bank gangs. The Wave's own. The pirates the Charter files under $(l)\"raid-class$()$(l), light-tonnage.\"$()$(br2)They come in small crews, in fast ships, in coats stitched from a dozen captured uniforms. They are not, individually, dangerous. They are dangerous because they outnumber the Charter's survey ships by something like three to one."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "A Wave-born raid runs on a familiar timetable. They arrive at sunset. They take what they can carry. They leave before sunrise.$(br2)A fortified colony loses iron. An unfortified colony loses citizens. The Charter, after, files a survey docket and replaces the lost citizens with the audit reserve. Slowly."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Some Wave-born are former Charter Foremen whose dockets were recalled. The Charter, officially, does not comment on this.$(br2)Erik will, sober, tell you it is true. He will not, sober, tell you any of their names."
+    }
+  ]
+}

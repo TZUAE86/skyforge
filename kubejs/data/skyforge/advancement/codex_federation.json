@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:story/root",
+  "display": {
+    "icon": { "id": "minecraft:white_banner" },
+    "title": { "text": "Codex: Federation" },
+    "description": { "text": "Sister colonies, cargo routes, the Wave." },
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": { "default": { "trigger": "minecraft:impossible" } },
+  "rewards": {}
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:story/root",
+  "display": {
+    "icon": { "id": "minecraft:writable_book" },
+    "title": { "text": "Codex: Foundations" },
+    "description": { "text": "The Charter, the Tablet, the office wall." },
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": { "default": { "trigger": "minecraft:impossible" } },
+  "rewards": {}
+}

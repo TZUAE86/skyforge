@@ -1,0 +1,24 @@
+{
+  "name": "Sky Wildlife",
+  "icon": "minecraft:feather",
+  "category": "skyforge:bestiary",
+  "advancement": "skyforge:codex_foundations",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "What Lives Up Here",
+      "text": "Most of what lives on a Charter fragment is recognisable. Pigs, sheep, cows, chickens — Charter survey ships seed them in the first year. Wolves and foxes arrive on their own, eventually, by some sky-walked route nobody has charted.$(br2)Past the seeding, the wild fills in."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Useful Drops",
+      "text": "$(l)Sheep$() — wool, mutton. The Foreman's first textile.$(br2)$(l)Cow$() — leather, beef. The Foreman's first armour binding.$(br2)$(l)Chicken$() — feathers for arrows, eggs for the Federation breakfast docket.$(br2)$(l)Bee$() — honey, wax. The wax matters. Charter dockets need wax."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Dangerous Flora",
+      "text": "The Charter's surveys note that the fragment's lower terraces sometimes host $(o)source-touched$() plant life — flowers that move on their own, vines that grow toward a forge fire.$(br2)Reformers find them useful. Traditionalists burn them. The Charter has signed both responses depending on the auditor."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:story/root",
+  "display": {
+    "icon": { "id": "minecraft:gunpowder" },
+    "title": { "text": "Codex: The Crisis" },
+    "description": { "text": "The rogue administrator. The wax of the wrong colour." },
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": { "default": { "trigger": "minecraft:impossible" } },
+  "rewards": {}
+}

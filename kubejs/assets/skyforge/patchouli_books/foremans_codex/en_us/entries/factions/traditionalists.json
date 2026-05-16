@@ -1,0 +1,22 @@
+{
+  "name": "The Traditionalists",
+  "icon": "minecraft:iron_block",
+  "category": "skyforge:factions",
+  "advancement": "skyforge:codex_diplomacy",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Traditionalists",
+      "text": "The $(l)Traditionalists$() are the Federation bloc that keeps the old Charter ways. Brass. Steam. Iron. Wax seals. Written letters. Audited books.$(br2)They are led, informally, by $(l)Yoki Stilts$() of the high ridges."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Traditionalists are not against magic. They are against the Charter signing dockets it cannot $(o)audit$(). Source flow is hard to measure. Spell-craft is harder. A Charter clerk cannot weigh a soul-stone the way they weigh an ingot.$(br2)The Traditionalist position is: if you cannot audit it, do not sign for it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "In practice, Traditionalist colonies run cleaner books, slower forges, and tighter walls. They lose fewer audits. They also lose more Federation contracts to the Reformers, who can produce healing potions on tap."
+    }
+  ]
+}

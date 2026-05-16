@@ -1,0 +1,22 @@
+{
+  "name": "Cornelius Vanguard",
+  "icon": "minecraft:gunpowder",
+  "category": "skyforge:personnel",
+  "advancement": "skyforge:codex_crisis",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Cornelius Vanguard",
+      "text": "$(l)Charter Administrator. Status: filing irregular.$()$(br2)Cornelius Vanguard was, until recently, a Charter administrator of standing comparable to Halloran's. His signature appeared on routine dockets across three colonies for eleven years."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The Charter has not, in any public communication, said that Cornelius Vanguard is missing. The Charter has also not, in any public communication, said anything else.$(br2)Senior Foremen note that Vanguard's signature has continued to appear on dockets in colonies he has not, by any survey ship's log, visited.$(br2)Some of the wax is the wrong colour."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "It is the Charter's policy that an administrator's filings are presumed valid until audited.$(br2)An audit takes time. Most senior Foremen suspect the audit is, in this case, what Cornelius Vanguard is waiting for.$(br2)Most senior Foremen do not, in writing, say so."
+    }
+  ]
+}

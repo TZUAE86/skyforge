@@ -1,0 +1,22 @@
+{
+  "name": "The Charter (as a Faction)",
+  "icon": "minecraft:bell",
+  "category": "skyforge:factions",
+  "advancement": "skyforge:codex_foundations",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Charter",
+      "text": "Bureaucratic. Slow. Generous. Legalistic.$(br2)Those four words are how every senior Foreman describes the Charter when pressed. None of them are wrong."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The Charter's strength is its $(l)patience$(). It will sign almost any reasonable docket, given time and tea. Its weakness is the same. A claim filed today may not be audited for a year. A complaint filed today may never be heard.$(br2)Foremen learn to keep their own books clean. The Charter audits eventually."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The Charter is $(o)not$() a military body. It has clerks and surveyors and the occasional auditor. It does not have armies. When pirates raid a colony, the Charter writes a strongly worded note and dispatches a survey ship to count the dead.$(br2)Some Foremen find this comforting. Some do not."
+    }
+  ]
+}

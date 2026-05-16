@@ -1,0 +1,22 @@
+{
+  "name": "Fragment 0x174A",
+  "icon": "minecraft:stone",
+  "category": "skyforge:places",
+  "advancement": "skyforge:codex_foundations",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Fragment 0x174A",
+      "text": "Your home fragment. The Charter's surveyor logged it as $(l)0x174A$() — the catalogue number of the survey that found it. It has no other name unless you give it one.$(br2)Most Foremen give their fragment a name. Most Charter clerks continue to file it under the number anyway."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The fragment sits at a stable cloud-bank altitude with reliable updrafts and predictable storms. Survey notes call it $(o)\"workable.\"$() That is the highest praise a Charter surveyor gives an unbuilt fragment.$(br2)Iron ore reasonable. Copper present. Source fonts none on first survey — Foreman's discretion if any are found later."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The fragment's $(l)Tablet$() — the one in your survey crate — is keyed to the surveyor's report of 0x174A. If you take it elsewhere, it is a stone. If anyone else takes it from you, it is a stone.$(br2)This is the only thing the Charter has ever been quick about."
+    }
+  ]
+}

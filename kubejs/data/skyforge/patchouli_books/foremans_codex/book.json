@@ -1,0 +1,12 @@
+{
+  "name": "The Foreman's Codex",
+  "landing_text": "$(l)A senior Foreman's reference book.$()$(br2)Erik handed you this. Every senior keeps one. Dossiers on the people, places, factions, and wildlife of the Charter's sky. Read it cover to cover or thumb to the page you need.$(br2)$(o)— filed under your name, by the Charter's clerk.$()",
+  "subtitle": "Senior Engineer's Reference, 14th Print",
+  "creative_tab": "tools_and_utilities",
+  "model": "patchouli:book_brown",
+  "book_texture": "patchouli:textures/gui/book_brown.png",
+  "use_resource_pack": true,
+  "show_progress": false,
+  "version": 1,
+  "i18n": false
+}

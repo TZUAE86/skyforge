@@ -1,0 +1,22 @@
+{
+  "name": "The Eldritch Tide",
+  "icon": "minecraft:wither_skeleton_skull",
+  "category": "skyforge:bestiary",
+  "advancement": "skyforge:codex_endgame",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Tide",
+      "text": "The $(l)Eldritch Tide$() is what the Charter, in private, calls a $(o)problem the Charter does not have a clerk for$().$(br2)It is not, strictly, an invasion. It is a $(o)rising$(). Things that should not move begin to move. Things that should not speak begin to speak. The Charter has, twice, sent an audit ship into the affected fragment. Neither audit ship returned a docket."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "What is known: the Tide is most active near the $(l)Aether's Edge$(). It manifests as creatures the Iron's Spells codex calls $(o)\"wandering\"$() and $(o)\"summoned without summoner.\"$() The Charter has not, officially, agreed with the Iron's Spells codex about anything.$(br2)Senior Foremen on the Edge file under a special docket prefix. The wax is dark blue."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "What is suspected: the Tide and the Charter's rogue-administrator situation are not, despite the Charter's hopes, unrelated.$(br2)Nobody has, in writing, said so. A senior Foreman who works near the Edge is invited to keep their books $(o)very$() clean."
+    }
+  ]
+}

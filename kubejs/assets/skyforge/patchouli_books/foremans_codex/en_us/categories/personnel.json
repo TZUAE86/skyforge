@@ -1,0 +1,6 @@
+{
+  "name": "Personnel Roster",
+  "description": "The names you will hear most often. Builders, faction leaders, administrators — the people whose dockets cross your desk.",
+  "icon": "minecraft:player_head",
+  "sortnum": 2
+}

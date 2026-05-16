@@ -1,0 +1,22 @@
+{
+  "name": "The Docket System",
+  "icon": "minecraft:paper",
+  "category": "skyforge:charter",
+  "advancement": "skyforge:codex_foundations",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Dockets",
+      "text": "A $(l)docket$() is a single signed page. It records a thing the Foreman did, intends to do, or is responsible for. The wax seal at the bottom is the Charter's signature.$(br2)Most dockets are small. Build a wall. Hire a builder. Forge sixty-four ingots. Each one is filed with the clerk and forgotten by everyone except the Foreman who signed it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Some dockets are larger. The $(l)Engineer's Cap$() is a docket. So is the $(l)Project Manager's brass clip$(). These hang on the office wall in a row of eleven and they each represent a level of mastery the Charter recognises in writing.$(br2)A senior Foreman with the full row is rare enough that the Charter sends a Council carriage."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The $(l)wax seal$() is the part to watch. Red wax is routine. Brass-trimmed wax is a senior docket. Black wax is a $(o)recall$() — and a recall is when the Charter sends auditors with company."
+    }
+  ]
+}

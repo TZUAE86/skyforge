@@ -1,0 +1,22 @@
+{
+  "name": "The Foreman's Tablet",
+  "icon": "minecraft:stone",
+  "category": "skyforge:charter",
+  "advancement": "skyforge:codex_foundations",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Tablet",
+      "text": "Every Charter claim begins the same way. A surveyor's crate is opened on a fresh fragment. Inside is a $(l)Tablet$() — a flat stone slab, palm-sized, with the Charter's mark stamped into it.$(br2)When the Foreman activates it, the Tablet wakes. The claim is filed. From that moment, the fragment is on the Charter's map."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Nobody is quite sure how the Tablet works. It is not magic in the Reformer sense. It is not mechanical in the Foreman sense. Most senior engineers stop asking after the first decade.$(br2)What is known: a Tablet only activates for the Foreman whose name is on the docket. A stolen Tablet is a $(o)stone$()."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Some Foremen keep their Tablet on the office desk forever. Some bury it under the first stone of the first foundation. There is no Charter rule on this. The Tablet has done its job the moment it activated."
+    }
+  ]
+}

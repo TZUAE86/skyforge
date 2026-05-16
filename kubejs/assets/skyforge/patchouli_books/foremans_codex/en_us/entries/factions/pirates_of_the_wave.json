@@ -1,0 +1,22 @@
+{
+  "name": "Pirates of the Wave",
+  "icon": "minecraft:tnt",
+  "category": "skyforge:factions",
+  "advancement": "skyforge:codex_federation",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "The Wave",
+      "text": "The $(l)Wave$() is what surveyors call the great cloud-bank that runs along the underside of the sky. Below it, the air thins to nothing. Above it, the Charter's maps end.$(br2)Things live in the Wave. Some of them have ships."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The $(l)Wave-born$() — pirates, raiders, gangs — are not a single faction. They are dozens of small crews who use the Wave as cover and the Charter's slowness as opportunity.$(br2)They want ingots. They want food. Some of them want hostages, which the Charter will eventually ransom out of the audit reserve."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Why does the Charter tolerate them? Two reasons.$(br2)One: the Charter has no navy. Sending an audit ship into the Wave is a way to lose an audit ship.$(br2)Two: the Charter $(o)needs$() the Wave-born, faintly. A colony that fears raids fortifies. A colony that fortifies pays the Charter for defensive surveys. The Charter is patient, and the books balance."
+    }
+  ]
+}

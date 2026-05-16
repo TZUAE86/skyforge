@@ -74,8 +74,8 @@ function skyforgeStartChallenge(player, challengeId) {
             console.warn("[Skyforge] unknown challenge: " + challengeId);
             return false;
         }
-        const server = player.server;
-        const active = getActive(server);
+        const srv = player.server;
+        const active = getActive(srv);
         const key = player.uuid.toString() + ":" + challengeId;
         const baseline = def.kind === "throughput"
             ? countItemInInventory(player, def.item)
@@ -86,7 +86,7 @@ function skyforgeStartChallenge(player, challengeId) {
             kind: def.kind,
             challengeId: challengeId
         };
-        setActive(server, active);
+        setActive(srv, active);
         player.tell("§e[Charter] Challenge started: §f" + challengeId);
         return true;
     } catch (e) {
@@ -103,8 +103,8 @@ ServerEvents.tick(event => {
         if (tickCounter < CHALLENGE_TICK_HZ) return;
         tickCounter = 0;
 
-        const server = event.server;
-        const active = getActive(server);
+        const srv = event.server;
+        const active = getActive(srv);
         if (Object.keys(active).length === 0) return;
 
         const now = Date.now();
@@ -120,7 +120,7 @@ ServerEvents.tick(event => {
             }
             const elapsedSec = (now - c.startedAt) / 1000;
             const uuid = key.split(":")[0];
-            const player = server.players.find(p => p.uuid.toString() == uuid);
+            const player = srv.players.find(p => p.uuid.toString() == uuid);
             if (!player) continue;
 
             if (def.kind === "throughput") {
@@ -140,7 +140,7 @@ ServerEvents.tick(event => {
             // no-craft and waypoint kinds wired in when Acts IV-VI land
         }
 
-        if (dirty) setActive(server, active);
+        if (dirty) setActive(srv, active);
     } catch (e) {
         console.error("[Skyforge] challenge tick crashed: " + e);
     }

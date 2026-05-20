@@ -1,12 +1,12 @@
 name = "Skyforge"
 author = "Athezu"
-version = "0.9.7"
+version = "0.9.8"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "4637324d3417a46b97ea782129cd0125b32ddf7335851b83af0c4534df156c82"
+hash = "42888697d33e28623c62f05df9951266a76c3629d5af3c0441f89009afb8ff6e"
 
 [versions]
 minecraft = "1.21.1"

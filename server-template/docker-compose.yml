@@ -1,0 +1,72 @@
+# Skyforge dedicated server via itzg/minecraft-server
+# Usage:  docker compose up -d   (in this folder)
+# Stop:   docker compose down
+# Logs:   docker compose logs -f
+# Console: docker compose exec skyforge rcon-cli
+#
+# AUTO-UPDATE: this compose file uses MODRINTH_MODPACK pointing at the
+# latest GitHub Release mrpack. On every `docker compose up`, the itzg
+# image fetches the mrpack and reconciles mods/config/kubejs to match.
+# To pin a specific version, change the MODRINTH_MODPACK URL.
+#
+# If you'd rather use the bare-metal launcher with packwiz auto-update
+# (start-server.sh), comment out MODRINTH_MODPACK and mount ./mods
+# back in.
+
+services:
+  skyforge:
+    image: itzg/minecraft-server:java21
+    container_name: skyforge
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    ports:
+      - "25565:25565/tcp"   # vanilla MC
+      - "24454:24454/udp"   # Simple Voice Chat
+    environment:
+      EULA: "TRUE"
+      TYPE: "NEOFORGE"
+      VERSION: "1.21.1"
+      NEOFORGE_VERSION: "21.1.228"
+      MEMORY: "12G"
+      USE_AIKAR_FLAGS: "TRUE"
+
+      # Auto-update: fetch the latest published Skyforge release mrpack.
+      # Override with a versioned URL to pin (e.g. .../v0.8.1/Skyforge-0.8.1.mrpack).
+      MODRINTH_MODPACK: "https://github.com/TZUAE86/skyforge/releases/download/v0.9.8/Skyforge-0.9.8.mrpack"
+      # Clean removed mods on update — without this, mods removed from the pack
+      # (e.g. PMMO/Apotheosis in v0.9.0→v0.9.1) would linger and crash the server.
+      REMOVE_OLD_MODS: "TRUE"
+      REMOVE_OLD_MODS_INCLUDE: "*.jar"
+      REMOVE_OLD_MODS_DEPTH: "1"
+
+      # Players + difficulty
+      MAX_PLAYERS: "10"
+      DIFFICULTY: "hard"
+      MOTD: "§6§l⚙ Skyforge §r§7| §eThe Charter Audits\n§8Steampunk colonies · Create · Magic · friends only"
+      ALLOW_FLIGHT: "TRUE"
+
+      # Force MOTD/server.properties to apply on every restart
+      # (without this, server.properties is created once and never re-written)
+      OVERRIDE_SERVER_PROPERTIES: "TRUE"
+
+      # Server icon — itzg downloads this URL into /data/server-icon.png
+      # on every start. OVERRIDE_ICON ensures it replaces any cached copy.
+      ICON: "https://raw.githubusercontent.com/TZUAE86/skyforge/main/server-icon.png"
+      OVERRIDE_ICON: "TRUE"
+
+      # Server perf (low view distance — clients use Distant Horizons for far view)
+      VIEW_DISTANCE: "8"
+      SIMULATION_DISTANCE: "6"
+
+      # Auto-snapshot management (optional — comment out if not wanted)
+      # ENABLE_AUTOPAUSE: "TRUE"
+    volumes:
+      # Persistent server data (worlds, configs, logs)
+      - ./data:/data
+    healthcheck:
+      test: mc-health
+      start_period: 5m
+      interval: 30s
+      timeout: 10s
+      retries: 3

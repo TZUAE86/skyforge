@@ -1,0 +1,53 @@
+name: Validate Pack
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'mods/**'
+      - 'config/**'
+      - 'kubejs/**'
+      - 'pack.toml'
+      - 'index.toml'
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install packwiz
+        run: |
+          cd /tmp && curl -L -o pw.zip "https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip"
+          unzip pw.zip -d pw && sudo install -m 0755 pw/packwiz /usr/local/bin/packwiz
+          packwiz --version
+
+      - name: Run packwiz refresh
+        run: packwiz refresh
+
+      - name: Check that refresh produced no drift
+        run: |
+          if ! git diff --exit-code pack.toml index.toml; then
+            echo "::error::packwiz refresh detected uncommitted changes."
+            echo "Run 'packwiz refresh' locally and commit the updated pack.toml + index.toml."
+            git diff pack.toml index.toml
+            exit 1
+          fi
+          echo "Pack is consistent."
+
+      - name: Sanity-check pack.toml format
+        run: |
+          if ! grep -q '^version = ' pack.toml; then
+            echo "::error::pack.toml missing version field"
+            exit 1
+          fi
+          if ! grep -q '^minecraft = "1\.21\.1"' pack.toml; then
+            echo "::error::pack.toml minecraft version is not 1.21.1"
+            exit 1
+          fi
+          echo "pack.toml format OK"

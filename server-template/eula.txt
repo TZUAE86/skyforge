@@ -1,0 +1,2 @@
+# By changing this to true you accept the Mojang EULA: https://aka.ms/MinecraftEULA
+eula=true

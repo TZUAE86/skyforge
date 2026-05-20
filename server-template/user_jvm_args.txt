@@ -1,0 +1,34 @@
+# Skyforge — JVM args read by NeoForge's run.sh / run.bat.
+# This file is a SAFETY NET — start-server.sh/bat overwrites it with
+# the value of SKYFORGE_RAM. If you run run.sh directly (or your host
+# panel ignores our launcher), these flags still apply.
+#
+# IMPORTANT: 6G is the absolute minimum for this pack (~150 mods including
+# AE2, Mekanism, Create + addons, MineColonies, Iron's Spells). If your
+# server crashes with java.lang.OutOfMemoryError, bump these numbers up.
+# Recommended: 8G (10 players), 12G (busy server / lots of automation).
+
+-Xms8G
+-Xmx8G
+
+# Aikar's flags — G1GC tuned for modded Minecraft
+-XX:+UseG1GC
+-XX:+ParallelRefProcEnabled
+-XX:MaxGCPauseMillis=200
+-XX:+UnlockExperimentalVMOptions
+-XX:+DisableExplicitGC
+-XX:+AlwaysPreTouch
+-XX:G1NewSizePercent=30
+-XX:G1MaxNewSizePercent=40
+-XX:G1HeapRegionSize=8M
+-XX:G1ReservePercent=20
+-XX:G1HeapWastePercent=5
+-XX:G1MixedGCCountTarget=4
+-XX:InitiatingHeapOccupancyPercent=15
+-XX:G1MixedGCLiveThresholdPercent=90
+-XX:G1RSetUpdatingPauseTimePercent=5
+-XX:SurvivorRatio=32
+-XX:+PerfDisableSharedMem
+-XX:MaxTenuringThreshold=1
+-Daikars.new.flags=true
+-Dusing.aikars.flags=https://mcflags.emc.gs

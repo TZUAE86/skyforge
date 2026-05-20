@@ -1,0 +1,87 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Read version from tag
+        id: version
+        run: echo "version=${GITHUB_REF#refs/tags/v}" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Install packwiz
+        run: |
+          curl -L -o /usr/local/bin/packwiz \
+            https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip
+          # nightly.link returns a zip; extract the binary
+          cd /tmp && curl -L -o pw.zip "https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip"
+          unzip pw.zip -d pw && sudo install -m 0755 pw/packwiz /usr/local/bin/packwiz
+          packwiz --version
+
+      - name: Verify pack version matches tag
+        run: |
+          PACK_VERSION=$(grep '^version = ' pack.toml | sed -E 's/version = "(.*)"/\1/')
+          if [ "$PACK_VERSION" != "${{ steps.version.outputs.version }}" ]; then
+            echo "::error::pack.toml version ($PACK_VERSION) does not match git tag (${{ steps.version.outputs.version }})"
+            exit 1
+          fi
+          echo "Version match: $PACK_VERSION"
+
+      - name: Refresh friend pack
+        run: packwiz refresh
+
+      - name: Verify index hashes still match
+        run: |
+          if ! git diff --exit-code pack.toml index.toml; then
+            echo "::error::packwiz refresh changed pack.toml or index.toml. Commit changes before tagging."
+            exit 1
+          fi
+
+      - name: Export Modrinth mrpack
+        run: packwiz modrinth export -o "Skyforge-${{ steps.version.outputs.version }}.mrpack" -y
+
+      - name: Build server zip
+        run: |
+          # Materialize the server folder from server-template/ + bootstrap-sync
+          cp -r server-template server-build
+          cp server-icon.png server-build/server-icon.png
+          cd server-build
+          java -jar packwiz-installer-bootstrap.jar -g --side server \
+            "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}/pack.toml"
+          # Drop the bootstrap manifest cache so users get a clean state
+          rm -f packwiz.json
+          cd ..
+          (cd server-build && zip -r "../Skyforge-Server-${{ steps.version.outputs.version }}.zip" .)
+          ls -lh "Skyforge-Server-${{ steps.version.outputs.version }}.zip"
+
+      - name: Create GitHub release with mrpack + server zip
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "v${{ steps.version.outputs.version }}" \
+            "Skyforge-${{ steps.version.outputs.version }}.mrpack" \
+            "Skyforge-Server-${{ steps.version.outputs.version }}.zip" \
+            --title "Skyforge ${{ steps.version.outputs.version }}" \
+            --notes "Auto-built by GitHub Actions from tag v${{ steps.version.outputs.version }}. See commit history for changelog."
+
+      # CurseForge export skipped in CI — the CF pack lives in a separate
+      # sibling folder (skyforge-curseforge/) and isn't tracked by this repo.
+      # Run `packwiz curseforge export` locally if you want the CF zip.

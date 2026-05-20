@@ -1,0 +1,183 @@
+# Skyforge — Side Chapter: The Tavern's Cellar (~12 quests, Brewin' and Chewin').
+# TONE: Steampunk colonial. The Charter taxes liquor at the docks. A senior
+# Foreman keeps a private cellar — the Charter knows, the Charter looks away.
+# Honor-system tasks (mostly checkmark) so mod item IDs can't break the chapter.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "side_tavern_cellar"
+	group: "5A11E0F100000002"
+	icon: "minecraft:potion"
+	id: "5A11E0F1D0000000"
+	images: [ ]
+	order_index: 102
+	quest_links: [ ]
+	subtitle: ["Beer, wine, spirits. The Charter's clerks drink too."]
+	title: "Side — The Tavern's Cellar"
+	quests: [
+
+		{
+			id: "5A11E0F1D0010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Cellar Opens"
+			subtitle: "Erik hands you the keys to the cellar."
+			description: [
+				"\"Every Charter colony has a tavern. Every Foreman has a cellar. The Charter taxes the barrel at the dock and looks the other way at the brewing.\""
+				""
+				"Erik unlocks a small stone room under the workshop. Empty barrels. Empty kegs. The light of a single candle. Twelve recipes between you and a respectable cellar."
+			]
+			icon: "minecraft:barrel"
+			tasks: [{ id: "5A11E0F1D0020001", type: "checkmark", title: "Place a Fermentation Barrel (Brewin' and Chewin')" }]
+			rewards: [
+				{ id: "5A11E0F1D0030001", type: "xp", xp: 40 }
+				{ id: "5A11E0F1D0030002", type: "item", item: { id: "minecraft:wheat", Count: 32b } }
+			]
+			dependencies: [ ]
+		}
+		{
+			id: "5A11E0F1D0010002"
+			x: 2.0d
+			y: 0.0d
+			title: "Grain and Hops"
+			subtitle: "The first ingredients for any honest beer."
+			description: ["Harvest wheat and find hops. The cellar is patient — it'll be there when you return."]
+			icon: "minecraft:wheat"
+			tasks: [{ id: "5A11E0F1D0020002", type: "checkmark", title: "Gather wheat and hops (or substitute)" }]
+			rewards: [{ id: "5A11E0F1D0030003", type: "xp", xp: 30 }]
+			dependencies: ["5A11E0F1D0010001"]
+		}
+		{
+			id: "5A11E0F1D0010003"
+			x: 4.0d
+			y: 0.0d
+			title: "First Ferment"
+			subtitle: "Wait. Wait some more. Then drink."
+			description: ["Brew your first beer in the Fermentation Barrel. The Charter calls this 'a service to the colony's nerves.'"]
+			icon: "minecraft:glass_bottle"
+			tasks: [{ id: "5A11E0F1D0020003", type: "checkmark", title: "Brew any beer" }]
+			rewards: [{ id: "5A11E0F1D0030004", type: "xp", xp: 50 }]
+			dependencies: ["5A11E0F1D0010002"]
+		}
+		{
+			id: "5A11E0F1D0010004"
+			x: 6.0d
+			y: 0.0d
+			title: "Charter Inspection"
+			subtitle: "The audit clerk wants a tasting."
+			description: ["Pour the clerk a sample. The Charter accepts hospitality as a duty-free tax payment. Drink one beer in front of an NPC or with another player."]
+			icon: "minecraft:glass_bottle"
+			tasks: [{ id: "5A11E0F1D0020004", type: "checkmark", title: "Share a beer (drink one beer)" }]
+			rewards: [{ id: "5A11E0F1D0030005", type: "xp", xp: 40 }]
+			dependencies: ["5A11E0F1D0010003"]
+		}
+		{
+			id: "5A11E0F1D0010005"
+			x: 0.0d
+			y: 2.0d
+			title: "The Wine Press"
+			subtitle: "Grapes, sugar, patience."
+			description: ["Set up wine-making. The Reformers prefer wine — every diplomatic tea has a bottle on the table."]
+			icon: "minecraft:potion"
+			tasks: [{ id: "5A11E0F1D0020005", type: "checkmark", title: "Make any wine" }]
+			rewards: [{ id: "5A11E0F1D0030006", type: "xp", xp: 50 }]
+			dependencies: ["5A11E0F1D0010001"]
+		}
+		{
+			id: "5A11E0F1D0010006"
+			x: 2.0d
+			y: 2.0d
+			title: "Distillation"
+			subtitle: "The Traditionalist drink: spirits."
+			description: ["Build a distillation apparatus and produce spirits. The Charter taxes spirits at twice the rate of beer. Worth it."]
+			icon: "minecraft:potion"
+			tasks: [{ id: "5A11E0F1D0020006", type: "checkmark", title: "Distill any spirit" }]
+			rewards: [{ id: "5A11E0F1D0030007", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1D0010005"]
+		}
+		{
+			id: "5A11E0F1D0010007"
+			x: 4.0d
+			y: 2.0d
+			title: "The Cellar Doubles"
+			subtitle: "Two barrels. Two ferments running."
+			description: ["Run two fermentation barrels in parallel. The cellar grows. The Charter's clerk drops by more often."]
+			icon: "minecraft:barrel"
+			tasks: [{ id: "5A11E0F1D0020007", type: "checkmark", title: "Operate 2+ fermentation barrels at once" }]
+			rewards: [{ id: "5A11E0F1D0030008", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1D0010003"]
+		}
+		{
+			id: "5A11E0F1D0010008"
+			x: 6.0d
+			y: 2.0d
+			title: "Saskia's Brew"
+			subtitle: "A bottle worthy of Veridian Pier."
+			description: ["Brew a high-quality wine or spirit fit to send to Saskia. Every Reformer tea wants a Skyforge label."]
+			icon: "minecraft:potion"
+			tasks: [{ id: "5A11E0F1D0020008", type: "checkmark", title: "Brew a 'premium' wine or spirit (any aged barrel)" }]
+			rewards: [{ id: "5A11E0F1D0030009", type: "xp", xp: 80 }]
+			dependencies: ["5A11E0F1D0010006"]
+		}
+		{
+			id: "5A11E0F1D0010009"
+			x: 0.0d
+			y: 4.0d
+			title: "Yoki's Stout"
+			subtitle: "Dark, bitter, slow."
+			description: ["Brew a stout — the High Ridge favourite. Yoki keeps a cask in her office for visitors who can drink."]
+			icon: "minecraft:potion"
+			tasks: [{ id: "5A11E0F1D0020009", type: "checkmark", title: "Brew any stout or dark beer" }]
+			rewards: [{ id: "5A11E0F1D003000A", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1D0010003"]
+		}
+		{
+			id: "5A11E0F1D001000A"
+			x: 2.0d
+			y: 4.0d
+			title: "The Cellar Stocked"
+			subtitle: "A dozen bottles, sorted."
+			description: ["Stock 12+ filled bottles or kegs in a chest. The Charter calls this a 'reserve'; the Foreman calls it Tuesday."]
+			icon: "minecraft:chest"
+			tasks: [{ id: "5A11E0F1D002000A", type: "checkmark", title: "Stockpile 12+ beverage bottles" }]
+			rewards: [{ id: "5A11E0F1D003000B", type: "xp", xp: 70 }]
+			dependencies: ["5A11E0F1D0010007"]
+		}
+		{
+			id: "5A11E0F1D001000B"
+			x: 4.0d
+			y: 4.0d
+			title: "The Public House"
+			subtitle: "Build a tavern."
+			description: ["Build a public-house room — bar, stools, ovens, a fireplace. The senior Foreman's tavern is a Charter landmark by tradition."]
+			icon: "minecraft:oak_door"
+			tasks: [{ id: "5A11E0F1D002000B", type: "checkmark", title: "Build a tavern room (bar + seating + fireplace)" }]
+			rewards: [{ id: "5A11E0F1D003000C", type: "xp", xp: 80 }]
+			dependencies: ["5A11E0F1D001000A"]
+		}
+		{
+			id: "5A11E0F1D001000C"
+			x: 6.0d
+			y: 4.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "Cellarmaster"
+			subtitle: "The Charter signs a license."
+			description: [
+				"You file the cellar's inventory with the Charter clerk. She signs without reading. The license is brass-trimmed; the wax is the colour of a good stout."
+				""
+				"You are a Cellarmaster, by Charter recognition. The tavern is open for business."
+			]
+			icon: "minecraft:gold_ingot"
+			tasks: [{ id: "5A11E0F1D002000C", type: "checkmark", title: "Operate a tavern with 3+ beverage types on the menu" }]
+			rewards: [
+				{ id: "5A11E0F1D003000D", type: "xp", xp: 150 }
+				{ id: "5A11E0F1D003000E", type: "item", item: { id: "minecraft:gold_ingot", Count: 8b } }
+			]
+			dependencies: ["5A11E0F1D001000B"]
+		}
+	]
+}

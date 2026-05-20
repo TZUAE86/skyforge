@@ -1,0 +1,160 @@
+# Skyforge — Act XIII: The Foreman's Encore (~10 quests, main story extension).
+# TONE: Steampunk colonial. Post-XII Charter. The senior Foreman accepts a
+# new round of contracts — taverns, kitchens, rockets, build-mastery — as a
+# light, optional main-story coda. Gated after Act XII finale.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "act_13_the_foremans_encore"
+	group: "5A11E0F100000001"
+	icon: "minecraft:totem_of_undying"
+	id: "5A11E0F10D000000"
+	images: [ ]
+	order_index: 13
+	quest_links: [ ]
+	subtitle: ["Twelve acts behind. The Council still pays you to build."]
+	title: "Act XIII — The Foreman's Encore"
+	quests: [
+
+		{
+			id: "5A11E0F10D010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Council's Letter"
+			subtitle: "A Brass Hall sealed envelope."
+			description: [
+				"\"Foreman — the Brass Hall convened in your absence. Your seat is kept. The Council notes that you, as senior, are no longer obliged to file routine dockets. The Council also notes that the Charter has a great deal of unfiled work. Yours, if you want it.\""
+				""
+				"Halloran's signature. Black wax, brass-trimmed. The Encore begins."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{ id: "5A11E0F10D020001", type: "checkmark", title: "Read the Council's letter (open this quest)" }]
+			rewards: [
+				{ id: "5A11E0F10D030001", type: "xp", xp: 100 }
+				{ id: "5A11E0F10D030002", type: "item", item: { id: "minecraft:writable_book", Count: 4b } }
+			]
+			dependencies: ["5A11E0F10C010035"]
+		}
+		{
+			id: "5A11E0F10D010002"
+			x: 2.0d
+			y: 0.0d
+			title: "The Cellar Contract"
+			subtitle: "The Council needs a tavern."
+			description: ["Establish a cellar — see the Tavern's Cellar side chapter, or simply brew and serve any one beverage to the Council's standard."]
+			icon: "minecraft:barrel"
+			tasks: [{ id: "5A11E0F10D020002", type: "checkmark", title: "Brew any beverage" }]
+			rewards: [{ id: "5A11E0F10D030003", type: "xp", xp: 100 }]
+			dependencies: ["5A11E0F10D010001"]
+		}
+		{
+			id: "5A11E0F10D010003"
+			x: 4.0d
+			y: 0.0d
+			title: "The Kitchen Contract"
+			subtitle: "The Council expects to dine."
+			description: ["Serve a full meal to the Council — see the Charter's Kitchen side chapter, or plate a 3-course meal: appetiser, main, dessert."]
+			icon: "minecraft:cake"
+			tasks: [{ id: "5A11E0F10D020003", type: "checkmark", title: "Plate a 3-course meal" }]
+			rewards: [{ id: "5A11E0F10D030004", type: "xp", xp: 100 }]
+			dependencies: ["5A11E0F10D010001"]
+		}
+		{
+			id: "5A11E0F10D010004"
+			x: 0.0d
+			y: 2.0d
+			title: "The Folio Contract"
+			subtitle: "The Council requests a sketch."
+			description: ["Decorate the Brass Hall guest room — see the Decoration Mastery side chapter, or finish any one room with 20+ unique blocks."]
+			icon: "minecraft:painting"
+			tasks: [{ id: "5A11E0F10D020004", type: "checkmark", title: "Decorate a room with 20+ unique blocks" }]
+			rewards: [{ id: "5A11E0F10D030005", type: "xp", xp: 100 }]
+			dependencies: ["5A11E0F10D010001"]
+		}
+		{
+			id: "5A11E0F10D010005"
+			x: 2.0d
+			y: 2.0d
+			title: "The Frontier Contract"
+			subtitle: "The Council looks up."
+			description: ["Reach the Moon (or any celestial body) — see Per Spatium side chapter. Or simply file a survey report from the Aether's Edge if rockets are not your road."]
+			icon: "minecraft:end_stone"
+			tasks: [{ id: "5A11E0F10D020005", type: "checkmark", title: "Reach the Moon OR survey the Aether's Edge" }]
+			rewards: [{ id: "5A11E0F10D030006", type: "xp", xp: 200 }]
+			dependencies: ["5A11E0F10D010001"]
+		}
+		{
+			id: "5A11E0F10D010006"
+			x: 4.0d
+			y: 2.0d
+			title: "The Sky Captain's Run"
+			subtitle: "A long Aeronautics flight."
+			description: ["Pilot an Aeronautics ship from the home colony to a sister colony — or simply fly 1000 blocks in one trip."]
+			icon: "minecraft:elytra"
+			tasks: [{ id: "5A11E0F10D020006", type: "checkmark", title: "Fly 1000+ blocks in an Aeronautics ship" }]
+			rewards: [{ id: "5A11E0F10D030007", type: "xp", xp: 120 }]
+			dependencies: ["5A11E0F10D010001"]
+		}
+		{
+			id: "5A11E0F10D010007"
+			x: 0.0d
+			y: 4.0d
+			title: "The Gunsmith's Trial"
+			subtitle: "The Council appreciates a working defense."
+			description: ["Build, load, and fire a Create: Gunsmithing weapon at a practice target. The Council does not, formally, sanction Gunsmithing."]
+			icon: "minecraft:crossbow"
+			tasks: [{ id: "5A11E0F10D020007", type: "checkmark", title: "Fire a Gunsmithing weapon" }]
+			rewards: [{ id: "5A11E0F10D030008", type: "xp", xp: 100 }]
+			dependencies: ["5A11E0F10D010001"]
+		}
+		{
+			id: "5A11E0F10D010008"
+			x: 2.0d
+			y: 4.0d
+			title: "The Factory's Sprawl"
+			subtitle: "TFMG: the factory must grow."
+			description: ["Establish a Create: TFMG factory line — conveyors, packagers, anything autonomous. The Council files it under 'industrial vigour.'"]
+			icon: "create:brass_ingot"
+			tasks: [{ id: "5A11E0F10D020008", type: "checkmark", title: "Operate a TFMG factory line" }]
+			rewards: [{ id: "5A11E0F10D030009", type: "xp", xp: 150 }]
+			dependencies: ["5A11E0F10D010001"]
+		}
+		{
+			id: "5A11E0F10D010009"
+			x: 4.0d
+			y: 4.0d
+			title: "Five of Seven"
+			subtitle: "Council requires at least five contracts."
+			description: ["Complete any five of the seven contracts above. The Council is generous — it does not ask for all seven."]
+			icon: "minecraft:gold_ingot"
+			tasks: [{ id: "5A11E0F10D020009", type: "checkmark", title: "Complete 5+ of Q2-Q8 above" }]
+			rewards: [{ id: "5A11E0F10D03000A", type: "xp", xp: 300 }]
+			dependencies: ["5A11E0F10D010001"]
+			min_required_dependencies: 1L
+		}
+		{
+			id: "5A11E0F10D01000A"
+			x: 6.0d
+			y: 4.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Encore Filed"
+			subtitle: "The Council mints you a brass-clasped pin."
+			description: [
+				"Halloran personally walks you to the Brass Hall pin tray and selects one — Encore, etched, in copper-silver alloy. The Charter does not record Encore pins in the public ledger."
+				""
+				"The Foreman's Encore is filed. The senior chair at the Brass Hall is, formally, yours. The clerks rise when you enter the room."
+			]
+			icon: "minecraft:totem_of_undying"
+			tasks: [{ id: "5A11E0F10D02000A", type: "checkmark", title: "Receive the Encore pin (after Q9)" }]
+			rewards: [
+				{ id: "5A11E0F10D03000B", type: "xp", xp: 500 }
+				{ id: "5A11E0F10D03000C", type: "item", item: { id: "minecraft:totem_of_undying", Count: 1b } }
+			]
+			dependencies: ["5A11E0F10D010009"]
+		}
+	]
+}

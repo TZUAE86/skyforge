@@ -1,0 +1,183 @@
+# Skyforge — Side Chapter: Per Spatium (~12 quests, the space frontier).
+# TONE: Steampunk colonial. Beyond the Charter's maps lies the sky's sky.
+# The Foreman builds a rocket — the Charter does not audit what it cannot reach.
+# Uses Ad Astra successor: Per Spatium Et Tempus. Mostly checkmark tasks.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "side_per_spatium"
+	group: "5A11E0F100000002"
+	icon: "minecraft:end_stone"
+	id: "5A11E0F1F0000000"
+	images: [ ]
+	order_index: 104
+	quest_links: [ ]
+	subtitle: ["Past the Aether's Edge. Past the maps. Up."]
+	title: "Side — Per Spatium Et Tempus"
+	quests: [
+
+		{
+			id: "5A11E0F1F0010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Surveyor's Folly"
+			subtitle: "A senior surveyor's last theory."
+			description: [
+				"\"There's a sky above the sky. The Charter says it's mythology. I say I've seen the lights from a high terrace at midnight. Build the rocket. I'll fund the first reactor.\""
+				""
+				"Survey notes, old, in a senior Foreman's hand. Twelve steps from here to a planet's surface."
+			]
+			icon: "minecraft:writable_book"
+			tasks: [{ id: "5A11E0F1F0020001", type: "checkmark", title: "Read the surveyor's folly (open this quest)" }]
+			rewards: [
+				{ id: "5A11E0F1F0030001", type: "xp", xp: 50 }
+				{ id: "5A11E0F1F0030002", type: "item", item: { id: "minecraft:iron_ingot", Count: 16b } }
+			]
+			dependencies: [ ]
+		}
+		{
+			id: "5A11E0F1F0010002"
+			x: 2.0d
+			y: 0.0d
+			title: "Steel for the Hull"
+			subtitle: "Iron alone won't make it past the upper sky."
+			description: ["Smelt or alloy 32 steel ingots (Per Spatium / Mekanism / Create). The hull demands more than iron."]
+			icon: "minecraft:iron_ingot"
+			tasks: [{ id: "5A11E0F1F0020002", type: "checkmark", title: "Stockpile 32+ steel ingots" }]
+			rewards: [{ id: "5A11E0F1F0030003", type: "xp", xp: 50 }]
+			dependencies: ["5A11E0F1F0010001"]
+		}
+		{
+			id: "5A11E0F1F0010003"
+			x: 4.0d
+			y: 0.0d
+			title: "The NASA Workbench"
+			subtitle: "Specialist crafting only."
+			description: ["Place the workbench Per Spatium needs to build space-grade parts (NASA Workbench or equivalent)."]
+			icon: "minecraft:crafting_table"
+			tasks: [{ id: "5A11E0F1F0020003", type: "checkmark", title: "Place the Per Spatium specialist workbench" }]
+			rewards: [{ id: "5A11E0F1F0030004", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1F0010002"]
+		}
+		{
+			id: "5A11E0F1F0010004"
+			x: 6.0d
+			y: 0.0d
+			title: "Oxygen, on Demand"
+			subtitle: "The sky above the sky has none."
+			description: ["Build an oxygen generation system. The Charter calls this 'speculative'; the surveyors call it 'survival.'"]
+			icon: "minecraft:glass_bottle"
+			tasks: [{ id: "5A11E0F1F0020004", type: "checkmark", title: "Build an oxygen generator + storage" }]
+			rewards: [{ id: "5A11E0F1F0030005", type: "xp", xp: 80 }]
+			dependencies: ["5A11E0F1F0010003"]
+		}
+		{
+			id: "5A11E0F1F0010005"
+			x: 8.0d
+			y: 0.0d
+			title: "The Pressure Suit"
+			subtitle: "Brass and rubber and a sealed helmet."
+			description: ["Craft a full space suit set (Per Spatium). The Foreman's office wall will have a new helmet on display."]
+			icon: "minecraft:leather_helmet"
+			tasks: [{ id: "5A11E0F1F0020005", type: "checkmark", title: "Craft full space suit (helmet, chest, legs, boots)" }]
+			rewards: [{ id: "5A11E0F1F0030006", type: "xp", xp: 100 }]
+			dependencies: ["5A11E0F1F0010004"]
+		}
+		{
+			id: "5A11E0F1F0010006"
+			x: 0.0d
+			y: 2.0d
+			title: "Fuel"
+			subtitle: "Oil. Refined. Refined again."
+			description: ["Refine rocket fuel (Per Spatium). The Charter clerk has never seen oil this clear; she signs the safety form anyway."]
+			icon: "minecraft:lava_bucket"
+			tasks: [{ id: "5A11E0F1F0020006", type: "checkmark", title: "Produce rocket fuel" }]
+			rewards: [{ id: "5A11E0F1F0030007", type: "xp", xp: 70 }]
+			dependencies: ["5A11E0F1F0010003"]
+		}
+		{
+			id: "5A11E0F1F0010007"
+			x: 2.0d
+			y: 2.0d
+			title: "The Tier I Rocket"
+			subtitle: "The first true frontier."
+			description: ["Build a Tier I rocket. The colony will gather to watch the launch. Erik bring brassicas."]
+			icon: "minecraft:tnt"
+			tasks: [{ id: "5A11E0F1F0020007", type: "checkmark", title: "Assemble a Tier I rocket" }]
+			rewards: [{ id: "5A11E0F1F0030008", type: "xp", xp: 120 }]
+			dependencies: ["5A11E0F1F0010005", "5A11E0F1F0010006"]
+		}
+		{
+			id: "5A11E0F1F0010008"
+			x: 4.0d
+			y: 2.0d
+			title: "The Moon"
+			subtitle: "The first sky above the sky."
+			description: ["Launch and land on the Moon. The Charter's maps stop here; yours don't."]
+			icon: "minecraft:end_stone"
+			tasks: [{ id: "5A11E0F1F0020008", type: "checkmark", title: "Reach the Moon dimension" }]
+			rewards: [{ id: "5A11E0F1F0030009", type: "xp", xp: 200 }]
+			dependencies: ["5A11E0F1F0010007"]
+		}
+		{
+			id: "5A11E0F1F0010009"
+			x: 6.0d
+			y: 2.0d
+			title: "Lunar Survey"
+			subtitle: "Sample the dust. File the report."
+			description: ["Mine 32 lunar rocks / regolith / moon materials. Bring them back. The Charter clerk faints, then files the docket."]
+			icon: "minecraft:end_stone"
+			tasks: [{ id: "5A11E0F1F0020009", type: "checkmark", title: "Mine 32+ lunar materials" }]
+			rewards: [{ id: "5A11E0F1F003000A", type: "xp", xp: 100 }]
+			dependencies: ["5A11E0F1F0010008"]
+		}
+		{
+			id: "5A11E0F1F001000A"
+			x: 8.0d
+			y: 2.0d
+			title: "Tier II — Mars"
+			subtitle: "Red dust on the audit clerk's boots."
+			description: ["Upgrade to a Tier II rocket and reach Mars (Per Spatium). The frontier expands again."]
+			icon: "minecraft:red_sand"
+			tasks: [{ id: "5A11E0F1F002000A", type: "checkmark", title: "Reach Mars" }]
+			rewards: [{ id: "5A11E0F1F003000B", type: "xp", xp: 250 }]
+			dependencies: ["5A11E0F1F0010009"]
+		}
+		{
+			id: "5A11E0F1F001000B"
+			x: 4.0d
+			y: 4.0d
+			title: "The Lunar Outpost"
+			subtitle: "Five buildings, oxygen, a flag."
+			description: ["Establish a permanent outpost on the Moon: five buildings, an oxygen feeder, a Charter flag. The first off-Charter colony."]
+			icon: "minecraft:beacon"
+			tasks: [{ id: "5A11E0F1F002000B", type: "checkmark", title: "Build a 5-structure outpost on the Moon (or Mars)" }]
+			rewards: [{ id: "5A11E0F1F003000C", type: "xp", xp: 200 }]
+			dependencies: ["5A11E0F1F0010008"]
+		}
+		{
+			id: "5A11E0F1F001000C"
+			x: 6.0d
+			y: 4.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Charter of the Stars"
+			subtitle: "A docket the Charter will write itself."
+			description: [
+				"The Charter accepts your survey. The wax seal is, for once, blank — the Charter has no precedent for the colour."
+				""
+				"You are an Astronaut by Charter recognition. The frontier has no further edge that you have not, personally, reached."
+			]
+			icon: "minecraft:nether_star"
+			tasks: [{ id: "5A11E0F1F002000C", type: "checkmark", title: "Reach 2+ celestial bodies (Moon + Mars or further)" }]
+			rewards: [
+				{ id: "5A11E0F1F003000D", type: "xp", xp: 400 }
+				{ id: "5A11E0F1F003000E", type: "item", item: { id: "minecraft:nether_star", Count: 1b } }
+			]
+			dependencies: ["5A11E0F1F001000A", "5A11E0F1F001000B"]
+		}
+	]
+}

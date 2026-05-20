@@ -258,6 +258,91 @@ const SCENE_BEATS = {
         sound: "minecraft:ui.toast.challenge_complete",
         pitch: 1.0,
         lore: "Project Docket filed — 25 of 30 automation pages ticked. The Charter's clerk has the inventory. The Foreman is a Project Manager now; the eleventh docket goes on the office wall, brass-trimmed."
+    },
+    // ---- Side: The Tavern's Cellar ----
+    "5A11E0F1D0010001": {
+        title: "The Cellar Opens",
+        subtitle: "Twelve recipes between you and respectability.",
+        color: 0x8B4513,
+        sound: "minecraft:block.barrel.open",
+        pitch: 1.0,
+        lore: "Tavern's Cellar opened. The Charter taxes liquor at the dock and looks the other way at the brewing. A senior Foreman's cellar is, by tradition, a Charter landmark."
+    },
+    "5A11E0F1D001000C": {
+        title: "Cellarmaster",
+        subtitle: "Wax the colour of a good stout.",
+        color: 0xE8C070,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 1.0,
+        lore: "Cellarmaster. The tavern is open for business. The Charter clerk drops by more often than the docket strictly requires."
+    },
+    // ---- Side: The Charter's Kitchen ----
+    "5A11E0F1E0010001": {
+        title: "The Kitchen Opens",
+        subtitle: "Twelve dishes to a Charter dinner.",
+        color: 0xC8A060,
+        sound: "minecraft:block.lantern.place",
+        pitch: 1.0,
+        lore: "Charter's Kitchen opened. The senior Foreman feeds the Charter back. A good kitchen is, by old-Charter tradition, a defensible kitchen."
+    },
+    "5A11E0F1E001000C": {
+        title: "The Senior Cook",
+        subtitle: "The audit clerk wipes her plate. Signs the form.",
+        color: 0xE8C070,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 1.0,
+        lore: "Senior Cook. A small line at the bottom of the audit form reads 'Cook.' The clerk visits twice a quarter now."
+    },
+    // ---- Side: Per Spatium ----
+    "5A11E0F1F0010001": {
+        title: "The Surveyor's Folly",
+        subtitle: "The sky above the sky.",
+        color: 0x88A0E0,
+        sound: "minecraft:entity.experience_orb.pickup",
+        pitch: 1.3,
+        lore: "Per Spatium opened. There is a sky above the sky. The Charter's maps stop at the Aether's Edge; yours don't."
+    },
+    "5A11E0F1F001000C": {
+        title: "The Charter of the Stars",
+        subtitle: "Blank wax. No precedent.",
+        color: 0xFFFFFF,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 0.8,
+        lore: "Astronaut. The Charter has no precedent for the colour of the wax. The frontier has no further edge that you have not, personally, reached."
+    },
+    // ---- Side: Decoration Mastery ----
+    "5A11E0F1D1010001": {
+        title: "The Folio Opens",
+        subtitle: "Beautiful blocks. Framed views.",
+        color: 0xC8A060,
+        sound: "minecraft:item.book.page_turn",
+        pitch: 1.0,
+        lore: "Decoration Mastery opened. Anyone can build a wall. A Foreman builds a wall the Charter clerk wants to draw."
+    },
+    "5A11E0F1D101000C": {
+        title: "Senior Architect",
+        subtitle: "Copper-silver alloy, etched.",
+        color: 0xE8C070,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 1.0,
+        lore: "Senior Architect. The Charter clerk requests a tea date. The colony is beautiful. The audit is favourable."
+    },
+    // ---- Act XIII — The Foreman's Encore ----
+    "5A11E0F10D010001": {
+        title: "The Council's Letter",
+        subtitle: "Black wax, brass-trimmed.",
+        color: 0xC9A24A,
+        sound: "minecraft:block.bell.use",
+        pitch: 1.1,
+        lore: "Act XIII — The Foreman's Encore. The Brass Hall convened in your absence. Your seat is kept. The Charter has a great deal of unfiled work. Yours, if you want it."
+    },
+    "5A11E0F10D01000A": {
+        title: "The Encore Filed",
+        subtitle: "Etched copper-silver. Not in the public ledger.",
+        color: 0xE8C070,
+        sound: "minecraft:ui.toast.challenge_complete",
+        pitch: 1.0,
+        lore: "Encore filed. The senior chair at the Brass Hall is, formally, yours. The clerks rise when you enter the room."
     }
 };
 

@@ -1,0 +1,183 @@
+# Skyforge — Side Chapter: Decoration Mastery (~12 quests).
+# TONE: Steampunk colonial. Build beauty. The Senior Architect's Folio.
+# Uses FramedBlocks + Create: Deco + Design n' Decor + Bits 'n' Bobs +
+# Cardboard Things + Create: Extra Casing + Petrol's Parts. Mostly checkmark.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "side_decoration_mastery"
+	group: "5A11E0F100000002"
+	icon: "minecraft:item_frame"
+	id: "5A11E0F1D1000000"
+	images: [ ]
+	order_index: 105
+	quest_links: [ ]
+	subtitle: ["Wrap any block. Frame any view. The Charter notices presentation."]
+	title: "Side — The Senior Architect's Folio"
+	quests: [
+
+		{
+			id: "5A11E0F1D1010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Folio Opens"
+			subtitle: "A folio of decorative dockets, drawn by hand."
+			description: [
+				"\"Anyone can build a wall. A Foreman builds a wall the Charter clerk wants to draw. Twelve dockets in the Folio.\""
+				""
+				"Erik hands you a leather-wrapped sketchbook. Beautiful blocks. Framed views. The brass-trimmed colony."
+			]
+			icon: "minecraft:item_frame"
+			tasks: [{ id: "5A11E0F1D1020001", type: "checkmark", title: "Place a Framed Block (FramedBlocks)" }]
+			rewards: [
+				{ id: "5A11E0F1D1030001", type: "xp", xp: 40 }
+				{ id: "5A11E0F1D1030002", type: "item", item: { id: "minecraft:item_frame", Count: 8b } }
+			]
+			dependencies: [ ]
+		}
+		{
+			id: "5A11E0F1D1010002"
+			x: 2.0d
+			y: 0.0d
+			title: "First Camo"
+			subtitle: "A frame wrapped in stone — read as stone."
+			description: ["Place a FramedBlocks frame and camo it with any block. The Charter calls this 'cosmetic.' The Foreman calls it 'load-bearing aesthetics.'"]
+			icon: "minecraft:stone"
+			tasks: [{ id: "5A11E0F1D1020002", type: "checkmark", title: "Camo a Framed Block with any block" }]
+			rewards: [{ id: "5A11E0F1D1030003", type: "xp", xp: 50 }]
+			dependencies: ["5A11E0F1D1010001"]
+		}
+		{
+			id: "5A11E0F1D1010003"
+			x: 4.0d
+			y: 0.0d
+			title: "Slopes and Stairs"
+			subtitle: "Fifteen Framed shapes, learned."
+			description: ["Place 5 different FramedBlocks shapes (slope, corner, stair, slab, etc.). The Folio fills."]
+			icon: "minecraft:stone_stairs"
+			tasks: [{ id: "5A11E0F1D1020003", type: "checkmark", title: "Place 5+ different Framed shapes" }]
+			rewards: [{ id: "5A11E0F1D1030004", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1D1010002"]
+		}
+		{
+			id: "5A11E0F1D1010004"
+			x: 6.0d
+			y: 0.0d
+			title: "Create: Deco"
+			subtitle: "Brass trim, copper rivets, steam pipes."
+			description: ["Craft and place a block from Create: Deco. The Charter's clerks love brass trim. The Foreman knows."]
+			icon: "create:brass_block"
+			tasks: [{ id: "5A11E0F1D1020004", type: "checkmark", title: "Place a Create: Deco decorative block" }]
+			rewards: [{ id: "5A11E0F1D1030005", type: "xp", xp: 50 }]
+			dependencies: ["5A11E0F1D1010001"]
+		}
+		{
+			id: "5A11E0F1D1010005"
+			x: 0.0d
+			y: 2.0d
+			title: "Bits 'n' Bobs"
+			subtitle: "The small details. Hinges, valves, gauges."
+			description: ["Place 8+ blocks from Create: Bits 'n' Bobs around the workshop. Detail is what separates a colony from a camp."]
+			icon: "minecraft:redstone_torch"
+			tasks: [{ id: "5A11E0F1D1020005", type: "checkmark", title: "Place 8+ Bits 'n' Bobs blocks" }]
+			rewards: [{ id: "5A11E0F1D1030006", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1D1010001"]
+		}
+		{
+			id: "5A11E0F1D1010006"
+			x: 2.0d
+			y: 2.0d
+			title: "Cardboard Things"
+			subtitle: "Mock-ups before the real build."
+			description: ["Craft and place a Create: Cardboard Things block. The senior architects draft in cardboard first."]
+			icon: "minecraft:paper"
+			tasks: [{ id: "5A11E0F1D1020006", type: "checkmark", title: "Place a Cardboard Things block" }]
+			rewards: [{ id: "5A11E0F1D1030007", type: "xp", xp: 40 }]
+			dependencies: ["5A11E0F1D1010001"]
+		}
+		{
+			id: "5A11E0F1D1010007"
+			x: 4.0d
+			y: 2.0d
+			title: "Design n' Decor"
+			subtitle: "The catalogue of fine furnishings."
+			description: ["Place 5+ blocks from Create: Design n' Decor. The Charter clerks visit your office on the way to teas, just to look around."]
+			icon: "minecraft:oak_chest"
+			tasks: [{ id: "5A11E0F1D1020007", type: "checkmark", title: "Place 5+ Design n' Decor items" }]
+			rewards: [{ id: "5A11E0F1D1030008", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1D1010005"]
+		}
+		{
+			id: "5A11E0F1D1010008"
+			x: 6.0d
+			y: 2.0d
+			title: "Petrol's Parts"
+			subtitle: "Mechanical detail, working-class craft."
+			description: ["Install 3+ Petrol's Parts blocks (mechanical fittings, valves, signage). The workshop should look like the workshop is working."]
+			icon: "minecraft:redstone_lamp"
+			tasks: [{ id: "5A11E0F1D1020008", type: "checkmark", title: "Install 3+ Petrol's Parts" }]
+			rewards: [{ id: "5A11E0F1D1030009", type: "xp", xp: 50 }]
+			dependencies: ["5A11E0F1D1010005"]
+		}
+		{
+			id: "5A11E0F1D1010009"
+			x: 0.0d
+			y: 4.0d
+			title: "The Office Wall"
+			subtitle: "A wall the Charter clerk will sketch."
+			description: ["Build a single wall in your office or workshop entirely from FramedBlocks + Create: Deco + decorative content. No two blocks the same."]
+			icon: "minecraft:painting"
+			tasks: [{ id: "5A11E0F1D1020009", type: "checkmark", title: "Build a 5x5 decorative wall with 25+ unique blocks" }]
+			rewards: [{ id: "5A11E0F1D103000A", type: "xp", xp: 80 }]
+			dependencies: ["5A11E0F1D1010003", "5A11E0F1D1010004"]
+		}
+		{
+			id: "5A11E0F1D101000A"
+			x: 2.0d
+			y: 4.0d
+			title: "The Brass-Trim Office"
+			subtitle: "Floor to ceiling. Wax seal on the door."
+			description: ["Finish the senior Foreman's office: framed photos on the wall, brass trim above the desk, a tea service, a curtain. The Charter clerk visits voluntarily now."]
+			icon: "create:brass_block"
+			tasks: [{ id: "5A11E0F1D102000A", type: "checkmark", title: "Decorate a complete office room (8x8+) with 50+ unique blocks" }]
+			rewards: [{ id: "5A11E0F1D103000B", type: "xp", xp: 100 }]
+			dependencies: ["5A11E0F1D1010009", "5A11E0F1D1010007", "5A11E0F1D1010008"]
+		}
+		{
+			id: "5A11E0F1D101000B"
+			x: 4.0d
+			y: 4.0d
+			title: "Public Facade"
+			subtitle: "A face on the colony itself."
+			description: ["Build a public-facing facade: town hall front, tavern sign, fountain or statue. Something the Charter clerk recognises before knocking."]
+			icon: "minecraft:stone_brick_stairs"
+			tasks: [{ id: "5A11E0F1D102000B", type: "checkmark", title: "Build a public facade (storefront / town square / statue)" }]
+			rewards: [{ id: "5A11E0F1D103000C", type: "xp", xp: 90 }]
+			dependencies: ["5A11E0F1D101000A"]
+		}
+		{
+			id: "5A11E0F1D101000C"
+			x: 6.0d
+			y: 4.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "Senior Architect"
+			subtitle: "The Charter prints a roll-call."
+			description: [
+				"The Charter mints a small brass plate for the office wall: 'Senior Architect — by Folio.' Not all senior Foremen earn this. The clerk presents it personally."
+				""
+				"You are a Senior Architect by Charter recognition. The colony is beautiful. The audit is favourable. The Charter clerk requests a tea date."
+			]
+			icon: "minecraft:gold_block"
+			tasks: [{ id: "5A11E0F1D102000C", type: "checkmark", title: "Submit the Folio (complete the public facade)" }]
+			rewards: [
+				{ id: "5A11E0F1D103000D", type: "xp", xp: 200 }
+				{ id: "5A11E0F1D103000E", type: "item", item: { id: "minecraft:painting", Count: 4b } }
+			]
+			dependencies: ["5A11E0F1D101000B"]
+		}
+	]
+}

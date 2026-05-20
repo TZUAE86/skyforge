@@ -1,0 +1,184 @@
+# Skyforge — Side Chapter: The Charter's Kitchen (~12 quests).
+# TONE: Steampunk colonial. The Charter audits citizens' food rations.
+# A senior Foreman keeps a kitchen good enough to host the audit clerk.
+# Uses Create: Deepfried + Slice & Dice + Ratatouille + Bitterballen + Garnished +
+# Fishery Industry + Farmer's Delight. Honor-system checkmarks.
+
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "side_charters_kitchen"
+	group: "5A11E0F100000002"
+	icon: "minecraft:bread"
+	id: "5A11E0F1E0000000"
+	images: [ ]
+	order_index: 103
+	quest_links: [ ]
+	subtitle: ["The Charter inspects the larder. Set a fine table."]
+	title: "Side — The Charter's Kitchen"
+	quests: [
+
+		{
+			id: "5A11E0F1E0010001"
+			x: 0.0d
+			y: 0.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Kitchen Opens"
+			subtitle: "Erik clears a corner of the workshop for the stove."
+			description: [
+				"\"The Charter feeds its citizens. The senior Foreman feeds the Charter back. A good kitchen is a defensible kitchen.\""
+				""
+				"You build a kitchen. Twelve dishes between you and a Charter dinner invitation."
+			]
+			icon: "minecraft:bread"
+			tasks: [{ id: "5A11E0F1E0020001", type: "checkmark", title: "Build a kitchen area (cooking pot, stove, oven, counter)" }]
+			rewards: [
+				{ id: "5A11E0F1E0030001", type: "xp", xp: 40 }
+				{ id: "5A11E0F1E0030002", type: "item", item: { id: "minecraft:wheat_seeds", Count: 16b } }
+			]
+			dependencies: [ ]
+		}
+		{
+			id: "5A11E0F1E0010002"
+			x: 2.0d
+			y: 0.0d
+			title: "The Cutting Board"
+			subtitle: "Slice and Dice begins everything."
+			description: ["Place a Mechanical Slicer (Slice & Dice) and process a stack of any ingredient. Half the kitchen is preparation."]
+			icon: "minecraft:iron_axe"
+			tasks: [{ id: "5A11E0F1E0020002", type: "checkmark", title: "Use a Mechanical Slicer / Cutter" }]
+			rewards: [{ id: "5A11E0F1E0030003", type: "xp", xp: 40 }]
+			dependencies: ["5A11E0F1E0010001"]
+		}
+		{
+			id: "5A11E0F1E0010003"
+			x: 4.0d
+			y: 0.0d
+			title: "The Deep Fryer"
+			subtitle: "Hot oil, golden crust."
+			description: ["Build a deep fryer (Create: Deepfried) and fry something. Fried food is the Charter clerk's secret love."]
+			icon: "minecraft:dried_kelp"
+			tasks: [{ id: "5A11E0F1E0020003", type: "checkmark", title: "Operate a deep fryer (Create: Deepfried)" }]
+			rewards: [{ id: "5A11E0F1E0030004", type: "xp", xp: 50 }]
+			dependencies: ["5A11E0F1E0010001"]
+		}
+		{
+			id: "5A11E0F1E0010004"
+			x: 6.0d
+			y: 0.0d
+			title: "Bitterballen"
+			subtitle: "A small thing. A perfect thing."
+			description: ["Make bitterballen — the Charter clerk's snack of choice. Beef croquettes, fried golden, served in a basket."]
+			icon: "minecraft:cooked_beef"
+			tasks: [{ id: "5A11E0F1E0020004", type: "checkmark", title: "Produce any Bitterballen item" }]
+			rewards: [{ id: "5A11E0F1E0030005", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1E0010003"]
+		}
+		{
+			id: "5A11E0F1E0010005"
+			x: 0.0d
+			y: 2.0d
+			title: "The Garden Box"
+			subtitle: "Greens, herbs, root crops."
+			description: ["Plant a Farmer's Delight cooking-grade garden — at least 6 different crops. The kitchen needs fresh."]
+			icon: "minecraft:carrot"
+			tasks: [{ id: "5A11E0F1E0020005", type: "checkmark", title: "Grow 6+ different Farmer's Delight crops" }]
+			rewards: [{ id: "5A11E0F1E0030006", type: "xp", xp: 50 }]
+			dependencies: ["5A11E0F1E0010001"]
+		}
+		{
+			id: "5A11E0F1E0010006"
+			x: 2.0d
+			y: 2.0d
+			title: "Ratatouille"
+			subtitle: "Layered, baked, peasant-perfect."
+			description: ["Cook a ratatouille (Create: Ratatouille). Aubergines, peppers, tomatoes, fennel. Served family-style."]
+			icon: "minecraft:bowl"
+			tasks: [{ id: "5A11E0F1E0020006", type: "checkmark", title: "Produce a Ratatouille dish" }]
+			rewards: [{ id: "5A11E0F1E0030007", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1E0010005"]
+		}
+		{
+			id: "5A11E0F1E0010007"
+			x: 4.0d
+			y: 2.0d
+			title: "The Fish Counter"
+			subtitle: "Fishery Industry. Auto-rod, sort, serve."
+			description: ["Set up a Fishery Industry auto-fishing rig. The Charter's docks supply the colony; your kitchen supplies the dock."]
+			icon: "minecraft:cod"
+			tasks: [{ id: "5A11E0F1E0020007", type: "checkmark", title: "Operate an automatic Create: Fishery Industry rig" }]
+			rewards: [{ id: "5A11E0F1E0030008", type: "xp", xp: 70 }]
+			dependencies: ["5A11E0F1E0010002"]
+		}
+		{
+			id: "5A11E0F1E0010008"
+			x: 6.0d
+			y: 2.0d
+			title: "Smoked, Cured, Stored"
+			subtitle: "A cellar of cured meats."
+			description: ["Smoke, cure, or jerky any 3 meats. The Charter audits the larder once a quarter; cured meat counts double."]
+			icon: "minecraft:cooked_porkchop"
+			tasks: [{ id: "5A11E0F1E0020008", type: "checkmark", title: "Stock 3+ cured / smoked meat types" }]
+			rewards: [{ id: "5A11E0F1E0030009", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1E0010004"]
+		}
+		{
+			id: "5A11E0F1E0010009"
+			x: 0.0d
+			y: 4.0d
+			title: "The Bakery"
+			subtitle: "Bread, every morning, before the bell."
+			description: ["Bake bread + 2 other baked goods (pies, pastries, garnished sweet items). The Charter's audit smells like a bakery for a reason."]
+			icon: "minecraft:bread"
+			tasks: [{ id: "5A11E0F1E0020009", type: "checkmark", title: "Bake 3+ baked goods" }]
+			rewards: [{ id: "5A11E0F1E003000A", type: "xp", xp: 60 }]
+			dependencies: ["5A11E0F1E0010005"]
+		}
+		{
+			id: "5A11E0F1E001000A"
+			x: 2.0d
+			y: 4.0d
+			title: "The Garnish"
+			subtitle: "The plate is the brand."
+			description: ["Use Create: Garnished to dress plates with garnishes (parsley, edible flowers, sauces). The Charter notices presentation."]
+			icon: "minecraft:azure_bluet"
+			tasks: [{ id: "5A11E0F1E002000A", type: "checkmark", title: "Plate 3+ garnished dishes" }]
+			rewards: [{ id: "5A11E0F1E003000B", type: "xp", xp: 70 }]
+			dependencies: ["5A11E0F1E0010006"]
+		}
+		{
+			id: "5A11E0F1E001000B"
+			x: 4.0d
+			y: 4.0d
+			title: "The Charter Dinner"
+			subtitle: "A full meal for the audit clerk."
+			description: ["Prepare a full meal: appetizer (bitterballen or fried), main (ratatouille or roast), side (bread or salad), dessert (sweet from Garnished). Serve on a clean table."]
+			icon: "minecraft:cake"
+			tasks: [{ id: "5A11E0F1E002000B", type: "checkmark", title: "Plate a full 4-course meal" }]
+			rewards: [{ id: "5A11E0F1E003000C", type: "xp", xp: 100 }]
+			dependencies: ["5A11E0F1E0010008", "5A11E0F1E001000A", "5A11E0F1E0010009"]
+		}
+		{
+			id: "5A11E0F1E001000C"
+			x: 6.0d
+			y: 4.0d
+			shape: "diamond"
+			size: 1.5d
+			title: "The Senior Cook"
+			subtitle: "The Charter inscribes 'Cook' onto your docket."
+			description: [
+				"The audit clerk wipes her plate, smiles, signs the form. A small line at the bottom reads 'Cook'."
+				""
+				"You are a Senior Cook by Charter recognition. The colony eats well now. The clerk visits twice a quarter."
+			]
+			icon: "minecraft:gold_ingot"
+			tasks: [{ id: "5A11E0F1E002000C", type: "checkmark", title: "Earn the Charter dinner audit" }]
+			rewards: [
+				{ id: "5A11E0F1E003000D", type: "xp", xp: 150 }
+				{ id: "5A11E0F1E003000E", type: "item", item: { id: "minecraft:cake", Count: 4b } }
+			]
+			dependencies: ["5A11E0F1E001000B"]
+		}
+	]
+}

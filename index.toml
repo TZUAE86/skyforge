@@ -993,6 +993,11 @@ hash = "82e2c1ac8875303b3dfc70ce7cfe8ca08ca1c1629c34f986441ea203f5fb645c"
 metafile = true
 
 [[files]]
+file = "mods/sky-aesthetics.pw.toml"
+hash = "9f12b985733a8d7b12b38808d52efa88721105d56a6fa089018944fd9fe8b4bc"
+metafile = true
+
+[[files]]
 file = "mods/sleep-tight.pw.toml"
 hash = "14386d0c382a2a4e400cf2794a07cd4b7a09fbe6be4ed116e3319db6623312cf"
 metafile = true

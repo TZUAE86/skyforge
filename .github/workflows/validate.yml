@@ -27,12 +27,14 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: '1.22'
+          cache: false
 
       - name: Install packwiz
         run: |
           go install github.com/packwiz/packwiz@latest
           echo "$HOME/go/bin" >> "$GITHUB_PATH"
-          "$HOME/go/bin/packwiz" --version
+          "$HOME/go/bin/packwiz" --help > /dev/null
+          echo "packwiz installed at $HOME/go/bin/packwiz"
 
       - name: Run packwiz refresh
         run: packwiz refresh

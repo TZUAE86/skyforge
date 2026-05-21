@@ -258,11 +258,11 @@ hash = "adc3ed9e9173ad881ef7f421809d9cbb47f2386486e0b7616f8bdba86c9e28e6"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_custom_tasks.js"
-hash = "8ffaf80d1bf212c45d1fc99d53344e6f79b23d4b01379de143fcc7eee9536a8e"
+hash = "bf92fedbc6bd35e86b861e11f6c08c62e68e6b59d26efb305696094771dd66fe"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_office.js"
-hash = "fbbf8b30a6a707345593a49fa8984ef5fd26253514210b0d95d77cb54cba6c9f"
+hash = "5d49ed2fbeac67a6e595624784250e5381703f914eb34dd885b87545f0f95654"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_player_setup.js"
@@ -270,7 +270,7 @@ hash = "cf736ec614206cc0f79a2166dc53b6221e4e1829bea12d82be4a3aa34e97924c"
 
 [[files]]
 file = "kubejs/server_scripts/skyforge_scene_beats.js"
-hash = "7b4ad4f95b9debb3e41db279f622ba43fde571cbdd06296bd1f7d2d6aa5487c1"
+hash = "47d9bc53bb67649478aed27e6f760e2d5f5282a89b677a5899fac4cd7605feb9"
 
 [[files]]
 file = "mods/advancedae.pw.toml"
@@ -445,6 +445,11 @@ metafile = true
 [[files]]
 file = "mods/create-bitterballen.pw.toml"
 hash = "818c72ad08596c9312ad2090aad62c7c1733053ec4588079c1d5f9cd2fa03421"
+metafile = true
+
+[[files]]
+file = "mods/create-broken-bad-fabric.pw.toml"
+hash = "5117f179779ec5be73a5d36dc5055e1aaafe97672e9b39d39b46b0d433cc27aa"
 metafile = true
 
 [[files]]
@@ -683,6 +688,11 @@ hash = "43287a3c5030a05b370b45ec1ab9a4a8d5c3d43e9c740aae5218f07ffd041fd2"
 metafile = true
 
 [[files]]
+file = "mods/functional-storage.pw.toml"
+hash = "bf87620865e88ba85547d050f09c579e991ed1f80a05058ff86598c61e1d057d"
+metafile = true
+
+[[files]]
 file = "mods/galosphere.pw.toml"
 hash = "8c990ed08776b403cf29ae41064f8e3d1fde9d879dd0ef6eaf7ee9031bed82ae"
 metafile = true
@@ -805,6 +815,11 @@ metafile = true
 [[files]]
 file = "mods/lithostitched.pw.toml"
 hash = "bc2d592dc0107406f3564f968daf6b84d9379cdb66997305855ae68886fd5502"
+metafile = true
+
+[[files]]
+file = "mods/man-of-many-planes.pw.toml"
+hash = "d887c005b64a36e1ab515d2fc6a35531b665ff7f4964b7068a01d3a136925641"
 metafile = true
 
 [[files]]
@@ -1063,6 +1078,11 @@ hash = "da7ee99189ad35aac094919fe33cac647d98533b23c228f10d4811f08989e2b8"
 metafile = true
 
 [[files]]
+file = "mods/titanium.pw.toml"
+hash = "455ba0409bef5fe9bda93434d826a8d2d5eb11c1b7d41ea119256fe3b15da157"
+metafile = true
+
+[[files]]
 file = "mods/too-fast.pw.toml"
 hash = "63da0a2850babdf37f9511b17d2962fbaa9ce980d4c8478299767954df4efc19"
 metafile = true
@@ -1150,3 +1170,31 @@ metafile = true
 [[files]]
 file = "server-icon.png"
 hash = "d34fa1c1dc97851ec0967a2765feb4c0d7ac28462e8b24c01cb3e2885ce468a5"
+
+[[files]]
+file = "server-template/docker-compose.yml"
+hash = "7c63491c3e586b31ec6336d6d9c1e664eb2751990450d01be02c8cf9148db136"
+
+[[files]]
+file = "server-template/eula.txt"
+hash = "6c165580f6753d46cb54d650301591970de51c67e67b259f4505f05c2979ea72"
+
+[[files]]
+file = "server-template/packwiz-installer-bootstrap.jar"
+hash = "a8fbb24dc604278e97f4688e82d3d91a318b98efc08d5dbfcbcbcab6443d116c"
+
+[[files]]
+file = "server-template/server.properties"
+hash = "87de780411178fb2120b24f143c7f312f2a0da5eb44dc91b0a53e370d07a71bb"
+
+[[files]]
+file = "server-template/start-server.bat"
+hash = "c4912f1edefe17b0573f31c463cce931b38dbcaa46b89bf735ad236ff79cf1a5"
+
+[[files]]
+file = "server-template/start-server.sh"
+hash = "04ef57099239ae541c9d6fb18f245549754165cb82ce69648c10a52179ff5d78"
+
+[[files]]
+file = "server-template/user_jvm_args.txt"
+hash = "8f1f1ee0b43f582ea21d001fe94e66ba142e5ba4d321d36fe65c8879726437e4"

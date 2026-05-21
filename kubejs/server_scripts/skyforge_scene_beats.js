@@ -12,7 +12,7 @@
 // All side effects wrapped in try/catch so a handler error never blocks
 // the quest's reward delivery.
 
-const SCENE_BEATS = {
+var SCENE_BEATS = {
     // ---- Act I — The Charter ----
     "5A11E0F101010001": {
         title: "Foreman of Fragment 0x174A",

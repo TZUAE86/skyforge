@@ -16,11 +16,11 @@
 // invoked repeatedly will throw "redeclaration of var X" because
 // Rhino re-runs the body in a shared scope between calls.
 
-const LOGS_INGREDIENT = Ingredient.of('#minecraft:logs');
+var LOGS_INGREDIENT = Ingredient.of('#minecraft:logs');
 var skyforge_q3_check_logged = false;
 
 // ---- Q03 (Act I, "First Light"): 16 logs of any wood type ----
-FTBQuestsEvents.customTask('5A11E0F101020003', event => {
+FTBQuestsEvents.customTask('5A11E0F101020003', function(event) {
     try {
         event.setMaxProgress(16);
         event.setCheckTimer(40); // 2 s polling

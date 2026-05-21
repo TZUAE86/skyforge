@@ -10,7 +10,7 @@
 // Rhino-safe: classic function() + var; no arrow, no const/let.
 
 // ---- DOCKET TABLE: the 12 office-wall dockets (verified IDs) ----
-const DOCKET_BEATS = {
+var DOCKET_BEATS = {
     "5A11E0F101010001": { num: 1,  name: "Foreman of Record" },
     "5A11E0F102010040": { num: 2,  name: "First Smoke Filed" },
     "5A11E0F103010040": { num: 3,  name: "Builder of Record",      tag: "Erik signs" },
@@ -26,7 +26,7 @@ const DOCKET_BEATS = {
 };
 
 // ---- CODEX ADVANCEMENT TRIGGERS: which quest grants which gate ----
-const CODEX_TRIGGERS = {
+var CODEX_TRIGGERS = {
     "5A11E0F101010001": "skyforge:codex_foundations",     // Act I Q1
     "5A11E0F103010004": "skyforge:codex_workshop",        // Act III Q4 (Erik's hut)
     "5A11E0F105010040": "skyforge:codex_federation",      // Act V finale (sky trade opens)
@@ -38,7 +38,7 @@ const CODEX_TRIGGERS = {
 // ---- BACKFILL PATTERNS: detect dockets from legacy lore-log entries ----
 // Short distinctive substring per docket; matched against lore entry text
 // when the entry lacks a qid (entries from before this code shipped).
-const BACKFILL_PATTERNS = [
+var BACKFILL_PATTERNS = [
     { num: 1,  match: "Foreman of Fragment" },
     { num: 2,  match: "Smoke Rises" },
     { num: 3,  match: "Erik tips his cap" },
@@ -54,7 +54,7 @@ const BACKFILL_PATTERNS = [
 ];
 
 // Hash of the DOCKET_BEATS table for cache invalidation when this file changes.
-const OFFICE_TABLE_HASH = "v1-12dockets-2026-05-16";
+var OFFICE_TABLE_HASH = "v1-12dockets-2026-05-16";
 
 // ---- Helpers ----
 function readOffice(player) {

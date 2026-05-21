@@ -1173,7 +1173,7 @@ hash = "d34fa1c1dc97851ec0967a2765feb4c0d7ac28462e8b24c01cb3e2885ce468a5"
 
 [[files]]
 file = "server-template/docker-compose.yml"
-hash = "7c63491c3e586b31ec6336d6d9c1e664eb2751990450d01be02c8cf9148db136"
+hash = "ab3ccd5bfce66978a7018f85ea39a2307afe6b2c69a6b1e60421c213a2fce6e0"
 
 [[files]]
 file = "server-template/eula.txt"

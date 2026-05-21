@@ -9,8 +9,10 @@ on:
       - 'kubejs/**'
       - 'pack.toml'
       - 'index.toml'
+      - '.github/workflows/validate.yml'
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   validate:

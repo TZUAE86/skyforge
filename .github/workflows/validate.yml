@@ -21,11 +21,16 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
       - name: Install packwiz
         run: |
-          cd /tmp && curl -L -o pw.zip "https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip"
-          unzip pw.zip -d pw && sudo install -m 0755 pw/packwiz /usr/local/bin/packwiz
-          packwiz --version
+          go install github.com/packwiz/packwiz@latest
+          echo "$HOME/go/bin" >> "$GITHUB_PATH"
+          "$HOME/go/bin/packwiz" --version
 
       - name: Run packwiz refresh
         run: packwiz refresh

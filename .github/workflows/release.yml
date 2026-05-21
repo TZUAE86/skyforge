@@ -27,14 +27,16 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
       - name: Install packwiz
         run: |
-          curl -L -o /usr/local/bin/packwiz \
-            https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip
-          # nightly.link returns a zip; extract the binary
-          cd /tmp && curl -L -o pw.zip "https://nightly.link/packwiz/packwiz/workflows/go/main/Linux%2064-bit%20x86.zip"
-          unzip pw.zip -d pw && sudo install -m 0755 pw/packwiz /usr/local/bin/packwiz
-          packwiz --version
+          go install github.com/packwiz/packwiz@latest
+          echo "$HOME/go/bin" >> "$GITHUB_PATH"
+          "$HOME/go/bin/packwiz" --version
 
       - name: Verify pack version matches tag
         run: |

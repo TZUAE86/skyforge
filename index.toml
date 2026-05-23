@@ -863,6 +863,16 @@ hash = "42061fd570a0b7a8063c0860056c6391593190caa0f12d3b49105e52a56817fe"
 metafile = true
 
 [[files]]
+file = "mods/minecolonies-compatibility.pw.toml"
+hash = "b586ad5a011989c786b5f6482d689830170736e322b8b166ec4fb02ce189c70c"
+metafile = true
+
+[[files]]
+file = "mods/minecolonies-tweaks.pw.toml"
+hash = "f090e3565743b7dda597ac76c1b6b7d4ace3d35f432c97437201dfbb283aa44b"
+metafile = true
+
+[[files]]
 file = "mods/minecolonies.pw.toml"
 hash = "3ea53a3421a50217c28e1aed057fd7baf08e946e90013ba12e84d3e04fad4600"
 metafile = true
@@ -1078,6 +1088,11 @@ hash = "593fa7b30ab016aa45be07bd6bef3a9f160ed0f24689850d60bf84995d69b843"
 metafile = true
 
 [[files]]
+file = "mods/spice-of-life-carrot-edition.pw.toml"
+hash = "e520ad446364dff7dd50896108a96140f3f5598b72003dade5b17308fa9ef2a9"
+metafile = true
+
+[[files]]
 file = "mods/stellaris.pw.toml"
 hash = "21f98908d94bfdf05ebaedc2142a9edc82d1549c8fff601bca5fba3de28bc2c2"
 metafile = true
@@ -1203,7 +1218,7 @@ hash = "d34fa1c1dc97851ec0967a2765feb4c0d7ac28462e8b24c01cb3e2885ce468a5"
 
 [[files]]
 file = "server-template/docker-compose.yml"
-hash = "e522bd01a38fb34b07bf9ccce75b25405b1851a9244c9954c76a1f1d53f6d020"
+hash = "c2412d899d2b209805b209575e35f94bd5f789a6b9165fe3a54b0c43fa3a52e2"
 
 [[files]]
 file = "server-template/eula.txt"

@@ -718,6 +718,11 @@ hash = "bf87620865e88ba85547d050f09c579e991ed1f80a05058ff86598c61e1d057d"
 metafile = true
 
 [[files]]
+file = "mods/fzzy-config.pw.toml"
+hash = "f9c118b7a66238a7f9e052705e82402e57c7a5b753d62d679b94701ede479752"
+metafile = true
+
+[[files]]
 file = "mods/galosphere.pw.toml"
 hash = "8c990ed08776b403cf29ae41064f8e3d1fde9d879dd0ef6eaf7ee9031bed82ae"
 metafile = true

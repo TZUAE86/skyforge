@@ -343,6 +343,11 @@ hash = "5486f656b149dd16ebd97ea62f3410372ad6883604f51e88d14f22c5263a8280"
 metafile = true
 
 [[files]]
+file = "mods/better-with-minecolonies.pw.toml"
+hash = "349385f73a9088979f59e109edbbadb4b0e6b510c6f73ddad7d438cd36ab498b"
+metafile = true
+
+[[files]]
 file = "mods/blockui.pw.toml"
 hash = "05abf6fafe4a8adf5aaa24f09b7dedfbe199a8727d925e816fc608d6357f5ba8"
 metafile = true
@@ -395,6 +400,11 @@ metafile = true
 [[files]]
 file = "mods/clumps.pw.toml"
 hash = "2acaff560bbda5741538528a2967355ec86a8f7564adba0b2316989c66892374"
+metafile = true
+
+[[files]]
+file = "mods/colonyrank.pw.toml"
+hash = "be5511d74cf87a9359e7f891c28c5b768fb393146a1b48016a721ee461ab178d"
 metafile = true
 
 [[files]]
@@ -568,6 +578,11 @@ hash = "104581a7f2a0b1c164399d278675f68701a2147db5a895188298e049d14dcea9"
 metafile = true
 
 [[files]]
+file = "mods/create-stone-generators.pw.toml"
+hash = "03618ecf9f2978422867cc0d8ed1809882b841129cd1a0b54eb0e4060ae661ce"
+metafile = true
+
+[[files]]
 file = "mods/create-storage-neo-forge.pw.toml"
 hash = "480b7c7cf1569b1eb98d199c10ce60a8ad13a534b738aa72e7bbcd3ac966d21e"
 metafile = true
@@ -575,6 +590,11 @@ metafile = true
 [[files]]
 file = "mods/create-structures-arise.pw.toml"
 hash = "84308711b81c8207e4c73039671cb2760f4446777d69bbe991facd9896d0ce7c"
+metafile = true
+
+[[files]]
+file = "mods/create-teleporters.pw.toml"
+hash = "a9fdfce6ffedfe29a7df44e8aea2df2a9d56ff8b3da73f9dcafcf6d5a861d2a5"
 metafile = true
 
 [[files]]
@@ -605,6 +625,11 @@ metafile = true
 [[files]]
 file = "mods/curios.pw.toml"
 hash = "f92e7a06645e41ea1934dc420eb2772edb1708c0d71cb427baef8cf753acb934"
+metafile = true
+
+[[files]]
+file = "mods/diet-appleseed-edition.pw.toml"
+hash = "a4eb86cb4d9893e59889272cfe7d9f298de2e31f39527b5c2f38da0cacd10d69"
 metafile = true
 
 [[files]]
@@ -913,6 +938,11 @@ hash = "3718e8a37d0dc2939cc350cce74bcb9c36b59f48baf4560e62804f7ca6478185"
 metafile = true
 
 [[files]]
+file = "mods/pathfinding-edition-for-minecolonies.pw.toml"
+hash = "ef631559fbece70b02fe85b388cec4421ad266b0157320b9d5f8f870116800f8"
+metafile = true
+
+[[files]]
 file = "mods/per-spatium.pw.toml"
 hash = "557c7470f6fa151d176e684154b22ea9a53b80f57070a8ae6eeccf771f336cab"
 metafile = true
@@ -1063,6 +1093,11 @@ hash = "084ba00d5d41d76f4975935f3ada0fb1fce41bce59dd3901f54684c3588cb9f6"
 metafile = true
 
 [[files]]
+file = "mods/talking-colonists-(minecolonies-addon).pw.toml"
+hash = "75519c5d480e0728d968f48b436dc851d44d796ee4667efa36e5c1bfbbee111e"
+metafile = true
+
+[[files]]
 file = "mods/tectonic.pw.toml"
 hash = "cd5c8c1f6183f5c2ca899daed14f272890566002dfcb2d9f9a59dfbfac0bc8f6"
 metafile = true
@@ -1173,7 +1208,7 @@ hash = "d34fa1c1dc97851ec0967a2765feb4c0d7ac28462e8b24c01cb3e2885ce468a5"
 
 [[files]]
 file = "server-template/docker-compose.yml"
-hash = "ab3ccd5bfce66978a7018f85ea39a2307afe6b2c69a6b1e60421c213a2fce6e0"
+hash = "e522bd01a38fb34b07bf9ccce75b25405b1851a9244c9954c76a1f1d53f6d020"
 
 [[files]]
 file = "server-template/eula.txt"

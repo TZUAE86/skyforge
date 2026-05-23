@@ -1,0 +1,13 @@
+name = "Talking Colonists (Minecolonies Addon)"
+filename = "mc_talking-1.6.0-neoforge+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/QJvWFsra/versions/KRSnNPCz/mc_talking-1.6.0-neoforge%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "a3a0655f043900fc3218076741d16a7468289b14c2afb98cf1e1ee370fe89b77cbcbbbd9bcaf738a69e609d174b1695f6960f64e4e4c612ac800aaea7661f735"
+
+[update]
+[update.modrinth]
+mod-id = "QJvWFsra"
+version = "KRSnNPCz"

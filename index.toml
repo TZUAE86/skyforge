@@ -1138,11 +1138,6 @@ hash = "baba208274c2694de645628138244a4316942cfbf9cf67b8c8dd656013fcbc54"
 metafile = true
 
 [[files]]
-file = "mods/waystones.pw.toml"
-hash = "65242951f26a65cce20bcc2c796805b655046970ee8fe13990976e649fa6ba04"
-metafile = true
-
-[[files]]
 file = "mods/when-dungeons-arise.pw.toml"
 hash = "7e6948368276f2c49d5bccf52cbf80930d0daca75b4dfbc5530479f1d3f95cf8"
 metafile = true

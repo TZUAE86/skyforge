@@ -728,6 +728,11 @@ hash = "0521ed2becdf2b460511c92e80e2702a4b6e540c85c99fb571844e1c7c505724"
 metafile = true
 
 [[files]]
+file = "mods/gemini_live_lib.pw.toml"
+hash = "db0ad034a427d972325a6f587b13f483f5a5f1ba32f35509f69e07e9377b11ef"
+metafile = true
+
+[[files]]
 file = "mods/gokiskills.pw.toml"
 hash = "3f6060382eebfff4f31bd2276fee2cd2b14b3d4608f978beec3fab2a699cd4ac"
 metafile = true

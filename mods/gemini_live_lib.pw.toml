@@ -1,0 +1,13 @@
+name = "Gemini Live Library"
+filename = "gemini_live_lib-2.3.1-neoforge+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/qUJFGi0e/versions/2vTQeFCV/gemini_live_lib-2.3.1-neoforge%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "7cb4a6971ae8fc27c939e460118d63850a975c738bcb491e81c04f770d1a28af2b9fe241e103f0339c556c583229f6ae6efc18ae046438dc98c835b16789f6ab"
+
+[update]
+[update.modrinth]
+mod-id = "qUJFGi0e"
+version = "2vTQeFCV"

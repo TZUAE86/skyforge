@@ -33,7 +33,7 @@ services:
 
       # Auto-update: fetch the latest published Skyforge release mrpack.
       # Override with a versioned URL to pin (e.g. .../v0.8.1/Skyforge-0.8.1.mrpack).
-      MODRINTH_MODPACK: "https://github.com/TZUAE86/skyforge/releases/download/v0.9.11/Skyforge-0.9.11.mrpack"
+      MODRINTH_MODPACK: "https://github.com/TZUAE86/skyforge/releases/download/v0.9.12/Skyforge-0.9.12.mrpack"
       # Clean removed mods on update — without this, mods removed from the pack
       # (e.g. PMMO/Apotheosis in v0.9.0→v0.9.1) would linger and crash the server.
       REMOVE_OLD_MODS: "TRUE"

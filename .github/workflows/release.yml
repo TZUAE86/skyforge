@@ -76,13 +76,26 @@ jobs:
           (cd server-build && zip -r "../Skyforge-Server-${{ steps.version.outputs.version }}.zip" .)
           ls -lh "Skyforge-Server-${{ steps.version.outputs.version }}.zip"
 
-      - name: Create GitHub release with mrpack + server zip
+      - name: Build Prism instance zip (for friends)
+        run: |
+          # Tiny zip (~100 KB) — just instance config + bootstrap jar.
+          # All mods come from packwiz on first Prism launch.
+          mkdir -p prism-build/Skyforge/.minecraft
+          cp client-installer/instance-template/instance.cfg  prism-build/Skyforge/instance.cfg
+          cp client-installer/instance-template/mmc-pack.json prism-build/Skyforge/mmc-pack.json
+          curl -fsSL -o prism-build/Skyforge/.minecraft/packwiz-installer-bootstrap.jar \
+            https://github.com/packwiz/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar
+          (cd prism-build && zip -r "../Skyforge-PrismInstance.zip" .)
+          ls -lh Skyforge-PrismInstance.zip
+
+      - name: Create GitHub release with all 3 assets
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release create "v${{ steps.version.outputs.version }}" \
             "Skyforge-${{ steps.version.outputs.version }}.mrpack" \
             "Skyforge-Server-${{ steps.version.outputs.version }}.zip" \
+            "Skyforge-PrismInstance.zip" \
             --title "Skyforge ${{ steps.version.outputs.version }}" \
             --notes "Auto-built by GitHub Actions from tag v${{ steps.version.outputs.version }}. See commit history for changelog."
 

@@ -1,6 +1,14 @@
 hash-format = "sha256"
 
 [[files]]
+file = "client-installer/instance-template/instance.cfg"
+hash = "169b671b4691b7551e41060436c5b44ab92b3a7658cd2ee4f1526b8eecd22bef"
+
+[[files]]
+file = "client-installer/instance-template/mmc-pack.json"
+hash = "05ea336d64d5da99ddc608ff7d49d5a57ab522d3684ad5a3fd55a02ad5330775"
+
+[[files]]
 file = "config/ftbquests/quests/chapter_groups.snbt"
 hash = "d390a9816680c40d9809630ac555ca0518997553c412053b841ed8d4a89ef35f"
 
@@ -1223,7 +1231,7 @@ hash = "d34fa1c1dc97851ec0967a2765feb4c0d7ac28462e8b24c01cb3e2885ce468a5"
 
 [[files]]
 file = "server-template/docker-compose.yml"
-hash = "c2412d899d2b209805b209575e35f94bd5f789a6b9165fe3a54b0c43fa3a52e2"
+hash = "41014953d415c3b7d0a5bb587d7f312ee481b469eb62c69e7d2085d1c066ba77"
 
 [[files]]
 file = "server-template/eula.txt"
